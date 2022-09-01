@@ -2,3 +2,6 @@
 
 /*/.rdf
 	Content-Type: application/xml+rdf
+
+/*/*/*.rdf
+	Content-Type: application/xml+rdf
