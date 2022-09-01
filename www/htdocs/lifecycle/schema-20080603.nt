@@ -1,0 +1,193 @@
+<http://purl.org/vocab/lifecycle/schema#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/elements/1.1/date> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/elements/1.1/title> "Lifecycle Schema"@en .
+<http://purl.org/vocab/lifecycle/schema#> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\tThe Lifecycle Schema provides classes and properties that allow the specification of a lifecycle that any resource may pass through. It's intention to allow the description of the states and transitions that constitute a given lifecycle without imposing any constraint on the way in which transitions happen or how long it may take to move through a lifecycle.\n    \t"@en .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/lifecycle/schema-20080603" .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2008 Talis Information Ltd" .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/lifecycle/schema#" .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "lifecycle" .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/example> <file:///home/iand/web/vocab.org/www/src/lifecycle/schema-diagram.html> .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/example> <file:///home/iand/web/vocab.org/www/src/lifecycle/example-job-application-lifecycle.html> .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/lifecycle/schema-20080603> .
+<http://purl.org/vocab/lifecycle/schema-20080603.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text/html" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@en .
+<http://purl.org/vocab/lifecycle/schema-20080603.html> <http://purl.org/dc/elements/1.1/format> _:genid1 .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/lifecycle/schema-20080603.html> .
+<http://purl.org/vocab/lifecycle/schema-20080603.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/rdf+xml" .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "RDF"@en .
+<http://purl.org/vocab/lifecycle/schema-20080603.rdf> <http://purl.org/dc/elements/1.1/format> _:genid2 .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/lifecycle/schema-20080603.rdf> .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/terms/issued> "2008-06-03" .
+_:genid3 <http://purl.org/dc/elements/1.1/date> "2008-06-03" .
+_:genid3 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "First cut of the ontology published" .
+<http://purl.org/vocab/lifecycle/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid3 .
+<file:///home/iand/web/vocab.org/www/src/lifecycle/schema-20080603.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/web/vocab.org/www/src/lifecycle/schema-20080603.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://purl.org/vocab/lifecycle/schema#Lifecycle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/lifecycle/schema#Lifecycle> <http://www.w3.org/2000/01/rdf-schema#label> "Lifecycle"@en .
+<http://purl.org/vocab/lifecycle/schema#Lifecycle> <http://www.w3.org/2000/01/rdf-schema#comment> "A lifecycle is a series of states connected by allowable transitions. It may be used to describe the lifecycle of business objects or equally the lifecycle of a butterfly."@en .
+<http://purl.org/vocab/lifecycle/schema#Lifecycle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#Lifecycle> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/lifecycle/schema#State> <http://www.w3.org/2000/01/rdf-schema#label> "State"@en .
+<http://purl.org/vocab/lifecycle/schema#State> <http://www.w3.org/2000/01/rdf-schema#comment> "A state describes one possible state that a resource can be in at a given time. Resources may be in one state in a given lifecycle at any given time, states are considered mutually exclusive within a lifecycle."@en .
+<http://purl.org/vocab/lifecycle/schema#State> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#State> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#Transition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/lifecycle/schema#Transition> <http://www.w3.org/2000/01/rdf-schema#label> "Transition"@en .
+<http://purl.org/vocab/lifecycle/schema#Transition> <http://www.w3.org/2000/01/rdf-schema#comment> "A transition describes the way in which a resource moves from one state to another state and may also describe the tasks required to make that transition."@en .
+<http://purl.org/vocab/lifecycle/schema#Transition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#Transition> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Task Group"@en .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a collection of tasks grouped together for convenience"@en .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/lifecycle/schema#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task"@en .
+<http://purl.org/vocab/lifecycle/schema#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a task in a workflow"@en .
+<http://purl.org/vocab/lifecycle/schema#Task> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#Task> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/lifecycle/schema#Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action"@en .
+<http://purl.org/vocab/lifecycle/schema#Action> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an instance of a task taking place against a given resource"@en .
+<http://purl.org/vocab/lifecycle/schema#Action> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#Action> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#state> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#state> <http://www.w3.org/2000/01/rdf-schema#label> "state"@en .
+<http://purl.org/vocab/lifecycle/schema#state> <http://www.w3.org/2000/01/rdf-schema#comment> "The state property relates any resource with the state that it is currently in." .
+<http://purl.org/vocab/lifecycle/schema#state> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource> .
+<http://purl.org/vocab/lifecycle/schema#state> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/lifecycle/schema#State> .
+<http://purl.org/vocab/lifecycle/schema#state> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#state> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://www.w3.org/2000/01/rdf-schema#label> "state of"@en .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'state of' property is the inverse of the state property, relating a state to all of the resources currently in that state." .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#State> .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource> .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/lifecycle/schema#state> .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#stateOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#possibleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#possibleState> <http://www.w3.org/2000/01/rdf-schema#label> "possible state"@en .
+<http://purl.org/vocab/lifecycle/schema#possibleState> <http://www.w3.org/2000/01/rdf-schema#comment> "The possible state property is used to identify the states that occur within a given lifecycle and are thus the possible states of a resource going through that lifecycle." .
+<http://purl.org/vocab/lifecycle/schema#possibleState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Lifecycle> .
+<http://purl.org/vocab/lifecycle/schema#possibleState> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/lifecycle/schema#State> .
+<http://purl.org/vocab/lifecycle/schema#possibleState> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#possibleState> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#resultingState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#resultingState> <http://www.w3.org/2000/01/rdf-schema#label> "resulting state"@en .
+<http://purl.org/vocab/lifecycle/schema#resultingState> <http://www.w3.org/2000/01/rdf-schema#comment> "Once a transition is completed the state of the resource should change to the state specified as the resulting state." .
+<http://purl.org/vocab/lifecycle/schema#resultingState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Transition> .
+<http://purl.org/vocab/lifecycle/schema#resultingState> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/lifecycle/schema#State> .
+<http://purl.org/vocab/lifecycle/schema#resultingState> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#resultingState> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#possibleTransition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#possibleTransition> <http://www.w3.org/2000/01/rdf-schema#label> "possible transition"@en .
+<http://purl.org/vocab/lifecycle/schema#possibleTransition> <http://www.w3.org/2000/01/rdf-schema#comment> "When in a state there may be many possible transitions." .
+<http://purl.org/vocab/lifecycle/schema#possibleTransition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#State> .
+<http://purl.org/vocab/lifecycle/schema#possibleTransition> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/lifecycle/schema#Transition> .
+<http://purl.org/vocab/lifecycle/schema#possibleTransition> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#possibleTransition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#completed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#completed> <http://www.w3.org/2000/01/rdf-schema#label> "completed"@en .
+<http://purl.org/vocab/lifecycle/schema#completed> <http://www.w3.org/2000/01/rdf-schema#comment> "This uses a boolean to represent if an action has been completed. This is a simple alternative to the taskProgress property." .
+<http://purl.org/vocab/lifecycle/schema#completed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Action> .
+<http://purl.org/vocab/lifecycle/schema#completed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.org/vocab/lifecycle/schema#completed> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#completed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#label> "mandatory"@en .
+<http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#comment> "Sepcifies if a task is mandatory or optional." .
+<http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Task> .
+<http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.org/vocab/lifecycle/schema#mandatory> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#label> "next"@en .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#comment> "provides a simple ordering relationship to allow tasks to be ordered in user interfaces." .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/lifecycle/schema#Task> .
+<http://purl.org/vocab/lifecycle/schema#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/lifecycle/schema#TaskGroup> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/lifecycle/schema#Task> .
+<http://purl.org/vocab/lifecycle/schema#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/lifecycle/schema#TaskGroup> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
+<http://purl.org/vocab/lifecycle/schema#next> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#taskGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#taskGroup> <http://www.w3.org/2000/01/rdf-schema#label> "task group"@en .
+<http://purl.org/vocab/lifecycle/schema#taskGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A task group related to this transition." .
+<http://purl.org/vocab/lifecycle/schema#taskGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Transition> .
+<http://purl.org/vocab/lifecycle/schema#taskGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/lifecycle/schema#TaskGroup> .
+<http://purl.org/vocab/lifecycle/schema#taskGroup> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#taskGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#task> <http://www.w3.org/2000/01/rdf-schema#label> "task"@en .
+<http://purl.org/vocab/lifecycle/schema#task> <http://www.w3.org/2000/01/rdf-schema#comment> "A task related to this transition." .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/lifecycle/schema#TaskGroup> .
+<http://purl.org/vocab/lifecycle/schema#TaskGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/lifecycle/schema#Transition> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+<http://purl.org/vocab/lifecycle/schema#Transition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+<http://purl.org/vocab/lifecycle/schema#task> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+<http://purl.org/vocab/lifecycle/schema#task> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/lifecycle/schema#Task> .
+<http://purl.org/vocab/lifecycle/schema#task> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#task> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#taskProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#taskProgress> <http://www.w3.org/2000/01/rdf-schema#label> "task progress"@en .
+<http://purl.org/vocab/lifecycle/schema#taskProgress> <http://www.w3.org/2000/01/rdf-schema#comment> "The current progress on this task. Some resources are defined in this ontology for this, but you are free to define your own." .
+<http://purl.org/vocab/lifecycle/schema#taskProgress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Action> .
+<http://purl.org/vocab/lifecycle/schema#taskProgress> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/lifecycle/schema#TaskProgress> .
+<http://purl.org/vocab/lifecycle/schema#taskProgress> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#taskProgress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/lifecycle/schema#resource> <http://www.w3.org/2000/01/rdf-schema#label> "resource"@en .
+<http://purl.org/vocab/lifecycle/schema#resource> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource on which the action being taken. This is a resource that is being processed through a lifecycle." .
+<http://purl.org/vocab/lifecycle/schema#resource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Action> .
+<http://purl.org/vocab/lifecycle/schema#resource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource> .
+<http://purl.org/vocab/lifecycle/schema#resource> <http://purl.org/dc/terms/issued> "2008-06-03" .
+<http://purl.org/vocab/lifecycle/schema#resource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#Completed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Description> .
+<http://purl.org/vocab/lifecycle/schema#Completed> <http://www.w3.org/2000/01/rdf-schema#label> "Completed"@en .
+<http://purl.org/vocab/lifecycle/schema#Completed> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents that an individual task has been completed."@en .
+<http://purl.org/vocab/lifecycle/schema#Completed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#Completed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/lifecycle/schema#TaskProgress> .
+<http://purl.org/vocab/lifecycle/schema#Started> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Description> .
+<http://purl.org/vocab/lifecycle/schema#Started> <http://www.w3.org/2000/01/rdf-schema#label> "Started"@en .
+<http://purl.org/vocab/lifecycle/schema#Started> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents that an individual task has been started."@en .
+<http://purl.org/vocab/lifecycle/schema#Started> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#Started> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/lifecycle/schema#TaskProgress> .
+<http://purl.org/vocab/lifecycle/schema#OnHold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Description> .
+<http://purl.org/vocab/lifecycle/schema#OnHold> <http://www.w3.org/2000/01/rdf-schema#label> "On Hold"@en .
+<http://purl.org/vocab/lifecycle/schema#OnHold> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents that an individual task has been placed on hold."@en .
+<http://purl.org/vocab/lifecycle/schema#OnHold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> .
+<http://purl.org/vocab/lifecycle/schema#OnHold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/lifecycle/schema#TaskProgress> .

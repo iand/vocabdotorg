@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Changes from Previous Version</title>
+	</head>
+	<body>
+    <ul>
+      <li>Added this change log</li>
+      <li>Split schema into core and extended</li>
+      <li>Renamed CorporateEntity to CorporateBody to keep in line with FRBR terminology</li>
+
+      <li>Renamed isRealisedThrough to realization</li>
+      <li>Renamed isARealisationOf to realizationOf</li>
+      <li>Renamed isEmbodiedIn to embodiment</li>
+      <li>Renamed isAnEmbodimentOf to embodimentOf</li>
+      <li>Renamed isAnExemplarOf to exemplarOf</li>
+      <li>Renamed isExemplifiedBy to exemplar</li>
+
+      <li>Added reproduction property</li>
+      <li>Added reproductionOf property and made inverse of reproduction</li>
+
+      <li>Added successor property</li>
+      <li>Added successorOf property and made inverse of successor</li>
+
+      <li>Added supplement property</li>
+      <li>Added supplementOf property and made inverse of supplement</li>
+
+      <li>Added complement property</li>
+      <li>Added complementOf property and made inverse of complement</li>
+
+      <li>Added summarization property</li>
+      <li>Added summarizationOf property and made inverse of summarization</li>
+
+      <li>Added adaption property</li>
+      <li>Added adaptionOf property and made inverse of adaption</li>
+
+      <li>Added transformation property</li>
+      <li>Added transformationOf property and made inverse of transformation</li>
+
+      <li>Added imitation property</li>
+      <li>Added imitationOf property and made inverse of imitation</li>
+      <li>Added part property</li>
+      <li>Added partOf property and made inverse of part</li>
+
+      <li>Added abridgement property</li>
+      <li>Added abridgementOf property and made inverse of abridgement</li>
+
+
+      <li>Added revision property</li>
+      <li>Added revisionOf property and made inverse of revision</li>
+
+      <li>Added translation property</li>
+      <li>Added translationOf property and made inverse of translation</li>
+
+      <li>Added arrangement property</li>
+      <li>Added arrangementOf property and made inverse of arrangement</li>
+
+      <li>Made AutonomousExpression and ReferentialExpression subclasses of Expression and moved to http://purl.org/vocab/frbr/extended#</li>
+      <li>Made AutonomousWork and ReferentialWork subclasses of Work  and moved to http://purl.org/vocab/frbr/extended#</li>	
+
+      <li>Removed SymmetricProperty type from relatedEndeavour since this would be inherited by subproperties. Made it superproperty of all endeavour relations</li>
+
+      <li>Renamed hasResponsibleEntity to responsibleEntity</li>
+      <li>Renamed isResponsibleEntityFor to responsibleEntityOf</li>
+
+      <li>Renamed isCreatedBy to creator and made subproperty of responsibleEntity</li>
+      <li>Renamed isCreatorOf to creatorOf and made subproperty of responsibleEntityOf</li>
+      <li>Renamed isRealisedBy to realizer</li>
+      <li>Renamed isRealiserOf to realizerOf and made subproperty of responsibleEntityOf</li>
+
+      <li>Renamed isProducedBy to producer</li>
+      <li>Renamed isProducerOf to producerOf</li>
+
+      <li>Renamed isOwnedBy to owner</li>
+      <li>Renamed isOwnerOf to ownerOf</li>
+
+
+      <li>Moved all of the following properties to http://purl.org/vocab/frbr/extended#
+        <ul>
+          <li>complementsExpression</li>
+          <li>complementsWork</li>
+          <li>hasDependentPartExpression</li>
+          <li>hasDependentPartWork</li>
+          <li>hasIndependentPartExpression</li>
+          <li>hasIndependentPartWork</li>
+          <li>hasPartExpression</li>
+          <li>hasPartItem</li>
+          <li>hasPartManifestation</li>
+          <li>hasPartWork</li>
+          <li>isAnAbridgementOfExpression</li>
+          <li>isAnAdaptationOfExpression</li>
+          <li>isAnAdaptationOfWork</li>
+          <li>isAnAlternativeManifestationTo</li>
+          <li>isAnArrangementOfExpression</li>
+          <li>isAnImitationOfExpression</li>
+          <li>isAnImitationOfWork</li>
+          <li>isAReconfigurationOfItem</li>
+          <li>isAReferentialSuccessorToExpression</li>
+          <li>isAReferentialSuccessorToWork</li>
+          <li>isAReproductionOfItem</li>
+          <li>isAReproductionOfManifestation</li>
+          <li>isARevisionOfExpression</li>
+          <li>isASuccessorToExpression</li>
+          <li>isASuccessorToWork</li>
+          <li>isASummaryOfExpression</li>
+          <li>isASummaryOfWork</li>
+          <li>isATransformationOfExpression</li>
+          <li>isATransformationOfWork</li>
+          <li>isATranslationOfExpression</li>
+          <li>isAutonomouslyRelatedToExpression</li>
+          <li>isAutonomouslyRelatedToWork</li>
+          <li>isDependentPartOfExpression</li>
+          <li>isDependentPartOfWork</li>
+          <li>isIndependentPartOfExpression</li>
+          <li>isIndependentPartOfWork</li>
+          <li>isPartOfExpression</li>
+          <li>isPartOfItem</li>
+          <li>isPartOfManifestation</li>
+          <li>isPartOfWork</li>
+          <li>isReferentiallyRelatedToExpression</li>
+          <li>isReferentiallyRelatedToWork</li>
+          <li>isRelatedToExpression</li>
+          <li>isRelatedToItem</li> 
+          <li>isRelatedToManifestation</li>
+          <li>isRelatedToWork</li>
+          <li>referentiallyComplementsExpression</li>
+          <li>referentiallyComplementsWork</li>
+          <li>referentiallySupplementsExpression</li>
+          <li>referentiallySupplementsWork</li>
+          <li>supplementsExpression</li>
+          <li>supplementsWork</li>
+        </ul>
+
+      </li>
+
+
+    </ul>
+
+
+
+
+
+	</body>
+</html>

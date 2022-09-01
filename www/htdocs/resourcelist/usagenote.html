@@ -1,0 +1,38 @@
+<html>
+<head><title>Using Resource List Ontology</title></head>
+<body>  
+<p>The Resource List ontology is designed to model academic reading lists, bookmarks and similarly structured collections of references. The Resource List Ontology makes use of a number of other ontologies:
+<ul>
+	<li><a href="http://rdfs.org/sioc/spec/">SIOC Core Ontology</a></li>
+	<li><a href="http://bibliontology.com/">Bibliographic Ontology</a></li>
+	<li><a href="http://vocab.org/lifecycle/schema">Lifecycle Ontology</a></li>
+</ul> 
+</p>
+<p>We use SIOC to model the structure of a Resource List and the relationships between items and their containers. We use Bibliographic Ontology to model the various kinds of resources that can be included on a list. It is recommended that you refer to those ontologies to gain a better understanding of the classes and properties that are available.</p>
+<h3>Lifecycle Ontology</h3>
+<p>
+We are currently using the lifecycle ontology to model the status of a List, Section or Item, with a view to introduce the ability to model more detailed workflow type activities in the future. At the moment it is used to indicate whether a List, a Section or an Item are draft, or published. In order to do this we have defined the following Individuals as part of the Resource List Ontology
+<pre>
+ &lt;lifecycle:State rdf:about=&quot;http://purl.org/vocab/resourcelist/schema#status-draft&quot;&gt;
+    &lt;rdfs:label xml:lang=&quot;en&quot;&gt;Draft&lt;/rdfs:label&gt;
+ &lt;/lifecycle:State&gt;
+
+ &lt;lifecycle:State rdf:about=&quot;http://purl.org/vocab/resourcelist/schema#status-published&quot;&gt;
+    &lt;rdfs:label xml:lang=&quot;en&quot;&gt;Published&lt;/rdfs:label&gt;
+ &lt;/lifecycle:State&gt;
+</pre>
+And specify that the <a href="http://vocab.org/lifecycle/schema#term-state"><code>&lt;lifecycle:state&gt;</code></a> property be used when indicating the status of an item, section or a list. For example:
+
+<pre>
+ &lt;resource:List rdf:about=&quot;http://example.com/lists/test&quot;&gt;
+     &lt;resource:created&gt;20080520110000&lt;/resource:created&gt;
+     &lt;sioc:has_creator rdf:resource=&quot;http://example.com/people/joe_bloggs&quot;/&gt;
+     &lt;lifecycle:state rdf:resource=&quot;http://purl.org/vocab/resourcelist/schema#status-draft&quot;/&gt;
+     &lt;sioc:name xml:lang=&quot;en&quot;&gt;Test List&lt;/sioc:name&gt;
+     &lt;resource:description xml:lang=&quot;en&quot;&gt;This a test list&lt;/resource:description&gt;
+ &lt;/resource:List&gt;
+</pre>
+</p>
+<p></p>
+</body>
+</html>

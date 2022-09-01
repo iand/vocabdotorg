@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:cc="http://web.resource.org/cc/"
+	xmlns:dctype="http://purl.org/dc/dcmitype/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:multi-tenant="http://purl.org/vocab/multi-tenant-configuration/schema#"
+	>
+	<owl:Ontology rdf:about="" dc:date="2009-05-13">
+		<dc:title xml:lang="en">Multi-Tenant Configuration Schema</dc:title>
+		<rdfs:comment xml:lang="en">
+			The Multi-Tenant Configuration Schema provides 
+    	</rdfs:comment>
+		<dc:identifier>http://purl.org/vocab/multi-tenant-configuration/schema-20090513</dc:identifier>
+		<dct:isVersionOf rdf:resource="#"/>
+		<dc:creator>Rob Styles</dc:creator>
+		<dc:rights>Copyright © 2009 Talis Information Ltd</dc:rights>
+		<vann:preferredNamespaceUri>http://purl.org/vocab/multi-tenant-configuration/schema#</vann:preferredNamespaceUri>
+		<vann:preferredNamespacePrefix>multi-tenant</vann:preferredNamespacePrefix>
+		<vann:example rdf:resource="schema-diagram.html" />
+		<dct:hasFormat>
+			<dctype:Text rdf:about="http://purl.org/vocab/multi-tenant-configuration/schema-20090513.html">
+				<dc:format>
+					<dct:IMT>
+						<rdf:value>text/html</rdf:value>
+						<rdfs:label xml:lang="en">HTML</rdfs:label>
+					</dct:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dct:hasFormat>
+		<dct:hasFormat>
+			<dctype:Text rdf:about="http://purl.org/vocab/multi-tenant-configuration/schema-20090513.rdf">
+				<dc:format>
+					<dct:IMT>
+						<rdf:value>application/rdf+xml</rdf:value>
+						<rdfs:label xml:lang="en">RDF</rdfs:label>
+					</dct:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dct:hasFormat>
+		<dct:issued>2009-05-13</dct:issued>
+		<skos:historyNote rdf:value="First draft of the ontology published" dc:date="2009-05-13" dc:creator="Rob Styles"/>
+	</owl:Ontology>
+	<cc:Work rdf:about="">
+		<cc:license rdf:resource="http://creativecommons.org/licenses/by/2.0/uk/"/>
+	</cc:Work>
+	<cc:License rdf:about="http://creativecommons.org/licenses/by/2.0/uk/">
+		<cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+		<cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+		<cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+		<cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+		<cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+	</cc:License>
+	
+	<rdfs:Class rdf:about="#Customer">
+		<rdfs:label xml:lang="en">Customer</rdfs:label>
+		<rdfs:comment xml:lang="en">A customer represents your customer. They may have zero or more tenancies. We need to consider how this class relates to foaf:Agent and possibly other ontologies describing CRM models.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+		<dct:issued>2009-05-13</dct:issued>
+	</rdfs:Class>
+
+	<rdfs:Class rdf:about="#Tenancy">
+		<rdfs:label xml:lang="en">Tenancy</rdfs:label>
+		<rdfs:comment xml:lang="en">A tenancy represents the area or part of the service that is owned by a particular customer. A customer may own more than one tenancy.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+		<dct:issued>2009-05-13</dct:issued>
+	</rdfs:Class>
+
+	<rdfs:Class rdf:about="#TenancyType">
+		<rdfs:label xml:lang="en">Tenancy Type</rdfs:label>
+		<rdfs:comment xml:lang="en">Tenancy Types allow the tenancies of different systems to be distinguished within a single graph. You should define a tenancy type within your own namespace for each multi-tenant application you are describing tenancies for.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+		<dct:issued>2009-05-13</dct:issued>
+	</rdfs:Class>
+
+	<rdfs:Class rdf:about="#Subscription">
+		<rdfs:label xml:lang="en">Subscription</rdfs:label>
+		<rdfs:comment xml:lang="en">Subscription resources track the periods for which a customer has subscribed to the service and at what subscription level.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+		<dct:issued>2009-05-13</dct:issued>
+	</rdfs:Class>
+
+	<rdfs:Class rdf:about="#SubscriptionLevel">
+		<rdfs:label xml:lang="en">Subscription Level</rdfs:label>
+		<rdfs:comment xml:lang="en">Subscription Level resources allow your application to tailor its feature set based on subscription levels you define within your own namespace.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+		<dct:issued>2009-05-13</dct:issued>
+	</rdfs:Class>
+
+	<rdfs:Class rdf:about="#Feature">
+		<rdfs:label xml:lang="en">Feature</rdfs:label>
+		<rdfs:comment xml:lang="en">You can describe features within your own namespace, relating them to different subscription levels.</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+		<dct:issued>2009-05-13</dct:issued>
+	</rdfs:Class>
+
+	<rdf:Property rdf:about="#customer">
+		<rdfs:label xml:lang="en">Customer</rdfs:label>
+		<rdfs:comment>The customer property links a Tenancy with the Customer who owns it.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Tenancy"/>
+		<rdfs:range rdf:resource="#Customer"/>
+		<owl:inverseOf rdf:resource="#tenancy"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#tenancy">
+		<rdfs:label xml:lang="en">Tenancy</rdfs:label>
+		<rdfs:comment>The tenancy property links a Customer with the tenancies they own.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Tenancy"/>
+		<rdfs:range rdf:resource="#Customer"/>
+		<owl:inverseOf rdf:resource="#customer"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="#tenancyType">
+		<rdfs:label xml:lang="en">Tenancy Type</rdfs:label>
+		<rdfs:comment>The type of tenancy this resource describes.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Tenancy"/>
+		<rdfs:range rdf:resource="#TenancyType"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#subscription">
+		<rdfs:label xml:lang="en">Subscription</rdfs:label>
+		<rdfs:comment>A subscription that enables the use of this tenancy.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Tenancy"/>
+		<rdfs:range rdf:resource="#TenancyType"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#createdAt">
+		<rdfs:label xml:lang="en">Created</rdfs:label>
+		<rdfs:comment>The date on which the tenancy was created. Managing this allows multiple tenancies to be displayed in time order.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Tenancy"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#enabled">
+		<rdfs:label xml:lang="en">Enabled</rdfs:label>
+		<rdfs:comment>A simple boolean value that allows a tenancy to be enabled or disabled entirely.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Tenancy"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#subscriptionLevel">
+		<rdfs:label xml:lang="en">Subscription Level</rdfs:label>
+		<rdfs:comment>The level at which the customer has subscribed to this tenancy.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Subscription"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#validUntil">
+		<rdfs:label xml:lang="en">Valid Until</rdfs:label>
+		<rdfs:comment>The date on which a subscription expires.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Subscription"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#validFrom">
+		<rdfs:label xml:lang="en">Valid From</rdfs:label>
+		<rdfs:comment>The date from which a subscription is valid.</rdfs:comment>
+		<rdfs:domain rdf:resource="#Subscription"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#allowedFeature">
+		<rdfs:label xml:lang="en">Allowed Feature</rdfs:label>
+		<rdfs:comment>A feature that is allowed for subscriptions at this subscription level. This allows for a white-listing approach to feature control.</rdfs:comment>
+		<rdfs:domain rdf:resource="#SubscriptionLevel"/>
+		<rdfs:range rdf:resource="#Feature"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="#disallowedFeature">
+		<rdfs:label xml:lang="en">Disallowed Feature</rdfs:label>
+		<rdfs:comment>A feature that is not allowed for subscriptions at this subscription level. This allows for a black-listing approach to feature control.</rdfs:comment>
+		<rdfs:domain rdf:resource="#SubscriptionLevel"/>
+		<rdfs:range rdf:resource="#Feature"/>
+		<dct:issued>2009-05-13</dct:issued>
+		<rdfs:isDefinedBy rdf:resource="#"/>
+	</rdf:Property>
+
+</rdf:RDF>

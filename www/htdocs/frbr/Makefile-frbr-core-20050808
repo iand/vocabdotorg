@@ -1,0 +1,12 @@
+XSLT=xsltproc --catalogs
+
+all: frbr-core-20050808.html
+	cp -f frbr-core-20050808.html core.html
+	cp -f frbr-core-20050808.rdf core.rdf
+
+frbr-core-20050808.html: frbr-core-20050808.rdf
+	$(XSLT) $(XSLTOPT)  -o frbr-core-20050808.html ../2004/03/toolchain/vocab-html-docs.xsl frbr-core-20050808.rdf
+
+clean: 
+	rm -f frbr-core-20050808.html
+

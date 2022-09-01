@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Linked ChangeSets</title>
+	</head>
+	<body>
+    <p>This example shows how a history of changes can be maintained using the precedingChangeSet property. We start with
+      the resource  description below:
+    </p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+  &lt;rdf:Description rdf:about="http://example.com/res#thing"/&gt;
+    &lt;dc:title&gt;Original Title&lt;/dc:title&gt;
+    &lt;dc:description&gt;A short description of this resource&lt;/dc:description&gt;
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+    <p>
+      A change to the title of the resource is then made:
+    </p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+  &lt;rdf:Description rdf:about="http://example.com/res#thing"/&gt;
+    <span class="highlight">&lt;dc:title&gt;New Title&lt;/dc:title&gt;</span>
+    &lt;dc:description&gt;A short description of this resource&lt;/dc:description&gt;
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+    <p>
+      This change is modelled by a ChangeSet describing the removal of the existing dc:title triple
+      and the addition of a new triple with a new value:
+    </p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:cs="http://purl.org/vocab/changeset/schema#"&gt;
+  &lt;cs:ChangeSet rdf:about="http://example.com/res#change1"&gt;
+    &lt;cs:subjectOfChange rdf:resource="http://example.com/res#thing"/&gt;
+    &lt;cs:createdDate&gt;2006-01-01T00:00:00Z&lt;/cs:createdDate&gt;
+    &lt;cs:creatorName&gt;Anne Onymous&lt;/cs:creatorName&gt;
+    &lt;cs:changeReason&gt;Change of title&lt;/cs:changeReason&gt;
+    &lt;cs:removal&gt;
+      &lt;rdf:Statement&gt;
+        &lt;rdf:subject rdf:resource="http://example.com/res#thing"/&gt;
+        &lt;rdf:predicate rdf:resource="http://purl.org/dc/elements/1.1/title"/&gt;
+        &lt;rdf:object&gt;Original Title&lt;/rdf:object&gt;
+      &lt;/rdf:Statement&gt;
+    &lt;/cs:removal&gt;
+    &lt;cs:addition&gt;
+      &lt;rdf:Statement&gt;
+        &lt;rdf:subject rdf:resource="http://example.com/res#thing"/&gt;
+        &lt;rdf:predicate rdf:resource="http://purl.org/dc/elements/1.1/title"/&gt;
+        &lt;rdf:object&gt;New Title&lt;/rdf:object&gt;
+      &lt;/rdf:Statement&gt;
+    &lt;/cs:addition&gt;
+  &lt;/cs:ChangeSet&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+    <p>Subsequently a dc:identifier property is added to the description:</p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+  &lt;rdf:Description rdf:about="http://example.com/res#thing"/&gt;
+    &lt;dc:title&gt;New Title&lt;/dc:title&gt;
+    &lt;dc:description&gt;A short description of this resource&lt;/dc:description&gt;
+    <span class="highlight">&lt;dc:identifier&gt;Z875331&lt;/dc:identifier&gt;</span>
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+    <p>
+      The ChangeSet describes only the addition of the new statement. However this new ChangeSet uses the precedingChangeSet property
+      to reference the first ChangeSet:
+    </p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:cs="http://purl.org/vocab/changeset/schema#"&gt;
+  &lt;cs:ChangeSet rdf:about="http://example.com/res#change2"&gt;
+    <span class="highlight">&lt;cs:precedingChangeSet rdf:resource="http://example.com/res#change1"/&gt;</span>
+    &lt;cs:subjectOfChange rdf:resource="http://example.com/res#thing"/&gt;
+    &lt;cs:createdDate&gt;2006-01-02T00:00:00Z&lt;/cs:createdDate&gt;
+    &lt;cs:creatorName&gt;Anne Onymous&lt;/cs:creatorName&gt;
+    &lt;cs:changeReason&gt;Addition of identifier&lt;/cs:changeReason&gt;
+    &lt;cs:addition&gt;
+      &lt;rdf:Statement&gt;
+        &lt;rdf:subject rdf:resource="http://example.com/res#thing"/&gt;
+        &lt;rdf:predicate rdf:resource="http://purl.org/dc/elements/1.1/identifier"/&gt;
+        &lt;rdf:object&gt;Z875331&lt;/rdf:object&gt;
+      &lt;/rdf:Statement&gt;
+    &lt;/cs:addition&gt;
+  &lt;/cs:ChangeSet&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+    <p>Later on the description is removed and a new ChangeSet is created to represent this change:</p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+  &lt;rdf:Description rdf:about="http://example.com/res#thing"/&gt;
+    &lt;dc:title&gt;New Title&lt;/dc:title&gt;
+    <span class="highlight">                                                                   </span>
+    &lt;dc:identifier&gt;Z875331&lt;/dc:identifier&gt;
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:cs="http://purl.org/vocab/changeset/schema#"&gt;
+  &lt;cs:ChangeSet rdf:about="http://example.com/res#change3"&gt;
+    <span class="highlight">&lt;cs:precedingChangeSet rdf:resource="http://example.com/res#change2"/&gt;</span>
+    &lt;cs:subjectOfChange rdf:resource="http://example.com/res#thing"/&gt;
+    &lt;cs:createdDate&gt;2006-01-03T00:00:00Z&lt;/cs:createdDate&gt;
+    &lt;cs:creatorName&gt;Anne Onymous&lt;/cs:creatorName&gt;
+    &lt;cs:changeReason&gt;Removal of description&lt;/cs:changeReason&gt;
+    &lt;cs:removal&gt;
+      &lt;rdf:Statement&gt;
+        &lt;rdf:subject rdf:resource="http://example.com/res#thing"/&gt;
+        &lt;rdf:predicate rdf:resource="http://purl.org/dc/elements/1.1/description"/&gt;
+        &lt;rdf:object&gt;A short description of this resource&lt;/rdf:object&gt;
+      &lt;/rdf:Statement&gt;
+    &lt;/cs:removal&gt;
+  &lt;/cs:ChangeSet&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+	</body>
+</html>

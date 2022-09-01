@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+  <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+  <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+  <!ENTITY sdl "http://purl.org/vocab/riro/sdl#" >
+  <!ENTITY gpt "http://purl.org/vocab/riro/gpt#" >
+  <!ENTITY lsrn "http://www.lsrn.org/lsrn/name.owl#" >
+  <!ENTITY lsrs "http://www.lsrn.org/lsrn/schema.owl#" >
+]>
+<rdf:RDF
+  xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;" xmlns:dc="&dc;"
+  xmlns:foaf="&foaf;" xmlns:sdl="&sdl;" xmlns:lsrn="&lsrn;" 
+  xmlns:lsrs="&lsrs;" xmlns="&gpt;">
+
+  <sdl:RIROService rdf:about="http://riro.lsrn.org/resolver">
+    <rdfs:label>LSRN Resolver</rdfs:label>
+    <dc:creator>Sergei Egorov</dc:creator>
+    <foaf:homepage rdf:resource="http://www.lsrn.org/resolver/" />
+    <sdl:commandName>Resolve LSRN to Record, URLs</sdl:commandName>
+    <sdl:commandDescription>Resolve LSRN to the corresponging database record and its URLs</sdl:commandDescription>
+    <sdl:fileUnder>Life Sciences/Identity Services</sdl:fileUnder>
+    <sdl:inputPattern>
+      <Filter>
+        <onPattern>
+          <Graph>
+            <allOf rdf:parseType="Collection">
+              <Statement>
+                <subject rdf:nodeID="n"/>
+                <predicate rdf:resource="&rdf;type"/>
+                <object rdf:resource="&lsrn;Name"/>
+              </Statement>
+              <Statement>
+                <subject rdf:nodeID="n"/>
+                <predicate rdf:resource="&rdf;value"/>
+                <object rdf:nodeID="lsrn"/>
+              </Statement>
+            </allOf>
+          </Graph>
+        </onPattern>
+        <valueConstraint>
+          <ISLITERAL>
+            <arg1 rdf:nodeID="lsrn"/>
+          </ISLITERAL>
+        </valueConstraint>
+      </Filter>
+    </sdl:inputPattern>
+    <sdl:outputTemplate>
+      <Graph>
+        <allOf rdf:parseType="Collection">
+          <Statement>
+            <subject rdf:nodeID="n"/>
+            <predicate rdf:resource="&lsrn;schema"/>
+            <object rdf:nodeID="s"/>
+          </Statement>
+          <Statement>
+            <subject rdf:nodeID="s"/>
+            <predicate rdf:resource="&rdf;type"/>
+            <object rdf:resource="&lsrs;Schema"/>
+          </Statement>
+          <Statement>
+            <subject rdf:nodeID="s"/>
+            <predicate rdf:resource="&rdfs;label"/>
+            <object rdf:nodeID="sn"/>
+          </Statement>
+          <Statement>
+            <subject rdf:nodeID="n"/>
+            <predicate rdf:resource="&lsrn;id"/>
+            <object rdf:nodeID="i"/>
+          </Statement>
+          <Statement>
+            <subject rdf:nodeID="r"/>
+            <predicate rdf:resource="&dc;identifier"/>
+            <object rdf:nodeID="n"/>
+          </Statement>
+          <Statement>
+            <subject rdf:nodeID="r"/>
+            <predicate rdf:resource="&rdf;type"/>
+            <object rdf:resource="&lsrn;Record"/>
+          </Statement>
+          <Statement>
+            <subject rdf:nodeID="r"/>
+            <predicate rdf:resource="&rdfs;seeAlso"/>
+            <object rdf:nodeID="d"/>
+          </Statement>
+          <Statement>
+            <subject rdf:nodeID="d"/>
+            <predicate rdf:resource="&rdf;type"/>
+            <object rdf:resource="&foaf;Document"/>
+          </Statement>
+        </allOf>
+      </Graph>
+    </sdl:outputTemplate>
+    <sdl:method>get</sdl:method>
+  </sdl:RIROService>
+
+</rdf:RDF>
+

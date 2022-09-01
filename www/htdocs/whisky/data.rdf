@@ -1,0 +1,188 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:vann="http://purl.org/vocab/vann/" 
+  xmlns:dct="http://purl.org/dc/terms/" 
+  xmlns:dctype="http://purl.org/dc/dcmitype/" 
+  xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:w="http://vocab.org/whisky/terms/"
+  xmlns:rev="http://www.purl.org/stuff/rev#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  
+  
+  <w:Cask rdf:about="http://vocab.org/whisky/casks/bourbon">
+    <rdfs:label>bourbon</rdfs:label>
+    <rdfs:comment>oak casks previously used for bourbon</rdfs:comment>
+    <w:material rdf:resource="http://dbpedia.org/resource/Oak"/>
+    <w:previousContents rdf:resource="http://dbpedia.org/resource/Bourbon_whiskey" />
+  </w:Cask>
+   
+
+  <w:Region rdf:about="http://vocab.org/whisky/regions/islay">
+    <rdfs:label>Islay, Scotland</rdfs:label>
+  </w:Region>
+  
+
+
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/laphroaig">
+    <rdfs:label>Laphroaig Distillery </rdfs:label>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Laphroaig" />
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+    <w:waterSource rdf:resource="http://vocab.org/whisky/watersource/kilbride-dam" />
+  </w:Distillery>
+
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/ardbeg">
+    <rdfs:label>Ardbeg Distillery </rdfs:label>
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+    <w:owner rdf:resource="http://dbpedia.org/resource/LVMH" />
+    <w:owner rdf:resource="http://dbpedia.org/resource/Diageo" />
+    <w:waterSource rdf:resource="http://vocab.org/whisky/watersource/kilbride-dam" />
+  </w:Distillery>
+
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/bowmore">
+    <rdfs:label>Bowmore Distillery </rdfs:label>
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+  </w:Distillery>
+
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/bruichladdich">
+    <rdfs:label>Bruichladdich Distillery </rdfs:label>
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+  </w:Distillery>
+  
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/bunnahabhain">
+    <rdfs:label>Bunnahabhain Distillery </rdfs:label>
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+  </w:Distillery>
+
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/caolila">
+    <rdfs:label>Caol Ila Distillery </rdfs:label>
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+  </w:Distillery>
+
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/lagavulin">
+    <rdfs:label>Lagavulin Distillery </rdfs:label>
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+  </w:Distillery>
+
+  <w:Distillery rdf:about="http://vocab.org/whisky/distilleries/kilchoman">
+    <rdfs:label>Kilchoman Distillery </rdfs:label>
+    <w:region rdf:resource="http://vocab.org/whisky/regions/islay" />
+  </w:Distillery>
+
+
+
+
+  <w:Brand rdf:about="http://vocab.org/whisky/brands/laphroaig">
+    <rdfs:label>Laphroaig</rdfs:label>
+  </w:Brand>
+
+
+
+  <w:WaterSource rdf:about="http://vocab.org/whisky/watersource/kilbride-dam">
+    <rdfs:label>The Kibride Dam</rdfs:label>
+  </w:WaterSource>
+
+
+  <w:WaterSource rdf:about="http://vocab.org/whisky/watersource/loch-uigeadail">
+    <rdfs:label>Loch Uigeadail</rdfs:label>
+  </w:WaterSource>
+
+  
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-10yr">
+    <rdfs:label>10 Year Old Laphroaig</rdfs:label>
+    <w:age>10</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>43</w:abv>
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-10yr-cask">
+    <rdfs:label>10 Year Old Laphroaig Cask Strength</rdfs:label>
+    <w:age>10</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>55.7</w:abv>
+
+    <rev:hasReview>
+      <w:WhiskyReview rdf:about="http://vocab.org/whisky/review/laphroaig-10yr-cask-1">
+        <foaf:primaryTopic rdf:resource="http://vocab.org/whisky/whiskies/laphroaig-10yr-cask" />
+        <w:colour>Dark Amber</w:colour>
+        <w:nose>Emergency room, Smoke, Peat and a little Honey</w:nose>
+        <w:body>Full</w:body>
+        <w:palate>Smoke, Butter, Honey, Sweet Malt, Peat, Salt, Warm</w:palate>
+        <w:finish>Medium, Sweet and a Little Smoky</w:finish>
+      </w:WhiskyReview>
+    </rev:hasReview>
+
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-15yr">
+    <rdfs:label>15 Year Old Laphroaig</rdfs:label>
+    <w:age>15</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>43</w:abv>
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-18yr">
+    <rdfs:label>18 Year Old Laphroaig</rdfs:label>
+    <w:age>18</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>43</w:abv>
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-25yr">
+    <rdfs:label>25 Year Old Laphroaig</rdfs:label>
+    <w:age>25</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>43</w:abv>
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-27yr">
+    <rdfs:label>27 Year Old Laphroaig</rdfs:label>
+    <w:age>27</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>43</w:abv>
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-30yr">
+    <rdfs:label>30 Year Old Laphroaig</rdfs:label>
+    <w:age>30</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>43</w:abv>
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-40yr">
+    <rdfs:label>40 Year Old Laphroaig</rdfs:label>
+    <w:age>40</w:age>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>43</w:abv>
+  </w:Whisky>
+
+  <w:Whisky rdf:about="http://vocab.org/whisky/whiskies/laphroaig-quartercask">
+    <rdfs:label>Laphroaig Quarter Cask</rdfs:label>
+    <w:agingCask rdf:resource="http://vocab.org/whisky/casks/bourbon" />
+    <w:brand rdf:resource="http://vocab.org/whisky/brands/laphroaig" />
+    <w:distillery rdf:resource="http://vocab.org/whisky/distilleries/laphroaig" />
+    <w:abv>48</w:abv>
+  </w:Whisky>
+
+
+
+
+</rdf:RDF>

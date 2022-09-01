@@ -1,0 +1,92 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:vann="http://purl.org/vocab/vann/" 
+  xmlns:dct="http://purl.org/dc/terms/" 
+  xmlns:dctype="http://purl.org/dc/dcmitype/" 
+  xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:ev="http://vocab.org/evidence/terms/"
+  xmlns:rev="http://www.purl.org/stuff/rev#"
+  xmlns:bib="http://purl.org/net/biblio#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:z="http://www.zotero.org/namespaces/export#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  >
+  
+  
+  <rdf:Description rdf:about="">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Sir_Thomas_More_(play)" />
+  </rdf:Description>
+  
+  <ev:Hypothesis rdf:about="http://vocab.org/evidence/data/hypothesis1">
+    <rdfs:comment>"Hand D" belongs to William Shakespeare</rdfs:comment>
+    <ev:conclusion rdf:resource="http://vocab.org/evidence/data/conclusion1"/>
+    <ev:supportingEvidence rdf:resource="http://vocab.org/evidence/data/evidence1" />
+    <ev:supportingEvidence rdf:resource="http://vocab.org/evidence/data/evidence2" />
+    <ev:supportingEvidence rdf:resource="http://vocab.org/evidence/data/evidence3" />
+  </ev:Hypothesis>
+  
+  <ev:Conclusion rdf:about="http://vocab.org/evidence/data/conclusion1">
+    <rdfs:comment>William Shakespeare contributed to the play "Sir Thomas More"</rdfs:comment>
+    <rdf:subject rdf:resource="http://dbpedia.org/resource/Sir_Thomas_More_(play)" />
+    <rdf:property rdf:resource="http://purl.org/dc/elements/1.1/contributor" />
+    <rdf:object rdf:resource="http://dbpedia.org/resource/William_Shakespeare" />
+  </ev:Conclusion>
+  
+  <ev:Hypothesis rdf:about="http://vocab.org/evidence/data/hypothesis2">
+    <rdfs:comment>Edward de Vere wrote all plays attributed to Shakespeare</rdfs:comment>
+    <ev:conclusion rdf:resource="http://vocab.org/evidence/data/conclusion2"/>
+    <ev:refutingEvidence rdf:resource="http://vocab.org/evidence/data/evidence1" />
+    <ev:refutingEvidence rdf:resource="http://vocab.org/evidence/data/evidence2" />
+    <ev:refutingEvidence rdf:resource="http://vocab.org/evidence/data/evidence3" />
+  </ev:Hypothesis>
+  
+  <ev:Conclusion rdf:about="http://vocab.org/evidence/data/conclusion2">
+    <rdfs:comment>Edward de Vere contributed to the play "Sir Thomas More"</rdfs:comment>
+    <rdf:subject rdf:resource="http://dbpedia.org/resource/Sir_Thomas_More_(play)" />
+    <rdf:property rdf:resource="http://purl.org/dc/elements/1.1/contributor" />
+    <rdf:object rdf:resource="http://dbpedia.org/resource/Edward_de_Vere%2C_17th_Earl_of_Oxford" />
+  </ev:Conclusion>
+  
+  <ev:Evidence rdf:about="http://vocab.org/evidence/data/evidence1">
+    <rdfs:comment>Handwriting similar to six existing signatures of Shakespeare</rdfs:comment>
+  </ev:Evidence>
+
+  <ev:Evidence rdf:about="http://vocab.org/evidence/data/evidence2">
+    <rdfs:comment>Spellings characteristic of Shakespeare</rdfs:comment>
+  </ev:Evidence>
+
+  <ev:Evidence rdf:about="http://vocab.org/evidence/data/evidence3">
+    <rdfs:comment>Stylistic elements similar to Shakespeare's acknowledged works</rdfs:comment>
+    <dc:source rdf:resource="urn:isbn:9780719016325" />
+  </ev:Evidence>
+  
+
+  <bib:Book rdf:about="urn:isbn:9780719016325">
+    <dc:title>Sir Thomas More</dc:title>
+    <dc:description>Modern spelling critical edition of Sir Thomas More</dc:description>
+    <dc:date>2002</dc:date>
+    <bib:pages>272</bib:pages>
+    <dc:identifier>9780719016325</dc:identifier>
+    <foaf:isPrimaryTopicOf rdf:resource="http://books.google.co.uk/books?id=Ine1pY9eaRMC" />
+  </bib:Book>
+
+<!--                     
+  <bib:Book RDF:ID="item_12807"
+                   z:itemType="book"
+                   dc:title="Sources of Four Plays Ascribed to Shakespeare"
+                   dc:date="1989"
+                   z:repository="Google Scholar">
+                   
+  <bib:Book RDF:about="http://www.archive.org/details/shakespeareshand00polluoft"
+                   z:itemType="book"
+                   dc:title="Internet Archive: Details: Shakespeare's hand in the play of Sir Thomas More; papers by Alfred W. Pollard [and others] With the text of Ill May day scenes"
+                   z:shortTitle="Internet Archive"
+                   dcterms:dateSubmitted="2008-09-25 10:46:20"
+                   z:repository="Internet Archive">
+                     
+-->  
+  
+</rdf:RDF>

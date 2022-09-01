@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Changesets</title><link rel="meta" type="application/rdf+xml" title="Changesets" href="http://purl.org/vocab/changeset/schema-20051214.rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Changesets</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://purl.org/vocab/changeset/schema-20051214">http://purl.org/vocab/changeset/schema-20051214</a> [<a href="http://purl.org/vocab/changeset/schema-20051214.html">HTML</a>] [<a href="http://purl.org/vocab/changeset/schema-20051214.rdf">RDF</a>]</dd><dt>Latest Version</dt><dd><a href="http://purl.org/vocab/changeset/schema#">http://purl.org/vocab/changeset/schema#</a></dd><dt>Authors</dt><dd>Sam Tunnicliffe</dd><dd>Ian Davis &lt;http://purl.org/NET/iand&gt;</dd><dt>Contributors</dt></dl><p class="rights">Copyright © 2005 Talis Information Ltd.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-schema">RDF Schema</a></li></ul><h2 id="sec-introduction">Introduction</h2><h2 id="sec-changes">Changes From Previous Version</h2><ul/><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://purl.org/vocab/changeset/schema#</code></pre><p>
+          When used in XML documents the suggested prefix is <code>cs</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/changeset/schema#addition
+http://purl.org/vocab/changeset/schema#ChangeSet</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>ChangeSet
+</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>addition
+removal</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      
+          one class
+        
+      and 
+      7 properties 
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">ChangeSet</a></td><td>class</td><td>The encapsulation of a delta between 2 versions of a resource description</td></tr><tr><td><a href="#term-addition" title="http://purl.org/vocab/changeset/schema#addition">addition</a></td><td>property</td><td></td></tr><tr><td><a href="#term-changeReason" title="http://purl.org/vocab/changeset/schema#changeReason">changeReason</a></td><td>property</td><td></td></tr><tr><td><a href="#term-createdDate" title="http://purl.org/vocab/changeset/schema#createdDate">createdDate</a></td><td>property</td><td></td></tr><tr><td><a href="#term-creatorName" title="http://purl.org/vocab/changeset/schema#creatorName">creatorName</a></td><td>property</td><td></td></tr><tr><td><a href="#term-precedingChangeSet" title="http://purl.org/vocab/changeset/schema#precedingChangeSet">precedingChangeSet</a></td><td>property</td><td></td></tr><tr><td><a href="#term-removal" title="http://purl.org/vocab/changeset/schema#removal">removal</a></td><td>property</td><td></td></tr><tr><td><a href="#term-subjectOfChange" title="http://purl.org/vocab/changeset/schema#subjectOfChange">subjectOfChange</a></td><td>property</td><td></td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-ChangeSet">Class: ChangeSet</h3><div class="description"><p class="definition"><strong>Definition: </strong>The encapsulation of a delta between 2 versions of a resource description</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#ChangeSet</td></tr><tr><th>Label:</th><td>ChangeSet</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-addition">Property: addition</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#addition</td></tr><tr><th>Label:</th><td>addition</td></tr><tr><th>Domain</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">rdf:Statement</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-addition" title="http://purl.org/vocab/changeset/schema#addition">cs:addition</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-changeReason">Property: changeReason</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#changeReason</td></tr><tr><th>Label:</th><td>changeReason</td></tr><tr><th>Domain</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-changeReason" title="http://purl.org/vocab/changeset/schema#changeReason">cs:changeReason</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-createdDate">Property: createdDate</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#createdDate</td></tr><tr><th>Label:</th><td>createdDate</td></tr><tr><th>Domain</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Subproperty of</th><td><a href="http://purl.org/dc/elements/1.1/date">dc:date</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-createdDate" title="http://purl.org/vocab/changeset/schema#createdDate">cs:createdDate</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-creatorName">Property: creatorName</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#creatorName</td></tr><tr><th>Label:</th><td>creatorName</td></tr><tr><th>Domain</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-creatorName" title="http://purl.org/vocab/changeset/schema#creatorName">cs:creatorName</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-precedingChangeSet">Property: precedingChangeSet</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#precedingChangeSet</td></tr><tr><th>Label:</th><td>precedingChangeSet</td></tr><tr><th>Domain</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Range</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-precedingChangeSet" title="http://purl.org/vocab/changeset/schema#precedingChangeSet">cs:precedingChangeSet</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-removal">Property: removal</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#removal</td></tr><tr><th>Label:</th><td>removal</td></tr><tr><th>Domain</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">rdf:Statement</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-removal" title="http://purl.org/vocab/changeset/schema#removal">cs:removal</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-subjectOfChange">Property: subjectOfChange</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/changeset/schema#subjectOfChange</td></tr><tr><th>Label:</th><td>subjectOfChange</td></tr><tr><th>Domain</th><td><a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-subjectOfChange" title="http://purl.org/vocab/changeset/schema#subjectOfChange">cs:subjectOfChange</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">cs:ChangeSet</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2005-12-14</span> - first issued</li></ul></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://purl.org/vocab/changeset/schema-20051214.rdf">http://purl.org/vocab/changeset/schema-20051214.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"></span>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2005-12-14</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Changesets</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/changeset/schema-20051214</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Sam Tunnicliffe</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Ian Davis &lt;http://purl.org/NET/iand&gt;</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span><span class="text">Copyright © 2005 Talis Information Ltd.</span><span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/changeset/schema#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">cs</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema-20051214.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema-20051214.rdf</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#addition</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">addition</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#removal</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">removal</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#subjectOfChange</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">subjectOfChange</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#precedingChangeSet</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">precedingChangeSet</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#createdDate</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">createdDate</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/date</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#changeReason</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">changeReason</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Literal</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#creatorName</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">creatorName</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Literal</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#ChangeSet</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">ChangeSet</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The encapsulation of a delta between 2 versions of a resource description</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/changeset/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-12-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><div id="footer">
+      Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Lifecycle Schema</title><link rel="meta" type="application/rdf+xml" title="Lifecycle Schema" href="http://purl.org/vocab/lifecycle/schema-20080603.rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Lifecycle Schema</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://purl.org/vocab/lifecycle/schema-20080603">http://purl.org/vocab/lifecycle/schema-20080603</a> [<a href="http://purl.org/vocab/lifecycle/schema-20080603.html">HTML</a>] [<a href="http://purl.org/vocab/lifecycle/schema-20080603.rdf">RDF</a>]</dd><dt>Latest Version</dt><dd><a href="http://purl.org/vocab/lifecycle/schema#">http://purl.org/vocab/lifecycle/schema#</a></dd><dt>Previous Version</dt><dd><a href="http://purl.org/vocab/lifecycle/schema-20080603">http://purl.org/vocab/lifecycle/schema-20080603</a></dd><dt>Authors</dt><dd>Rob Styles</dd><dd>Nadeem Shabir</dd><dt>Contributors</dt></dl><p class="rights">Copyright © 2008 Talis Information Ltd</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-examples">Examples</a></li><li><a href="#sec-schema">RDF Schema</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="comment">
+			The Lifecycle Schema provides classes and properties that allow the specification of a lifecycle that any resource may pass through. It's intention to allow the description of the states and transitions that constitute a given lifecycle without imposing any constraint on the way in which transitions happen or how long it may take to move through a lifecycle.
+    	</p><h2 id="sec-changes">Changes From Previous Version</h2><ul><li class="historyNote">2008-06-03 - semantic change by Rob Styles:
+			"First cut of the ontology published"
+    </li></ul><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://purl.org/vocab/lifecycle/schema#</code></pre><p>
+          When used in XML documents the suggested prefix is <code>lifecycle</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/lifecycle/schema#state
+http://purl.org/vocab/lifecycle/schema#Lifecycle</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>Lifecycle
+State</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>state
+stateOf</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      6 classes 
+        
+      and 
+      12 properties 
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-Action" title="http://purl.org/vocab/lifecycle/schema#Action">Action</a></td><td>class</td><td>Represents an instance of a task taking place against a given resource</td></tr><tr><td><a href="#term-Lifecycle" title="http://purl.org/vocab/lifecycle/schema#Lifecycle">Lifecycle</a></td><td>class</td><td>A lifecycle is a series of states connected by allowable transitions. It may be used to describe the lifecycle of business objects or equally the lifecycle of a butterfly.</td></tr><tr><td><a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">State</a></td><td>class</td><td>A state describes one possible state that a resource can be in at a given time. Resources may be in one state in a given lifecycle at any given time, states are considered mutually exclusive within a lifecycle.</td></tr><tr><td><a href="#term-Task" title="http://purl.org/vocab/lifecycle/schema#Task">Task</a></td><td>class</td><td>Represents a task in a workflow</td></tr><tr><td><a href="#term-TaskGroup" title="http://purl.org/vocab/lifecycle/schema#TaskGroup">TaskGroup</a></td><td>class</td><td>Represents a collection of tasks grouped together for convenience</td></tr><tr><td><a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">Transition</a></td><td>class</td><td>A transition describes the way in which a resource moves from one state to another state and may also describe the tasks required to make that transition.</td></tr><tr><td><a href="#term-completed" title="http://purl.org/vocab/lifecycle/schema#completed">completed</a></td><td>property</td><td>This uses a boolean to represent if an action has been completed. This is a simple alternative to the taskProgress property.</td></tr><tr><td><a href="#term-mandatory" title="http://purl.org/vocab/lifecycle/schema#mandatory">mandatory</a></td><td>property</td><td>Sepcifies if a task is mandatory or optional.</td></tr><tr><td><a href="#term-next" title="http://purl.org/vocab/lifecycle/schema#next">next</a></td><td>property</td><td>provides a simple ordering relationship to allow tasks to be ordered in user interfaces.</td></tr><tr><td><a href="#term-possibleState" title="http://purl.org/vocab/lifecycle/schema#possibleState">possibleState</a></td><td>property</td><td>The possible state property is used to identify the states that occur within a given lifecycle and are thus the possible states of a resource going through that lifecycle.</td></tr><tr><td><a href="#term-possibleTransition" title="http://purl.org/vocab/lifecycle/schema#possibleTransition">possibleTransition</a></td><td>property</td><td>When in a state there may be many possible transitions.</td></tr><tr><td><a href="#term-resource" title="http://purl.org/vocab/lifecycle/schema#resource">resource</a></td><td>property</td><td>The resource on which the action being taken. This is a resource that is being processed through a lifecycle.</td></tr><tr><td><a href="#term-resultingState" title="http://purl.org/vocab/lifecycle/schema#resultingState">resultingState</a></td><td>property</td><td>Once a transition is completed the state of the resource should change to the state specified as the resulting state.</td></tr><tr><td><a href="#term-state" title="http://purl.org/vocab/lifecycle/schema#state">state</a></td><td>property</td><td>The state property relates any resource with the state that it is currently in.</td></tr><tr><td><a href="#term-stateOf" title="http://purl.org/vocab/lifecycle/schema#stateOf">stateOf</a></td><td>property</td><td>The 'state of' property is the inverse of the state property, relating a state to all of the resources currently in that state.</td></tr><tr><td><a href="#term-task" title="http://purl.org/vocab/lifecycle/schema#task">task</a></td><td>property</td><td>A task related to this transition.</td></tr><tr><td><a href="#term-taskGroup" title="http://purl.org/vocab/lifecycle/schema#taskGroup">taskGroup</a></td><td>property</td><td>A task group related to this transition.</td></tr><tr><td><a href="#term-taskProgress" title="http://purl.org/vocab/lifecycle/schema#taskProgress">taskProgress</a></td><td>property</td><td>The current progress on this task. Some resources are defined in this ontology for this, but you are free to define your own.</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Action">Class: Action</h3><div class="description"><p class="comment">Represents an instance of a task taking place against a given resource</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#Action</td></tr><tr><th>Label:</th><td>Action</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Lifecycle">Class: Lifecycle</h3><div class="description"><p class="comment">A lifecycle is a series of states connected by allowable transitions. It may be used to describe the lifecycle of business objects or equally the lifecycle of a butterfly.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#Lifecycle</td></tr><tr><th>Label:</th><td>Lifecycle</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-State">Class: State</h3><div class="description"><p class="comment">A state describes one possible state that a resource can be in at a given time. Resources may be in one state in a given lifecycle at any given time, states are considered mutually exclusive within a lifecycle.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#State</td></tr><tr><th>Label:</th><td>State</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Task">Class: Task</h3><div class="description"><p class="comment">Represents a task in a workflow</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#Task</td></tr><tr><th>Label:</th><td>Task</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-TaskGroup">Class: TaskGroup</h3><div class="description"><p class="comment">Represents a collection of tasks grouped together for convenience</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#TaskGroup</td></tr><tr><th>Label:</th><td>Task Group</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Transition">Class: Transition</h3><div class="description"><p class="comment">A transition describes the way in which a resource moves from one state to another state and may also describe the tasks required to make that transition.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#Transition</td></tr><tr><th>Label:</th><td>Transition</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-completed">Property: completed</h3><div class="description"><p class="comment">This uses a boolean to represent if an action has been completed. This is a simple alternative to the taskProgress property.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#completed</td></tr><tr><th>Label:</th><td>completed</td></tr><tr><th>Domain</th><td><a href="#term-Action" title="http://purl.org/vocab/lifecycle/schema#Action">lifecycle:Action</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-completed" title="http://purl.org/vocab/lifecycle/schema#completed">lifecycle:completed</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Action" title="http://purl.org/vocab/lifecycle/schema#Action">lifecycle:Action</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-mandatory">Property: mandatory</h3><div class="description"><p class="comment">Sepcifies if a task is mandatory or optional.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#mandatory</td></tr><tr><th>Label:</th><td>mandatory</td></tr><tr><th>Domain</th><td><a href="#term-Task" title="http://purl.org/vocab/lifecycle/schema#Task">lifecycle:Task</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-mandatory" title="http://purl.org/vocab/lifecycle/schema#mandatory">lifecycle:mandatory</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Task" title="http://purl.org/vocab/lifecycle/schema#Task">lifecycle:Task</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-next">Property: next</h3><div class="description"><p class="comment">provides a simple ordering relationship to allow tasks to be ordered in user interfaces.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#next</td></tr><tr><th>Label:</th><td>next</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-Task" title="http://purl.org/vocab/lifecycle/schema#Task">lifecycle:Task</a>
+					 or a <a href="#term-TaskGroup" title="http://purl.org/vocab/lifecycle/schema#TaskGroup">lifecycle:TaskGroup</a>
+				
+			</td></tr><tr><th>Range</th><td>Union of 
+				
+					<a href="#term-Task" title="http://purl.org/vocab/lifecycle/schema#Task">lifecycle:Task</a>
+					 or a <a href="#term-TaskGroup" title="http://purl.org/vocab/lifecycle/schema#TaskGroup">lifecycle:TaskGroup</a>
+				
+			</td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-next" title="http://purl.org/vocab/lifecycle/schema#next">lifecycle:next</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-Task" title="http://purl.org/vocab/lifecycle/schema#Task">lifecycle:Task</a> or a <a href="#term-TaskGroup" title="http://purl.org/vocab/lifecycle/schema#TaskGroup">lifecycle:TaskGroup</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-possibleState">Property: possibleState</h3><div class="description"><p class="comment">The possible state property is used to identify the states that occur within a given lifecycle and are thus the possible states of a resource going through that lifecycle.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#possibleState</td></tr><tr><th>Label:</th><td>possible state</td></tr><tr><th>Domain</th><td><a href="#term-Lifecycle" title="http://purl.org/vocab/lifecycle/schema#Lifecycle">lifecycle:Lifecycle</a></td></tr><tr><th>Range</th><td><a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">lifecycle:State</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-possibleState" title="http://purl.org/vocab/lifecycle/schema#possibleState">lifecycle:possibleState</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Lifecycle" title="http://purl.org/vocab/lifecycle/schema#Lifecycle">lifecycle:Lifecycle</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-possibleTransition">Property: possibleTransition</h3><div class="description"><p class="comment">When in a state there may be many possible transitions.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#possibleTransition</td></tr><tr><th>Label:</th><td>possible transition</td></tr><tr><th>Domain</th><td><a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">lifecycle:State</a></td></tr><tr><th>Range</th><td><a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">lifecycle:Transition</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-possibleTransition" title="http://purl.org/vocab/lifecycle/schema#possibleTransition">lifecycle:possibleTransition</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">lifecycle:State</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-resource">Property: resource</h3><div class="description"><p class="comment">The resource on which the action being taken. This is a resource that is being processed through a lifecycle.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#resource</td></tr><tr><th>Label:</th><td>resource</td></tr><tr><th>Domain</th><td><a href="#term-Action" title="http://purl.org/vocab/lifecycle/schema#Action">lifecycle:Action</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource">rdf:Resource</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-resource" title="http://purl.org/vocab/lifecycle/schema#resource">lifecycle:resource</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Action" title="http://purl.org/vocab/lifecycle/schema#Action">lifecycle:Action</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-resultingState">Property: resultingState</h3><div class="description"><p class="comment">Once a transition is completed the state of the resource should change to the state specified as the resulting state.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#resultingState</td></tr><tr><th>Label:</th><td>resulting state</td></tr><tr><th>Domain</th><td><a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">lifecycle:Transition</a></td></tr><tr><th>Range</th><td><a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">lifecycle:State</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-resultingState" title="http://purl.org/vocab/lifecycle/schema#resultingState">lifecycle:resultingState</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">lifecycle:Transition</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-state">Property: state</h3><div class="description"><p class="comment">The state property relates any resource with the state that it is currently in.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#state</td></tr><tr><th>Label:</th><td>state</td></tr><tr><th>Domain</th><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource">rdf:Resource</a></td></tr><tr><th>Range</th><td><a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">lifecycle:State</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-state" title="http://purl.org/vocab/lifecycle/schema#state">lifecycle:state</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource">rdf:Resource</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-stateOf">Property: stateOf</h3><div class="description"><p class="comment">The 'state of' property is the inverse of the state property, relating a state to all of the resources currently in that state.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#stateOf</td></tr><tr><th>Label:</th><td>state of</td></tr><tr><th>Domain</th><td><a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">lifecycle:State</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource">rdf:Resource</a></td></tr><tr><th>Inverse of</th><td><a href="#term-state" title="http://purl.org/vocab/lifecycle/schema#state">lifecycle:state</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-stateOf" title="http://purl.org/vocab/lifecycle/schema#stateOf">lifecycle:stateOf</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-State" title="http://purl.org/vocab/lifecycle/schema#State">lifecycle:State</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-task">Property: task</h3><div class="description"><p class="comment">A task related to this transition.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#task</td></tr><tr><th>Label:</th><td>task</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-TaskGroup" title="http://purl.org/vocab/lifecycle/schema#TaskGroup">lifecycle:TaskGroup</a>
+					 or a <a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">lifecycle:Transition</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="#term-Task" title="http://purl.org/vocab/lifecycle/schema#Task">lifecycle:Task</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-task" title="http://purl.org/vocab/lifecycle/schema#task">lifecycle:task</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-TaskGroup" title="http://purl.org/vocab/lifecycle/schema#TaskGroup">lifecycle:TaskGroup</a> or a <a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">lifecycle:Transition</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-taskGroup">Property: taskGroup</h3><div class="description"><p class="comment">A task group related to this transition.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#taskGroup</td></tr><tr><th>Label:</th><td>task group</td></tr><tr><th>Domain</th><td><a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">lifecycle:Transition</a></td></tr><tr><th>Range</th><td><a href="#term-TaskGroup" title="http://purl.org/vocab/lifecycle/schema#TaskGroup">lifecycle:TaskGroup</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-taskGroup" title="http://purl.org/vocab/lifecycle/schema#taskGroup">lifecycle:taskGroup</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Transition" title="http://purl.org/vocab/lifecycle/schema#Transition">lifecycle:Transition</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-taskProgress">Property: taskProgress</h3><div class="description"><p class="comment">The current progress on this task. Some resources are defined in this ontology for this, but you are free to define your own.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/lifecycle/schema#taskProgress</td></tr><tr><th>Label:</th><td>task progress</td></tr><tr><th>Domain</th><td><a href="#term-Action" title="http://purl.org/vocab/lifecycle/schema#Action">lifecycle:Action</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/lifecycle/schema#TaskProgress">lifecycle:TaskProgress</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-taskProgress" title="http://purl.org/vocab/lifecycle/schema#taskProgress">lifecycle:taskProgress</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Action" title="http://purl.org/vocab/lifecycle/schema#Action">lifecycle:Action</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-06-03</span> - first issued</li></ul></div></div><h2 id="sec-examples">Examples</h2><div class="example"><h3>Diagram of Lifecycle Ontology</h3><body>
+
+<img src="schema-diagram.jpg"/>
+
+</body></div><div class="example"><h3>Job Application Example of Lifecycle Ontology</h3><body>
+	<p>
+		The following example (in Turtle) describes the lifecycle of a job application.
+	</p><p>
+		We have an applicant, a foaf agent:
+	</p>
+	<pre xml:space="preserve">
+		@prefix foaf: &lt;http://xmlns.com/foaf/spec/&gt;
+
+		&lt;http://example.com/foaf/geoff&gt;
+			a foaf:Person;
+			foaf:name "Geoff Foo".
+	</pre>
+	<p>
+		Geoff has applied for a job at example.com and his application has been received:
+	</p>
+	<pre xml:space="preserve">
+		@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+		@prefix lifecycle: &lt;http://purl.org/vocab/lifecycle/schema#&gt;
+		@prefix job: &lt;http://example.com/schemas/job-application/schema#&gt;
+		@prefix jobApplication: &lt;http://example.com/lifecycles/job-application#&gt;
+
+		&lt;http://example.com/jobs/application-12997&gt;
+			rdfs:label "Job application from Geoff Foo";
+			a job:Application;
+			job:applicant &lt;http://example.com/foaf/geoff&gt;;
+			lifecycle:state jobApplication:Received.
+	</pre>
+	<p>His application is being stored using a very basic example ontology:</p>
+	<pre xml:space="preserve">
+		@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+		@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+		@prefix foaf: &lt;http://xmlns.com/foaf/spec/&gt;
+		@prefix job: &lt;http://example.com/schemas/job-application/schema#&gt;
+
+		job:Application
+			a rdfs:Class;
+			rdfs:Label "A class representing an application for a job".
+
+		job:applicant
+			a rdf:Property;
+			rdfs:Label "A foaf agent who is applying for a job";
+			rdfs:domain job:Application;
+			rdfs:range foaf:Agent.
+	</pre>
+	<p>
+		We can see from the snippet for Geoff's application that his application is the "Received" state. Actions are already underway to process it:
+	</p>
+	<pre xml:space="preserve">
+		@prefix lifecycle: &lt;http://purl.org/vocab/lifecycle/schema#&gt;
+		@prefix jobApplication: &lt;http://example.com/lifecycles/job-application#&gt;
+
+		&lt;http://example.com/actions/124353648593626818&gt;
+			a lifecycle:Action;
+			lifecycle:resource &lt;http://example.com/jobs/application-12997&gt;;
+			lifecycle:task jobApplication:confirmRightToWork;
+			lifecycle:taskProgress lifecycle:Completed.
+
+		&lt;http://example.com/actions/985637ahj7826127y&gt;
+			a lifecycle:Action;
+			lifecycle:resource &lt;http://example.com/jobs/application-12997&gt;;
+			lifecycle:task jobApplication:checkForPreviousApplications;
+			lifecycle:taskProgress lifecycle:Started.
+	</pre>
+	<p>
+		The state of Geoff's application, and the actions that have taken place to process it thus far have been specified using the Lifecycle ontology. The specification of the job application process looks like this:
+	</p>
+	<pre xml:space="preserve">
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+@prefix foaf: &lt;http://xmlns.com/foaf/spec/&gt;
+@prefix lifecycle: &lt;http://purl.org/vocab/lifecycle/schema#&gt;
+@prefix job: &lt;http://example.com/schemas/job-application/schema#&gt;
+@prefix jobApplication: &lt;http://example.com/lifecycles/job-application#&gt;
+
+jobApplication:ApplicationProcess
+	rdfs:Label "Lifecycle for Processing Job Applications"
+	a lifecycle:Lifecycle;
+	possibleState jobApplication:Received;
+	possibleState jobApplication:Reviewed;
+	possibleState jobApplication:ToInterview;
+	possibleState jobApplication:Interviewed;
+	possibleState jobApplication:Offered;
+	possibleState jobApplication:TheyDeclined;
+	possibleState jobApplication:WeDeclined;
+	possibleState jobApplication:Accepted.
+
+jobApplication:Received
+	a lifecycle:State;
+	rdfs:Label "Received";
+	lifecycle:possibleTransition jobApplication:reviewApplication;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Reviewed
+	a lifecycle:State;
+	rdfs:Label "Reviewed";
+	lifecycle:possibleTransition jobApplication:acceptApplication;
+	lifecycle:possibleTransition jobApplication:declineByLetter;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:ToInterview
+	a lifecycle:State;
+	rdfs:Label "To Interview";
+	lifecycle:possibleTransition jobApplication:arrangeInterview;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Interviewed
+	a lifecycle:State;
+	rdfs:Label "Interviewed";
+	lifecycle:possibleTransition jobApplication:makeOffer;
+	lifecycle:possibleTransition jobApplication:declineByPhone;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Offered
+	a lifecycle:State;
+	rdfs:Label "An offer has been made";
+	lifecycle:possibleTransition jobApplication:acceptOffer;
+	lifecycle:possibleTransition jobApplication:declineOffer;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Accepted
+	a lifecycle:State;
+	rdfs:Label "The applicant has accepted this role";
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:TheyDeclined
+	a lifecycle:State;
+	rdfs:Label "The applicant has declined this role".
+
+jobApplication:WeDeclined
+	a lifecycle:State;
+	rdfs:Label "We have declined this applicant".
+
+jobApplication:acceptApplication
+	a lifecycle:Transition;
+	rdfs:Label "Accept this application";
+	lifecycle:resultingState jobApplication:ToInterview.
+	
+jobApplication:acceptOffer
+	a lifecycle:Transition;
+	rdfs:Label "Accept this offer";
+	lifecycle:resultingState jobApplication:Accepted.
+
+jobApplication:arrangeInterview
+	a lifecycle:Transition;
+	rdfs:Label "Arrange an Interview";
+	lifecycle:taskGroup jobApplication:arrangeInternalDates;
+	lifecycle:task jobApplication:arrangeExternalDates;
+	lifecycle:task jobApplication:sendDetailsToEveryone;	
+	lifecycle:resultingState jobApplication:Interviewed.
+
+jobApplication:declineByLetter
+	a lifecycle:Transition;
+	rdfs:Label "Decline this application by letter";
+	lifecycle:resultingState jobApplication:WeDeclined.
+
+jobApplication:declineByPhone
+	a lifecycle:Transition;
+	rdfs:Label "Decline this application by phone";
+	lifecycle:resultingState jobApplication:WeDeclined.
+
+jobApplication:declineOffer
+	a lifecycle:Transition;
+	rdfs:Label "Decline this offer";
+	lifecycle:resultingState jobApplication:TheyDeclined.
+
+jobApplication:makeOffer
+	a lifecycle:Transition;
+	rdfs:Label "Make an offer to this applicant";
+	lifecycle:resultingState jobApplication:Offered.
+
+jobApplication:reviewApplication
+	a lifecycle:Transition;
+	rdfs:Label "Review this application";
+	lifecycle:task jobApplication:confirmRightToWork;
+	lifecycle:task jobApplication:checkForPreviousApplications;	
+	lifecycle:resultingState jobApplication:Reviewed.
+
+jobApplication:withdrawApplication
+	a lifecycle:Transition;
+	rdfs:Label "Withdraw this application";
+	lifecycle:resultingState jobApplication:TheyDeclined.
+
+jobApplication:confirmRightToWork
+	a lifecycle:Task;
+	rdfs:Label "Confirm Right To Work";
+	lifecycle:mandatory "true"^^xsd:boolean;
+	lifecycle:next jobApplication:checkForPreviousApplications.
+	
+jobApplication:checkForPreviousApplications
+	a lifecycle:Task;
+	rdfs:Label "Check for Previous Applications".
+
+jobApplication:arrangeInternalDates
+	a lifecycle:taskGroup;
+	rdfs:Label "Arrange internal interviewer dates";
+	lifecycle:task jobApplication:findLineManagerDates;
+	lifecycle:task jobApplication:findSecondaryInterviewerDates;
+	lifecycle:next jobApplication:arrangeExternalDates.
+	
+jobApplication:arrangeExternalDates
+	a lifecycle:task;
+	rdfs:Label "Arrange dates with applicant";
+	lifecycle:next jobApplication:sendDetailsToEveryone.
+	
+jobApplication:sendDetailsToEveryone
+	a lifecycle:task;
+	rdfs:Label "Send interview details to everyone".
+
+jobApplication:findLineManagerDates
+	a lifecycle:task;
+	rdfs:Label "Find available dates for interviewing manager";
+	lifecycle:next jobApplication:findSecondaryInterviewerDates.
+
+jobApplication:findSecondaryInterviewerDates
+	a lifecycle:task;
+	rdfs:Label "Find available dates for secondary interviewers".
+	</pre>
+</body></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://purl.org/vocab/lifecycle/schema-20080603.rdf">http://purl.org/vocab/lifecycle/schema-20080603.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:xsd</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"/>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2008-06-03</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Lifecycle Schema</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The Lifecycle Schema provides classes and properties that allow the </span>
+      <span class="text">specification of a lifecycle that any resource may pass through. It's </span>
+      <span class="text">intention to allow the description of the states and transitions that </span>
+      <span class="text">constitute a given lifecycle without imposing any constraint on the way </span>
+      <span class="text">in which transitions happen or how long it may take to move through a </span>
+      <span class="text">lifecycle.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/lifecycle/schema-20080603</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Rob Styles</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Nadeem Shabir</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span><span class="text">Copyright © 2008 Talis Information Ltd</span><span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/lifecycle/schema#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">lifecycle</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;vann:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">schema-diagram.html</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;vann:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">example-job-application-lifecycle.html</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:replaces</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema-20080603</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema-20080603.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema-20080603.rdf</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">First cut of the ontology published</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-06-03</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"/>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Lifecycle</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Lifecycle</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A lifecycle is a series of states connected by allowable transitions. It </span>
+      <span class="text">may be used to describe the lifecycle of business objects or equally the </span>
+      <span class="text">lifecycle of a butterfly.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#State</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">State</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A state describes one possible state that a resource can be in at a </span>
+      <span class="text">given time. Resources may be in one state in a given lifecycle at any </span>
+      <span class="text">given time, states are considered mutually exclusive within a lifecycle.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Transition</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Transition</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A transition describes the way in which a resource moves from one state </span>
+      <span class="text">to another state and may also describe the tasks required to make that </span>
+      <span class="text">transition.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskGroup</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Task Group</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Represents a collection of tasks grouped together for convenience</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Task</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Task</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Represents a task in a workflow</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Action</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Action</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Represents an instance of a task taking place against a given resource</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#state</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">state</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">The state property relates any resource with the state that it is </span>
+      <span class="text">currently in.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#State</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#stateOf</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">state of</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">The 'state of' property is the inverse of the state property, relating a </span>
+      <span class="text">state to all of the resources currently in that state.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#State</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#state</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#possibleState</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">possible state</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">The possible state property is used to identify the states that occur </span>
+      <span class="text">within a given lifecycle and are thus the possible states of a resource </span>
+      <span class="text">going through that lifecycle.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Lifecycle</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#State</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#resultingState</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">resulting state</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">Once a transition is completed the state of the resource should change </span>
+      <span class="text">to the state specified as the resulting state.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Transition</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#State</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#possibleTransition</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">possible transition</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">When in a state there may be many possible transitions.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#State</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Transition</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#completed</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">completed</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">This uses a boolean to represent if an action has been completed. This </span>
+      <span class="text">is a simple alternative to the taskProgress property.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Action</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#boolean</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#mandatory</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">mandatory</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">Sepcifies if a task is mandatory or optional.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Task</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#boolean</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#next</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">next</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">provides a simple ordering relationship to allow tasks to be ordered in </span>
+      <span class="text">user interfaces.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Task</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskGroup</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:range</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Task</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskGroup</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:range&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#taskGroup</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">task group</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">A task group related to this transition.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Transition</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskGroup</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#task</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">task</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span><span class="text">A task related to this transition.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskGroup</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Transition</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Task</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#taskProgress</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">task progress</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">The current progress on this task. Some resources are defined in this </span>
+      <span class="text">ontology for this, but you are free to define your own.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Action</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskProgress</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#resource</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">resource</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span><span class="elem">&gt;</span>
+      <span class="text">The resource on which the action being taken. This is a resource that is </span>
+      <span class="text">being processed through a lifecycle.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Action</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-06-03</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Description</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Completed</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Completed</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Represents that an individual task has been completed.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskProgress</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Description&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Description</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#Started</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Started</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Represents that an individual task has been started.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskProgress</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Description&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Description</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#OnHold</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">On Hold</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Represents that an individual task has been placed on hold.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdf:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#TaskProgress</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Description&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.<p>The following section is informational only, please refer to the 
+			<a href="http://creativecommons.org/licenses/by/2.0/uk/">Original License</a> for complete license terms.
+		</p><p>This license grants the following rights:</p><ul><li>making multiple copies
+						(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+					</li><li>distribution, public display, and publicly performance
+						(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+					</li><li>creation and distribution of derivative works
+						(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+					</li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license notices be kept intact
+						(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+					</li><li>credit be given to copyright holder and/or author
+						(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+					</li></ul></p><div id="footer">
+      Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

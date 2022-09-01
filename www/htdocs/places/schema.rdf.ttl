@@ -1,0 +1,500 @@
+@prefix cc: <http://web.resource.org/cc/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geographis: <http://www.telegraphis.net/ontology/geography/geography#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix place: <http://purl.org/ontology/places#> .
+@prefix po: <http://purl.org/ontology/po/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/ontology/places> a owl:Ontology
+; dcterms:created "2010-11-27"^^xsd:date
+; dcterms:title "The Places Ontology"@en
+; rdfs:comment "The Places Ontology is a simple lightweight ontology for describing places of geographic interest."@en
+; dcterms:description "The Places Ontology is a simple lightweight ontology for describing places of geographic interest."@en
+; foaf:maker <http://purl.org/ontology/places/#tom>, <http://purl.org/ontology/places/#rob>, <http://purl.org/ontology/places/#michael>
+; vann:preferredNamespaceUri "http://purl.org/ontology/places#"
+; vann:preferredNamespacePrefix "place"
+.
+
+<http://purl.org/ontology/places> a cc:Work
+; cc:license <http://creativecommons.org/licenses/by/1.0/>
+; dcterms:type <http://purl.org/dc/dcmitype/Text>
+.
+
+<http://creativecommons.org/licenses/by/1.0/> a cc:Licence
+; cc:permits <http://web.resource.org/cc/Reproduction>
+; cc:permits <http://web.resource.org/cc/Distribution>
+; cc:requires <http://web.resource.org/cc/Notice>
+; cc:requires <http://web.resource.org/cc/Attribution>
+; cc:permits <http://web.resource.org/cc/DerivativeWorks>
+.
+
+<http://purl.org/ontology/places/#michael> a foaf:Person
+; foaf:name "Michael Smethurst"
+.
+
+<http://purl.org/ontology/places/#tom> a foaf:Person
+; foaf:name "Tom Scott"
+.
+
+<http://purl.org/ontology/places/#rob> a foaf:Person
+; foaf:name "Rob Styles"
+.
+
+#####################################################################
+# Classes
+#####################################################################
+
+place:Plate a owl:Class
+; rdfs:label "Plate"
+; rdfs:comment "A geological plate, a piece of the earth’s crust. Useful for geological descriptions involving the movement and separation of continents."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Tectonic_plate>
+; rdfs:isDefinedBy place:
+.
+
+place:LandMass a owl:Class
+; rdfs:label "LandMass"
+; rdfs:comment "A piece of land, useful in combination with Continent, Plate and others."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Landmass>
+; rdfs:isDefinedBy place:
+.
+
+place:Island a owl:Class
+; rdfs:label "Island"
+; rdfs:comment "A landmass surrounded entirely by water."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Island>
+; rdfs:isDefinedBy place:
+.
+
+place:Continent a owl:Class
+; rdfs:label "Continent"
+; rdfs:comment "A large landmass recognised by convention as a continent."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Continent>
+; rdfs:isDefinedBy place:
+; owl:equivalentClass <http://dbpedia.org/ontology/Continent>
+; owl:equivalentClass geographis:Continent
+.
+
+place:Country a owl:Class
+; rdfs:label "Country"
+; rdfs:comment "A region considered to be the territory of a recognised political state."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Country>
+; rdfs:isDefinedBy place:
+; owl:equivalentClass <http://dbpedia.org/ontology/Country>
+.
+
+place:Region a owl:Class
+; rdfs:label "Region"
+; rdfs:comment "A politically or culturally recognised area."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Region>
+; rdfs:isDefinedBy place:
+.
+
+place:ArbitraryRegion a owl:Class
+; rdfs:label "ArbitraryRegion"
+; rdfs:comment "An area that is useful to illustrate a particular point but does not have a recognised political or cultural identity."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:City a owl:Class
+; rdfs:label "City"
+; rdfs:comment "A large settlement, often with some form of formal political recognition."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/City>
+; rdfs:isDefinedBy place:
+; owl:equivalentClass <http://dbpedia.org/ontology/City>
+.
+
+place:Town a owl:Class
+; rdfs:label "Town"
+; rdfs:comment "A settlement smaller than a city but larger than a village."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Town>
+; rdfs:isDefinedBy place:
+.
+
+place:Village a owl:Class
+; rdfs:label "Village"
+; rdfs:comment "A small human settlement."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Village>
+; rdfs:isDefinedBy place:
+.
+
+place:Lake a owl:Class
+; rdfs:label "Lake"
+; rdfs:comment "An inland body of water."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Lake>
+; rdfs:isDefinedBy place:
+; owl:equivalentClass <http://dbpedia.org/ontology/Lake>
+.
+
+place:River a owl:Class
+; rdfs:label "River"
+; rdfs:comment "A natural watercourse flowing towards an ocean, sea or lake."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/River>
+; rdfs:isDefinedBy place:
+; owl:equivalentClass <http://dbpedia.org/ontology/River>
+.
+
+place:Sea a owl:Class
+; rdfs:label "Sea"
+; rdfs:comment "A large body of salt water, usually connected to an ocean."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Sea>
+; rdfs:isDefinedBy place:
+.
+
+place:Ocean a owl:Class
+; rdfs:label "Ocean"
+; rdfs:comment "A major body of salt water."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Ocean>
+; rdfs:isDefinedBy place:
+.
+
+place:Mountain a owl:Class
+; rdfs:label "Mountain"
+; rdfs:comment "A mountain is a large landform that stretches above the surrounding land in a limited area usually in the form of a peak. A mountain is generally steeper than a hill."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Mountain>
+; rdfs:isDefinedBy place:
+; owl:equivalentClass <http://dbpedia.org/ontology/Mountain>
+.
+
+place:Hill a owl:Class
+; rdfs:label "Hill"
+; rdfs:comment "A hill is a landform that extends above the surrounding terrain."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Hill>
+; rdfs:isDefinedBy place:
+.
+
+place:Desert a owl:Class
+; rdfs:label "Desert"
+; rdfs:comment "A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/Desert>
+; rdfs:isDefinedBy place:
+.
+
+place:County a owl:Class
+; rdfs:label "County"
+; rdfs:comment "A county is a land area of local governance within a country. A county may have cities and towns within its area."
+; vs:term_status "testing"
+; rdfs:seeAlso <http://en.wikipedia.org/wiki/County>
+; rdfs:isDefinedBy place:
+.
+
+place:State a owl:Class
+; rdfs:label "State"
+; rdfs:comment "A State is a land area of governance within a country. A state may have counties, cities and towns within its area."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Hamlet a owl:Class
+; rdfs:label "Hamlet"
+; rdfs:comment "A Hamlet is a small human settlement consisting of just a few dwellings."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Settlement a owl:Class
+; rdfs:label "Settlement"
+; rdfs:comment "A Settlement is an area of land inhabited by humans and usually having buildings."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Reservoir a owl:Class
+; rdfs:label "Reservoir"
+; rdfs:comment "A man-made or natural lake used for the storage and regulation of a water supply."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Beach a owl:Class
+; rdfs:label "Beach"
+; rdfs:comment "The shore of a body of water, usually sandy or pebbly."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Road a owl:Class
+; rdfs:label "Road"
+; rdfs:comment "A Road is a recognised and maintained route from one place to another that is suitable for vehicles."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Path a owl:Class
+; rdfs:label "Path"
+; rdfs:comment " A Path is a recognised and maintained route from one place to another that is suitable for pedestrians."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Bay a owl:Class
+; rdfs:label "Bay"
+; rdfs:comment "An indentation to a shoreline, a body of water enclosed but with a large mouth to a wider body of water."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Estuary a owl:Class
+; rdfs:label "Estuary"
+; rdfs:comment "The widened area of a river as it opens to meet the sea or ocean."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Valley a owl:Class
+; rdfs:label "Valley"
+; rdfs:comment "A depressed area of land, often between mountains and often containing a river."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Plain a owl:Class
+; rdfs:label "Plain"
+; rdfs:comment "A level area of land."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Cliff a owl:Class
+; rdfs:label "Cliff"
+; rdfs:comment "A steep high face of rock."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Ridge a owl:Class
+; rdfs:label "Ridge"
+; rdfs:comment "A long elevation or striation in the land."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Plateau a owl:Class
+; rdfs:label "Plateau"
+; rdfs:comment "A flat highland, a large area of flat land higher than the surrounding land."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Isthmus a owl:Class
+; rdfs:label "Isthmus"
+; rdfs:comment "A narrow strip of land, bounded by water on two sides, and connecting two larger landmasses."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Peninsula a owl:Class
+; rdfs:label "Peninsula"
+; rdfs:comment "A landmass projecting out into a body of water."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Glacier a owl:Class
+; rdfs:label "Glacier"
+; rdfs:comment "A slow-moving mass of ice."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Strait a owl:Class
+; rdfs:label "Strait"
+; rdfs:comment "A narrow channel of a sea joining two larger bodies of water."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Cape a owl:Class
+; rdfs:label "Cape"
+; rdfs:comment "A strip of land projecting into a body of water"
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Watershed a owl:Class
+; rdfs:label "Watershed"
+; rdfs:comment "A ridge of land seperating two adjacent water systems."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Volcano a owl:Class
+; rdfs:label "Volcano"
+; rdfs:comment "A volcano is a crack in the Earth's crust that allows lava and hot gases to escape."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Gulf a owl:Class
+; rdfs:label "Gulf"
+; rdfs:comment "Part of a sea or ocean that is partially enclosed by land. Like a bay but larger."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Township a owl:Class
+; rdfs:label "Township"
+; rdfs:comment "A settlement and geographic area, less formally recognised than a town."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Borough a owl:Class
+; rdfs:label "Borough"
+; rdfs:comment "An administrative region of governance."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:District a owl:Class
+; rdfs:label "District"
+; rdfs:comment "A region of governance."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Parish a owl:Class
+; rdfs:label "Parish"
+; rdfs:comment "An area of regional governance stemming from the geographical area associated with a church."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Municipality a owl:Class
+; rdfs:label "Municipality"
+; rdfs:comment "A region of governance, often self-governed."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Province a owl:Class
+; rdfs:label "Province"
+; rdfs:comment "A region of governance."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:Boundary a owl:Class
+; rdfs:subClassOf rdf:Seq
+; rdfs:label "Boundary"
+; rdfs:comment "A Boundary resource specifies a sequence of points which, if joined, give the boundary of a geographical area. The sequence may be a serious of resources, each with a latitude and longitude, or a series of points using the datatype place:latlong. If the final point is the same as the first then the boundary is considered to be a closed area, whereas if the first and last points differ the boundary is considered to be a border line."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+#####################################################################
+# Properties
+#####################################################################
+
+place:in a owl:ObjectProperty
+; rdfs:label "in"
+; rdfs:comment """in is a property that allows you to say that a place is entirely within the boundaries of another place. It allows you to make statements like "Paris is in france"."""
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:overlaps a owl:ObjectProperty
+; rdfs:label "overlaps"
+; rdfs:comment "Overlaps is a property for saying that a particular place shares an area of land with another place but that neither place is entirely within the other."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:bounded_by a owl:ObjectProperty
+; rdfs:label "bounded by"
+; rdfs:range place:Boundary
+; rdfs:comment "The bounded by property relates any place to a boundary that marks out the geographic area it covers."
+; vs:term_status "testing"
+; rdfs:isDefinedBy place:
+.
+
+place:point_on_map a owl:DatatypeProperty
+; rdfs:label "Point on map"
+; rdfs:comment "The point on map property indicates where a place should be shown by a pin on a map."
+.
+
+#####################################################################
+# Datatypes
+#####################################################################
+
+place:latlong a rdfs:Datatype
+; rdfs:label "Lat/Long"
+; rdfs:comment """The Lat/long datatype allows us to specify that a literal value is a latitude/longitude pair, based in the WGS84 projection and in the comma-seperated, decimal format. e.g. "38.897605896,-77.0365219116"^^place:latlong would specify the WGS84 geographic co-ordinates of The White House, Washington DC."""
+.
+
+#####################################################################
+# Language Labels
+#####################################################################
+
+place:Plate rdfs:label "Plate"@en,"Plate"@fr-fr,"Tafel"@de,"Placa"@es,"板"@zh .
+place:LandMass rdfs:label "Landmass"@en,"La masse continentale"@fr-fr,"Landmasse"@de,"Masa de tierra"@es,"陆地"@zh .
+place:Island rdfs:label "Island"@en,"Island"@fr-fr,"Island"@de,"Isla"@es,"岛"@zh .
+place:Continent rdfs:label "Continent"@en,"Continent"@fr-fr,"Kontinent"@de,"Continente"@es,"大陆"@zh .
+place:Country rdfs:label "Country"@en,"Pays"@fr-fr,"Land"@de,"País"@es,"国家"@zh .
+place:Region rdfs:label "Region"@en,"Région"@fr-fr,"Region"@de,"Región"@es,"区"@zh .
+place:ArbitraryRegion rdfs:label "Arbitrary Region"@en,"Région Arbitraire"@fr-fr,"Willkürliche Region"@de,"Arbitraria Región"@es,"任意区域"@zh .
+place:City rdfs:label "City"@en,"City"@fr-fr,"City"@de,"Ciudad"@es,"市"@zh .
+place:Town rdfs:label "Town"@en,"Ville"@fr-fr,"Town"@de,"Ciudad"@es,"镇"@zh .
+place:Village rdfs:label "Village"@en,"Village"@fr-fr,"Village"@de,"Pueblo"@es,"村"@zh .
+place:Lake rdfs:label "Lake"@en,"Lake"@fr-fr,"Lake"@de,"Lago"@es,"湖"@zh .
+place:River rdfs:label "River"@en,"River"@fr-fr,"River"@de,"Río"@es,"河"@zh .
+place:Sea rdfs:label "Sea"@en,"Mer"@fr-fr,"Sea"@de,"Mar"@es,"海"@zh .
+place:Ocean rdfs:label "Ocean"@en,"Ocean"@fr-fr,"Ocean"@de,"Mar"@es,"海洋"@zh .
+place:Mountain rdfs:label "Mountain"@en,"Mountain"@fr-fr,"Mountain"@de,"Montaña"@es,"山"@zh .
+place:Hill rdfs:label "Hill"@en,"Hill"@fr-fr,"Hill"@de,"Hill"@es,"希尔"@zh .
+place:Desert rdfs:label "Desert"@en,"Desert"@fr-fr,"Desert"@de,"Desierto"@es,"沙漠"@zh .
+place:County rdfs:label "County"@en,"Comté"@fr-fr,"County"@de,"Condado"@es,"县"@zh .
+place:State rdfs:label "State"@en,"État"@fr-fr,"Staat"@de,"Estado"@es,"国家"@zh .
+place:Hamlet rdfs:label "Hamlet"@en,"Hamlet"@fr-fr,"Weiler"@de,"Aldea"@es,"村庄"@zh .
+place:Settlement rdfs:label "Settlement"@en,"Règlement"@fr-fr,"Siedlung"@de,"Liquidación"@es,"解决"@zh .
+place:Reservoir rdfs:label "Reservoir"@en,"Réservoir"@fr-fr,"Reservoir"@de,"Depósito"@es,"水库"@zh .
+place:Beach rdfs:label "Beach"@en,"Beach"@fr-fr,"Beach"@de,"Playa"@es,"海滩"@zh .
+place:Road rdfs:label "Road"@en,"Road"@fr-fr,"Road"@de,"Por carretera"@es,"路"@zh .
+place:Path rdfs:label "Path"@en,"Path"@fr-fr,"Path"@de,"Ruta"@es,"路径"@zh .
+place:Bay rdfs:label "Bay"@en,"Bay"@fr-fr,"Bay"@de,"Bahía"@es,"湾"@zh .
+place:Estuary rdfs:label "Estuary"@en,"Estuaire"@fr-fr,"Mündung"@de,"Estuario"@es,"河口"@zh .
+place:Valley rdfs:label "Valley"@en,"Vallée"@fr-fr,"Valley"@de,"Valle"@es,"谷"@zh .
+place:Plain rdfs:label "Plain"@en,"Plain"@fr-fr,"Plain"@de,"Llanura"@es,"平原"@zh .
+place:Cliff rdfs:label "Cliff"@en,"Cliff"@fr-fr,"Cliff"@de,"Acantilado"@es,"悬崖"@zh .
+place:Ridge rdfs:label "Ridge"@en,"Ridge"@fr-fr,"Ridge"@de,"Ridge"@es,"脊"@zh .
+place:Plateau rdfs:label "Plateau"@en,"Plateau"@fr-fr,"Plateau"@de,"Meseta"@es,"高原"@zh .
+place:Isthmus rdfs:label "Isthmus"@en,"Isthme"@fr-fr,"Isthmus"@de,"Istmo"@es,"地峡"@zh .
+place:Peninsula rdfs:label "Peninsula"@en,"Péninsule"@fr-fr,"Halbinsel"@de,"Península"@es,"半岛"@zh .
+place:Glacier rdfs:label "Glacier"@en,"Glacier"@fr-fr,"Gletscher"@de,"Glaciar"@es,"冰川"@zh .
+place:Strait rdfs:label "Strait"@en,"Détroit"@fr-fr,"Meerenge"@de,"Estrecho"@es,"海峡"@zh .
+place:Cape rdfs:label "Cape"@en,"Cap"@fr-fr,"Cape"@de,"Cabo"@es,"披肩"@zh .
+place:Watershed rdfs:label "Watershed"@en,"Des bassins versants"@fr-fr,"Wasserscheide"@de,"Cuencas"@es,"流域"@zh .
+place:Volcano rdfs:label "Volcano"@en,"Volcan"@fr-fr,"Vulkan"@de,"Volcán"@es,"火山"@zh .
+place:Gulf rdfs:label "Gulf"@en,"Golfe"@fr-fr,"Gulf"@de,"Golfo"@es,"海湾"@zh .
+place:Township rdfs:label "Township"@en,"Canton"@fr-fr,"Township"@de,"Municipio"@es,"乡"@zh .
+place:Borough rdfs:label "Borough"@en,"Arrondissement"@fr-fr,"Bezirk"@de,"Municipio"@es,"伯勒"@zh .
+place:District rdfs:label "District"@en,"District"@fr-fr,"Bezirk"@de,"Distrito"@es,"区"@zh .
+place:Parish rdfs:label "Parish"@en,"Paroisse"@fr-fr,"Gemeinde"@de,"Parroquia"@es,"教区"@zh .
+place:Municipality rdfs:label "Municipality"@en,"Municipalité"@fr-fr,"Gemeinde"@de,"Municipio"@es,"市"@zh .
+place:Province rdfs:label "Province"@en,"Province"@fr-fr,"Provinz"@de,"Provincia"@es,"省"@zh .
+place:in rdfs:label "in"@en,"dans"@fr-fr,"in"@de,"en"@es,"在"@zh .
+place:overlaps rdfs:label "overlaps"@en,"chevauchements"@fr-fr,"Überschneidungen"@de,"solapamientos"@es,"重叠"@zh .

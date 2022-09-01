@@ -1,0 +1,443 @@
+<http://purl.org/vocab/frbr/extended#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/elements/1.1/title> "Expression of Extended FRBR Concepts in RDF"@en .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/frbr/frbr-extended-20050810" .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/elements/1.1/creator> "Ian Davis <http://purl.org/NET/iand>" .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/elements/1.1/creator> "Richard Newman" .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2005 Richard Newman and Ian Davis" .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/frbr/frbr-extended-20050729> .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/frbr/extended#" .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "frbre" .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text/html" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@en .
+<http://purl.org/vocab/frbr/frbr-extended-20050810.html> <http://purl.org/dc/elements/1.1/format> _:genid1 .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/frbr/frbr-extended-20050810.html> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/rdf+xml" .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "RDF"@en .
+<http://purl.org/vocab/frbr/frbr-extended-20050810.rdf> <http://purl.org/dc/elements/1.1/format> _:genid2 .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/frbr/frbr-extended-20050810.rdf> .
+<http://purl.org/vocab/frbr/extended#> <http://purl.org/dc/terms/issued> "2005-07-29" .
+_:genid3 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:genid3 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy properties and updated documentation" .
+<http://purl.org/vocab/frbr/extended#> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid3 .
+<file:///home/iand/web/vocab.org/www/src/frbr/extended.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/web/vocab.org/www/src/frbr/extended.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<file:///home/iand/web/vocab.org/www/src/frbr/extended.rdf> <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Text> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/extended#ReferentialWork> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/extended#AutonomousWork> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+<http://purl.org/vocab/frbr/extended#AutonomousWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/extended#ReferentialExpression> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/extended#AutonomousExpression> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+<http://purl.org/vocab/frbr/extended#AutonomousWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/extended#AutonomousWork> <http://www.w3.org/2000/01/rdf-schema#label> "autonomous work"@en .
+<http://purl.org/vocab/frbr/extended#AutonomousWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#AutonomousWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#AutonomousWork> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/extended#ReferentialWork> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#complementOf> <http://purl.org/vocab/frbr/extended#ReferentialWork> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid11 .
+<http://purl.org/vocab/frbr/extended#AutonomousWork> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#label> "referential work"@en .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A referential work is one which has little meaning when not studied in conjunction with the work it refers to."@en .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/extended#AutonomousWork> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/frbr/core#isReferentiallyRelatedToWork> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid15 .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid14 .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/2000/01/rdf-schema#label> "autonomous expression"@en .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/extended#ReferentialExpression> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#complementOf> <http://purl.org/vocab/frbr/extended#ReferentialExpression> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid22 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
+_:genid22 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Changed complementOf to refer to ReferentialExpression instead of ReferentialWork" .
+<http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid22 .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#label> "referential expression"@en .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "A referential expression is one which has little meaning when not studied in conjunction with the expression it refers to."@en .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/extended#AutonomousExpression> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/frbr/core#isReferentiallyRelatedToExpression> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid24 .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid23 .
+<http://purl.org/vocab/frbr/extended#complementsExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#complementsExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#complementsExpression> <http://www.w3.org/2000/01/rdf-schema#label> "complements expression"@en .
+<http://purl.org/vocab/frbr/extended#complementsExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#complementsExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#complementsWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#complementsWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#complementsWork> <http://www.w3.org/2000/01/rdf-schema#label> "complements work"@en .
+<http://purl.org/vocab/frbr/extended#complementsWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Referential: cadenza, libretto, choreography, ending for unfinished work, etc.\nAutonomous: incidental music, musical setting for a text, pendant, etc."@en .
+<http://purl.org/vocab/frbr/extended#complementsWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#complementsWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#label> "has dependent part expression"@en .
+<http://purl.org/vocab/frbr/extended#hasDependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#hasPartExpression> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartExpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartWork> <http://www.w3.org/2000/01/rdf-schema#label> "has dependent part work"@en .
+<http://purl.org/vocab/frbr/extended#hasDependentPartWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#hasDependentPartWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#hasPartWork> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#label> "has independent part expression"@en .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#hasPartExpression> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> .
+<http://purl.org/vocab/frbr/extended#hasPartExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasPartExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasPartExpression> <http://www.w3.org/2000/01/rdf-schema#label> "has part expression"@en .
+<http://purl.org/vocab/frbr/extended#hasPartExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#hasPartExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#hasPartExpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isPartOfExpression> .
+<http://purl.org/vocab/frbr/extended#hasPartItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasPartItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasPartItem> <http://www.w3.org/2000/01/rdf-schema#label> "has part item"@en .
+<http://purl.org/vocab/frbr/extended#hasPartItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/extended#hasPartItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/extended#hasPartItem> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isPartOfItem> .
+<http://purl.org/vocab/frbr/extended#hasPartManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasPartManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasPartManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "has part manifestation"@en .
+<http://purl.org/vocab/frbr/extended#hasPartManifestation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/extended#hasPartManifestation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/extended#hasPartManifestation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isPartOfManifestation> .
+<http://purl.org/vocab/frbr/extended#hasPartWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasPartWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasPartWork> <http://www.w3.org/2000/01/rdf-schema#label> "has part work"@en .
+<http://purl.org/vocab/frbr/extended#hasPartWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#hasPartWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#hasPartWork> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isPartOfWork> .
+<http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is an abridgement of expression"@en .
+<http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "Between expressions of the SAME WORK."@en .
+<http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is an adaptation of expression"@en .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork> <http://www.w3.org/2000/01/rdf-schema#label> "is adaption of work"@en .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Adaptation, paraphrase, free translation, variation (music), harmonisation (music), fantasy (music), etc.\nThe subject is not dependent on the object for meaning."@en .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo> <http://www.w3.org/2000/01/rdf-schema#label> "is an alternative manifestation to"@en .
+<http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Alternate is an Americanism."@en .
+<http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToManifestation> .
+<http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is an arrangement of expression"@en .
+<http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "Between expressions of the SAME WORK."@en .
+<http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is an imitation of expression"@en .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem> <http://www.w3.org/2000/01/rdf-schema#label> "is a reconfiguration of item"@en .
+<http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToItem> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is a referential successor to expression"@en .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isASuccessorToExpression> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#label> "is a referential successor to work"@en .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isASuccessorToWork> .
+<http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfItem> <http://www.w3.org/2000/01/rdf-schema#label> "is a reproduction of item"@en .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToItem> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "is a reproduction of manifestation"@en .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Endeavour> .
+<http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToManifestation> .
+<http://purl.org/vocab/frbr/extended#isARevisionOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isARevisionOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isARevisionOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is a revision of expression"@en .
+<http://purl.org/vocab/frbr/extended#isARevisionOfExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "Between expressions of the SAME WORK."@en .
+<http://purl.org/vocab/frbr/extended#isARevisionOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isARevisionOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is a successor to expression"@en .
+<http://purl.org/vocab/frbr/extended#isASuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#label> "is a sucessor to work"@en .
+<http://purl.org/vocab/frbr/extended#isASuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Referential: sequel, etc.\nAutonomous: sequel, succeeding work, etc."@en .
+<http://purl.org/vocab/frbr/extended#isASuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isASuccessorToWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is a summary of expression"@en .
+<http://purl.org/vocab/frbr/extended#isASummaryOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfWork> <http://www.w3.org/2000/01/rdf-schema#label> "is a summary of work"@en .
+<http://purl.org/vocab/frbr/extended#isASummaryOfWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Digest, abstract, etc.\nThe subject is not dependent on the object for meaning."@en .
+<http://purl.org/vocab/frbr/extended#isASummaryOfWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isASummaryOfWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is a transformation of expression"@en .
+<http://purl.org/vocab/frbr/extended#isATransformationOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfWork> <http://www.w3.org/2000/01/rdf-schema#label> "is a transformation of work"@en .
+<http://purl.org/vocab/frbr/extended#isATransformationOfWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Dramatisation, novelisation, versification, screenplay, etc.\nThe subject is not dependent on the object for meaning."@en .
+<http://purl.org/vocab/frbr/extended#isATransformationOfWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isATransformationOfWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isATranslationOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isATranslationOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isATranslationOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is a translation of expression"@en .
+<http://purl.org/vocab/frbr/extended#isATranslationOfExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "Between expressions of the SAME WORK."@en .
+<http://purl.org/vocab/frbr/extended#isATranslationOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isATranslationOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is autonomously related to expression"@en .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between two expressions which does not result in the subject becoming a referential expression (i.e. one which has little meaning without the object)."@en .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#label> "is autonomously related to work"@en .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject is not dependent on the object for meaning."@en .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is dependent part of expression"@en .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isPartOfExpression> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfExpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#hasDependentPartExpression> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#label> "is dependent part of work"@en .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isPartOfWork> .
+<http://purl.org/vocab/frbr/extended#isDependentPartOfWork> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#hasDependentPartWork> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is independent part of expression"@en .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isPartOfExpression> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#hasIndependentPartExpression> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#label> "is independent part of work"@en .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isIndependentPartOfWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isPartOfWork> .
+<http://purl.org/vocab/frbr/extended#isPartOfExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is part of expression"@en .
+<http://purl.org/vocab/frbr/extended#isPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isPartOfExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isPartOfExpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#hasPartExpression> .
+<http://purl.org/vocab/frbr/extended#isPartOfItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isPartOfItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isPartOfItem> <http://www.w3.org/2000/01/rdf-schema#label> "is part of item"@en .
+<http://purl.org/vocab/frbr/extended#isPartOfItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/extended#isPartOfItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/extended#isPartOfItem> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#hasPartItem> .
+<http://purl.org/vocab/frbr/extended#isPartOfManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isPartOfManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isPartOfManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "is part of manifestation"@en .
+<http://purl.org/vocab/frbr/extended#isPartOfManifestation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/extended#isPartOfManifestation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/extended#isPartOfManifestation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#hasPartManifestation> .
+<http://purl.org/vocab/frbr/extended#isPartOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isPartOfWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isPartOfWork> <http://www.w3.org/2000/01/rdf-schema#label> "is part of work"@en .
+<http://purl.org/vocab/frbr/extended#isPartOfWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isPartOfWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is referentially related to expression"@en .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between two expressions which results in the subject becoming a referential expression (i.e. one which has little meaning without the object)."@en .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#label> "is referentially related to work"@en .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/extended#Work> .
+<http://purl.org/vocab/frbr/extended#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/extended#Expression> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+<http://purl.org/vocab/frbr/extended#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid27 .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isRelatedToExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#label> "is related to expression"@en .
+<http://purl.org/vocab/frbr/extended#isRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#isRelatedToExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/extended#isRelatedToItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isRelatedToItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isRelatedToItem> <http://www.w3.org/2000/01/rdf-schema#label> "is related to item"@en .
+<http://purl.org/vocab/frbr/extended#isRelatedToItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Item> .
+<http://purl.org/vocab/frbr/extended#isRelatedToItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/extended#isRelatedToManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isRelatedToManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isRelatedToManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "is related to manifestation"@en .
+<http://purl.org/vocab/frbr/extended#isRelatedToManifestation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/vocab/frbr/extended#isRelatedToManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/extended#isRelatedToWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#label> "is related to work"@en .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/2002/07/owl#unionOf> _:genid31 .
+<http://purl.org/vocab/frbr/extended#isRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid30 .
+<http://purl.org/vocab/frbr/extended#isRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isRelatedToWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression> <http://www.w3.org/2000/01/rdf-schema#label> "referentially complements expression"@en .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#complementsExpression> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsWork> <http://www.w3.org/2000/01/rdf-schema#label> "referentially complements work"@en .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#referentiallyComplementsWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression> <http://www.w3.org/2000/01/rdf-schema#label> "referentially supplements expression"@en .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#supplementsExpression> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsWork> <http://www.w3.org/2000/01/rdf-schema#label> "referentially supplements work"@en .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#supplementsWork> .
+<http://purl.org/vocab/frbr/extended#referentiallySupplementsWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#supplementsExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#supplementsExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#supplementsExpression> <http://www.w3.org/2000/01/rdf-schema#label> "supplements expression"@en .
+<http://purl.org/vocab/frbr/extended#supplementsExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/extended#supplementsExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToExpression> .
+<http://purl.org/vocab/frbr/extended#supplementsWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#supplementsWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#supplementsWork> <http://www.w3.org/2000/01/rdf-schema#label> "supplements work"@en .
+<http://purl.org/vocab/frbr/extended#supplementsWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Referential: index, concordance, teacher's guide, gloss, supplement, appendix, etc.\nAutonomous: supplement, appendix, etc."@en .
+<http://purl.org/vocab/frbr/extended#supplementsWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#supplementsWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/extended#isRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfWork> <http://www.w3.org/2000/01/rdf-schema#label> "is an imitation of work"@en .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Parody, imitation, travesty, etc.\nThe subject is not dependent on the object for meaning."@en .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#isAnImitationOfWork> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartWork> <http://www.w3.org/2000/01/rdf-schema#label> "has independent part work"@en .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/extended#hasIndependentPartWork> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/extended#isIndependentPartOfWork> .

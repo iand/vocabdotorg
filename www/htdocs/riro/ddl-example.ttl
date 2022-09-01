@@ -1,0 +1,15 @@
+# RIRO Service discovery description example
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix ddl: <http://purl.org/vocab/riro/ddl#>.
+@prefix lsrn: <http://www.lsrn.org/lsrn/name.owl#>.
+@prefix lsrs: <http://www.lsrn.org/lsrn/schema.owl#>.
+
+<http://riro.lsrn.org/resolver>
+  ddl:handlesNamespaceUri "http://www.lsrn.org/lsrn/name.owl#";
+  ddl:handlesNamespaceUri "http://www.lsrn.org/lsrn/schema.owl#";
+  ddl:handlesInstancesOf lsrn:Name, lsrn:Record, lsrs:Schema, foaf:Document;
+  ddl:handlesProperty lsrn:schema, lsrn:id, dc:identifier, rdfs:seeAlso.

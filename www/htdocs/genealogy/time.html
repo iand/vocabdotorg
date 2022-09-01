@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Genealogy Time Vocabulary</title><link rel="meta" type="application/rdf+xml" title="Genealogy Time Vocabulary" href="http://purl.org/vocab/genealogy/time.rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Genealogy Time Vocabulary</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://purl.org/vocab/genealogy/time">http://purl.org/vocab/genealogy/time</a> [<a href="http://purl.org/vocab/genealogy/time.html">HTML</a>] [<a href="http://purl.org/vocab/genealogy/time.rdf">RDF</a>]</dd><dt>Latest Version</dt><dd><a href="http://purl.org/vocab/genealogy/time#">http://purl.org/vocab/genealogy/time#</a></dd><dt>Previous Version</dt><dd><a href="http://purl.org/vocab/frbr/frbr-core-20050809">http://purl.org/vocab/frbr/frbr-core-20050809</a></dd><dt>Authors</dt><dd>Ian Davis &lt;http://purl.org/NET/iand&gt;</dd></dl><p class="rights">Copyright © 2007 Ian Davis</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-schema">RDF Schema</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><h2 id="sec-changes">Changes From Previous Version</h2><ul><li><span class="date">2007-09-10</span> - first issued</li></ul><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://purl.org/vocab/genealogy/time#</code></pre><p>
+          When used in XML documents the suggested prefix is <code>gtime</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/genealogy/time#subject
+http://purl.org/vocab/genealogy/time#MemberPartnership</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>MemberPartnership
+MemberBunch</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>subject
+resource</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      28 classes 
+        
+      and 
+      2 properties 
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-AdministrativeDivision" title="http://purl.org/vocab/genealogy/time#AdministrativeDivision">AdministrativeDivision</a></td><td>class</td><td>An administrative region or part of a sovereign state usually with a local government body with some degree of autonomy</td></tr><tr><td><a href="#term-AdministrativelyPartOf" title="http://purl.org/vocab/genealogy/time#AdministrativelyPartOf">AdministrativelyPartOf</a></td><td>class</td><td>An interval of time during which one administrative division was considered to be part of another.</td></tr><tr><td><a href="#term-Alive" title="http://purl.org/vocab/genealogy/time#Alive">Alive</a></td><td>class</td><td>An interval of time during which a person was alive.</td></tr><tr><td><a href="#term-ClassificationInterval" title="http://purl.org/vocab/genealogy/time#ClassificationInterval">ClassificationInterval</a></td><td>class</td><td>An interval of time during which a resource was classified by some subject</td></tr><tr><td><a href="#term-Dead" title="http://purl.org/vocab/genealogy/time#Dead">Dead</a></td><td>class</td><td>An interval of time during which a person was dead.</td></tr><tr><td><a href="#term-Disabled" title="http://purl.org/vocab/genealogy/time#Disabled">Disabled</a></td><td>class</td><td>An interval of time during which a person was physically disabled.</td></tr><tr><td><a href="#term-Divorced" title="http://purl.org/vocab/genealogy/time#Divorced">Divorced</a></td><td>class</td><td>An interval of time during which a person was divorced from another.</td></tr><tr><td><a href="#term-Educated" title="http://purl.org/vocab/genealogy/time#Educated">Educated</a></td><td>class</td><td>An interval of time during which a person was engaging in formal education.</td></tr><tr><td><a href="#term-Employed" title="http://purl.org/vocab/genealogy/time#Employed">Employed</a></td><td>class</td><td>An interval of time during which a person was employed in work.</td></tr><tr><td><a href="#term-Imprisoned" title="http://purl.org/vocab/genealogy/time#Imprisoned">Imprisoned</a></td><td>class</td><td>An interval of time during which a person was imprisoned.</td></tr><tr><td><a href="#term-Marriage" title="http://purl.org/vocab/genealogy/time#Marriage">Marriage</a></td><td>class</td><td>A partnership between people, often one man and one woman, that forms a new family unit</td></tr><tr><td><a href="#term-MarriageEvent" title="http://purl.org/vocab/genealogy/time#MarriageEvent">MarriageEvent</a></td><td>class</td><td>The act of uniting people in marriage. This is often accompanied by a wedding ceremony conducted by religious and/or government officials. The marriage act is often recorded in a register.</td></tr><tr><td><a href="#term-MarriageEventRecord" title="http://purl.org/vocab/genealogy/time#MarriageEventRecord">MarriageEventRecord</a></td><td>class</td><td>A record of a marriage event.</td></tr><tr><td><a href="#term-Married" title="http://purl.org/vocab/genealogy/time#Married">Married</a></td><td>class</td><td>An interval of time during which a person was a married to another</td></tr><tr><td><a href="#term-MemberBunch" title="http://purl.org/vocab/genealogy/time#MemberBunch">MemberBunch</a></td><td>class</td><td>A relationship between resources that are grouped according to some criteria.</td></tr><tr><td><a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">MemberBunchInterval</a></td><td>class</td><td>An interval of time during which a resource was a member of a bunch</td></tr><tr><td><a href="#term-MemberPartnership" title="http://purl.org/vocab/genealogy/time#MemberPartnership">MemberPartnership</a></td><td>class</td><td>A relationship between resources that cannot be removed without destroying the partnership.</td></tr><tr><td><a href="#term-MemberPartnershipInterval" title="http://purl.org/vocab/genealogy/time#MemberPartnershipInterval">MemberPartnershipInterval</a></td><td>class</td><td>An interval of time during which a resource was a member of a partnership</td></tr><tr><td><a href="#term-Named" title="http://purl.org/vocab/genealogy/time#Named">Named</a></td><td>class</td><td>An interval of time during which an entity was named in a particular way.</td></tr><tr><td><a href="#term-PersonInEmployment" title="http://purl.org/vocab/genealogy/time#PersonInEmployment">PersonInEmployment</a></td><td>class</td><td>An interval of time during a person was employed by a company</td></tr><tr><td><a href="#term-PersonInFamily" title="http://purl.org/vocab/genealogy/time#PersonInFamily">PersonInFamily</a></td><td>class</td><td>An interval of time during a person was a member of a family</td></tr><tr><td><a href="#term-PersonInHousehold" title="http://purl.org/vocab/genealogy/time#PersonInHousehold">PersonInHousehold</a></td><td>class</td><td>An interval of time during a person was a member of a household</td></tr><tr><td><a href="#term-PlaceArea" title="http://purl.org/vocab/genealogy/time#PlaceArea">PlaceArea</a></td><td>class</td><td>A relationship between areas and particular places within them. Places cannot be seperated from the area that contains them.</td></tr><tr><td><a href="#term-PortionObject" title="http://purl.org/vocab/genealogy/time#PortionObject">PortionObject</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Retired" title="http://purl.org/vocab/genealogy/time#Retired">Retired</a></td><td>class</td><td>An interval of time during which a person was retired from work.</td></tr><tr><td><a href="#term-Unemployed" title="http://purl.org/vocab/genealogy/time#Unemployed">Unemployed</a></td><td>class</td><td>An interval of time during which a person was unemployed from work.</td></tr><tr><td><a href="#term-Unmarried" title="http://purl.org/vocab/genealogy/time#Unmarried">Unmarried</a></td><td>class</td><td>An interval of time during which a person was not and had never been married.</td></tr><tr><td><a href="#term-Widowed" title="http://purl.org/vocab/genealogy/time#Widowed">Widowed</a></td><td>class</td><td>An interval of time during which a person was widowed from another.</td></tr><tr><td><a href="#term-resource" title="http://purl.org/vocab/genealogy/time#resource">resource</a></td><td>property</td><td>A resource that participates in a relation.</td></tr><tr><td><a href="#term-subject" title="http://purl.org/vocab/genealogy/time#subject">subject</a></td><td>property</td><td>A concept that is the subject of a resource during a particular interval.</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-AdministrativeDivision">Class: AdministrativeDivision</h3><div class="description"><p class="definition"><strong>Definition: </strong>An administrative region or part of a sovereign state usually with a local government body with some degree of autonomy</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#AdministrativeDivision</td></tr><tr><th>Label:</th><td>administrative division</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-AdministrativelyPartOf">Class: AdministrativelyPartOf</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which one administrative division was considered to be part of another.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#AdministrativelyPartOf</td></tr><tr><th>Label:</th><td>administratively part of</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Alive">Class: Alive</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was alive.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Alive</td></tr><tr><th>Label:</th><td>alive</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Alive" title="http://purl.org/vocab/genealogy/time#Alive">gtime:Alive</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-ClassificationInterval">Class: ClassificationInterval</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a resource was classified by some subject</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#ClassificationInterval</td></tr><tr><th>Label:</th><td>classification interval</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-ClassificationInterval" title="http://purl.org/vocab/genealogy/time#ClassificationInterval">gtime:ClassificationInterval</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Dead">Class: Dead</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was dead.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Dead</td></tr><tr><th>Label:</th><td>dead</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Dead" title="http://purl.org/vocab/genealogy/time#Dead">gtime:Dead</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Disabled">Class: Disabled</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was physically disabled.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Disabled</td></tr><tr><th>Label:</th><td>disabled</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Disabled" title="http://purl.org/vocab/genealogy/time#Disabled">gtime:Disabled</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Divorced">Class: Divorced</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was divorced from another.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Divorced</td></tr><tr><th>Label:</th><td>divorced</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Divorced" title="http://purl.org/vocab/genealogy/time#Divorced">gtime:Divorced</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Educated">Class: Educated</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was engaging in formal education.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Educated</td></tr><tr><th>Label:</th><td>educated</td></tr><tr><th>Equivalent to</th><td>Intersection of 
+        
+          <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a>
+          , <a href="http://purl.org/vocab/genealogy/time#Situation">gtime:Situation</a>
+           and  things that have 
+          (a complex restriction, see schema)
+        
+        
+      </td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Educated" title="http://purl.org/vocab/genealogy/time#Educated">gtime:Educated</a>
+                 is something that, amongst other things, 
+                
+          something that, amongst other things, is a 
+          <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a>, <a href="http://purl.org/vocab/genealogy/time#Situation">gtime:Situation</a> and  has  exactly 1 <a href="http://purl.org/vocab/genealogy/time#personInSituation">gtime:personInSituation</a> property</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Employed">Class: Employed</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was employed in work.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Employed</td></tr><tr><th>Label:</th><td>employed</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Employed" title="http://purl.org/vocab/genealogy/time#Employed">gtime:Employed</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Imprisoned">Class: Imprisoned</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was imprisoned.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Imprisoned</td></tr><tr><th>Label:</th><td>imprisoned</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Imprisoned" title="http://purl.org/vocab/genealogy/time#Imprisoned">gtime:Imprisoned</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Marriage">Class: Marriage</h3><div class="description"><p class="definition"><strong>Definition: </strong>A partnership between people, often one man and one woman, that forms a new family unit</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Marriage</td></tr><tr><th>Label:</th><td>marriage</td></tr><tr><th>Subclass of</th><td><a href="#term-MemberPartnership" title="http://purl.org/vocab/genealogy/time#MemberPartnership">gtime:MemberPartnership</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Marriage" title="http://purl.org/vocab/genealogy/time#Marriage">gtime:Marriage</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-MemberPartnership" title="http://purl.org/vocab/genealogy/time#MemberPartnership">gtime:MemberPartnership</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-MarriageEvent">Class: MarriageEvent</h3><div class="description"><p class="definition"><strong>Definition: </strong>The act of uniting people in marriage. This is often accompanied by a wedding ceremony conducted by religious and/or government officials. The marriage act is often recorded in a register.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#MarriageEvent</td></tr><tr><th>Label:</th><td>marriage event</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/genealogy/time#Event">gtime:Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MarriageEvent" title="http://purl.org/vocab/genealogy/time#MarriageEvent">gtime:MarriageEvent</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/genealogy/time#Event">gtime:Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-MarriageEventRecord">Class: MarriageEventRecord</h3><div class="description"><p class="definition"><strong>Definition: </strong>A record of a marriage event.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#MarriageEventRecord</td></tr><tr><th>Label:</th><td>marriage event record</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/genealogy/time#Act">gtime:Act</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MarriageEventRecord" title="http://purl.org/vocab/genealogy/time#MarriageEventRecord">gtime:MarriageEventRecord</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/genealogy/time#Act">gtime:Act</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Married">Class: Married</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was a married to another</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Married</td></tr><tr><th>Label:</th><td>married</td></tr><tr><th>Subclass of</th><td><a href="#term-MemberPartnershipInterval" title="http://purl.org/vocab/genealogy/time#MemberPartnershipInterval">gtime:MemberPartnershipInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Married" title="http://purl.org/vocab/genealogy/time#Married">gtime:Married</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-MemberPartnershipInterval" title="http://purl.org/vocab/genealogy/time#MemberPartnershipInterval">gtime:MemberPartnershipInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-MemberBunch">Class: MemberBunch</h3><div class="description"><p class="definition"><strong>Definition: </strong>A relationship between resources that are grouped according to some criteria.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#MemberBunch</td></tr><tr><th>Label:</th><td>member bunch</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MemberBunch" title="http://purl.org/vocab/genealogy/time#MemberBunch">gtime:MemberBunch</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-MemberBunchInterval">Class: MemberBunchInterval</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a resource was a member of a bunch</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#MemberBunchInterval</td></tr><tr><th>Label:</th><td>member bunch interval</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">gtime:MemberBunchInterval</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-MemberPartnership">Class: MemberPartnership</h3><div class="description"><p class="definition"><strong>Definition: </strong>A relationship between resources that cannot be removed without destroying the partnership.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#MemberPartnership</td></tr><tr><th>Label:</th><td>member partnership</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MemberPartnership" title="http://purl.org/vocab/genealogy/time#MemberPartnership">gtime:MemberPartnership</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-MemberPartnershipInterval">Class: MemberPartnershipInterval</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a resource was a member of a partnership</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#MemberPartnershipInterval</td></tr><tr><th>Label:</th><td>member partnership interval</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MemberPartnershipInterval" title="http://purl.org/vocab/genealogy/time#MemberPartnershipInterval">gtime:MemberPartnershipInterval</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Named">Class: Named</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which an entity was named in a particular way.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Named</td></tr><tr><th>Label:</th><td>named</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Named" title="http://purl.org/vocab/genealogy/time#Named">gtime:Named</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-PersonInEmployment">Class: PersonInEmployment</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during a person was employed by a company</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#PersonInEmployment</td></tr><tr><th>Label:</th><td>family interval</td></tr><tr><th>Subclass of</th><td><a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">gtime:MemberBunchInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-PersonInEmployment" title="http://purl.org/vocab/genealogy/time#PersonInEmployment">gtime:PersonInEmployment</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">gtime:MemberBunchInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-PersonInFamily">Class: PersonInFamily</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during a person was a member of a family</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#PersonInFamily</td></tr><tr><th>Label:</th><td>family interval</td></tr><tr><th>Subclass of</th><td><a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">gtime:MemberBunchInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-PersonInFamily" title="http://purl.org/vocab/genealogy/time#PersonInFamily">gtime:PersonInFamily</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">gtime:MemberBunchInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-PersonInHousehold">Class: PersonInHousehold</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during a person was a member of a household</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#PersonInHousehold</td></tr><tr><th>Label:</th><td>family interval</td></tr><tr><th>Subclass of</th><td><a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">gtime:MemberBunchInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-PersonInHousehold" title="http://purl.org/vocab/genealogy/time#PersonInHousehold">gtime:PersonInHousehold</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-MemberBunchInterval" title="http://purl.org/vocab/genealogy/time#MemberBunchInterval">gtime:MemberBunchInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-PlaceArea">Class: PlaceArea</h3><div class="description"><p class="definition"><strong>Definition: </strong>A relationship between areas and particular places within them. Places cannot be seperated from the area that contains them.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#PlaceArea</td></tr><tr><th>Label:</th><td>place area</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-PlaceArea" title="http://purl.org/vocab/genealogy/time#PlaceArea">gtime:PlaceArea</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-PortionObject">Class: PortionObject</h3><div class="description"><p class="definition"><strong>Definition: </strong></p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#PortionObject</td></tr><tr><th>Label:</th><td>portion object</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-PortionObject" title="http://purl.org/vocab/genealogy/time#PortionObject">gtime:PortionObject</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/genealogy/time#PartWholeComposition">gtime:PartWholeComposition</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Retired">Class: Retired</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was retired from work.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Retired</td></tr><tr><th>Label:</th><td>retired</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Retired" title="http://purl.org/vocab/genealogy/time#Retired">gtime:Retired</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Unemployed">Class: Unemployed</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was unemployed from work.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Unemployed</td></tr><tr><th>Label:</th><td>unemployed</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Unemployed" title="http://purl.org/vocab/genealogy/time#Unemployed">gtime:Unemployed</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Unmarried">Class: Unmarried</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was not and had never been married.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Unmarried</td></tr><tr><th>Label:</th><td>unmarried</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Unmarried" title="http://purl.org/vocab/genealogy/time#Unmarried">gtime:Unmarried</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Widowed">Class: Widowed</h3><div class="description"><p class="definition"><strong>Definition: </strong>An interval of time during which a person was widowed from another.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#Widowed</td></tr><tr><th>Label:</th><td>widowed</td></tr><tr><th>Subclass of</th><td><a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Widowed" title="http://purl.org/vocab/genealogy/time#Widowed">gtime:Widowed</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://www.w3.org/2006/time#ProperInterval">http://www.w3.org/2006/time#ProperInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-resource">Property: resource</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] A resource that participates in a relation.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#resource</td></tr><tr><th>Label:</th><td>resource</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-subject">Property: subject</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] A concept that is the subject of a resource during a particular interval.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/genealogy/time#subject</td></tr><tr><th>Label:</th><td>subject</td></tr><tr><th>Domain</th><td><a href="#term-ClassificationInterval" title="http://purl.org/vocab/genealogy/time#ClassificationInterval">gtime:ClassificationInterval</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-subject" title="http://purl.org/vocab/genealogy/time#subject">gtime:subject</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-ClassificationInterval" title="http://purl.org/vocab/genealogy/time#ClassificationInterval">gtime:ClassificationInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2007-09-10</span> - first issued</li></ul></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://purl.org/vocab/genealogy/time.rdf">http://purl.org/vocab/genealogy/time.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"></span>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2007-09-10</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Genealogy Time Vocabulary</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">This RDF vocabulary describes classes and properties for modelling </span>
+      <span class="text">genealogical situations and events.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/genealogy/time</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Ian Davis &lt;http://purl.org/NET/iand&gt;</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span><span class="text">Copyright © 2007 Ian Davis</span><span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;dct:replaces</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/frbr-core-20050809</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/genealogy/time#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">gtime</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time.rdf</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"></span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/format</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/hasFormat</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/isVersionOf</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/replaces</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/type</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/rights</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/date</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/identifier</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/contributor</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/title</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespacePrefix</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespaceUri</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/changes</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#value</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.isi.edu/~pan/damltime/time-entry.owl#Event</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Work~2</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/IMT</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#Concept</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/dcmitype/Text</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/License</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Permission</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Requirement</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/permits</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/requires</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/license</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberPartnership</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">member partnership</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A relationship between resources that cannot be removed without </span>
+      <span class="text">destroying the partnership.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PartWholeComposition</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberBunch</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">member bunch</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A relationship between resources that are grouped according to some </span>
+      <span class="text">criteria.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PartWholeComposition</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PlaceArea</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">place area</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A relationship between areas and particular places within them. Places </span>
+      <span class="text">cannot be seperated from the area that contains them.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PartWholeComposition</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PortionObject</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">portion object</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PartWholeComposition</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#ClassificationInterval</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">classification interval</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a resource was classified by some subject</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberPartnershipInterval</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">member partnership interval</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a resource was a member of a partnership</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberBunchInterval</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">member bunch interval</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a resource was a member of a bunch</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PersonInFamily</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">family interval</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An interval of time during a person was a member of a family</span><span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberBunchInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PersonInEmployment</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">family interval</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during a person was employed by a company</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberBunchInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#PersonInHousehold</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">family interval</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during a person was a member of a household</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberBunchInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#AdministrativeDivision</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">administrative division</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An administrative region or part of a sovereign state usually with a </span>
+      <span class="text">local government body with some degree of autonomy</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#AdministrativelyPartOf</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">administratively part of</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which one administrative division was </span>
+      <span class="text">considered to be part of another.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;owl:intersectionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+      <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Situation</span>"<span class="elem">/&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:cardinality</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+<span class="text">1</span><span class="elem">&lt;/owl:cardinality&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#administrativeSuperDivision</span>"<span class="elem">/&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:cardinality</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+<span class="text">1</span><span class="elem">&lt;/owl:cardinality&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#administrativeSubDivision</span>"<span class="elem">/&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/owl:intersectionOf&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Married</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">married</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was a married to another</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberPartnershipInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Marriage</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">marriage</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A partnership between people, often one man and one woman, that forms a </span>
+      <span class="text">new family unit</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MemberPartnership</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MarriageEvent</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">marriage event</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The act of uniting people in marriage. This is often accompanied by a </span>
+      <span class="text">wedding ceremony conducted by religious and/or government officials. The </span>
+      <span class="text">marriage act is often recorded in a register.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#MarriageEventRecord</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">marriage event record</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A record of a marriage event.</span><span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Act</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Divorced</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">divorced</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was divorced from another.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Widowed</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">widowed</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was widowed from another.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Retired</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">retired</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was retired from work.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Unmarried</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">unmarried</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was not and had never been </span>
+      <span class="text">married.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Alive</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">alive</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An interval of time during which a person was alive.</span><span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Dead</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">dead</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An interval of time during which a person was dead.</span><span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Named</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">named</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which an entity was named in a particular way.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Imprisoned</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">imprisoned</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An interval of time during which a person was imprisoned.</span><span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Employed</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">employed</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was employed in work.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Unemployed</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">unemployed</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was unemployed from work.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Disabled</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">disabled</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was physically disabled.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Educated</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">educated</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An interval of time during which a person was engaging in formal </span>
+      <span class="text">education.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:intersectionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/2006/time#ProperInterval</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#Situation</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;owl:cardinality</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+<span class="text">1</span><span class="elem">&lt;/owl:cardinality&gt;</span>
+            <span class="elem">&lt;owl:onProperty</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#personInSituation</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;/owl:Restriction&gt;</span>
+        <span class="elem">&lt;/owl:intersectionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/owl:equivalentClass&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#subject</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">subject</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A concept that is the subject of a resource during a particular interval.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#ClassificationInterval</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#Concept</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#resource</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">resource</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A resource that participates in a relation.</span><span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/genealogy/time#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2007-09-10</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  <span class="text">#$MakingAnAgreement #$EmployeeHiring (person, employer) </span>
+  <span class="text">#$EmploymentTermination (person, employer) #$EndingAnAgreement </span>
+  <span class="text">#$PurposefulAction #$SocialGathering #$VisitingSomeone #$SocialOccurrence </span>
+  <span class="text">#$deliberateActor - means that the #$Agent ACTOR is conscious, volitional, </span>
+  <span class="text">and purposeful in the #$Event ACT. ACTOR is aware of acting in ACT, and </span>
+  <span class="text">chooses to play the role he/she/it does in ACT. #$directingAgent - DIRECTOR </span>
+  <span class="text">deliberately controls or directs EVENT #$assistingAgent - AGENT is one of </span>
+  <span class="text">the agents assisting in the performance of ACT; AGENT itself may or may not </span>
+  <span class="text">also be performing ACT. AGENT is doing some tasks related to ACT but which </span>
+  <span class="text">are not directly #$subEvents of performing the main or focus action. Thus, </span>
+  <span class="text">`assisting' here means doing such supporting activities as fetching supplies </span>
+  <span class="text">or tools needed in ACT; helping to manipulate objects involved in ACT; </span>
+  <span class="text">gathering an audience, or booking the performer, if ACT is a public </span>
+  <span class="text">performance, and so forth #$objectActedOn #$nonDeliberateActor - means that </span>
+  <span class="text">ACTOR plays some role in the #$Event ACT, but is not acting deliberately. </span>
+  <span class="text">For example, #$JohnKennedy was a #$nonDeliberateActors in his assassination, </span>
+  <span class="text">a person is a #$nonDeliberateActors in his/her own autonomic bodily </span>
+  <span class="text">functioning, and Mount #$Vesuvius-Volcano was a #$nonDeliberateActors in the </span>
+  <span class="text">event of its eruption that destroyed Pompeii. #$SingleDoerAction - an action </span>
+  <span class="text">which can have only one doer #$doneBy - means that DOER is the doer in the </span>
+  <span class="text">event EVENT: some activity on the part of DOER causes or carries out EVENT. </span>
+  <span class="text">This predicate is agnostic as to whether DOER does EVENT intentionally or </span>
+  <span class="text">not. #$IncurringAnInjury #$Sleeping, #$Dying, #$PhysiologicalCondition - </span>
+  <span class="text">being in some physiological state that is not typical for that organism's </span>
+  <span class="text">species, modulo considerations about the organism's sex or (in some cases) </span>
+  <span class="text">subspecies #$AilmentCondition Attributes of a person that can vary over </span>
+  <span class="text">time: nationality name</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.<p>The following section is informational only, please refer to the 
+			<a href="http://creativecommons.org/licenses/by/2.0/uk/">Original License</a> for complete license terms.
+		</p><p>This license grants the following rights:</p><ul><li>making multiple copies
+						(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+					</li><li>distribution, public display, and publicly performance
+						(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+					</li><li>creation and distribution of derivative works
+						(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+					</li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license notices be kept intact
+						(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+					</li><li>credit be given to copyright holder and/or author
+						(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+					</li></ul></p><div id="footer">
+      Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

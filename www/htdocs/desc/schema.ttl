@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cc: <http://web.resource.org/cc/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix desc: <http://vocab.org/desc/schema/> .
+
+<http://vocab.org/desc/schema>
+  a owl:Ontology
+  ; dc:title "A Schema for Linking Resource Descriptions"
+  ; dc:creator <http://iandavis.com/id/me>
+  ; vann:preferredNamespaceUri "http://vocab.org/desc/schema/"
+  ; vann:preferredNamespacePrefix "desc"
+  ; dc:rights "This work is hereby released into the Public Domain. To view a copy of the public domain dedication, visit http://creativecommons.org/licenses/publicdomain or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA."
+  .
+  
+desc:description
+  a owl:ObjectProperty 
+  ; rdfs:label "Description" 
+  ; skos:definition "the relationship between a resource and its description."
+  ; rdfs:comment "The description of a resource contains data about that resource. It may also describe multiple resources." 
+  ; rdfs:isDefinedBy <http://vocab.org/desc/schema> 
+  ; rdfs:subPropertyOf rdfs:seeAlso
+  . 
+  
+desc:isDescriptionOf
+  a owl:ObjectProperty 
+  ; rdfs:label "Is Description Of"
+  ; skos:definition "the relationship between a description and the resource it describes."
+  ; rdfs:isDefinedBy <http://vocab.org/desc/schema> 
+  ; owl:inverseOf desc:description
+  ; rdfs:subPropertyOf rdfs:seeAlso
+  . 
+
+<http://iandavis.com/id/me>
+  a foaf:Person 
+  ; foaf:name "Ian Davis" 
+  .
+    

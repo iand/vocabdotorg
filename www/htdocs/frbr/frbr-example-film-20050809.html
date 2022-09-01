@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Describing a Film</title>
+	</head>
+	<body>
+    <p>This example describes a work with title 'Amores Perros' which has been expressed as a motion picture. One manifestation of that motion picture
+is a DVD.</p>
+		<pre><code>
+@prefix frbr: &lt;http://purl.org/vocab/frbr/core#> .
+@prefix rbib: &lt;http://purl.org/net/xbib#> .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/> .
+
+&lt;http://www.imdb.com/title/tt0245712/&gt;
+  a frbr:Work;
+  dc:title "Amores Perros"@es ;
+  dc:title "Love's a Bitch"@en ;
+  frbr:subject &lt;#Global_Cities> ;
+  frbr:subject &lt;#Mexico_City> ;
+  frbr:realization &lt;#amores-perros> ;
+  rbib:comment "Set in Mexico City."@en ;
+  rbib:comment "Shows the complexities of global city life."@en .
+
+&lt;#amores-perros>
+  a rbib:MotionPicture ;
+  dc:creator "Alejandro González Iñárritu" ;
+  frbr:embodiment &lt;#amores-perros-dvd> .
+
+&lt;#amores-perros-dvd>
+  a rbib:DVD ;
+  dc:date "2000" .
+
+</code></pre>
+
+			</body>
+</html>

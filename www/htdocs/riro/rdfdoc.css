@@ -1,0 +1,133 @@
+/* style sheet for RDF docs rendered in HTML */
+
+code.xml .text {
+  color: #000000;
+  background: transparent;
+}
+code.xml .elem {
+  color: #2C4368; /* #000080; */ 
+  background: transparent;
+}
+code.xml .attr {
+  color: #4D592D; /* #008080; */
+  background: transparent;
+}
+code.xml .attrVal {
+  color: #666666;
+  background: transparent;
+}
+code.xml .highlight {
+  background: #ffff00;
+}
+pre {
+  border: 1px #888 /* #9999cc */ dotted;
+  background-color: #F4F1EC;
+  padding: 0.5em;
+  color: #000000; 
+  width: 95%;
+}
+	
+blockquote {
+  border-style: solid;
+  border-color: #d0dbe7;
+  border-width: 0 0 0 .25em;
+  padding-left: 0.5em;
+}
+	
+blockquote, q {
+  font-style: italic;
+} 
+	
+body {
+  font-family: Verdana, Geneva, "Arial Unicode MS", Arial, Helvetica, sans-serif;
+}
+	
+a, p,blockquote, q, dl, dd, dt {
+  font-family: Verdana, Geneva, "Arial Unicode MS", Arial, Helvetica, sans-serif;
+}
+	
+dt {
+  font-weight: bold;
+}
+	
+a:link, a:visited { background-color: transparent; text-decoration: none; }
+a:link { color: #B04D52; /* #C95000; */ text-decoration: none; }
+a:hover { color: #02008D; text-decoration: underline; }
+a:visited { color: #B04D52; /* #C95000; */ text-decoration: none; } 
+a:visited:hover { color: #02008D; text-decoration: underline; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #B04D52; /* #996633; */ background: transparent; }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { 
+  font-family: "Courier New", Courier, "Andale Mono", Monaco, monospace; 
+}
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; /* font-size: smaller; */ position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #BBB 1px;}
+table thead { border-bottom: solid #BBB 2px;  } 
+table th { background-color: #F4F1EC;  }
+table td, table th { border-left: solid #BBB 1px; border-right: solid #BBB 1px; border-bottom: solid #BBB 1px; vertical-align: top; padding: 0.3em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+/* ----------------------font sizes---------------------- */
+
+/* Todd Fahrner's keyword hack for IE         */
+/* http://alistapart.com/stories/sizematters/ */
+
+body, body div, body p, body th, body td, body li, body dd  {
+  /* more specific to override rule in importing sheet */
+  font-size: x-small;
+  /* false value for WinIE4/5 */
+  voice-family: "\"}\"";
+  /* trick WinIE4/5 into thinking the rule is over */
+  voice-family: inherit;
+  /* recover from trick */
+  font-size: small
+  /* intended value for better browsers */
+}
+
+html>body, html>body div, html>body p, html>body th,
+html>body td, html>body li, html>body dd  {
+  font-size: small;
+  /* be nice to Opera */
+}
+
+/* end Todd Fahrner's keyword hack for IE */
+code { font-size: small; }
+
+h1 { font-size: 135%; }
+h2 { font-size: 120%; }
+h3 { font-size: 105%; }
+h4 { font-size: 100%; }
+h5 { font-size: 80%; }

@@ -1,0 +1,17 @@
+
+Attributes of Work
+
+title - a word, phrase or group of characters naming the work
+form - novel, play, poem, essay etc
+dateCreated - normally just the year, can also be datePublished or dateReleased (issued?)
+distinguishingCharacteristic - any characteristic that serves to diffentiate the work from another with the same name
+intendedTermination - a reflection of whether the work has been conceived as having a future end or whether it is intended to continue indefinately
+intendedAudience - the class of user for which the work is intended (children, young adults etc)
+context - the context is the historical, intellectual, artistic or other context within which the work was originally conceived
+performanceMedium - musical work - instrumental, vocal or other medium of performance for which a musical work was originallly conceived
+numericDesignation - a serial number, opus number or thematic index number assigned to a musical work by the composer, publisher or musicologist
+key - the key in which a musical work was originally composed
+coordinates - degrees, minutes and seconds of longitude and latitude that form the outer boundaries for the area represented in the cartographic image or object
+equinox - the year that serves as the point of reference for a celestial chart or model
+
+

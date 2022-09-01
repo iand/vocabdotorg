@@ -1,0 +1,97 @@
+<http://purl.org/vocab/participation/schema#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/elements/1.1/title> "Participation Schema"@en .
+<http://purl.org/vocab/participation/schema#> <http://www.w3.org/2000/01/rdf-schema#comment> "The participation ontology is a simple model for describing the roles that people play within groups. It is intended that specific domains will create subclasses of roles within their own areas of expertise. The first of these is AIISO Roles (http://purl.org/vocab/aiiso-roles/schema)"@en .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/participation/schema-20080925" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/participation/schema#> .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/elements/1.1/creator> "Chris Wallace" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/elements/1.1/creator> "Knud Moeller" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2008 Rob Styles, Chris Wallace, Knud Moeller" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/participation/schema#" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "participation" .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/vocab/vann/example> <http://purl.org/vocab/participation/example-participation.html> .
+<http://purl.org/vocab/participation/schema-20080925.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text/html" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@en .
+<http://purl.org/vocab/participation/schema-20080925.html> <http://purl.org/dc/elements/1.1/format> _:genid1 .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/participation/schema-20080925.html> .
+<http://purl.org/vocab/participation/schema-20080925.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/rdf+xml" .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "RDF"@en .
+<http://purl.org/vocab/participation/schema-20080925.rdf> <http://purl.org/dc/elements/1.1/format> _:genid2 .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/participation/schema-20080925.rdf> .
+<http://purl.org/vocab/participation/schema#> <http://purl.org/dc/terms/issued> "2008-09-25" .
+_:genid3 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid3 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "First cut of the ontology published, initial concepts extracted from original conference ontology at http://data.semanticweb.org/ns/swc/ontology" .
+<http://purl.org/vocab/participation/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid3 .
+<http://purl.org/vocab/participation/schema#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<http://purl.org/vocab/participation/schema#> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://purl.org/vocab/participation/schema#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/participation/schema#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
+<http://purl.org/vocab/participation/schema#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Roles describe the positions or functions we take up in participating in a group"@en .
+<http://purl.org/vocab/participation/schema#Role> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/participation/schema#> .
+<http://purl.org/vocab/participation/schema#Role> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/participation/schema#role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/participation/schema#role> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en .
+<http://purl.org/vocab/participation/schema#role> <http://www.w3.org/2000/01/rdf-schema#comment> "connects groups that have a role to the instance of that role" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Group> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+<http://purl.org/vocab/participation/schema#role> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+<http://purl.org/vocab/participation/schema#role> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/participation/schema#role> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/participation/schema#role_at> .
+<http://purl.org/vocab/participation/schema#role> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/participation/schema#> .
+<http://purl.org/vocab/participation/schema#role_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/participation/schema#role_at> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en .
+<http://purl.org/vocab/participation/schema#role_at> <http://www.w3.org/2000/01/rdf-schema#comment> "connects groups that have a role to the instance of that role" .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Group> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+<http://purl.org/vocab/participation/schema#role_at> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
+<http://purl.org/vocab/participation/schema#role_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/participation/schema#role_at> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/participation/schema#role_at> .
+<http://purl.org/vocab/participation/schema#role_at> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/participation/schema#> .
+<http://purl.org/vocab/participation/schema#holder_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/participation/schema#holder_of> <http://www.w3.org/2000/01/rdf-schema#comment> "specifies roles that an agent holds" .
+<http://purl.org/vocab/participation/schema#holder_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/vocab/participation/schema#holder_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/participation/schema#holder_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/participation/schema#holder> .
+<http://purl.org/vocab/participation/schema#holder_of> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/participation/schema#> .
+<http://purl.org/vocab/participation/schema#holder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/participation/schema#holder> <http://www.w3.org/2000/01/rdf-schema#comment> "specifies the holder of a role" .
+<http://purl.org/vocab/participation/schema#holder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/participation/schema#holder> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/vocab/participation/schema#holder> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/participation/schema#holder_of> .
+<http://purl.org/vocab/participation/schema#holder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/participation/schema#> .
+<http://purl.org/vocab/participation/schema#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/participation/schema#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "startDate"@en .
+<http://purl.org/vocab/participation/schema#startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which this agent started performing this role" .
+<http://purl.org/vocab/participation/schema#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/participation/schema#startDate> <http://www.w3.org/2000/01/rdf-schema#range> <xsd:Date> .
+<http://purl.org/vocab/participation/schema#startDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/participation/schema#> .
+<http://purl.org/vocab/participation/schema#endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/participation/schema#endDate> <http://www.w3.org/2000/01/rdf-schema#label> "endDate"@en .
+<http://purl.org/vocab/participation/schema#endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which this agent stopped performing this role" .
+<http://purl.org/vocab/participation/schema#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/participation/schema#endDate> <http://www.w3.org/2000/01/rdf-schema#range> <xsd:Date> .
+<http://purl.org/vocab/participation/schema#endDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/participation/schema#> .

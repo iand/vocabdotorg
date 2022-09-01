@@ -1,0 +1,70 @@
+
+title {
+  display: block;
+}
+title:before {
+  content: "Title: ";
+  font-size: 1.4em;
+}
+
+description {
+  display: block;
+}
+description:before {
+  content: "Description: ";
+  font-size: 1.4em;
+}
+
+author {
+  display: block;
+}
+
+
+author:before {
+  content: "Author: ";
+  font-size: 1.4em;
+}
+
+label {
+  display: block;
+  font-style: italic;
+}
+label:before {
+  content: "Label:";
+  font-weight: bold;
+}
+
+comment {
+  display: block;
+  font-style: italic;
+}
+comment:before {
+  content: "Comment:";
+  font-weight: bold;
+}
+
+Property, TransitiveProperty ,  SymmetricProperty, Class {
+  display: list-item;
+  padding-left:1em;
+}  
+
+
+Property:before {
+  content: "Property";
+  font-size: 1.3em;
+}  
+
+TransitiveProperty:before {
+  content: "Property (transitive)";
+  font-size: 1.3em;
+}  
+
+SymmetricProperty:before {
+  content: "Property (symmetric)";
+  font-size: 1.3em;
+}  
+
+Class:before {
+  content: "Class";
+  font-size: 1.3em;
+}  

@@ -1,0 +1,626 @@
+# Most work done 2004-08-12.
+# One minor fix 2005-07-05 prior to sending to Ian.
+
+@prefix frbr:		<http://www.holygoat.co.uk/owl/2004/08/frbr#> .
+@prefix dc:		    <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:		<http://xmlns.com/foaf/0.1/> .
+@prefix :		    <> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+
+# Basic classes.
+# Endeavour: all the four work-related classes, grouped.
+frbr:Endeavour		rdfs:label	"endeavour"@en ;
+      a       owl:Class ;
+      owl:disjointWith frbr:ResponsibleEntity , frbr:Subject ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Expression frbr:Item frbr:Manifestation frbr:Work)
+              ] .
+frbr:Work	rdfs:label	"work"@en ;
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Endeavour ;
+      owl:disjointWith frbr:Expression , frbr:Manifestation , frbr:Item ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (frbr:ReferentialWork frbr:AutonomousWork)
+              ] .
+
+frbr:AutonomousWork	rdfs:label	"autonomous work"@en ;
+      a       owl:Class ;
+      owl:disjointWith frbr:ReferentialWork ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (frbr:Work [ a       owl:Class ;
+                            owl:complementOf frbr:ReferentialWork
+                          ])
+              ] .
+frbr:ReferentialWork rdfs:label "referential work"@en ;
+      a       owl:Class ;
+	rdfs:comment	"A referential work is one which has little meaning when not studied in conjunction with the work it refers to."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      owl:disjointWith frbr:AutonomousWork ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (frbr:Work [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+                            owl:onProperty frbr:isReferentiallyRelatedToWork
+                          ])
+              ] .
+
+frbr:AutonomousExpression rdfs:label "autonomous expression"@en ;
+      a       owl:Class ;
+      owl:disjointWith frbr:ReferentialExpression ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (frbr:Expression [ a       owl:Class ;
+                            owl:complementOf frbr:ReferentialExpression
+                          ])
+              ] .
+frbr:ReferentialExpression rdfs:label "referential expression"@en ;
+	rdfs:comment	"A referential expression is one which has little meaning when not studied in conjunction with the expression it refers to."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      a       owl:Class ;
+      owl:disjointWith frbr:AutonomousExpression ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (frbr:Expression [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+                            owl:onProperty frbr:isReferentiallyRelatedToExpression
+                          ])
+              ] .
+
+# Endeavour -- Entity.
+frbr:hasResponsibleEntity		a		owl:ObjectProperty ;
+					rdfs:domain	frbr:Endeavour ;
+					rdfs:range 	frbr:ResponsibleEntity ;
+					owl:inverseOf	frbr:isResponsibleEntityFor .
+frbr:isResponsibleEntityFor		a		owl:ObjectProperty ;
+					rdfs:domain	frbr:ResponsibleEntity ;
+					rdfs:range	frbr:Endeavour ;
+					owl:inverseOf	frbr:hasResponsibleEntity .
+# Creator: Work -- Entity.
+frbr:isCreatorOf	a	 		owl:ObjectProperty ;
+			rdfs:domain 		frbr:ResponsibleEntity ;
+			rdfs:range		frbr:Work ;
+			rdfs:subPropertyOf	frbr:isResponsibleEntityFor ;
+			owl:inverseOf		frbr:isCreatedBy .
+
+frbr:isCreatedBy	a			owl:ObjectProperty ;
+			rdfs:domain 		frbr:Work ;
+			rdfs:range 		frbr:ResponsibleEntity ;
+			rdfs:subPropertyOf 	frbr:hasResponsibleEntity ;
+			owl:inverseOf 		frbr:isCreatorOf .
+
+# Realiser: Expression -- Entity.
+frbr:isRealiserOf
+      a       owl:ObjectProperty ;
+      rdfs:domain      frbr:ResponsibleEntity ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isResponsibleEntityFor ;
+      owl:inverseOf frbr:isRealisedBy .
+
+frbr:isRealisedThrough
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Work ;
+      rdfs:range frbr:Expression ;
+      owl:inverseOf frbr:isARealisationOf .
+
+# Producer: Manifestation -- Entity.
+frbr:isProducerOf
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:ResponsibleEntity ;
+      rdfs:range frbr:Manifestation ;
+      rdfs:subPropertyOf frbr:isResponsibleEntityFor ;
+      owl:inverseOf frbr:isProducedBy .
+
+frbr:isProducedBy
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Manifestation ;
+      rdfs:range frbr:ResponsibleEntity ;
+      rdfs:subPropertyOf frbr:hasResponsibleEntity ;
+      owl:inverseOf frbr:isProducerOf .
+
+# Ownership: Item -- Entity.
+frbr:isOwnedBy
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Item ;
+      rdfs:range frbr:ResponsibleEntity ;
+      rdfs:subPropertyOf frbr:hasResponsibleEntity ;
+      owl:inverseOf frbr:isOwnerOf .
+
+frbr:isOwnerOf
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:ResponsibleEntity ;
+      rdfs:range frbr:Item ;
+      rdfs:subPropertyOf frbr:isResponsibleEntityFor ;
+      owl:inverseOf frbr:isOwnedBy .
+
+frbr:complementsWork
+      a       owl:ObjectProperty ;
+      rdfs:comment """Referential: cadenza, libretto, choreography, ending for unfinished work, etc.
+Autonomous: incidental music, musical setting for a text, pendant, etc.
+"""^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isRelatedToWork .
+
+frbr:hasIndependentPartExpression
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Expression ;
+      rdfs:label "has independent part expression"@en ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:hasPartExpression ;
+      owl:inverseOf frbr:isIndependentPartOfExpression .
+
+frbr:hasPartManifestation
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Manifestation ;
+      rdfs:label "has part manifestation"@en ;
+      rdfs:range frbr:Manifestation ;
+      owl:inverseOf frbr:isPartOfManifestation .
+
+foaf:Group
+      a       owl:Class ;
+      rdfs:subClassOf frbr:CorporateEntity .
+
+<>    a       owl:Ontology .
+
+<http://www.owl-ontologies.com/unnamed.owl>
+      a       owl:Ontology .
+
+frbr:isAnImitationOfWork
+      a       owl:ObjectProperty ;
+      rdfs:comment """Parody, imitation, travesty, etc.
+The subject is not dependent on the object for meaning."""^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToWork .
+
+frbr:hasIndependentPartWork
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Work ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:hasPartWork ;
+      owl:inverseOf frbr:isIndependentPartOfWork .
+
+
+frbr:isAnEmbodimentOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "A manifestation is the (physical) embodiment of an expression."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:domain frbr:Manifestation ;
+      rdfs:range frbr:Expression ;
+      owl:inverseOf frbr:isEmbodiedIn .
+
+frbr:isATransformationOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:isReferentiallyRelatedToExpression
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation between two expressions which results in the subject becoming a referential expression (i.e. one which has little meaning without the object)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Expression)
+              ] ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isRelatedToExpression .
+
+frbr:isPartOfWork
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Work ;
+      rdfs:range frbr:Work .
+
+frbr:isAReproductionOfManifestation
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Endeavour ;
+      rdfs:subPropertyOf frbr:isRelatedToManifestation .
+
+frbr:isARevisionOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:comment "Between expressions of the SAME WORK."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:isAnAbridgementOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:comment "Between expressions of the SAME WORK."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:hasDependentPartWork
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Work ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:hasPartWork .
+
+
+frbr:isAnAdaptationOfWork
+      a       owl:ObjectProperty ;
+      rdfs:comment """Adaptation, paraphrase, free translation, variation (music), harmonisation (music), fantasy (music), etc.
+The subject is not dependent on the object for meaning."""^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToWork .
+
+
+frbr:isASummaryOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:isAReconfigurationOfItem
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Item ;
+      rdfs:subPropertyOf frbr:isRelatedToItem .
+
+foaf:Person
+      a       owl:Class ;
+      rdfs:subClassOf frbr:ResponsibleEntity .
+
+frbr:hasAsSubject
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Work)
+              ] ;
+      rdfs:label "has as subject"@en ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Endeavour frbr:ResponsibleEntity frbr:Subject)
+              ] .
+
+frbr:isDependentPartOfWork
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Work)
+              ] ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isPartOfWork ;
+      owl:inverseOf frbr:hasDependentPartWork .
+
+frbr:isAReproductionOfItem
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Item ;
+      rdfs:subPropertyOf frbr:isRelatedToItem .
+
+frbr:isPartOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Expression ;
+      rdfs:range frbr:Expression ;
+      owl:inverseOf frbr:hasPartExpression .
+
+frbr:isAnArrangementOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:comment "Between expressions of the SAME WORK."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:isASummaryOfWork
+      a       owl:ObjectProperty ;
+      rdfs:comment """Digest, abstract, etc.
+The subject is not dependent on the object for meaning."""^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToWork .
+
+
+frbr:hasPartItem
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Item ;
+      rdfs:label "has part item"@en ;
+      rdfs:range frbr:Item ;
+      owl:inverseOf <nullhasPartItem> .
+
+frbr:supplementsExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isRelatedToExpression .
+
+frbr:isRelatedToExpression
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Expression)
+              ] ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:relatedEndeavour .
+
+
+frbr:supplementsWork
+      a       owl:ObjectProperty ;
+      rdfs:comment """Referential: index, concordance, teacher's guide, gloss, supplement, appendix, etc.
+Autonomous: supplement, appendix, etc."""^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isRelatedToWork .
+
+frbr:isExemplifiedBy
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Manifestation ;
+      rdfs:range frbr:Item ;
+      owl:inverseOf frbr:isAnExemplarOf .
+
+frbr:isRelatedToManifestation
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Endeavour ;
+      rdfs:subPropertyOf frbr:relatedEndeavour .
+
+frbr:isAReferentialSuccessorToWork
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isASuccessorToWork , frbr:isReferentiallyRelatedToWork .
+
+frbr:isAnExemplarOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "An item is a single exemplar of a manifestation."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:domain frbr:Item ;
+      rdfs:label "is an exemplar of" ;
+      rdfs:range frbr:Manifestation ;
+      owl:inverseOf frbr:isExemplifiedBy .
+
+frbr:CorporateEntity
+      a       owl:Class ;
+      rdfs:subClassOf frbr:ResponsibleEntity ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (foaf:Organization foaf:Group)
+              ] .
+
+frbr:isAReferentialSuccessorToExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isReferentiallyRelatedToExpression , frbr:isASuccessorToExpression .
+
+frbr:isIndependentPartOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Expression ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isPartOfExpression ;
+      owl:inverseOf frbr:hasIndependentPartExpression .
+
+frbr:Subject
+      a       owl:Class ;
+      owl:disjointWith frbr:ResponsibleEntity , frbr:Endeavour ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Event frbr:Object frbr:Place frbr:Concept)
+              ] .
+
+frbr:isPartOfManifestation
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Manifestation ;
+      rdfs:range frbr:Manifestation ;
+      owl:inverseOf frbr:hasPartManifestation .
+
+frbr:isATranslationOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:comment "Between expressions of the SAME WORK."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:isEmbodiedIn
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Expression)
+              ] ;
+      rdfs:range frbr:Manifestation ;
+      owl:inverseOf frbr:isAnEmbodimentOf .
+
+
+frbr:relatedEndeavour
+      a       owl:SymmetricProperty , owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Endeavour)
+              ] ;
+      rdfs:range frbr:Endeavour .
+
+
+frbr:referentiallyComplementsWork
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isReferentiallyRelatedToWork , frbr:complementsWork .
+
+frbr:Concept
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Subject ;
+      owl:disjointWith frbr:Object , frbr:Event , frbr:Place .
+
+
+frbr:ResponsibleEntity
+      a       owl:Class ;
+      owl:disjointWith frbr:Subject , frbr:Endeavour ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (frbr:CorporateEntity foaf:Person)
+              ] .
+
+frbr:isASuccessorToExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isRelatedToExpression .
+
+frbr:isAnAdaptationOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:isRelatedToWork
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Work frbr:Expression)
+              ] ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:relatedEndeavour .
+
+frbr:isAnAlternativeManifestationTo
+      a       owl:ObjectProperty ;
+      rdfs:comment "Alternate is an Americanism."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Endeavour ;
+      rdfs:subPropertyOf frbr:isRelatedToManifestation .
+
+frbr:hasPartExpression
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Expression ;
+      rdfs:label "has part expression"@en ;
+      rdfs:range frbr:Expression ;
+      owl:inverseOf frbr:isPartOfExpression .
+
+
+
+frbr:referentiallySupplementsWork
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:supplementsWork , frbr:isReferentiallyRelatedToWork .
+
+frbr:isARealisationOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "An expression is the intellectual or artistic realisation of a work."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Expression)
+              ] ;
+      rdfs:range frbr:Work ;
+      owl:inverseOf frbr:isRealisedThrough .
+
+frbr:Object
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Subject ;
+      owl:disjointWith frbr:Event , frbr:Place , frbr:Concept .
+
+frbr:isRelatedToItem
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Item ;
+      rdfs:subPropertyOf frbr:relatedEndeavour .
+
+frbr:hasDependentPartExpression
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Expression ;
+      rdfs:label "has dependent part expression"@en ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:hasPartExpression ;
+      owl:inverseOf frbr:isDependentPartOfExpression .
+
+frbr:isAutonomouslyRelatedToWork
+      a       owl:ObjectProperty ;
+      rdfs:comment "The subject is not dependent on the object for meaning."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isRelatedToWork .
+
+frbr:isRealisedBy
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Expression)
+              ] ;
+      rdfs:range frbr:ResponsibleEntity ;
+      rdfs:subPropertyOf frbr:hasResponsibleEntity ;
+      owl:inverseOf frbr:isRealiserOf .
+
+
+frbr:isAnImitationOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToExpression .
+
+frbr:Place
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Subject ;
+      owl:disjointWith frbr:Object , frbr:Event , frbr:Concept .
+
+frbr:Event
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Subject ;
+      owl:disjointWith frbr:Object , frbr:Place , frbr:Concept .
+
+frbr:Expression
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Endeavour ;
+      owl:disjointWith frbr:Work , frbr:Item , frbr:Manifestation ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (frbr:ReferentialExpression frbr:AutonomousExpression)
+              ] .
+
+
+frbr:Manifestation
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Endeavour ;
+      owl:disjointWith frbr:Work , frbr:Expression , frbr:Item .
+
+frbr:isAutonomouslyRelatedToExpression
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation between two expressions which does not result in the subject becoming a referential expression (i.e. one which has little meaning without the object)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isRelatedToExpression .
+
+foaf:Organization
+      a       owl:Class ;
+      rdfs:subClassOf frbr:CorporateEntity .
+
+frbr:isPartOfItem   # not a good name
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Item ;
+      rdfs:range frbr:Item ;
+      owl:inverseOf frbr:hasPartItem .
+
+frbr:referentiallySupplementsExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:supplementsExpression , frbr:isReferentiallyRelatedToExpression .
+
+frbr:isASuccessorToWork
+      a       owl:ObjectProperty ;
+      rdfs:comment """Referential: sequel, etc.
+Autonomous: sequel, succeeding work, etc."""^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isRelatedToWork .
+
+frbr:referentiallyComplementsExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:complementsExpression , frbr:isReferentiallyRelatedToExpression .
+
+frbr:isReferentiallyRelatedToWork
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (frbr:Work frbr:Expression)
+              ] ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isRelatedToWork .
+
+frbr:isATransformationOfWork
+      a       owl:ObjectProperty ;
+      rdfs:comment """Dramatisation, novelisation, versification, screenplay, etc.
+The subject is not dependent on the object for meaning."""^^<http://www.w3.org/2001/XMLSchema#string> ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isAutonomouslyRelatedToWork .
+
+frbr:isIndependentPartOfWork
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Work ;
+      rdfs:range frbr:Work ;
+      rdfs:subPropertyOf frbr:isPartOfWork .
+
+frbr:complementsExpression
+      a       owl:ObjectProperty ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isRelatedToExpression .
+
+frbr:isDependentPartOfExpression
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Expression ;
+      rdfs:range frbr:Expression ;
+      rdfs:subPropertyOf frbr:isPartOfExpression ;
+      owl:inverseOf frbr:hasDependentPartExpression .
+
+frbr:hasPartWork
+      a       owl:ObjectProperty ;
+      rdfs:domain frbr:Work ;
+      rdfs:range frbr:Work ;
+      owl:inverseOf frbr:isPartOfWork .
+
+frbr:Item
+      a       owl:Class ;
+      rdfs:subClassOf frbr:Endeavour ;
+      owl:disjointWith frbr:Work , frbr:Expression , frbr:Manifestation .

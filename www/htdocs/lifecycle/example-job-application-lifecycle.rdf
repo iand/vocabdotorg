@@ -1,0 +1,178 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix lifecycle: <http://purl.org/vocab/lifecycle/schema#>
+@prefix job: <http://example.com/schemas/job-application/schema#>
+@prefix jobApplication: <http://example.com/lifecycles/job-application#>
+
+<http://example.com/foaf/geoff>
+	a foaf:Person.
+
+<http://example.com/jobs/application-12997>
+	a job:Application;
+	job:applicant <http://example.com/foaf/geoff>;
+	lifecycle:state jobApplication:Received.
+
+<http://example.com/actions/124353648593626818>
+	a lifecycle:Action;
+	lifecycle:resource <http://example.com/jobs/application-12997>;
+	lifecycle:task jobApplication:confirmRightToWork;
+	lifecycle:taskProgress lifecycle:Completed.
+
+<http://example.com/actions/985637ahj7826127y>
+	a lifecycle:Action;
+	lifecycle:resource <http://example.com/jobs/application-12997>;
+	lifecycle:task jobApplication:checkForPreviousApplications;
+	lifecycle:taskProgress lifecycle:Started.
+
+job:Application
+	a rdfs:Class;
+	rdfs:Label "A class representing an application for a job".
+
+job:applicant
+	a rdf:Property;
+	rdfs:Label "A foaf agent who is applying for a job";
+	rdfs:domain job:Application;
+	rdfs:range foaf:Agent.
+
+jobApplication:ApplicationProcess
+	rdfs:Label "Lifecycle for Processing Job Applications"
+	a lifecycle:Lifecycle;
+	possibleState jobApplication:Received;
+	possibleState jobApplication:Reviewed;
+	possibleState jobApplication:ToInterview;
+	possibleState jobApplication:Interviewed;
+	possibleState jobApplication:Offered;
+	possibleState jobApplication:TheyDeclined;
+	possibleState jobApplication:WeDeclined;
+	possibleState jobApplication:Accepted.
+
+jobApplication:Received
+	a lifecycle:State;
+	rdfs:Label "Received";
+	lifecycle:possibleTransition jobApplication:reviewApplication;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Reviewed
+	a lifecycle:State;
+	rdfs:Label "Reviewed";
+	lifecycle:possibleTransition jobApplication:acceptApplication;
+	lifecycle:possibleTransition jobApplication:declineByLetter;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:ToInterview
+	a lifecycle:State;
+	rdfs:Label "To Interview";
+	lifecycle:possibleTransition jobApplication:arrangeInterview;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Interviewed
+	a lifecycle:State;
+	rdfs:Label "Interviewed";
+	lifecycle:possibleTransition jobApplication:makeOffer;
+	lifecycle:possibleTransition jobApplication:declineByPhone;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Offered
+	a lifecycle:State;
+	rdfs:Label "An offer has been made";
+	lifecycle:possibleTransition jobApplication:acceptOffer;
+	lifecycle:possibleTransition jobApplication:declineOffer;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Accepted
+	a lifecycle:State;
+	rdfs:Label "The applicant has accepted this role";
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:TheyDeclined
+	a lifecycle:State;
+	rdfs:Label "The applicant has declined this role".
+
+jobApplication:WeDeclined
+	a lifecycle:State;
+	rdfs:Label "We have declined this applicant".
+
+jobApplication:acceptApplication
+	a lifecycle:Transition;
+	rdfs:Label "Accept this application";
+	lifecycle:resultingState jobApplication:ToInterview.
+	
+jobApplication:acceptOffer
+	a lifecycle:Transition;
+	rdfs:Label "Accept this offer";
+	lifecycle:resultingState jobApplication:Accepted.
+
+jobApplication:arrangeInterview
+	a lifecycle:Transition;
+	rdfs:Label "Arrange an Interview";
+	lifecycle:taskGroup jobApplication:arrangeInternalDates;
+	lifecycle:task jobApplication:arrangeExternalDates;
+	lifecycle:task jobApplication:sendDetailsToEveryone;	
+	lifecycle:resultingState jobApplication:Interviewed.
+
+jobApplication:declineByLetter
+	a lifecycle:Transition;
+	rdfs:Label "Decline this application by letter";
+	lifecycle:resultingState jobApplication:WeDeclined.
+
+jobApplication:declineByPhone
+	a lifecycle:Transition;
+	rdfs:Label "Decline this application by phone";
+	lifecycle:resultingState jobApplication:WeDeclined.
+
+jobApplication:declineOffer
+	a lifecycle:Transition;
+	rdfs:Label "Decline this offer";
+	lifecycle:resultingState jobApplication:TheyDeclined.
+
+jobApplication:makeOffer
+	a lifecycle:Transition;
+	rdfs:Label "Make an offer to this applicant";
+	lifecycle:resultingState jobApplication:Offered.
+
+jobApplication:reviewApplication
+	a lifecycle:Transition;
+	rdfs:Label "Review this application";
+	lifecycle:task jobApplication:confirmRightToWork;
+	lifecycle:task jobApplication:checkForPreviousApplications;	
+	lifecycle:resultingState jobApplication:Reviewed.
+
+jobApplication:withdrawApplication
+	a lifecycle:Transition;
+	rdfs:Label "Withdraw this application";
+	lifecycle:resultingState jobApplication:TheyDeclined.
+
+jobApplication:confirmRightToWork
+	a lifecycle:Task;
+	rdfs:Label "Confirm Right To Work";
+	lifecycle:mandatory "true"^^xsd:boolean;
+	lifecycle:next jobApplication:checkForPreviousApplications.
+	
+jobApplication:checkForPreviousApplications
+	a lifecycle:Task;
+	rdfs:Label "Check for Previous Applications".
+
+jobApplication:arrangeInternalDates
+	a lifecycle:taskGroup;
+	rdfs:Label "Arrange internal interviewer dates";
+	lifecycle:task jobApplication:findLineManagerDates;
+	lifecycle:task jobApplication:findSecondaryInterviewerDates;
+	lifecycle:next jobApplication:arrangeExternalDates.
+	
+jobApplication:arrangeExternalDates
+	a lifecycle:task;
+	rdfs:Label "Arrange dates with applicant";
+	lifecycle:next jobApplication:sendDetailsToEveryone.
+	
+jobApplication:sendDetailsToEveryone
+	a lifecycle:task;
+	rdfs:Label "Send interview details to everyone".
+
+jobApplication:findLineManagerDates
+	a lifecycle:task;
+	rdfs:Label "Find available dates for interviewing manager";
+	lifecycle:next jobApplication:findSecondaryInterviewerDates.
+
+jobApplication:findSecondaryInterviewerDates
+	a lifecycle:task;
+	rdfs:Label "Find available dates for secondary interviewers".

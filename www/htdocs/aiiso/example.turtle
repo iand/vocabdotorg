@@ -1,0 +1,43 @@
+@prefix us: <http://example.com/>
+@prefix aiiso: <http://purl.org/vocab/aiiso/schema#>
+@prefix aiiso-roles: <http://purl.org/vocab/aiiso-roles/schema#>
+@prefix foaf: <>
+@prefix participation: <http://purl.org/vocab/participation/schema#>
+
+us:#self
+	a aiiso:Institution
+	aiiso:organization us:Centre_For_Environment_Studies
+	aiiso:organization us:Administration
+	foaf:name "University of Everywhere"
+	participation:role us:Chancellor
+
+us:Centre_For_Environment_Studies
+	a aiiso:Centre
+	foaf:name "Centre for Environment Studies"
+	aiiso:organizationWithin us:self
+
+us:Administration
+	a aiiso:Department
+	foaf:name "Administration"
+	aiiso:organizationWithin us:self
+	particpation:role us:Administration/Head_Of_Department
+	
+us:Administration/Head_Of_Department
+	a aiiso-roles:Head_Of_Department
+	particpation:role_at us:Administration
+	participation:holder us:Peggy_Sue
+
+us:Peggy_Sue
+	a foaf:Person
+	foaf:name "Peggy Sue"
+	participation:holder_of us:Administration/Head_Of_Department
+
+us:Chancellor
+	a aiiso-roles:Chancellor
+	participation:holder us:Buddy_Holly
+	particpation:role_at us:#self
+
+us:Buddy_Holly
+	a foaf:Person
+	foaf:name "Buddy Holly"
+	participation:holder_of us:Chancellor

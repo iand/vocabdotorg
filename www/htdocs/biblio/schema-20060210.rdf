@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="vocab-html-docs.xsl" type="text/xsl"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:dctype="http://purl.org/dc/dcmitype/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:biblio="http://purl.org/net/biblio#"
+    xml:base="http://purl.org/net/biblio">
+
+  <owl:Ontology rdf:about="">
+    <dc:creator>Bruce D'Arcus</dc:creator>
+    <dc:title>Citation Oriented Bibliographic Vocabulary</dc:title>
+    <dc:description>A vocabulary to describe a general data model for scholarly citations. 
+     It covers three primary classes: events, agents, and bibliographic reference types. It 
+     is designed to offer a solid general relational model for citation metadata, and also to
+     provide a specific superset of reference types in standard formats like BibTeX, RIS, and
+     Refer/Endnote.</dc:description>
+    <dc:rights>Copyright © 2006 Bruce D'Arcus</dc:rights>
+
+    <dcterms:isVersionOf rdf:resource="http://purl.org/net/biblio#"/>
+
+<!--
+    <skos:example rdf:resource="example.rdf"/>
+-->
+
+    <vann:preferredNamespaceUri>http://purl.org/net/biblio#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>biblio</vann:preferredNamespacePrefix>
+
+    <dcterms:issued>2006-02-10</dcterms:issued>
+
+  </owl:Ontology>
+
+  <cc:Work rdf:about="">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+  </cc:Work>
+  
+  <cc:License rdf:about="http://creativecommons.org/licenses/by/2.0/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+  </cc:License>
+
+  <!-- Agent classes and subclasses -->
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Agent">
+    <rdfs:label xml:lang="en">agent</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:equivalentClass rdf:resource="http://vocab.org/frbr/core#term-ResponsibleEntity"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Person">
+    <rdfs:label xml:lang="en">person</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Agent"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/vocab/frbr/core#Person"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Person"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Organization">
+    <rdfs:label xml:lang="en">organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Agent"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Organization"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Publisher">
+    <rdfs:label xml:lang="en">publisher</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Organization"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Publisher"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#LegislativeBody">
+    <rdfs:label xml:lang="en">legislative body</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Organization"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Legislative_assembly"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <!-- Event classes and subclasses -->
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Event">
+    <rdfs:label xml:lang="en">event</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://purl.org/vocab/frbr/core#Event"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Conference">
+    <rdfs:label xml:lang="en">conference</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Event"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Conference"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Hearing">
+    <rdfs:label xml:lang="en">hearing</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Event"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Hearing"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Workshop">
+    <rdfs:label xml:lang="en">workshop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Event"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <!-- Collection class and subclasses -->
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Collection">
+    <rdfs:label xml:lang="en">collection</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Collection"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Series">
+    <rdfs:label xml:lang="en">series</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Collection"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Periodical">
+    <rdfs:label xml:lang="en">collection</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Collection"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Periodical"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#CourtReporter">
+    <rdfs:label xml:lang="en">court reporter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Periodical"/>
+    <rdfs:comment xml:lang="en">A kind of periodical that publishes legal rulings.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Magazine">
+    <rdfs:label xml:lang="en">magazine</rdfs:label>
+    <rdfs:subClass rdf:resource="http://purl.org/net/biblio#Periodical"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Magazine"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Newspaper">
+    <rdfs:label xml:lang="en">newspaper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Periodical"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Newspaper"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Proceedings">
+    <rdfs:label xml:lang="en">proceedings</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Collection"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <!-- Reference class and subclasses -->
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Reference">
+    <rdfs:label xml:lang="en">bibliographic reference</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Manifestation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Abstract">
+    <rdfs:label xml:lang="en">abstract</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Album">
+    <rdfs:label xml:lang="en">album</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Album"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#AlbumTrack">
+    <rdfs:label xml:lang="en">album track</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Part"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Article">
+    <rdfs:label xml:lang="en">article</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Part"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Article"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Bill">
+    <rdfs:label xml:lang="en">bill</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Legislation"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Bill"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Book">
+    <rdfs:label xml:lang="en">book</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Book"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#BookSection">
+    <rdfs:label xml:lang="en">book section</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Part"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Broadcast">
+    <rdfs:label xml:lang="en">braadcast</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Broadcast"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Chapter">
+    <rdfs:label xml:lang="en">chapter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#BookSection"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Chapter"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Data">
+    <rdfs:label xml:lang="en">data</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Diagram">
+    <rdfs:label xml:lang="en">diagram</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Illustration"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Diagram"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Dissertation">
+    <rdfs:label xml:lang="en">dissertation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Thesis"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Dissertation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Document">
+    <rdfs:label xml:lang="en">document</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Docoment"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#EditedBook">
+    <rdfs:label xml:lang="en">edited book</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Book"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#EMail">
+    <rdfs:label xml:lang="en">e-mail</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#PersonalCommunication"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/EMail"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Essay">
+    <rdfs:label xml:lang="en">essay</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Essay"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Figure">
+    <rdfs:label xml:lang="en">figure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Figure"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Illustration">
+    <rdfs:label xml:lang="en">illustration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Illustration"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Interview">
+    <rdfs:label xml:lang="en">interview</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#PersonalCommunication"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Interview"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Journal">
+    <rdfs:label xml:lang="en">journal</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Periodical"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+    <rdfs:comment xml:lang="en">An academic journal.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Law">
+    <rdfs:label xml:lang="en">law</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Legislation"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Law"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Legislation">
+    <rdfs:label xml:lang="en">legislation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Legislation"/>
+    <rdfs:comment xml:lang="en">Documents issued by legislative bodies.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Letter">
+    <rdfs:label xml:lang="en">letter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#PersonalCommunication"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Letter"/>
+    <rdfs:comment xml:lang="en">A kind of written communication.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Manuscript">
+    <rdfs:label xml:lang="en">manuscript</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Manuscript"/>
+    <rdfs:comment xml:lang="en">An unpublished document.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Map">
+    <rdfs:label xml:lang="en">map</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Map"/>
+    <rdfs:comment xml:lang="en">A cartographic representation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Memo">
+    <rdfs:label xml:lang="en">memo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#PersonalCommunication"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+    <rdfs:comment xml:lang="en">More formally called a memorandum.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#MotionPicture">
+    <rdfs:label xml:lang="en">motion picture</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Motion_Picture"/>
+    <rdfs:comment xml:lang="en">A film, video, DVD, etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#MusicalScore">
+    <rdfs:label xml:lang="en">musical score</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Musical_Score"/>
+    <rdfs:comment xml:lang="en">A textual representation of music.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Painting">
+    <rdfs:label xml:lang="en">painting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Illustration"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Painting"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Pamphlet">
+    <rdfs:label xml:lang="en">pamphlet</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Patent"/>
+    <rdfs:comment xml:lang="en">An informally published document.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Paper">
+    <rdfs:label xml:lang="en">paper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <rdfs:comment xml:lang="en">An unpublished document.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Part">
+    <rdfs:label xml:lang="en">part</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Part"/>
+    <rdfs:comment xml:lang="en">An item contained in something else; for example, a chapter in a book, or an article in a periodical.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Patent">
+    <rdfs:label xml:lang="en">patent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Patent"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#PersonalCommunication">
+    <rdfs:label xml:lang="en">personal communication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/wordnet/1.6/Communication"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Poster">
+    <rdfs:label xml:lang="en">poster</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Report">
+    <rdfs:label xml:lang="en">report</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Report"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Review">
+    <rdfs:label xml:lang="en">review</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Review"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Song">
+    <rdfs:label xml:lang="en">song</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Song"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Speech">
+    <rdfs:label xml:lang="en">speech</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/wordnet/1.6/Speech"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.org/net/biblio#Thesis">
+    <rdfs:label xml:lang="en">thesis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/biblio#Reference"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+  </owl:Class>
+
+  <!-- properties -->
+
+  <owl:ObjectProperty rdf:about="http://purl.org/net/biblio#presentedAt">
+    <rdfs:label xml:lang="en">presented at</rdfs:label>
+    <skos:definition xml:lang="en">An item presented at an event.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/biblio#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/related"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterm="http://purl.org/dc/terms/" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/">
+  <rdf:Description rdf:about="">
+    <dc:contributor>Ian Davis</dc:contributor>
+    <vann:preferredNamespaceUri>http://purl.org/vocab/psychometric-profile</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>psych</vann:preferredNamespacePrefix>
+    <dcterm:isPartOf rdf:resource="http://purl.org/vocab/psychometric-profile/psych-vocab-20040427" dc:title="PSYCHOMETRIC PROFILE: A vocabulary for describing common psychometric profiles"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/psychometric-profile/psych-vocab-20040427" dc:title="PSYCHOMETRIC PROFILE: A vocabulary for describing common psychometric profiles"/>
+    <dc:title></dc:title>
+    <dc:description>, a term in PSYCHOMETRIC PROFILE: A vocabulary for describing common psychometric profiles</dc:description>
+    <dc:identifier>http://purl.org/vocab/psychological-profile/psych-term-economic-20040427</dc:identifier>
+    <dcterm:isVersionOf rdf:resource="http://purl.org/vocab/psychological-profile/economic"/>
+    <dcterm:hasFormat>
+      <rdf:Description rdf:about="http://purl.org/vocab/psychological-profile/psych-term-economic-20040427.html">
+        <dc:format>
+          <dcterm:IMT>
+            <rdf:value>text/html</rdf:value>
+            <rdfs:label xml:lang="en">HTML</rdfs:label>
+          </dcterm:IMT>
+        </dc:format>
+      </rdf:Description>
+    </dcterm:hasFormat>
+    <dcterm:hasFormat>
+      <rdf:Description rdf:about="http://purl.org/vocab/psychological-profile/psych-term-economic-20040427.rdf">
+        <dc:format>
+          <dcterm:IMT>
+            <rdf:value>application/rdf+xml</rdf:value>
+            <rdfs:label xml:lang="en">RDF</rdfs:label>
+          </dcterm:IMT>
+        </dc:format>
+      </rdf:Description>
+    </dcterm:hasFormat>
+  </rdf:Description>
+  <cc:Work rdf:about="">
+		<cc:license rdf:resource="http://creativecommons.org/licenses/by/1.0/"/>
+		<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+	</cc:Work>
+  <cc:License rdf:about="http://creativecommons.org/licenses/by/1.0/">
+		<cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+		<cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+		<cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+		<cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+		<cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+	</cc:License>
+</rdf:RDF>

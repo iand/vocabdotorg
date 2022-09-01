@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterm="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xml:lang="en" lang="en"><head><title>PSYCHOMETRIC PROFILE: A vocabulary for describing common psychometric profiles</title><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #999999 dotted;
+	  background-color: #eeeeee;
+	  color: #000000;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+
+	
+    </style></head><body><h1>PSYCHOMETRIC PROFILE: A vocabulary for describing common psychometric profiles</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://purl.org/vocab/psychometric-profile/psych-vocab-20040427">http://purl.org/vocab/psychometric-profile/psych-vocab-20040427</a> [<a href="http://purl.org/vocab/psychometric-profile/psych-vocab-20040427.html">HTML</a>] [<a href="http://purl.org/vocab/psychometric-profile/psych-vocab-20040427.rdf">RDF</a>]</dd><dt>Latest Version</dt><dd><a href="http://purl.org/vocab/psychometric-profile">http://purl.org/vocab/psychometric-profile</a></dd><dt>Contributors</dt><dd>Ian Davis</dd></dl><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/1.0/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-properties">Vocabulary Properties</a><ul><li><a href="#profile">profile</a></li><li><a href="#social">social</a></li><li><a href="#economic">economic</a></li></ul></li><li><a href="#sec-classes">Vocabulary Classes</a><ul><li><a href="#PsychometricProfile">PsychometricProfile</a></li><li><a href="#PoliticalCompassProfile">PoliticalCompassProfile</a></li></ul></li><li><a href="#sec-examples">Examples</a></li><li><a href="#sec-schema">RDF Schema</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p>An experimental vocabulary for describing common psychometric profiles.</p><h2 id="sec-namespace">Namespace</h2><p>The preferred namespace URI for this vocabulary is <code>http://purl.org/vocab/psychometric-profile</code>
+          and the preferred prefix is <code>psych</code></p><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="profile">profile</h3><dl><dt>URI</dt><dd>http://purl.org/vocab/psychometric-profile/profile</dd><dt>Label</dt><dd>Profile</dd><dt>Definition</dt><dd>Relates a person to a psychometric profile.</dd><dt>Domain</dt><dd>Person
+		    						(<a href="http://xmlns.com/foaf/0.1/Person">http://xmlns.com/foaf/0.1/Person</a>)
+		    					</dd><dt>Range</dt><dd>psychometric Profile
+		    						(<a href=""></a>)
+		    					</dd></dl></div><div class="property"><h3 id="social">social</h3><dl><dt>URI</dt><dd>http://purl.org/vocab/psychometric-profile/social</dd><dt>Label</dt><dd>Social</dd><dt>Definition</dt><dd>A measure of the individual's social dimension as expressed in a Political Compass Profile.</dd><dt>Domain</dt><dd>Political Compass Profile
+		    						(<a href="http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile">http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile</a>)
+		    					</dd><dt>Range</dt><dd>RDF Literal
+		    						(<a href=""></a>)
+		    					</dd></dl></div><div class="property"><h3 id="economic">economic</h3><dl><dt>URI</dt><dd>http://purl.org/vocab/psychometric-profile/economic</dd><dt>Label</dt><dd>Economic</dd><dt>Definition</dt><dd>A measure of the individual's economic dimension as expressed in a Political Compass Profile.</dd><dt>Domain</dt><dd>Political Compass Profile
+		    						(<a href="http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile">http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile</a>)
+		    					</dd><dt>Range</dt><dd>RDF Literal
+		    						(<a href=""></a>)
+		    					</dd></dl></div><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="PsychometricProfile">PsychometricProfile</h3><dl><dt>URI</dt><dd>http://purl.org/vocab/psychometric-profile/PsychometricProfile</dd><dt>Label</dt><dd>Psychometric Profile</dd><dt>Definition</dt><dd>A psychometric profile.</dd></dl></div><div class="class"><h3 id="PoliticalCompassProfile">PoliticalCompassProfile</h3><dl><dt>URI</dt><dd>http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile</dd><dt>Label</dt><dd>Political Compass Profile</dd><dt>Definition</dt><dd>A profile representing an individual's political viewpoint, measured on two orthogonal scales: social and economic. See http://www.digitalronin.f2s.com/politicalcompass/index.html.</dd><dt>Sub Class Of</dt><dd><a href="http://purl.org/vocab/psychometric-profile/psychometricProfile">http://purl.org/vocab/psychometric-profile/psychometricProfile</a></dd></dl></div><h2 id="sec-examples">Examples</h2><div class="example"><h3>Using With FOAF</h3><body>
+    <p>The PSYCHOMETRIC-PROFILE vocabulary simply slots into standard <a href="http://xmlns.com/foaf/0.1/">FOAF</a> documents:</p>
+    
+    <pre>
+<code class="xml">  
+<span class="elem">&lt;rdf:RDF</span>
+<span class="attr">      xmlns:rdf</span>=&quot;<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>&quot;
+<span class="attr">      xmlns:rdfs</span>=&quot;<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>&quot;
+<span class="attr">      xmlns:foaf</span>=&quot;<span class="attrVal">http://xmlns.com/foaf/0.1/</span>&quot;
+<span class="attr">      xmlns:psych</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/</span>&quot;
+<span class="elem">      &gt;</span>
+<span class="elem">  &lt;foaf:Person</span> rdf:nodeID=&quot;ian&quot;&gt;
+<span class="elem">    &lt;foaf:name&gt;</span>Ian Davis<span class="elem">&lt;/foaf:name&gt;</span>
+<span class="elem">    &lt;foaf:title&gt;</span>Mr<span class="elem">&lt;/foaf:title&gt;</span>
+<span class="elem">    &lt;foaf:firstName&gt;</span>Ian<span class="elem">&lt;/foaf:firstName&gt;</span>
+<span class="elem">    &lt;foaf:surname&gt;</span>Davis<span class="elem">&lt;/foaf:surname&gt;</span>
+<span class="elem highlight">    &lt;psych:profile&gt;</span>
+<span class="elem highlight">      &lt;psych:PoliticalCompassProfile&gt;</span>
+<span class="elem highlight">        &lt;psych:economic&gt;</span><span class="text highlight">-0.38</span><span class="elem highlight">&lt;/psych:economic&gt;</span>	
+<span class="elem highlight">        &lt;psych:social&gt;</span><span class="text highlight">-5.18</span><span class="elem highlight">&lt;/psych:social&gt;</span>	
+<span class="elem highlight">      &lt;/psych:PoliticalCompassProfile&gt;</span>
+<span class="elem highlight">    &lt;/psych:profile&gt;</span>
+<span class="elem">  &lt;/foaf:Person&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt; </span>
+</code>
+    </pre>  
+	</body></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://purl.org/vocab/psychometric-profile/psych-vocab-20040427.rdf">http://purl.org/vocab/psychometric-profile/psych-vocab-20040427.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:rdf</span>=&quot;<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>&quot;
+   <span class="attr">xmlns:rdfs</span>=&quot;<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>&quot;
+   <span class="attr">xmlns:foaf</span>=&quot;<span class="attrVal">http://xmlns.com/foaf/0.1/</span>&quot;
+   <span class="attr">xmlns:wot</span>=&quot;<span class="attrVal">http://xmlns.com/wot/0.1/</span>&quot;
+   <span class="attr">xmlns:dc</span>=&quot;<span class="attrVal">http://purl.org/dc/elements/1.1/</span>&quot;
+   <span class="attr">xmlns:dcterm</span>=&quot;<span class="attrVal">http://purl.org/dc/terms/</span>&quot;
+   <span class="attr">xmlns:owl</span>=&quot;<span class="attrVal">http://www.w3.org/2002/07/owl#</span>&quot;
+   <span class="attr">xmlns:vann</span>=&quot;<span class="attrVal">http://purl.org/vocab/vann/</span>&quot;
+   <span class="attr">xmlns:cc</span>=&quot;<span class="attrVal">http://web.resource.org/cc/</span>&quot;<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;rdf:Description</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal"></span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:contributor</span><span class="elem">&gt;</span><span class="text">Ian Davis</span><span class="elem">&lt;/dc:contributor&gt;</span>
+    <span class="elem">&lt;dc:title</span><span class="elem">&gt;</span>
+      <span class="text">PSYCHOMETRIC PROFILE: A vocabulary for describing common psychometric </span>
+      <span class="text">profiles</span>
+    <span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;dc:description</span><span class="elem">&gt;</span>
+      <span class="text">An experimental vocabulary for describing common psychometric profiles.</span>
+    <span class="elem">&lt;/dc:description&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span>
+      <span class="text">http://purl.org/vocab/psychometric-profile/psych-vocab-20040427</span>
+    <span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dcterm:isVersionOf</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/psychometric-profile</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">psych</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;vann:example</span>
+       <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/psych-example-foaf-20040427.html</span>&quot;
+       <span class="attr">dc:title</span>=&quot;<span class="attrVal">Using With FOAF</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dcterm:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;rdf:Description</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/psych-vocab-20040427.html</span>&quot;<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dcterm:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dcterm:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/rdf:Description&gt;</span>
+    <span class="elem">&lt;/dcterm:hasFormat&gt;</span>
+    <span class="elem">&lt;dcterm:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;rdf:Description</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/psych-vocab-20040427.rdf</span>&quot;<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dcterm:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">RDF</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dcterm:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/rdf:Description&gt;</span>
+    <span class="elem">&lt;/dcterm:hasFormat&gt;</span>
+  <span class="elem">&lt;/rdf:Description&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal"></span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://creativecommons.org/licenses/by/1.0/</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:type</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/dc/dcmitype/Text</span>&quot;<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://creativecommons.org/licenses/by/1.0/</span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://web.resource.org/cc/Reproduction</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://web.resource.org/cc/Distribution</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://web.resource.org/cc/Notice</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://web.resource.org/cc/Attribution</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>&quot;<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/profile</span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">Profile</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">Relates a person to a psychometric profile.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span>
+       <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://xmlns.com/foaf/0.1/Person</span>&quot;
+       <span class="attr">rdfs:label</span>=&quot;<span class="attrVal">Person</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span>
+       <span class="attr">rdf:Resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/psychometricProfile</span>&quot;
+       <span class="attr">rdfs:label</span>=&quot;<span class="attrVal">psychometric Profile</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/</span>&quot;<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/PsychometricProfile</span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">Psychometric Profile</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">A psychometric profile.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/</span>&quot;<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile</span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">Political Compass Profile</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span>
+      <span class="text">A profile representing an individual's political viewpoint, measured on </span>
+      <span class="text">two orthogonal scales: social and economic. See </span>
+      <span class="text">http://www.digitalronin.f2s.com/politicalcompass/index.html.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/psychometricProfile</span>&quot;<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/social</span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">Social</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span>
+      <span class="text">A measure of the individual's social dimension as expressed in a </span>
+      <span class="text">Political Compass Profile.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span>
+       <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile</span>&quot;
+       <span class="attr">rdfs:label</span>=&quot;<span class="attrVal">Political Compass Profile</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span>
+       <span class="attr">rdf:Resource</span>=&quot;<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Literal</span>&quot;
+       <span class="attr">rdfs:label</span>=&quot;<span class="attrVal">RDF Literal</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/</span>&quot;<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/economic</span>&quot;<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span><span class="text">Economic</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>=&quot;<span class="attrVal">en</span>&quot;<span class="elem">&gt;</span>
+      <span class="text">A measure of the individual's economic dimension as expressed in a </span>
+      <span class="text">Political Compass Profile.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span>
+       <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/PoliticalCompassProfile</span>&quot;
+       <span class="attr">rdfs:label</span>=&quot;<span class="attrVal">Political Compass Profile</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span>
+       <span class="attr">rdf:Resource</span>=&quot;<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Literal</span>&quot;
+       <span class="attr">rdfs:label</span>=&quot;<span class="attrVal">RDF Literal</span>&quot;<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>=&quot;<span class="attrVal">http://purl.org/vocab/psychometric-profile/</span>&quot;<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/1.0/">Creative Commons License</a>.<p>The following section is informational only, please refer to the 
+			<a href="http://creativecommons.org/licenses/by/1.0/">Original License</a> for complete license terms.
+		</p><p>This license grants the following rights:</p><ul><li>making multiple copies
+						(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+					</li><li>distribution, public display, and publicly performance
+						(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+					</li><li>creation and distribution of derivative works
+						(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+					</li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license notices be kept intact
+						(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+					</li><li>credit be given to copyright holder and/or author
+						(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+					</li></ul></p></body></html>

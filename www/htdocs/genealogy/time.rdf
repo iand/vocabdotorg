@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY foaf  "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY cc  "http://web.resource.org/cc/" >
+    <!ENTITY vocabid  "http://purl.org/vocab/genealogy/time" >
+    <!ENTITY vocabns  "http://purl.org/vocab/genealogy/time#" >
+	  <!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:vann="http://purl.org/vocab/vann/" 
+  xmlns:dct="http://purl.org/dc/terms/" 
+  xmlns:dctype="http://purl.org/dc/dcmitype/" 
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+	<owl:Ontology rdf:about="" dc:date="2007-09-10">
+    <dc:title xml:lang="en">Genealogy Time Vocabulary</dc:title>
+    <skos:definition xml:lang="en">
+      This RDF vocabulary describes classes and properties for modelling genealogical situations and events.
+    </skos:definition>
+		<dc:identifier>&vocabid;</dc:identifier>
+		<dct:isVersionOf rdf:resource="&vocabns;"/>
+		<dc:creator>Ian Davis &lt;http://purl.org/NET/iand&gt;</dc:creator>
+		<dc:rights>Copyright © 2007 Ian Davis</dc:rights>
+		<dct:replaces rdf:resource="http://purl.org/vocab/frbr/frbr-core-20050809"/>
+		<vann:preferredNamespaceUri>&vocabns;</vann:preferredNamespaceUri>
+		<vann:preferredNamespacePrefix>gtime</vann:preferredNamespacePrefix>
+
+		<dct:hasFormat>
+			<dctype:Text rdf:about="&vocabid;.html">
+				<dc:format>
+					<dct:IMT>
+						<rdf:value>text/html</rdf:value>
+						<rdfs:label xml:lang="en">HTML</rdfs:label>
+					</dct:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dct:hasFormat>
+
+		<dct:hasFormat>
+			<dctype:Text rdf:about="&vocabid;.rdf">
+				<dc:format>
+					<dct:IMT>
+						<rdf:value>application/rdf+xml</rdf:value>
+						<rdfs:label xml:lang="en">RDF</rdfs:label>
+					</dct:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dct:hasFormat>
+
+    <dct:issued>2007-09-10</dct:issued>
+
+	</owl:Ontology>
+
+  <!-- Using new UK law licence -->
+	<cc:Work rdf:about="">
+		<cc:license rdf:resource="http://creativecommons.org/licenses/by/2.0/uk/"/>
+	</cc:Work>
+	<cc:License rdf:about="http://creativecommons.org/licenses/by/2.0/uk/">
+		<cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+		<cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+		<cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+		<cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+		<cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+	</cc:License>
+
+
+
+
+	<!-- some OWL DL constructs -->
+
+	<owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+	<owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/replaces"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+
+	<owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+	<owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+	<owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+	<owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+	<owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+	<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/changes"/>
+
+	<owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+
+	<owl:Class rdf:about="http://www.isi.edu/~pan/damltime/time-entry.owl#Event"/>
+	<owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+	<owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Work~2"/>
+	<owl:Class rdf:about="http://purl.org/dc/terms/IMT"/>
+	<owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+
+	<owl:Class rdf:about="http://purl.org/dc/dcmitype/Text"/>
+
+	<owl:Class rdf:about="&cc;License"/>
+	<owl:Class rdf:about="&cc;Permission"/>
+	<owl:Class rdf:about="&cc;Requirement"/>
+	<owl:ObjectProperty rdf:about="&cc;permits"/>
+	<owl:ObjectProperty rdf:about="&cc;requires"/>
+	<owl:AnnotationProperty rdf:about="&cc;license"/>
+	<cc:Permission rdf:about="&cc;Reproduction"/>
+	<cc:Permission rdf:about="&cc;Distribution"/>
+	<cc:Requirement rdf:about="&cc;Notice"/>
+	<cc:Requirement rdf:about="&cc;Attribution"/>
+	<cc:Permission rdf:about="&cc;DerivativeWorks"/>
+  
+
+  <owl:Class rdf:about="&vocabns;MemberPartnership">
+    <rdfs:label xml:lang="en">member partnership</rdfs:label>
+    <skos:definition  xml:lang="en">A relationship between resources that cannot be removed without destroying the partnership.</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;PartWholeComposition" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;MemberBunch">
+    <rdfs:label xml:lang="en">member bunch</rdfs:label>
+    <skos:definition  xml:lang="en">A relationship between resources that are grouped according to some criteria.</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;PartWholeComposition" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;PlaceArea">
+    <rdfs:label xml:lang="en">place area</rdfs:label>
+    <skos:definition  xml:lang="en">A relationship between areas and particular places within them. Places cannot be seperated from the area that contains them.</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;PartWholeComposition" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;PortionObject">
+    <rdfs:label xml:lang="en">portion object</rdfs:label>
+    <skos:definition  xml:lang="en"></skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;PartWholeComposition" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;ClassificationInterval">
+    <rdfs:label xml:lang="en">classification interval</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during which a resource was classified by some subject</skos:definition >
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;MemberPartnershipInterval">
+    <rdfs:label xml:lang="en">member partnership interval</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during which a resource was a member of a partnership</skos:definition >
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;MemberBunchInterval">
+    <rdfs:label xml:lang="en">member bunch interval</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during which a resource was a member of a bunch</skos:definition >
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+
+
+  <owl:Class rdf:about="&vocabns;PersonInFamily">
+    <rdfs:label xml:lang="en">family interval</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during a person was a member of a family</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;MemberBunchInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;PersonInEmployment">
+    <rdfs:label xml:lang="en">family interval</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during a person was employed by a company</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;MemberBunchInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;PersonInHousehold">
+    <rdfs:label xml:lang="en">family interval</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during a person was a member of a household</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;MemberBunchInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+
+<!-- PLACES -->
+
+  <owl:Class rdf:about="&vocabns;AdministrativeDivision">
+    <rdfs:label xml:lang="en">administrative division</rdfs:label>
+    <skos:definition  xml:lang="en">An administrative region or part of a sovereign state usually with a local government body with some degree of autonomy</skos:definition >
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;AdministrativelyPartOf">
+    <rdfs:label xml:lang="en">administratively part of</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during which one administrative division was considered to be part of another.</skos:definition >
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.w3.org/2006/time#ProperInterval"/>
+      <owl:Class rdf:about="&vocabns;Situation"/>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality> 
+        <owl:onProperty rdf:resource="&vocabns;administrativeSuperDivision"/>
+      </owl:Restriction>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality> 
+        <owl:onProperty rdf:resource="&vocabns;administrativeSubDivision"/>
+      </owl:Restriction>
+    </owl:intersectionOf>
+	</owl:Class>
+
+<!-- MARRIAGE -->
+
+  <owl:Class rdf:about="&vocabns;Married">
+    <rdfs:label xml:lang="en">married</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during which a person was a married to another</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;MemberPartnershipInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+  
+
+  <owl:Class rdf:about="&vocabns;Marriage">
+    <rdfs:label xml:lang="en">marriage</rdfs:label>
+    <skos:definition  xml:lang="en">A partnership between people, often one man and one woman, that forms a new family unit</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;MemberPartnership" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+    
+  <owl:Class rdf:about="&vocabns;MarriageEvent">
+    <rdfs:label xml:lang="en">marriage event</rdfs:label>
+    <skos:definition  xml:lang="en">The act of uniting people in marriage. This is often accompanied by a wedding ceremony conducted by religious and/or government officials. The marriage act is often recorded in a register.</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;Event" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;MarriageEventRecord">
+    <rdfs:label xml:lang="en">marriage event record</rdfs:label>
+    <skos:definition  xml:lang="en">A record of a marriage event.</skos:definition >
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+	</owl:Class>
+
+<!-- PLACES -->
+  <owl:Class rdf:about="&vocabns;AdministrativeUnitExistence">
+    <rdfs:label xml:lang="en">administrative unit existence</rdfs:label>
+    <skos:definition  xml:lang="en">An interval of time during which an administrative unit was in existence.</skos:definition >
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-10-03</dct:issued>
+	</owl:Class>
+  
+
+  <owl:Class rdf:about="&vocabns;AdministrativeUnit">
+    <rdfs:label xml:lang="en">administrative unit</rdfs:label>
+    <skos:definition  xml:lang="en">A unit of political governance</skos:definition >
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-10-03</dct:issued>
+	</owl:Class>
+
+    
+  <owl:Class rdf:about="&vocabns;AdministrativeUnitInitiation">
+    <rdfs:label xml:lang="en">administrative unit initiation</rdfs:label>
+    <skos:definition  xml:lang="en">The act of creating a new administrative unit.</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;Event" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-10-03</dct:issued>
+	</owl:Class>
+
+  <owl:Class rdf:about="&vocabns;AdministrativeUnitCessation">
+    <rdfs:label xml:lang="en">administrative unit cessation</rdfs:label>
+    <skos:definition  xml:lang="en">The act of ending a new administrative unit.</skos:definition >
+    <rdfs:subClassOf rdf:resource="&vocabns;Event" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-10-03</dct:issued>
+	</owl:Class>
+
+<!-- BIRTH -->
+
+  <owl:Class rdf:about="&vocabns;Divorced">
+    <rdfs:label xml:lang="en">divorced</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was divorced from another.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Widowed">
+    <rdfs:label xml:lang="en">widowed</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was widowed from another.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Retired">
+    <rdfs:label xml:lang="en">retired</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was retired from work.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Unmarried">
+    <rdfs:label xml:lang="en">unmarried</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was not and had never been married.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Alive">
+    <rdfs:label xml:lang="en">alive</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was alive.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Dead">
+    <rdfs:label xml:lang="en">dead</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was dead.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Named">
+    <rdfs:label xml:lang="en">named</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which an entity was named in a particular way.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Imprisoned">
+    <rdfs:label xml:lang="en">imprisoned</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was imprisoned.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Employed">
+    <rdfs:label xml:lang="en">employed</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was employed in work.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Unemployed">
+    <rdfs:label xml:lang="en">unemployed</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was unemployed from work.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Disabled">
+    <rdfs:label xml:lang="en">disabled</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was physically disabled.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval" />
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&vocabns;Educated">
+    <rdfs:label xml:lang="en">educated</rdfs:label>
+    <skos:definition xml:lang="en">An interval of time during which a person was engaging in formal education.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.w3.org/2006/time#ProperInterval"/>
+          <owl:Class rdf:about="&vocabns;Situation"/>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality> 
+            <owl:onProperty rdf:resource="&vocabns;personInSituation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+
+  <owl:ObjectProperty rdf:about="&vocabns;subject">
+    <rdfs:label xml:lang="en">subject</rdfs:label>
+    <skos:definition xml:lang="en">A concept that is the subject of a resource during a particular interval.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <rdfs:domain rdf:resource="&vocabns;ClassificationInterval"/>
+    <rdfs:range rdf:resource="&skos;Concept"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="&vocabns;resource">
+    <rdfs:label xml:lang="en">resource</rdfs:label>
+    <skos:definition xml:lang="en">A resource that participates in a relation.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="&vocabns;"/>
+    <dct:issued>2007-09-10</dct:issued>
+  </owl:ObjectProperty>
+
+<!--
+#$MakingAnAgreement
+  #$EmployeeHiring (person, employer)
+  #$EmploymentTermination (person, employer)
+
+#$EndingAnAgreement
+  
+#$PurposefulAction
+  #$SocialGathering
+  #$VisitingSomeone 
+  #$SocialOccurrence
+
+
+#$deliberateActor - means that the #$Agent ACTOR is conscious, volitional, and purposeful in the #$Event ACT. ACTOR is aware of acting in ACT, and chooses to play the role he/she/it does in ACT.
+  #$directingAgent  - DIRECTOR deliberately controls or directs EVENT
+  #$assistingAgent - AGENT is one of the agents assisting in the performance of ACT; AGENT itself may or may not also be performing ACT. AGENT is doing some tasks related to ACT but which are not directly #$subEvents of performing the main or focus action. Thus, `assisting' here means doing such supporting activities as fetching supplies or tools needed in ACT; helping to manipulate objects involved in ACT; gathering an audience, or booking the performer, if ACT is a public performance, and so forth
+  #$objectActedOn
+#$nonDeliberateActor - means that ACTOR plays some role in the #$Event ACT, but is not acting deliberately. For example, #$JohnKennedy was a #$nonDeliberateActors  in his assassination, a person is a #$nonDeliberateActors  in his/her own autonomic bodily functioning, and Mount #$Vesuvius-Volcano was a #$nonDeliberateActors  in the event of its eruption that destroyed Pompeii.
+
+#$SingleDoerAction - an action which can have only one doer 
+  #$doneBy - means that DOER is the doer in the event EVENT: some activity on the part of DOER causes or carries out EVENT. This predicate is agnostic as to whether DOER does EVENT intentionally or not.
+  #$IncurringAnInjury  
+  #$Sleeping, 
+  #$Dying, 
+
+#$PhysiologicalCondition - being in some physiological state that is not typical for that organism's species, modulo considerations about the organism's sex or (in some cases) subspecies
+  #$AilmentCondition
+
+
+Attributes of a person that can vary over time:
+
+nationality
+name
+
+-->
+
+
+</rdf:RDF>

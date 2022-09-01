@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+  <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+  <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+  <!ENTITY ddl "http://purl.org/vocab/riro/ddl#" >
+  <!ENTITY gpt "http://purl.org/vocab/riro/gpt#" >
+  <!ENTITY lsrn "http://www.lsrn.org/lsrn/name.owl#" >
+  <!ENTITY lsrs "http://www.lsrn.org/lsrn/schema.owl#" >
+]>
+<rdf:RDF xmlns:rdf="&rdf;" xmlns:ddl="&ddl;">
+
+  <rdf:Description rdf:about="http://riro.lsrn.org/resolver">
+    <ddl:handlesNamespaceUri>http://www.lsrn.org/lsrn/name.owl#</ddl:handlesNamespaceUri>
+    <ddl:handlesNamespaceUri>http://www.lsrn.org/lsrn/schema.owl#</ddl:handlesNamespaceUri>
+    <ddl:handlesInstancesOf rdf:resource="&lsrn;Name"/>
+    <ddl:handlesInstancesOf rdf:resource="&lsrn;Record"/>
+    <ddl:handlesInstancesOf rdf:resource="&lsrs;Schema"/>
+    <ddl:handlesInstancesOf rdf:resource="&foaf;Document"/>
+    <ddl:handlesProperty  rdf:resource="&lsrn;schema"/>
+    <ddl:handlesProperty  rdf:resource="&lsrn;id"/>
+    <ddl:handlesProperty  rdf:resource="&dc;identifier"/>
+    <ddl:handlesProperty  rdf:resource="&rdfs;seeAlso"/>
+  </rdf:Description>
+
+</rdf:RDF>
+

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE rdf:RDF [
+    <!ENTITY changeset  "http://purl.org/vocab/changeset/schema#" >
+    <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY foaf  "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY cc  "http://web.resource.org/cc/" >
+    <!ENTITY vocabid  "http://purl.org/vocab/changeset/schema-20051214" >
+	  <!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:vann="http://purl.org/vocab/vann/" 
+    xmlns:dct="http://purl.org/dc/terms/" 
+    xmlns:dctype="http://purl.org/dc/dcmitype/" 
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="" dc:date="2005-12-14">
+    <dc:title xml:lang="en">Changesets</dc:title>
+		<dc:identifier>&vocabid;</dc:identifier>
+		<dct:isVersionOf rdf:resource="&changeset;"/>
+		<dc:creator>Sam Tunnicliffe</dc:creator>
+		<dc:creator>Ian Davis &lt;http://purl.org/NET/iand&gt;</dc:creator>
+		<dc:rights>Copyright © 2005 Talis Information Ltd.</dc:rights>
+		<vann:preferredNamespaceUri>&changeset;</vann:preferredNamespaceUri>
+		<vann:preferredNamespacePrefix>cs</vann:preferredNamespacePrefix>
+
+		<dct:hasFormat>
+			<dctype:Text rdf:about="&vocabid;.html">
+				<dc:format>
+					<dct:IMT>
+						<rdf:value>text/html</rdf:value>
+						<rdfs:label xml:lang="en">HTML</rdfs:label>
+					</dct:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dct:hasFormat>
+
+		<dct:hasFormat>
+			<dctype:Text rdf:about="&vocabid;.rdf">
+				<dc:format>
+					<dct:IMT>
+						<rdf:value>application/rdf+xml</rdf:value>
+						<rdfs:label xml:lang="en">RDF</rdfs:label>
+					</dct:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dct:hasFormat>
+
+    <dct:issued>2005-12-14</dct:issued>
+  </owl:Ontology>
+
+  <rdf:Property rdf:about="&changeset;addition">
+    <rdfs:label xml:lang="en">addition</rdfs:label>        
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="&changeset;removal">
+    <rdfs:label xml:lang="en">removal</rdfs:label>        
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="&changeset;subjectOfChange">
+    <rdfs:label xml:lang="en">subjectOfChange</rdfs:label>        
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="&changeset;precedingChangeSet">
+    <rdfs:label xml:lang="en">precedingChangeSet</rdfs:label>        
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <rdfs:range rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="&changeset;createdDate">
+    <rdfs:label xml:lang="en">createdDate</rdfs:label>      
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="&changeset;changeReason">
+    <rdfs:label xml:lang="en">changeReason</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdf:Property>  
+
+
+  <rdf:Property rdf:about="&changeset;creatorName">
+    <rdfs:label xml:lang="en">creatorName</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdf:Property>
+
+
+  <rdfs:Class rdf:about="&changeset;ChangeSet">
+    <rdfs:label xml:lang="en">ChangeSet</rdfs:label>
+    <skos:definition xml:lang="en">The encapsulation of a delta between 2 versions of a resource description</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="&changeset;"/>
+    <dct:issued>2005-12-14</dct:issued>
+  </rdfs:Class>
+</rdf:RDF>

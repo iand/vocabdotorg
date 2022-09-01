@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Resource List Ontology</title><link rel="meta" type="application/rdf+xml" title="Resource List Ontology" href="http://purl.org/vocab/resourcelist/schema#.rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Resource List Ontology</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://purl.org/vocab/resourcelist/schema#">http://purl.org/vocab/resourcelist/schema#</a> [<a href="http://purl.org/vocab/resourcelist/schema-20080519.html">HTML</a>] [<a href="http://purl.org/vocab/resourcelist/schema-20080519.rdf">RDF</a>]</dd><dt>Latest Version</dt><dd><a href="http://purl.org/vocab/resourcelist/schema#">http://purl.org/vocab/resourcelist/schema#</a></dd><dt>Authors</dt><dd>Nadeem Shabir</dd><dd>Rob Styles</dd><dt>Contributors</dt><dd>Ian Corns</dd><dd>Sarah Bartlett</dd></dl><p class="rights">Copyright © 2008 Talis Information Ltd</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-usageNote">Usage Note</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-examples">Examples</a></li><li><a href="#sec-schema">RDF Schema</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="comment">
+The Resource List ontology describes collections of Items grouped together in Sections and explicitly ordered. Items refer to resources, currently bibo:Documents. The ontology subclasses SIOC for Container and Item relationships as well as providing additional properties for explicit ordering and optimisations for retrieving deeply structured Lists.
+The Resource List ontology is intended for use describing academic reading lists, bookmarks, bibliographies and similar structured collections of references.
+    	</p><h2 id="sec-changes">Changes From Previous Version</h2><ul><li class="historyNote">2008-05-19 - semantic change by Nadeem Shabir:
+			"First cut of the ontology published"
+    </li><li class="historyNote">2008-07-31 - semantic change by Nadeem Shabir:
+			"Ontology updated, lifecycle integrated"
+    </li><li class="historyNote">2009-07-01 - semantic change by Nadeem Shabir:
+			"Ontology updated, updated to reflect new properties, and change to using rdf:Seq of ordering of items/sections"
+    </li></ul><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://purl.org/vocab/resourcelist/schema#</code></pre><p>
+          When used in XML documents the suggested prefix is <code>resource</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/resourcelist/schema#list
+http://purl.org/vocab/resourcelist/schema#List</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>List
+Section</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>list
+contains</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      4 classes 
+        
+      and 
+      11 properties 
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-AlternativeItem" title="http://purl.org/vocab/resourcelist/schema#AlternativeItem">AlternativeItem</a></td><td>class</td><td>An Alternative Item is an Item that is used specifically as an alternative to the Item it is associated with. This allows resource list creators to specify alternative resources when the core items on their list are unavailable, or simply in addition to them within a given context.</td></tr><tr><td><a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">Item</a></td><td>class</td><td>An Item represents a resource in the context of the list in which it is contained. This differs from the resource itself in that a resource may be referenced in many lists or many times within a single list. Item provides the means to contextualize the specific reference to a resource on each list.</td></tr><tr><td><a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">List</a></td><td>class</td><td>A Resource List represents an ordered collection of Items each which refers to a resource (currently bibo:Documents) for such purposes as managing a bibliography, circulating a reading list or similar.</td></tr><tr><td><a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">Section</a></td><td>class</td><td>A Section denotes a grouping of resources within a Resource List that are considered related in some way.</td></tr><tr><td><a href="#term-alternative" title="http://purl.org/vocab/resourcelist/schema#alternative">alternative</a></td><td>property</td><td>The alternative property is used to relate one item to another as an alternative.</td></tr><tr><td><a href="#term-contains" title="http://purl.org/vocab/resourcelist/schema#contains">contains</a></td><td>property</td><td>A List may contain many Sections and Items organised in a hierarchical structure. the contains property provides a relationshiop between the parent List and all Sections and Items within it, whether they are attached directly or deeper within the structure. This allows a List and all of its parts to be retrieved with a single DESCRIBE. This is an optimisation that precludes the need for recursive querying.</td></tr><tr><td><a href="#term-created" title="http://purl.org/vocab/resourcelist/schema#created">created</a></td><td>property</td><td>This property is used to capture the date a list, item, or section was created</td></tr><tr><td><a href="#term-description" title="http://purl.org/vocab/resourcelist/schema#description">description</a></td><td>property</td><td>This property is used to provide a description of a Resource List.</td></tr><tr><td><a href="#term-lastUpdated" title="http://purl.org/vocab/resourcelist/schema#lastUpdated">lastUpdated</a></td><td>property</td><td>This property is used to capture the date a list, item, or section last updated</td></tr><tr><td><a href="#term-list" title="http://purl.org/vocab/resourcelist/schema#list">list</a></td><td>property</td><td>Sections and Items are contained within Lists, the list property allows an easy way to get from Items and Sections that may be several levels deep to their parent List.</td></tr><tr><td><a href="#term-next" title="http://purl.org/vocab/resourcelist/schema#next">next</a></td><td>property</td><td>DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</td></tr><tr><td><a href="#term-previous" title="http://purl.org/vocab/resourcelist/schema#previous">previous</a></td><td>property</td><td>DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</td></tr><tr><td><a href="#term-resource" title="http://purl.org/vocab/resourcelist/schema#resource">resource</a></td><td>property</td><td>The resource property relates an Item as it occurs in a List or Section to the resource it refers to. In our current view of Resource Lists the Items refer to resources all of which can be described using Bibliontology.</td></tr><tr><td><a href="#term-usedBy" title="http://purl.org/vocab/resourcelist/schema#usedBy">usedBy</a></td><td>property</td><td>The usedBy property relates a List to the those rdf:resources that refer to it.</td></tr><tr><td><a href="#term-usesList" title="http://purl.org/vocab/resourcelist/schema#usesList">usesList</a></td><td>property</td><td>The usesList property is used to relate any rdf:resource to a Resource List it makes use of.</td></tr></table><h2 id="sec-usageNote">Usage Note</h2><div class="usage-note"><body xmlns="">  
+<p>The Resource List ontology is designed to model academic reading lists, bookmarks and similarly structured collections of references. The Resource List Ontology makes use of a number of other ontologies:
+<ul>
+	<li><a href="http://rdfs.org/sioc/spec/">SIOC Core Ontology</a></li>
+	<li><a href="http://bibliontology.com/">Bibliographic Ontology</a></li>
+	<li><a href="http://vocab.org/lifecycle/schema">Lifecycle Ontology</a></li>
+</ul> 
+</p>
+<p>We use SIOC to model the structure of a Resource List and the relationships between items and their containers. We use Bibliographic Ontology to model the various kinds of resources that can be included on a list. It is recommended that you refer to those ontologies to gain a better understanding of the classes and properties that are available.</p>
+<h3>Lifecycle Ontology</h3>
+<p>
+We are currently using the lifecycle ontology to model the status of a List, Section or Item, with a view to introduce the ability to model more detailed workflow type activities in the future. At the moment it is used to indicate whether a List, a Section or an Item are draft, or published. In order to do this we have defined the following Individuals as part of the Resource List Ontology
+<pre>
+ &lt;lifecycle:State rdf:about="http://purl.org/vocab/resourcelist/schema#status-draft"&gt;
+    &lt;rdfs:label xml:lang="en"&gt;Draft&lt;/rdfs:label&gt;
+ &lt;/lifecycle:State&gt;
+
+ &lt;lifecycle:State rdf:about="http://purl.org/vocab/resourcelist/schema#status-published"&gt;
+    &lt;rdfs:label xml:lang="en"&gt;Published&lt;/rdfs:label&gt;
+ &lt;/lifecycle:State&gt;
+</pre>
+And specify that the <a href="http://vocab.org/lifecycle/schema#term-state"><code>&lt;lifecycle:state&gt;</code></a> property be used when indicating the status of an item, section or a list. For example:
+
+<pre>
+ &lt;resource:List rdf:about="http://example.com/lists/test"&gt;
+     &lt;resource:created&gt;20080520110000&lt;/resource:created&gt;
+     &lt;sioc:has_creator rdf:resource="http://example.com/people/joe_bloggs"/&gt;
+     &lt;lifecycle:state rdf:resource="http://purl.org/vocab/resourcelist/schema#status-draft"/&gt;
+     &lt;sioc:name xml:lang="en"&gt;Test List&lt;/sioc:name&gt;
+     &lt;resource:description xml:lang="en"&gt;This a test list&lt;/resource:description&gt;
+ &lt;/resource:List&gt;
+</pre>
+</p>
+<p/>
+</body></div><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-AlternativeItem">Class: AlternativeItem</h3><div class="description"><p class="comment">An Alternative Item is an Item that is used specifically as an alternative to the Item it is associated with. This allows resource list creators to specify alternative resources when the core items on their list are unavailable, or simply in addition to them within a given context.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#AlternativeItem</td></tr><tr><th>Label:</th><td>Alternative Item</td></tr><tr><th>Subclass of</th><td><a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-AlternativeItem" title="http://purl.org/vocab/resourcelist/schema#AlternativeItem">resource:AlternativeItem</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Item">Class: Item</h3><div class="description"><p class="comment">An Item represents a resource in the context of the list in which it is contained. This differs from the resource itself in that a resource may be referenced in many lists or many times within a single list. Item provides the means to contextualize the specific reference to a resource on each list.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#Item</td></tr><tr><th>Label:</th><td>Item</td></tr><tr><th>Subclass of</th><td><a href="http://rdfs.org/sioc/spec/Item">http://rdfs.org/sioc/spec/Item</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://rdfs.org/sioc/spec/Item">http://rdfs.org/sioc/spec/Item</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-List">Class: List</h3><div class="description"><p class="comment">A Resource List represents an ordered collection of Items each which refers to a resource (currently bibo:Documents) for such purposes as managing a bibliography, circulating a reading list or similar.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#List</td></tr><tr><th>Label:</th><td>Resource List</td></tr><tr><th>Subclass of</th><td><a href="http://rdfs.org/sioc/spec/Container">http://rdfs.org/sioc/spec/Container</a> and <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">rdf:Seq</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://rdfs.org/sioc/spec/Container">http://rdfs.org/sioc/spec/Container</a> and 
+        is a
+        <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">rdf:Seq</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li><li class="historyNote">2009-07-01 - semantic change by Nadeem Shabir:
+			"Updated, List now also subclasses rdf:Seq"
+    </li></ul></div></div><div class="class"><h3 id="term-Section">Class: Section</h3><div class="description"><p class="comment">A Section denotes a grouping of resources within a Resource List that are considered related in some way.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#Section</td></tr><tr><th>Label:</th><td>Section</td></tr><tr><th>Subclass of</th><td><a href="http://rdfs.org/sioc/spec/Container">http://rdfs.org/sioc/spec/Container</a> and <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">rdf:Seq</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://rdfs.org/sioc/spec/Container">http://rdfs.org/sioc/spec/Container</a> and 
+        is a
+        <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">rdf:Seq</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li><li class="historyNote">2009-07-01 - semantic change by Nadeem Shabir:
+			"Updated, Section now also subclasses rdf:Seq"
+    </li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-alternative">Property: alternative</h3><div class="description"><p class="comment">The alternative property is used to relate one item to another as an alternative.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#alternative</td></tr><tr><th>Label:</th><td>Alternative</td></tr><tr><th>Domain</th><td><a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/resourcelist/schema#AlernativeItem">resource:AlernativeItem</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-alternative" title="http://purl.org/vocab/resourcelist/schema#alternative">resource:alternative</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-contains">Property: contains</h3><div class="description"><p class="comment">A List may contain many Sections and Items organised in a hierarchical structure. the contains property provides a relationshiop between the parent List and all Sections and Items within it, whether they are attached directly or deeper within the structure. This allows a List and all of its parts to be retrieved with a single DESCRIBE. This is an optimisation that precludes the need for recursive querying.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#contains</td></tr><tr><th>Label:</th><td>contains</td></tr><tr><th>Domain</th><td><a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr><tr><th>Range</th><td>Union of 
+				
+					<a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+					 or a <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+				
+			</td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-contains" title="http://purl.org/vocab/resourcelist/schema#contains">resource:contains</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-created">Property: created</h3><div class="description"><p class="comment">This property is used to capture the date a list, item, or section was created</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#created</td></tr><tr><th>Label:</th><td>Created Date</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+					, <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+					 or a <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-created" title="http://purl.org/vocab/resourcelist/schema#created">resource:created</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>, <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a> or a <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-07-31</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-description">Property: description</h3><div class="description"><p class="comment">This property is used to provide a description of a Resource List.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#description</td></tr><tr><th>Label:</th><td>Description</td></tr><tr><th>Domain</th><td><a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-description" title="http://purl.org/vocab/resourcelist/schema#description">resource:description</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-lastUpdated">Property: lastUpdated</h3><div class="description"><p class="comment">This property is used to capture the date a list, item, or section last updated</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#lastUpdated</td></tr><tr><th>Label:</th><td>Last Updated Date</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+					, <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+					 or a <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-lastUpdated" title="http://purl.org/vocab/resourcelist/schema#lastUpdated">resource:lastUpdated</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>, <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a> or a <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-01</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-list">Property: list</h3><div class="description"><p class="comment">Sections and Items are contained within Lists, the list property allows an easy way to get from Items and Sections that may be several levels deep to their parent List.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#list</td></tr><tr><th>Label:</th><td>list</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+					 or a <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-list" title="http://purl.org/vocab/resourcelist/schema#list">resource:list</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a> or a <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-next">Property: next</h3><div class="description"><p class="comment">DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#next</td></tr><tr><th>Label:</th><td>next</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+					 or a <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+				
+			</td></tr><tr><th>Range</th><td>Union of 
+				
+					<a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+					 or a <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+				
+			</td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-next" title="http://purl.org/vocab/resourcelist/schema#next">resource:next</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a> or a <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li><li class="historyNote">2009-07-01 - semantic change by Nadeem Shabir:
+			"Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable"
+    </li></ul></div></div><div class="property"><h3 id="term-previous">Property: previous</h3><div class="description"><p class="comment">DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#previous</td></tr><tr><th>Label:</th><td>previous</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+					 or a <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+				
+			</td></tr><tr><th>Range</th><td>Union of 
+				
+					<a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a>
+					 or a <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a>
+				
+			</td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-previous" title="http://purl.org/vocab/resourcelist/schema#previous">resource:previous</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a> or a <a href="#term-Section" title="http://purl.org/vocab/resourcelist/schema#Section">resource:Section</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li><li class="historyNote">2009-07-01 - semantic change by Nadeem Shabir:
+			"Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable"
+    </li></ul></div></div><div class="property"><h3 id="term-resource">Property: resource</h3><div class="description"><p class="comment">The resource property relates an Item as it occurs in a List or Section to the resource it refers to. In our current view of Resource Lists the Items refer to resources all of which can be described using Bibliontology.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#resource</td></tr><tr><th>Label:</th><td>resource</td></tr><tr><th>Domain</th><td><a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/ontology/bibo/Document">http://purl.org/ontology/bibo/Document</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-resource" title="http://purl.org/vocab/resourcelist/schema#resource">resource:resource</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-Item" title="http://purl.org/vocab/resourcelist/schema#Item">resource:Item</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-usedBy">Property: usedBy</h3><div class="description"><p class="comment">The usedBy property relates a List to the those rdf:resources that refer to it.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#usedBy</td></tr><tr><th>Label:</th><td>List Used By</td></tr><tr><th>Domain</th><td><a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-usedBy" title="http://purl.org/vocab/resourcelist/schema#usedBy">resource:usedBy</a>
+                    implies being
+                   something that, amongst other things, is a <a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-usesList">Property: usesList</h3><div class="description"><p class="comment">The usesList property is used to relate any rdf:resource to a Resource List it makes use of.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/resourcelist/schema#usesList</td></tr><tr><th>Label:</th><td>Uses Resource List</td></tr><tr><th>Range</th><td><a href="#term-List" title="http://purl.org/vocab/resourcelist/schema#List">resource:List</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-19</span> - first issued</li></ul></div></div><h2 id="sec-examples">Examples</h2><div class="example"><h3>Resource List Ontology at a glance</h3><body xmlns="">
+	<p>
+		<img src="resourcelist_ont-20090701.png"/>
+	</p>
+</body></div><div class="example"><h3>Basic Resource List</h3><body xmlns="">  
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;rdf:RDF xmlns:bibo="http://purl.org/ontology/bibo/" 
+  xmlns:cc="http://web.resource.org/cc/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:dct="http://purl.org/dc/terms/" 
+  xmlns:dctype="http://purl.org/dc/dcmitype/" 
+  xmlns:foaf="http://xmlns.com/foaf/spec/" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:resource="http://purl.org/vocab/resourcelist/schema#" 
+  xmlns:sioc="http://rdfs.org/sioc/spec/" 
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+  xmlns:vann="http://purl.org/vocab/vann/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:lifeycle="http://purl.org/vocab/lifecycle/schema#"
+&gt;
+  &lt;resource:List rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self"&gt;
+    &lt;resource:created&gt;20080520110000&lt;/resource:created&gt;
+    &lt;resource:lastUpdated&gt;20090701110000&lt;/resource:lastUpdated&gt;
+    &lt;sioc:has_creator rdf:resource="http://list.hogwarts.ac.uk/people/umbridge_dolores#self"/&gt;
+    &lt;sioc:name xml:lang="en"&gt;Introduction to Defence Against The Dark Arts&lt;/sioc:name&gt;
+    &lt;resource:description xml:lang="en"&gt;This list contains a number of resources that provide a good introduction to defence against the dark arts&lt;/resource:description&gt;
+    &lt;resource:status rdf:resource="http://purl.org/vocab/resourcelist/schema#StatusPublished"/&gt;
+    &lt;resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self"/&gt;
+    &lt;resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self"/&gt;
+    &lt;resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self"/&gt;
+    &lt;resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self"/&gt;
+    &lt;resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self"/&gt;
+    &lt;resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self"/&gt;
+    &lt;resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self"/&gt;
+    &lt;sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self" /&gt;
+    &lt;sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self" /&gt;
+    &lt;sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self" /&gt;
+    &lt;rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self" /&gt;
+    &lt;rdf:_2 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self" /&gt;
+    &lt;rdf:_3 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self" /&gt;
+    &lt;lifecyle:state rdf:resource="http://purl.org/vocab/resourcelist/schema#status-published" /&gt;
+  &lt;/resource:List&gt;
+  &lt;resource:Section rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self"&gt;
+    &lt;sioc:name xml:lang="en"&gt;Week 1&lt;/sioc:name&gt;
+    &lt;resource:description xml:lang="en"&gt;This section contains resources that are relevant to study in Week One of this course&lt;/resource:description&gt;
+    &lt;sioc:has_parent rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self"/&gt;
+    &lt;sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self"/&gt;
+    &lt;rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self" /&gt;    
+  &lt;/resource:Section&gt;
+  &lt;resource:Section rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self"&gt;
+    &lt;sioc:name xml:lang="en"&gt;Week 2&lt;/sioc:name&gt;
+    &lt;resource:description xml:lang="en"&gt;This section contains resources that are relevant to study in Week Two of this course&lt;/resource:description&gt;
+    &lt;sioc:has_parent rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self"/&gt;
+    &lt;sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self"/&gt;
+    &lt;rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self" /&gt;
+  &lt;/resource:Section&gt;
+  &lt;resource:Section rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self"&gt;
+    &lt;sioc:name xml:lang="en"&gt;Week 3&lt;/sioc:name&gt;
+    &lt;resource:description xml:lang="en"&gt;This section contains resources that are relevant to study in Week Three of this course&lt;/resource:description&gt;
+    &lt;sioc:has_parent rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self"/&gt;
+    &lt;sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self"/&gt;
+    &lt;sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self"/&gt;
+    &lt;rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self" /&gt;
+    &lt;rdf:_2 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self" /&gt;
+  &lt;/resource:Section&gt;
+  &lt;resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self"&gt;
+    &lt;resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/1#self"/&gt;
+    &lt;sioc:note xml:lang="en"&gt;First lesson text, read this.&lt;/sioc:note&gt;
+    &lt;sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self"/&gt;
+  &lt;/resource:Item&gt;
+  &lt;resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self"&gt;
+    &lt;resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/2#self"/&gt;
+    &lt;sioc:note xml:lang="en"&gt;All students should read this.&lt;/sioc:note&gt;
+    &lt;sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self"/&gt;
+  &lt;/resource:Item&gt;
+  &lt;resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self"&gt;
+    &lt;resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/3#self"/&gt;
+    &lt;sioc:note xml:lang="en"&gt;All students should read this.&lt;/sioc:note&gt;
+    &lt;sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self"/&gt;
+    &lt;resource:next rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self"/&gt;
+  &lt;/resource:Item&gt;
+  &lt;resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self"&gt;
+    &lt;resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/4#self"/&gt;
+    &lt;sioc:note xml:lang="en"&gt;All students should read this.&lt;/sioc:note&gt;
+    &lt;sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self"/&gt;
+    &lt;resource:previous rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self"/&gt;
+  &lt;/resource:Item&gt;
+  &lt;bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/1#self"&gt;
+    &lt;dc:title xml:lang="en"&gt;Basics for Beginners&lt;/dc:title&gt;
+    &lt;bibo:locator xml:lang="en"&gt;1&lt;/bibo:locator&gt;
+    &lt;dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/&gt;
+  &lt;/bibo:Chapter&gt;
+  &lt;bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/2#self"&gt;
+    &lt;dc:title xml:lang="en"&gt;Common Defensive Theories and their Derivation&lt;/dc:title&gt;
+    &lt;bibo:locator xml:lang="en"&gt;2&lt;/bibo:locator&gt;
+    &lt;dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/&gt;
+  &lt;/bibo:Chapter&gt;
+  &lt;bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/3#self"&gt;
+    &lt;dc:title xml:lang="en"&gt;The Case for Non-Offensive Responses to Magical Attack&lt;/dc:title&gt;
+    &lt;bibo:pageStart&gt;34&lt;/bibo:pageStart&gt;
+    &lt;bibo:locator xml:lang="en"&gt;3&lt;/bibo:locator&gt;
+    &lt;dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/&gt;
+  &lt;/bibo:Chapter&gt;
+  &lt;bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/4#self"&gt;
+    &lt;dc:title xml:lang="en"&gt;Non-Retaliation and Negotiation&lt;/dc:title&gt;
+    &lt;bibo:locator xml:lang="en"&gt;34&lt;/bibo:locator&gt;
+    &lt;dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/&gt;
+  &lt;/bibo:Chapter&gt;
+  &lt;bibo:Book rdf:about="http://list.hogwarts.ac.uk/resources/5#self"&gt;
+    &lt;bibo:uri rdf:resource="http://www.hp-lexicon.org/wizworld/books.html#Defensive_Magical_Theory"/&gt;
+    &lt;bibo:isbn13 xml:lang="en"&gt;978-0-596-52932-1&lt;/bibo:isbn13&gt;
+    &lt;dct:title xml:lang="en"&gt;Defensive Magical Theory&lt;/dct:title&gt;
+    &lt;bibo:authorList&gt;
+      &lt;rdf:Description&gt;
+        &lt;rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/&gt;
+        &lt;rdf:first rdf:resource="http://list.hogwarts.ac.uk/people/slinkhard_Wilbert"/&gt;
+      &lt;/rdf:Description&gt;
+    &lt;/bibo:authorList&gt;
+    &lt;bibo:edition xml:lang="en"&gt;First Edition&lt;/bibo:edition&gt;
+    &lt;bibo:isbn10 xml:lang="en"&gt;0-596-52932-5&lt;/bibo:isbn10&gt;
+  &lt;/bibo:Book&gt;
+  &lt;foaf:Person rdf:about="http://list.hogwarts.ac.uk/people/slinkhard_Wilbert"&gt;
+    &lt;foaf:firstName xml:lang="en"&gt;Wilbert&lt;/foaf:firstName&gt;
+    &lt;foaf:surname&gt;Slinkhard&lt;/foaf:surname&gt;
+    &lt;foaf:homepage&gt;http://www.hp-lexicon.org/wizworld/books_authors.html#slinkhard_wilbert&lt;/foaf:homepage&gt;
+  &lt;/foaf:Person&gt;
+&lt;/rdf:RDF&gt;
+</pre>
+</body></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://purl.org/vocab/resourcelist/schema#.rdf">http://purl.org/vocab/resourcelist/schema#.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:lifecycle</span>="<span class="attrVal">http://purl.org/vocab/lifecycle/schema#</span>"
+   <span class="attr">xmlns:bibo</span>="<span class="attrVal">http://purl.org/ontology/bibo/</span>"
+   <span class="attr">xmlns:sioc</span>="<span class="attrVal">http://rdfs.org/sioc/spec/</span>"
+   <span class="attr">xmlns:xsd</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"/>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2008-05-14</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Resource List Ontology</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The Resource List ontology describes collections of Items grouped </span>
+      <span class="text">together in Sections and explicitly ordered. Items refer to resources, </span>
+      <span class="text">currently bibo:Documents. The ontology subclasses SIOC for Container and </span>
+      <span class="text">Item relationships as well as providing additional properties for </span>
+      <span class="text">explicit ordering and optimisations for retrieving deeply structured </span>
+      <span class="text">Lists. The Resource List ontology is intended for use describing </span>
+      <span class="text">academic reading lists, bookmarks, bibliographies and similar structured </span>
+      <span class="text">collections of references.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/resourcelist/schema#</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Nadeem Shabir</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Rob Styles</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:contributor</span><span class="elem">&gt;</span><span class="text">Ian Corns</span><span class="elem">&lt;/dc:contributor&gt;</span>
+    <span class="elem">&lt;dc:contributor</span><span class="elem">&gt;</span><span class="text">Sarah Bartlett</span><span class="elem">&lt;/dc:contributor&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span><span class="text">Copyright © 2008 Talis Information Ltd</span><span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/resourcelist/schema#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">resource</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;vann:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">ontology_diagram-20090701.html</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;vann:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">readinglist-example-20090701.html</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;vann:usageNote</span> <span class="attr">rdf:resource</span>="<span class="attrVal">usagenote.html</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema-20080519.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema-20080519.rdf</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">First cut of the ontology published</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-19</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Ontology updated, lifecycle integrated</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-07-31</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Ontology updated, updated to reflect new properties, and change to using rdf:Seq of ordering of items/sections</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2009-07-01</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"/>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Resource List</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Resource List represents an ordered collection of Items each which </span>
+      <span class="text">refers to a resource (currently bibo:Documents) for such purposes as </span>
+      <span class="text">managing a bibliography, circulating a reading list or similar.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://rdfs.org/sioc/spec/Container</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Updated, List now also subclasses rdf:Seq</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2009-07-01</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Section</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Section denotes a grouping of resources within a Resource List that </span>
+      <span class="text">are considered related in some way.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://rdfs.org/sioc/spec/Container</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Updated, Section now also subclasses rdf:Seq</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2009-07-01</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Item</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">An Item represents a resource in the context of the list in which it is </span>
+      <span class="text">contained. This differs from the resource itself in that a resource may </span>
+      <span class="text">be referenced in many lists or many times within a single list. Item </span>
+      <span class="text">provides the means to contextualize the specific reference to a resource </span>
+      <span class="text">on each list.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://rdfs.org/sioc/spec/Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#AlternativeItem</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Alternative Item</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">An Alternative Item is an Item that is used specifically as an </span>
+      <span class="text">alternative to the Item it is associated with. This allows resource list </span>
+      <span class="text">creators to specify alternative resources when the core items on their </span>
+      <span class="text">list are unavailable, or simply in addition to them within a given </span>
+      <span class="text">context.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#list</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">list</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">Sections and Items are contained within Lists, the list property allows </span>
+      <span class="text">an easy way to get from Items and Sections that may be several levels </span>
+      <span class="text">deep to their parent List.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#contains</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">contains</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A List may contain many Sections and Items organised in a hierarchical </span>
+      <span class="text">structure. the contains property provides a relationshiop between the </span>
+      <span class="text">parent List and all Sections and Items within it, whether they are </span>
+      <span class="text">attached directly or deeper within the structure. This allows a List and </span>
+      <span class="text">all of its parts to be retrieved with a single DESCRIBE. This is an </span>
+      <span class="text">optimisation that precludes the need for recursive querying.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:range&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#next</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">next</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">DEPRECATED: The Sections and Items within a List or a Section are </span>
+      <span class="text">ordered. The mechanism for that is a doubly linked list, using next and </span>
+      <span class="text">previous.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:range&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2009-07-01</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#previous</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">previous</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">DEPRECATED: The Sections and Items within a List or a Section are </span>
+      <span class="text">ordered. The mechanism for that is a doubly linked list, using next and </span>
+      <span class="text">previous.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:range&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2009-07-01</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#resource</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">resource</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">The resource property relates an Item as it occurs in a List or Section </span>
+      <span class="text">to the resource it refers to. In our current view of Resource Lists the </span>
+      <span class="text">Items refer to resources all of which can be described using </span>
+      <span class="text">Bibliontology.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/ontology/bibo/Document</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#usedBy</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">List Used By</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">The usedBy property relates a List to the those rdf:resources that refer </span>
+      <span class="text">to it.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#usesList</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Uses Resource List</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">The usesList property is used to relate any rdf:resource to a Resource </span>
+      <span class="text">List it makes use of.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#alternative</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Alternative</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">The alternative property is used to relate one item to another as an </span>
+      <span class="text">alternative.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#AlernativeItem</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#created</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Created Date</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">This property is used to capture the date a list, item, or section was </span>
+      <span class="text">created</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#date</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-07-31</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#lastUpdated</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Last Updated Date</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">This property is used to capture the date a list, item, or section last </span>
+      <span class="text">updated</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#date</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Item</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#Section</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2009-07-01</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#description</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Description</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">This property is used to provide a description of a Resource List.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#List</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-19</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;lifecycle:State</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#status-draft</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Draft</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+<span class="text">This State is used to indicate that something is Draft.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-07-31</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/lifecycle:State&gt;</span>
+  
+  <span class="elem">&lt;lifecycle:State</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#status-published</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Published</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+<span class="text">This State is used to indicate that something is Published.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/resourcelist/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-07-31</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/lifecycle:State&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.<p>The following section is informational only, please refer to the 
+			<a href="http://creativecommons.org/licenses/by/2.0/uk/">Original License</a> for complete license terms.
+		</p><p>This license grants the following rights:</p><ul><li>making multiple copies
+						(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+					</li><li>distribution, public display, and publicly performance
+						(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+					</li><li>creation and distribution of derivative works
+						(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+					</li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license notices be kept intact
+						(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+					</li><li>credit be given to copyright holder and/or author
+						(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+					</li></ul></p><div id="footer">
+      Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

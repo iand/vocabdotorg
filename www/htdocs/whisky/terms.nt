@@ -1,0 +1,111 @@
+<http://vocab.org/whisky/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.org/whisky/terms> <http://purl.org/dc/elements/1.1/title> "Vocabulary for describing whisky varieties"@en .
+<http://vocab.org/whisky/terms> <http://www.w3.org/2000/01/rdf-schema#comment> "Created at vocamp oxford 2008"@en .
+<http://vocab.org/whisky/terms/Whisky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/whisky/terms/Whisky> <http://www.w3.org/2000/01/rdf-schema#label> "Whisky" .
+<http://vocab.org/whisky/terms/Whisky> <http://www.w3.org/2000/01/rdf-schema#label> "Whiskey" .
+<http://vocab.org/whisky/terms/Whisky> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/Brand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/whisky/terms/Brand> <http://www.w3.org/2000/01/rdf-schema#label> "brand" .
+<http://vocab.org/whisky/terms/Brand> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/Distillery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/whisky/terms/Distillery> <http://www.w3.org/2000/01/rdf-schema#label> "distillery" .
+<http://vocab.org/whisky/terms/Distillery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/Cask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/whisky/terms/Cask> <http://www.w3.org/2000/01/rdf-schema#label> "cask" .
+<http://vocab.org/whisky/terms/Cask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/WaterSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/whisky/terms/WaterSource> <http://www.w3.org/2000/01/rdf-schema#label> "water source" .
+<http://vocab.org/whisky/terms/WaterSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/age> <http://www.w3.org/2000/01/rdf-schema#label> "age" .
+<http://vocab.org/whisky/terms/age> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/age> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/brand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/brand> <http://www.w3.org/2000/01/rdf-schema#label> "brand" .
+<http://vocab.org/whisky/terms/brand> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/brand> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/whisky/terms/Brand> .
+<http://vocab.org/whisky/terms/brand> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/finishingCask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/finishingCask> <http://www.w3.org/2000/01/rdf-schema#label> "finishing cask" .
+<http://vocab.org/whisky/terms/finishingCask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/finishingCask> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/whisky/terms/Cask> .
+<http://vocab.org/whisky/terms/finishingCask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/expressionLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/expressionLabel> <http://www.w3.org/2000/01/rdf-schema#label> "expression label" .
+<http://vocab.org/whisky/terms/expressionLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/expressionLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/character> <http://www.w3.org/2000/01/rdf-schema#label> "character" .
+<http://vocab.org/whisky/terms/character> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/character> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/colourDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/colourDescription> <http://www.w3.org/2000/01/rdf-schema#label> "colour description" .
+<http://vocab.org/whisky/terms/colourDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/colourDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/abv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/abv> <http://www.w3.org/2000/01/rdf-schema#label> "alcohol by volume" .
+<http://vocab.org/whisky/terms/abv> <http://www.w3.org/2000/01/rdf-schema#comment> "a standard measure of how much alcohol is contained in the drink" .
+<http://vocab.org/whisky/terms/abv> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/abv> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/grain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/grain> <http://www.w3.org/2000/01/rdf-schema#label> "grain" .
+<http://vocab.org/whisky/terms/grain> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/grain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/agingCask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/agingCask> <http://www.w3.org/2000/01/rdf-schema#label> "aging cask" .
+<http://vocab.org/whisky/terms/agingCask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/agingCask> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/whisky/terms/Cask> .
+<http://vocab.org/whisky/terms/agingCask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/distillery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/distillery> <http://www.w3.org/2000/01/rdf-schema#label> "distillery" .
+<http://vocab.org/whisky/terms/distillery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Whisky> .
+<http://vocab.org/whisky/terms/distillery> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/whisky/terms/Distillery> .
+<http://vocab.org/whisky/terms/distillery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/region> <http://www.w3.org/2000/01/rdf-schema#label> "region" .
+<http://vocab.org/whisky/terms/region> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Distillery> .
+<http://vocab.org/whisky/terms/region> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/whisky/terms/Region> .
+<http://vocab.org/whisky/terms/region> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/owner> <http://www.w3.org/2000/01/rdf-schema#label> "owner" .
+<http://vocab.org/whisky/terms/owner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Distillery> .
+<http://vocab.org/whisky/terms/owner> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vocab.org/whisky/terms/owner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/waterSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/waterSource> <http://www.w3.org/2000/01/rdf-schema#label> "water source" .
+<http://vocab.org/whisky/terms/waterSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Distillery> .
+<http://vocab.org/whisky/terms/waterSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/whisky/terms/WaterSource> .
+<http://vocab.org/whisky/terms/waterSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/WhiskyReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/whisky/terms/WhiskyReview> <http://www.w3.org/2000/01/rdf-schema#label> "Whisky Review" .
+<http://vocab.org/whisky/terms/WhiskyReview> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/colour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/colour> <http://www.w3.org/2000/01/rdf-schema#label> "colour" .
+<http://vocab.org/whisky/terms/colour> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/WhiskyReview> .
+<http://vocab.org/whisky/terms/colour> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/nose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/nose> <http://www.w3.org/2000/01/rdf-schema#label> "nose" .
+<http://vocab.org/whisky/terms/nose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/WhiskyReview> .
+<http://vocab.org/whisky/terms/nose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/palate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/palate> <http://www.w3.org/2000/01/rdf-schema#label> "palate" .
+<http://vocab.org/whisky/terms/palate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/WhiskyReview> .
+<http://vocab.org/whisky/terms/palate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/body> <http://www.w3.org/2000/01/rdf-schema#label> "body" .
+<http://vocab.org/whisky/terms/body> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/WhiskyReview> .
+<http://vocab.org/whisky/terms/body> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/finish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/finish> <http://www.w3.org/2000/01/rdf-schema#label> "finish" .
+<http://vocab.org/whisky/terms/finish> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/WhiskyReview> .
+<http://vocab.org/whisky/terms/finish> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/material> <http://www.w3.org/2000/01/rdf-schema#label> "material" .
+<http://vocab.org/whisky/terms/material> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Cask> .
+<http://vocab.org/whisky/terms/material> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms/previousContents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.org/whisky/terms/previousContents> <http://www.w3.org/2000/01/rdf-schema#label> "previous contents" .
+<http://vocab.org/whisky/terms/previousContents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/whisky/terms/Cask> .
+<http://vocab.org/whisky/terms/previousContents> <http://www.w3.org/2000/01/rdf-schema#range> <http://umbel.org/umbel/ac/LiquidTangibleThing> .
+<http://vocab.org/whisky/terms/previousContents> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/whisky/terms> .

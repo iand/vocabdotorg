@@ -1,0 +1,33 @@
+<pre>
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+@prefix cc: &lt;http://web.resource.org/cc/&gt;
+@prefix dctype: &lt;http://purl.org/dc/dcmitype/&gt;
+@prefix dct: &lt;http://purl.org/dc/terms/&gt;
+@prefix vann: &lt;http://purl.org/vocab/vann/&gt;
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+@prefix participation: &lt;http://purl.org/vocab/participation/schema#&gt;
+@prefix xiphos: &lt;http://talis.com/xiphos/&gt;
+@prefix jobs: &lt;http://example.com/schema/roles/jobs/&gt;
+
+&lt;http://dynamicorange.com/mmmmmrob#self&gt;
+	a foaf:Person
+	participation:holder_of xiphos:developer
+	
+xiphos:developer
+	a jobs:Developer
+	participation:role_at &lt;http://talis.com/xiphos&gt;
+	
+jobs:Developer
+	a rdfs:Class
+	rdfs:subclass-of participation:Role
+	participation:title &quot;Developer&quot;
+	
+&lt;http://talis.com/xiphos&gt;
+	a foaf:Organization
+	participation:role xiphos:developer
+</pre>

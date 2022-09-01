@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>A Simple ChangeSet</title>
+	</head>
+	<body>
+    <p>The following ChangeSet describes a change the the description of the resource identified by <code>http://example.com/res#thing</code></p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:cs="http://purl.org/vocab/changeset/schema#"&gt;
+  &lt;cs:ChangeSet rdf:about="http://example.com/changesets#change"&gt;
+    &lt;cs:subjectOfChange rdf:resource="http://example.com/res#thing"/&gt;
+    &lt;cs:createdDate&gt;2006-01-01T00:00:00Z&lt;/cs:createdDate&gt;
+    &lt;cs:creatorName&gt;Anne Onymous&lt;/cs:creatorName&gt;
+    &lt;cs:changeReason&gt;Change of title&lt;/cs:changeReason&gt;
+    &lt;cs:removal&gt;
+      &lt;rdf:Statement&gt;
+        &lt;rdf:subject rdf:resource="http://example.com/res#thing"/&gt;
+        &lt;rdf:predicate rdf:resource="http://purl.org/dc/elements/1.1/title"/&gt;
+        &lt;rdf:object&gt;Original Title&lt;/rdf:object&gt;
+      &lt;/rdf:Statement&gt;
+    &lt;/cs:removal&gt;
+    &lt;cs:addition&gt;
+      &lt;rdf:Statement&gt;
+        &lt;rdf:subject rdf:resource="http://example.com/res#thing"/&gt;
+        &lt;rdf:predicate rdf:resource="http://purl.org/dc/elements/1.1/title"/&gt;
+        &lt;rdf:object&gt;New Title&lt;/rdf:object&gt;
+      &lt;/rdf:Statement&gt;
+    &lt;/cs:addition&gt;
+  &lt;/cs:ChangeSet&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+<p>The ChangeSet describes the removal of a single statement, the dc:title of the resource:</p>
+<pre><code class="ntriples">&lt;http://example.com/res#thing&gt; &lt;http://purl.org/dc/elements/1.1/&gt; "Original Title" .</code></pre>
+<p>And the subsequent addition of another statement with a new value for dc:title:</p>
+<pre><code class="ntriples">&lt;http://example.com/res#thing&gt; &lt;http://purl.org/dc/elements/1.1/&gt; "New Title" .</code></pre>
+<p>So, given the following description of the resource:</p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+  &lt;rdf:Description rdf:about="http://example.com/res#thing"/&gt;
+    &lt;dc:title&gt;Original Title&lt;/dc:title&gt;
+    &lt;dc:description&gt;A short description of this resource&lt;/dc:description&gt;
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+<p>Application of the ChangeSet would result in the following:</p>
+    <pre>
+<code class="xml">&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+  &lt;rdf:Description rdf:about="http://example.com/res#thing"/&gt;
+    <span class="highlight">&lt;dc:title&gt;New Title&lt;/dc:title&gt;</span>
+    &lt;dc:description&gt;A short description of this resource&lt;/dc:description&gt;
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+	</body>
+</html>

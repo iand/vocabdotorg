@@ -1,0 +1,34 @@
+<html>
+<head><title>Using AIISO</title></head>
+<body>  
+<p>
+	AIISO is designed to be used in either alone or in conjunction with foaf, Participation and AIISO Roles.
+<ul>
+	<li><a href="http://xmlns.com/foaf/0.1/">foaf</a></li>
+	<li><a href="http://purl.org/vocab/participation/schema">Participation</a></li>
+	<li><a href="http://purl.org/vocab/aiiso-roles/schema">AIISO Roles</a></li>
+</ul> 
+</p>
+<h3>Using AIISO alone</h3>
+<p>AIISO on its own can be used to describe the organisational structure of an academic institution, it's constituent parts such as faculties, schools and departments.
+<pre><code lang="turtle">
+	@prefix aiiso: <http://purl.org/vocab/aiiso/schema>
+	@prefix broadminster: <http://broadminsteruniversity.org/>
+	
+	broadminster:
+		a aiiso:Institution;
+		foaf:name "Broadminster University";
+		aiiso:?? broadminster:schools/law;
+		.
+		
+	broadminster:schools/law
+		a aiiso:School;
+		foaf:name "Broadminster Law School";
+		aiiso:?? broadminster:;
+		.
+</code></pre>
+This describes Broadminster University and the Law School within it. AIISO alone
+
+</p>
+</body>
+</html>

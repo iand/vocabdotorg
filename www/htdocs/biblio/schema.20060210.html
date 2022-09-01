@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Citation Oriented Bibliographic Vocabulary</title><link rel="meta" type="application/rdf+xml" title="Citation Oriented Bibliographic Vocabulary" href=".rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Citation Oriented Bibliographic Vocabulary</h1><dl class="doc-info"><dt>This Version</dt><dd><a href=""></a></dd><dt>Latest Version</dt><dd><a href="http://purl.org/net/biblio#">http://purl.org/net/biblio#</a></dd><dt>Authors</dt><dd>Bruce D'Arcus</dd><dt>Contributors</dt></dl><p class="rights">Copyright © 2006 Bruce D'Arcus</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-schema">RDF Schema</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="description">A vocabulary to describe a general data model for scholarly citations. 
+     It covers three primary classes: events, agents, and bibliographic reference types. It 
+     is designed to offer a solid general relational model for citation metadata, and also to
+     provide a specific superset of reference types in standard formats like BibTeX, RIS, and
+     Refer/Endnote.</p><h2 id="sec-changes">Changes From Previous Version</h2><ul/><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://purl.org/net/biblio#</code></pre><p>
+          When used in XML documents the suggested prefix is <code>biblio</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/net/biblio#presentedAt
+http://purl.org/net/biblio#Agent</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>Agent
+Person</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>presentedAt
+</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      57 classes 
+        
+      and 
+      
+          one property
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-Abstract" title="http://purl.org/net/biblio#Abstract">Abstract</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Agent" title="http://purl.org/net/biblio#Agent">Agent</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Album" title="http://purl.org/net/biblio#Album">Album</a></td><td>class</td><td></td></tr><tr><td><a href="#term-AlbumTrack" title="http://purl.org/net/biblio#AlbumTrack">AlbumTrack</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Article" title="http://purl.org/net/biblio#Article">Article</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Bill" title="http://purl.org/net/biblio#Bill">Bill</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Book" title="http://purl.org/net/biblio#Book">Book</a></td><td>class</td><td></td></tr><tr><td><a href="#term-BookSection" title="http://purl.org/net/biblio#BookSection">BookSection</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Broadcast" title="http://purl.org/net/biblio#Broadcast">Broadcast</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Chapter" title="http://purl.org/net/biblio#Chapter">Chapter</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Collection" title="http://purl.org/net/biblio#Collection">Collection</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Conference" title="http://purl.org/net/biblio#Conference">Conference</a></td><td>class</td><td></td></tr><tr><td><a href="#term-CourtReporter" title="http://purl.org/net/biblio#CourtReporter">CourtReporter</a></td><td>class</td><td>A kind of periodical that publishes legal rulings.</td></tr><tr><td><a href="#term-Data" title="http://purl.org/net/biblio#Data">Data</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Diagram" title="http://purl.org/net/biblio#Diagram">Diagram</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Dissertation" title="http://purl.org/net/biblio#Dissertation">Dissertation</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Document" title="http://purl.org/net/biblio#Document">Document</a></td><td>class</td><td></td></tr><tr><td><a href="#term-EMail" title="http://purl.org/net/biblio#EMail">EMail</a></td><td>class</td><td></td></tr><tr><td><a href="#term-EditedBook" title="http://purl.org/net/biblio#EditedBook">EditedBook</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Essay" title="http://purl.org/net/biblio#Essay">Essay</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Event" title="http://purl.org/net/biblio#Event">Event</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Figure" title="http://purl.org/net/biblio#Figure">Figure</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Hearing" title="http://purl.org/net/biblio#Hearing">Hearing</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Illustration" title="http://purl.org/net/biblio#Illustration">Illustration</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Interview" title="http://purl.org/net/biblio#Interview">Interview</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Journal" title="http://purl.org/net/biblio#Journal">Journal</a></td><td>class</td><td>An academic journal.</td></tr><tr><td><a href="#term-Law" title="http://purl.org/net/biblio#Law">Law</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Legislation" title="http://purl.org/net/biblio#Legislation">Legislation</a></td><td>class</td><td>Documents issued by legislative bodies.</td></tr><tr><td><a href="#term-LegislativeBody" title="http://purl.org/net/biblio#LegislativeBody">LegislativeBody</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Letter" title="http://purl.org/net/biblio#Letter">Letter</a></td><td>class</td><td>A kind of written communication.</td></tr><tr><td><a href="#term-Magazine" title="http://purl.org/net/biblio#Magazine">Magazine</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Manuscript" title="http://purl.org/net/biblio#Manuscript">Manuscript</a></td><td>class</td><td>An unpublished document.</td></tr><tr><td><a href="#term-Map" title="http://purl.org/net/biblio#Map">Map</a></td><td>class</td><td>A cartographic representation.</td></tr><tr><td><a href="#term-Memo" title="http://purl.org/net/biblio#Memo">Memo</a></td><td>class</td><td>More formally called a memorandum.</td></tr><tr><td><a href="#term-MotionPicture" title="http://purl.org/net/biblio#MotionPicture">MotionPicture</a></td><td>class</td><td>A film, video, DVD, etc.</td></tr><tr><td><a href="#term-MusicalScore" title="http://purl.org/net/biblio#MusicalScore">MusicalScore</a></td><td>class</td><td>A textual representation of music.</td></tr><tr><td><a href="#term-Newspaper" title="http://purl.org/net/biblio#Newspaper">Newspaper</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Organization" title="http://purl.org/net/biblio#Organization">Organization</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Painting" title="http://purl.org/net/biblio#Painting">Painting</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Pamphlet" title="http://purl.org/net/biblio#Pamphlet">Pamphlet</a></td><td>class</td><td>An informally published document.</td></tr><tr><td><a href="#term-Paper" title="http://purl.org/net/biblio#Paper">Paper</a></td><td>class</td><td>An unpublished document.</td></tr><tr><td><a href="#term-Part" title="http://purl.org/net/biblio#Part">Part</a></td><td>class</td><td>An item contained in something else; for example, a chapter in a book, or an article in a periodical.</td></tr><tr><td><a href="#term-Patent" title="http://purl.org/net/biblio#Patent">Patent</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">Periodical</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Person" title="http://purl.org/net/biblio#Person">Person</a></td><td>class</td><td></td></tr><tr><td><a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">PersonalCommunication</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Poster" title="http://purl.org/net/biblio#Poster">Poster</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Proceedings" title="http://purl.org/net/biblio#Proceedings">Proceedings</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Publisher" title="http://purl.org/net/biblio#Publisher">Publisher</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">Reference</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Report" title="http://purl.org/net/biblio#Report">Report</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Review" title="http://purl.org/net/biblio#Review">Review</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Series" title="http://purl.org/net/biblio#Series">Series</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Song" title="http://purl.org/net/biblio#Song">Song</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Speech" title="http://purl.org/net/biblio#Speech">Speech</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Thesis" title="http://purl.org/net/biblio#Thesis">Thesis</a></td><td>class</td><td></td></tr><tr><td><a href="#term-Workshop" title="http://purl.org/net/biblio#Workshop">Workshop</a></td><td>class</td><td></td></tr><tr><td><a href="#term-presentedAt" title="http://purl.org/net/biblio#presentedAt">presentedAt</a></td><td>property</td><td>An item presented at an event.</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Abstract">Class: Abstract</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Abstract</td></tr><tr><th>Label:</th><td>abstract</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Abstract" title="http://purl.org/net/biblio#Abstract">biblio:Abstract</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Agent">Class: Agent</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Agent</td></tr><tr><th>Label:</th><td>agent</td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a> and <a href="http://vocab.org/frbr/core#term-ResponsibleEntity">http://vocab.org/frbr/core#term-ResponsibleEntity</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Agent" title="http://purl.org/net/biblio#Agent">biblio:Agent</a>
+                 is something that, amongst other things, 
+                </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Album">Class: Album</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Album</td></tr><tr><th>Label:</th><td>album</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Album">wordnet:Album</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Album" title="http://purl.org/net/biblio#Album">biblio:Album</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-AlbumTrack">Class: AlbumTrack</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#AlbumTrack</td></tr><tr><th>Label:</th><td>album track</td></tr><tr><th>Subclass of</th><td><a href="#term-Part" title="http://purl.org/net/biblio#Part">biblio:Part</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-AlbumTrack" title="http://purl.org/net/biblio#AlbumTrack">biblio:AlbumTrack</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Part" title="http://purl.org/net/biblio#Part">biblio:Part</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Article">Class: Article</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Article</td></tr><tr><th>Label:</th><td>article</td></tr><tr><th>Subclass of</th><td><a href="#term-Part" title="http://purl.org/net/biblio#Part">biblio:Part</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Article">wordnet:Article</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Article" title="http://purl.org/net/biblio#Article">biblio:Article</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Part" title="http://purl.org/net/biblio#Part">biblio:Part</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Bill">Class: Bill</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Bill</td></tr><tr><th>Label:</th><td>bill</td></tr><tr><th>Subclass of</th><td><a href="#term-Legislation" title="http://purl.org/net/biblio#Legislation">biblio:Legislation</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Bill">wordnet:Bill</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Bill" title="http://purl.org/net/biblio#Bill">biblio:Bill</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Legislation" title="http://purl.org/net/biblio#Legislation">biblio:Legislation</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Book">Class: Book</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Book</td></tr><tr><th>Label:</th><td>book</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Book">wordnet:Book</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Book" title="http://purl.org/net/biblio#Book">biblio:Book</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-BookSection">Class: BookSection</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#BookSection</td></tr><tr><th>Label:</th><td>book section</td></tr><tr><th>Subclass of</th><td><a href="#term-Part" title="http://purl.org/net/biblio#Part">biblio:Part</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-BookSection" title="http://purl.org/net/biblio#BookSection">biblio:BookSection</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Part" title="http://purl.org/net/biblio#Part">biblio:Part</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Broadcast">Class: Broadcast</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Broadcast</td></tr><tr><th>Label:</th><td>braadcast</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Broadcast">wordnet:Broadcast</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Broadcast" title="http://purl.org/net/biblio#Broadcast">biblio:Broadcast</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Chapter">Class: Chapter</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Chapter</td></tr><tr><th>Label:</th><td>chapter</td></tr><tr><th>Subclass of</th><td><a href="#term-BookSection" title="http://purl.org/net/biblio#BookSection">biblio:BookSection</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Chapter">wordnet:Chapter</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Chapter" title="http://purl.org/net/biblio#Chapter">biblio:Chapter</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-BookSection" title="http://purl.org/net/biblio#BookSection">biblio:BookSection</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Collection">Class: Collection</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Collection</td></tr><tr><th>Label:</th><td>collection</td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Collection">wordnet:Collection</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Collection" title="http://purl.org/net/biblio#Collection">biblio:Collection</a>
+                 is something that, amongst other things, 
+                </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Conference">Class: Conference</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Conference</td></tr><tr><th>Label:</th><td>conference</td></tr><tr><th>Subclass of</th><td><a href="#term-Event" title="http://purl.org/net/biblio#Event">biblio:Event</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Conference">wordnet:Conference</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Conference" title="http://purl.org/net/biblio#Conference">biblio:Conference</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Event" title="http://purl.org/net/biblio#Event">biblio:Event</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-CourtReporter">Class: CourtReporter</h3><div class="description"><p class="comment">A kind of periodical that publishes legal rulings.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#CourtReporter</td></tr><tr><th>Label:</th><td>court reporter</td></tr><tr><th>Subclass of</th><td><a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">biblio:Periodical</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-CourtReporter" title="http://purl.org/net/biblio#CourtReporter">biblio:CourtReporter</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">biblio:Periodical</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Data">Class: Data</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Data</td></tr><tr><th>Label:</th><td>data</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Data" title="http://purl.org/net/biblio#Data">biblio:Data</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Diagram">Class: Diagram</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Diagram</td></tr><tr><th>Label:</th><td>diagram</td></tr><tr><th>Subclass of</th><td><a href="#term-Illustration" title="http://purl.org/net/biblio#Illustration">biblio:Illustration</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Diagram">wordnet:Diagram</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Diagram" title="http://purl.org/net/biblio#Diagram">biblio:Diagram</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Illustration" title="http://purl.org/net/biblio#Illustration">biblio:Illustration</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Dissertation">Class: Dissertation</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Dissertation</td></tr><tr><th>Label:</th><td>dissertation</td></tr><tr><th>Subclass of</th><td><a href="#term-Thesis" title="http://purl.org/net/biblio#Thesis">biblio:Thesis</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Dissertation">wordnet:Dissertation</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Dissertation" title="http://purl.org/net/biblio#Dissertation">biblio:Dissertation</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Thesis" title="http://purl.org/net/biblio#Thesis">biblio:Thesis</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Document">Class: Document</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Document</td></tr><tr><th>Label:</th><td>document</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Docoment">wordnet:Docoment</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Document" title="http://purl.org/net/biblio#Document">biblio:Document</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-EMail">Class: EMail</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#EMail</td></tr><tr><th>Label:</th><td>e-mail</td></tr><tr><th>Subclass of</th><td><a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/EMail">wordnet:EMail</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-EMail" title="http://purl.org/net/biblio#EMail">biblio:EMail</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-EditedBook">Class: EditedBook</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#EditedBook</td></tr><tr><th>Label:</th><td>edited book</td></tr><tr><th>Subclass of</th><td><a href="#term-Book" title="http://purl.org/net/biblio#Book">biblio:Book</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-EditedBook" title="http://purl.org/net/biblio#EditedBook">biblio:EditedBook</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Book" title="http://purl.org/net/biblio#Book">biblio:Book</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Essay">Class: Essay</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Essay</td></tr><tr><th>Label:</th><td>essay</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Essay">wordnet:Essay</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Essay" title="http://purl.org/net/biblio#Essay">biblio:Essay</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Event">Class: Event</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Event</td></tr><tr><th>Label:</th><td>event</td></tr><tr><th>Equivalent to</th><td><a href="http://purl.org/vocab/frbr/core#Event">frbr:Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Event" title="http://purl.org/net/biblio#Event">biblio:Event</a>
+                 is something that, amongst other things, 
+                </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Figure">Class: Figure</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Figure</td></tr><tr><th>Label:</th><td>figure</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Figure">wordnet:Figure</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Figure" title="http://purl.org/net/biblio#Figure">biblio:Figure</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Hearing">Class: Hearing</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Hearing</td></tr><tr><th>Label:</th><td>hearing</td></tr><tr><th>Subclass of</th><td><a href="#term-Event" title="http://purl.org/net/biblio#Event">biblio:Event</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Hearing">wordnet:Hearing</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Hearing" title="http://purl.org/net/biblio#Hearing">biblio:Hearing</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Event" title="http://purl.org/net/biblio#Event">biblio:Event</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Illustration">Class: Illustration</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Illustration</td></tr><tr><th>Label:</th><td>illustration</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Illustration">wordnet:Illustration</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Illustration" title="http://purl.org/net/biblio#Illustration">biblio:Illustration</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Interview">Class: Interview</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Interview</td></tr><tr><th>Label:</th><td>interview</td></tr><tr><th>Subclass of</th><td><a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Interview">wordnet:Interview</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Interview" title="http://purl.org/net/biblio#Interview">biblio:Interview</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Journal">Class: Journal</h3><div class="description"><p class="comment">An academic journal.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Journal</td></tr><tr><th>Label:</th><td>journal</td></tr><tr><th>Subclass of</th><td><a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">biblio:Periodical</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Journal" title="http://purl.org/net/biblio#Journal">biblio:Journal</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">biblio:Periodical</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Law">Class: Law</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Law</td></tr><tr><th>Label:</th><td>law</td></tr><tr><th>Subclass of</th><td><a href="#term-Legislation" title="http://purl.org/net/biblio#Legislation">biblio:Legislation</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Law">wordnet:Law</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Law" title="http://purl.org/net/biblio#Law">biblio:Law</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Legislation" title="http://purl.org/net/biblio#Legislation">biblio:Legislation</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Legislation">Class: Legislation</h3><div class="description"><p class="comment">Documents issued by legislative bodies.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Legislation</td></tr><tr><th>Label:</th><td>legislation</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Legislation">wordnet:Legislation</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Legislation" title="http://purl.org/net/biblio#Legislation">biblio:Legislation</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-LegislativeBody">Class: LegislativeBody</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#LegislativeBody</td></tr><tr><th>Label:</th><td>legislative body</td></tr><tr><th>Subclass of</th><td><a href="#term-Organization" title="http://purl.org/net/biblio#Organization">biblio:Organization</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Legislative_assembly">wordnet:Legislative_assembly</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-LegislativeBody" title="http://purl.org/net/biblio#LegislativeBody">biblio:LegislativeBody</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Organization" title="http://purl.org/net/biblio#Organization">biblio:Organization</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Letter">Class: Letter</h3><div class="description"><p class="comment">A kind of written communication.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Letter</td></tr><tr><th>Label:</th><td>letter</td></tr><tr><th>Subclass of</th><td><a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Letter">wordnet:Letter</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Letter" title="http://purl.org/net/biblio#Letter">biblio:Letter</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Magazine">Class: Magazine</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Magazine</td></tr><tr><th>Label:</th><td>magazine</td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Magazine">wordnet:Magazine</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Magazine" title="http://purl.org/net/biblio#Magazine">biblio:Magazine</a>
+                 is something that, amongst other things, 
+                </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Manuscript">Class: Manuscript</h3><div class="description"><p class="comment">An unpublished document.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Manuscript</td></tr><tr><th>Label:</th><td>manuscript</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Manuscript">wordnet:Manuscript</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Manuscript" title="http://purl.org/net/biblio#Manuscript">biblio:Manuscript</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Map">Class: Map</h3><div class="description"><p class="comment">A cartographic representation.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Map</td></tr><tr><th>Label:</th><td>map</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Map">wordnet:Map</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Map" title="http://purl.org/net/biblio#Map">biblio:Map</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Memo">Class: Memo</h3><div class="description"><p class="comment">More formally called a memorandum.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Memo</td></tr><tr><th>Label:</th><td>memo</td></tr><tr><th>Subclass of</th><td><a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Memo" title="http://purl.org/net/biblio#Memo">biblio:Memo</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-MotionPicture">Class: MotionPicture</h3><div class="description"><p class="comment">A film, video, DVD, etc.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#MotionPicture</td></tr><tr><th>Label:</th><td>motion picture</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Motion_Picture">wordnet:Motion_Picture</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MotionPicture" title="http://purl.org/net/biblio#MotionPicture">biblio:MotionPicture</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-MusicalScore">Class: MusicalScore</h3><div class="description"><p class="comment">A textual representation of music.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#MusicalScore</td></tr><tr><th>Label:</th><td>musical score</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Musical_Score">wordnet:Musical_Score</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-MusicalScore" title="http://purl.org/net/biblio#MusicalScore">biblio:MusicalScore</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Newspaper">Class: Newspaper</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Newspaper</td></tr><tr><th>Label:</th><td>newspaper</td></tr><tr><th>Subclass of</th><td><a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">biblio:Periodical</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Newspaper">wordnet:Newspaper</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Newspaper" title="http://purl.org/net/biblio#Newspaper">biblio:Newspaper</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">biblio:Periodical</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Organization">Class: Organization</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Organization</td></tr><tr><th>Label:</th><td>organization</td></tr><tr><th>Subclass of</th><td><a href="#term-Agent" title="http://purl.org/net/biblio#Agent">biblio:Agent</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a> and <a href="http://xmlns.com/wordnet/1.6/Organization">wordnet:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Organization" title="http://purl.org/net/biblio#Organization">biblio:Organization</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Agent" title="http://purl.org/net/biblio#Agent">biblio:Agent</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Painting">Class: Painting</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Painting</td></tr><tr><th>Label:</th><td>painting</td></tr><tr><th>Subclass of</th><td><a href="#term-Illustration" title="http://purl.org/net/biblio#Illustration">biblio:Illustration</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Painting">wordnet:Painting</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Painting" title="http://purl.org/net/biblio#Painting">biblio:Painting</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Illustration" title="http://purl.org/net/biblio#Illustration">biblio:Illustration</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Pamphlet">Class: Pamphlet</h3><div class="description"><p class="comment">An informally published document.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Pamphlet</td></tr><tr><th>Label:</th><td>pamphlet</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Patent">wordnet:Patent</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Pamphlet" title="http://purl.org/net/biblio#Pamphlet">biblio:Pamphlet</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Paper">Class: Paper</h3><div class="description"><p class="comment">An unpublished document.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Paper</td></tr><tr><th>Label:</th><td>paper</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Paper" title="http://purl.org/net/biblio#Paper">biblio:Paper</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Part">Class: Part</h3><div class="description"><p class="comment">An item contained in something else; for example, a chapter in a book, or an article in a periodical.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Part</td></tr><tr><th>Label:</th><td>part</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Part">wordnet:Part</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Part" title="http://purl.org/net/biblio#Part">biblio:Part</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Patent">Class: Patent</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Patent</td></tr><tr><th>Label:</th><td>patent</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Patent">wordnet:Patent</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Patent" title="http://purl.org/net/biblio#Patent">biblio:Patent</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Periodical">Class: Periodical</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Periodical</td></tr><tr><th>Label:</th><td>collection</td></tr><tr><th>Subclass of</th><td><a href="#term-Collection" title="http://purl.org/net/biblio#Collection">biblio:Collection</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Periodical">wordnet:Periodical</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Periodical" title="http://purl.org/net/biblio#Periodical">biblio:Periodical</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Collection" title="http://purl.org/net/biblio#Collection">biblio:Collection</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Person">Class: Person</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Person</td></tr><tr><th>Label:</th><td>person</td></tr><tr><th>Subclass of</th><td><a href="#term-Agent" title="http://purl.org/net/biblio#Agent">biblio:Agent</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a>, <a href="http://purl.org/vocab/frbr/core#Person">frbr:Person</a> and <a href="http://xmlns.com/wordnet/1.6/Person">wordnet:Person</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Person" title="http://purl.org/net/biblio#Person">biblio:Person</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Agent" title="http://purl.org/net/biblio#Agent">biblio:Agent</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-PersonalCommunication">Class: PersonalCommunication</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#PersonalCommunication</td></tr><tr><th>Label:</th><td>personal communication</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and <a href="http://xmlns.com/wordnet/1.6/Communication">wordnet:Communication</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-PersonalCommunication" title="http://purl.org/net/biblio#PersonalCommunication">biblio:PersonalCommunication</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and 
+        is a
+        <a href="http://xmlns.com/wordnet/1.6/Communication">wordnet:Communication</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Poster">Class: Poster</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Poster</td></tr><tr><th>Label:</th><td>poster</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Poster" title="http://purl.org/net/biblio#Poster">biblio:Poster</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Proceedings">Class: Proceedings</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Proceedings</td></tr><tr><th>Label:</th><td>proceedings</td></tr><tr><th>Subclass of</th><td><a href="#term-Collection" title="http://purl.org/net/biblio#Collection">biblio:Collection</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Proceedings" title="http://purl.org/net/biblio#Proceedings">biblio:Proceedings</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Collection" title="http://purl.org/net/biblio#Collection">biblio:Collection</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Publisher">Class: Publisher</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Publisher</td></tr><tr><th>Label:</th><td>publisher</td></tr><tr><th>Subclass of</th><td><a href="#term-Organization" title="http://purl.org/net/biblio#Organization">biblio:Organization</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Publisher">wordnet:Publisher</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Publisher" title="http://purl.org/net/biblio#Publisher">biblio:Publisher</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Organization" title="http://purl.org/net/biblio#Organization">biblio:Organization</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Reference">Class: Reference</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Reference</td></tr><tr><th>Label:</th><td>bibliographic reference</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Report">Class: Report</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Report</td></tr><tr><th>Label:</th><td>report</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Report">wordnet:Report</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Report" title="http://purl.org/net/biblio#Report">biblio:Report</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Review">Class: Review</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Review</td></tr><tr><th>Label:</th><td>review</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Review">wordnet:Review</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Review" title="http://purl.org/net/biblio#Review">biblio:Review</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Series">Class: Series</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Series</td></tr><tr><th>Label:</th><td>series</td></tr><tr><th>Subclass of</th><td><a href="#term-Collection" title="http://purl.org/net/biblio#Collection">biblio:Collection</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Series" title="http://purl.org/net/biblio#Series">biblio:Series</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Collection" title="http://purl.org/net/biblio#Collection">biblio:Collection</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Song">Class: Song</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Song</td></tr><tr><th>Label:</th><td>song</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Song">wordnet:Song</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Song" title="http://purl.org/net/biblio#Song">biblio:Song</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Speech">Class: Speech</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Speech</td></tr><tr><th>Label:</th><td>speech</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Equivalent to</th><td><a href="http://xmlns.com/wordnet/1.6/Speech">wordnet:Speech</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Speech" title="http://purl.org/net/biblio#Speech">biblio:Speech</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a> and must be </td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Thesis">Class: Thesis</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Thesis</td></tr><tr><th>Label:</th><td>thesis</td></tr><tr><th>Subclass of</th><td><a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Thesis" title="http://purl.org/net/biblio#Thesis">biblio:Thesis</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Reference" title="http://purl.org/net/biblio#Reference">biblio:Reference</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-Workshop">Class: Workshop</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#Workshop</td></tr><tr><th>Label:</th><td>workshop</td></tr><tr><th>Subclass of</th><td><a href="#term-Event" title="http://purl.org/net/biblio#Event">biblio:Event</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Workshop" title="http://purl.org/net/biblio#Workshop">biblio:Workshop</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-Event" title="http://purl.org/net/biblio#Event">biblio:Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-presentedAt">Property: presentedAt</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] An item presented at an event.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/net/biblio#presentedAt</td></tr><tr><th>Label:</th><td>presented at</td></tr><tr><th>Subproperty of</th><td><a href="http://purl.org/dc/elements/1.1/related">dc:related</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href=".rdf">.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:biblio</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dcterms</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:xsd</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>" <span class="attr">xml:base</span>="<span class="attrVal">http://purl.org/net/biblio</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span> <span class="attr">rdf:about</span>="<span class="attrVal"></span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Bruce D'Arcus</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:title</span><span class="elem">&gt;</span><span class="text">Citation Oriented Bibliographic Vocabulary</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;dc:description</span><span class="elem">&gt;</span>
+      <span class="text">A vocabulary to describe a general data model for scholarly citations. </span>
+      <span class="text">It covers three primary classes: events, agents, and bibliographic </span>
+      <span class="text">reference types. It is designed to offer a solid general relational </span>
+      <span class="text">model for citation metadata, and also to provide a specific superset of </span>
+      <span class="text">reference types in standard formats like BibTeX, RIS, and Refer/Endnote.</span>
+    <span class="elem">&lt;/dc:description&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span><span class="text">Copyright © 2006 Bruce D'Arcus</span><span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;dcterms:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/net/biblio#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">biblio</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;dcterms:issued</span><span class="elem">&gt;</span><span class="text">2006-02-10</span><span class="elem">&lt;/dcterms:issued&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"></span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Agent</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">agent</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Agent</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://vocab.org/frbr/core#term-ResponsibleEntity</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Person</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">person</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Agent</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Person</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Person</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Person</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Organization</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">organization</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Agent</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Publisher</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">publisher</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Publisher</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#LegislativeBody</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">legislative body</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Legislative_assembly</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Event</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">event</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Conference</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">conference</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Conference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Hearing</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">hearing</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Hearing</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Workshop</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">workshop</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Event</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Collection</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">collection</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Collection</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Series</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">series</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Collection</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Periodical</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">collection</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Collection</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Periodical</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#CourtReporter</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">court reporter</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Periodical</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A kind of periodical that publishes legal rulings.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Magazine</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">magazine</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Periodical</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Magazine</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Newspaper</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">newspaper</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Periodical</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Newspaper</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Proceedings</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">proceedings</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Collection</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">bibliographic reference</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Manifestation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Abstract</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">abstract</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Album</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">album</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Album</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#AlbumTrack</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">album track</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Part</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Article</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">article</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Part</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Article</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Bill</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">bill</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Legislation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Bill</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Book</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">book</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Book</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#BookSection</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">book section</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Part</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Broadcast</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">braadcast</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Broadcast</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Chapter</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">chapter</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#BookSection</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Chapter</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Data</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">data</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Diagram</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">diagram</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Illustration</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Diagram</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Dissertation</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">dissertation</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Thesis</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Dissertation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Document</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">document</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Docoment</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#EditedBook</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">edited book</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Book</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#EMail</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">e-mail</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#PersonalCommunication</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/EMail</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Essay</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">essay</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Essay</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Figure</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">figure</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Figure</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Illustration</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">illustration</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Illustration</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Interview</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">interview</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#PersonalCommunication</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Interview</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Journal</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">journal</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Periodical</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An academic journal.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Law</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">law</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Legislation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Law</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Legislation</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">legislation</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Legislation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Documents issued by legislative bodies.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Letter</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">letter</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#PersonalCommunication</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Letter</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A kind of written communication.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Manuscript</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">manuscript</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Manuscript</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An unpublished document.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Map</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">map</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Map</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A cartographic representation.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Memo</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">memo</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#PersonalCommunication</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">More formally called a memorandum.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#MotionPicture</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">motion picture</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Motion_Picture</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A film, video, DVD, etc.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#MusicalScore</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">musical score</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Musical_Score</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A textual representation of music.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Painting</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">painting</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Illustration</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Painting</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Pamphlet</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">pamphlet</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Patent</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An informally published document.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Paper</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">paper</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An unpublished document.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Part</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">part</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Part</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An item contained in something else; for example, a chapter in a book, </span>
+      <span class="text">or an article in a periodical.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Patent</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">patent</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Patent</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#PersonalCommunication</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">personal communication</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Communication</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Poster</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">poster</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Report</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">report</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Report</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Review</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">review</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Review</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Song</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">song</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Song</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Speech</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">speech</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/wordnet/1.6/Speech</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#Thesis</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">thesis</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#Reference</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/net/biblio#presentedAt</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">presented at</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">An item presented at an event.</span><span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/net/biblio#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/related</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons License</a>.<p>The following section is informational only, please refer to the 
+			<a href="http://creativecommons.org/licenses/by/2.0/">Original License</a> for complete license terms.
+		</p><p>This license grants the following rights:</p><ul><li>making multiple copies
+						(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+					</li><li>distribution, public display, and publicly performance
+						(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+					</li><li>creation and distribution of derivative works
+						(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+					</li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license notices be kept intact
+						(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+					</li><li>credit be given to copyright holder and/or author
+						(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+					</li></ul></p><div id="footer">
+      Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

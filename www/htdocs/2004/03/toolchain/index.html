@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>vocab.org toolchain</title>
+		<meta name="cvsid" content="$Id: index.html,v 1.1 2005/04/04 11:22:19 ian Exp $" />
+		<link title="Default" type="text/css" href="/2005/04/styles/screen.css" rel="stylesheet" media="screen" />
+	</head>
+	<body>
+		<h1>Introduction.</h1>
+		<p>The documentation for each vocabulary on vocab.org is built from that vocabulary's RDF schema using a set of XSLT stylesheets and makefiles.</p>
+
+		<h1>Toolchain Components</h1>
+		<dl>
+			<dt><a href="vocab-generate-makefile.xsl">vocab-generate-makefile.xsl</a></dt>
+			<dd>An XSLT stylesheet that generates makefiles for building documentation of an RDF schema.</dd>
+			<dt><a href="vocab-extract-term-rdf.xsl">vocab-extract-term-rdf.xsl</a></dt>
+			<dd>An XSLT stylesheet that extracts the subset of RDF that applies to a single property or class in a schema.</dd>
+			<dt><a href="pretty-xml.xsl">pretty-xml.xsl</a></dt>
+			<dd>An XSLT stylesheet that formats an XML document as XHTML.</dd>
+			<dt><a href="vocab-html-docs.xsl">vocab-html-docs.xsl</a></dt>
+			<dd>An XSLT stylesheet that styles an RDF schema as XHTML.</dd>
+			<dt><a href="cc-schema.rdfs">cc-schema.rdfs</a></dt>
+			<dd>A copy of the creative commons RDF schema, used for generating XHTML descriptions of embedded licenses.</dd>
+		</dl>
+			
+		
+	    <h1>Using the Toolchain</h1>
+		<ol>
+			<li><p>Generate the makefile using vocab-generate-makefile.xsl. This stylesheet takes three parameters:</p>
+				<dl>
+					<dt>schema (required)</dt>
+					<dd>The short name of the schema (e.g. vann or bio)</dd>
+					<dt>date (required)</dt>
+					<dd>The date of the schema version (e.g. 20050401). This doesn't have to be a date but needs to act as a version identifier.</dd>
+					<dt>toolchain-dir (optional)</dt>
+					<dd>The directory of the toolchain (defaults to ../2004/03/toolchain/)</dd>
+				</dl>
+		
+		<p>Apply the stylesheet to the vocabulary RDF schema document. For example:</p>
+		<p><code>xsltproc --param schema "'vann'" --param date "'20050401'" ../2004/03/toolchain/vocab-generate-makefile.xsl  vann-vocab-20050401.rdf &gt; Makefile-vann-20050401</code></p>
+		
+		<p>(Note how the parameters are enclosed in both types of quotes to ensure that they are passed as text and not interpreted as XPath references.)</p>
+		
+		
+		<p>The result is a makefile that contains targets for all the files needed to completely document the vocabulary. I pipe the output to a new makefile for each version of the schema which means I can regenerate the documentation for any version at any time.</p>
+			
+			</li>
+			
+			
+			<li><p>Run make with the generated makefile. This applies vocab-html-docs.xsl to the schema document once for each class or property and once for the HTML version of the schema. This stylesheet takes an optional parameter:</p>
+			
+				<dl>
+					<dt>term (optional)</dt>
+					<dd>The URI of a vocabulary term (a property or class) to be extracted from the RDF schema. If this parameter is omitted, the entire schema is converted to HTML.</dd>
+				</dl>
+			
+				<p>The makefile generates RDF and HTML descriptions for each property and class in the schema. These files are named following the scheme: NNNN-term-TTTT-DDDD where NNNN is the vocabulary short name (e.g. bio), TTTT is the property or class name (e.g. date) and DDDD is the vocabulary date (e.g. 20050401), .rdf or .html is added as appropriate.</p>
+				<p>The makefile also copies the term documents to the short versions of the file names (e.g. date.html) so that they can be returned when a user dereferences the term URI.</p>
+				
+				</p>
+			</li>
+		</ol>
+		
+		<h1>RDF Schema Constraints</h1>
+		<p>The toolchain uses XSLT which operates at the syntactic level on the RDF schemas. This means that the RDF used in the schemas has to be authored in a consistent manner. The first child of the  rdf:RDF needs
+			to be an owl:Ontology element. This contains all the metadata about the vocabulary. The most important properties used here are:
+			<dl>
+				<dt>dc:identifier</dt>
+				<dd>Must contain the URI of the RDF schema without the file extension. (e.g. http://purl.org/vocab/vann/vann-vocab-20050401)</dd>
+				<dt>dcterm:isVersionOf</dt>
+				<dd>Must reference the vocabulary namespace URI (e.g. http://purl.org/vocab/vann/)</dd>
+				<dt>dcterm:hasFormat</dt>
+				<dd>This is used to describe the HTML and RDF versions of the schema, for example:
+				<pre>
+  &lt;dcterm:hasFormat&gt;
+    &lt;rdf:Description rdf:about="http://purl.org/vocab/vann/vann-vocab-20050401.html"&gt;
+      &lt;dc:format&gt;
+        &lt;dcterm:IMT&gt;
+          &lt;rdf:value&gt;text/html&lt;/rdf:value&gt;
+          &lt;rdfs:label xml:lang="en"&gt;HTML&lt;/rdfs:label&gt;
+        &lt;/dcterm:IMT&gt;
+      &lt;/dc:format&gt;
+    &lt;/rdf:Description&gt;
+  &lt;/dcterm:hasFormat&gt;
+  &lt;dcterm:hasFormat&gt;
+    &lt;rdf:Description rdf:about="http://purl.org/vocab/vann/vann-vocab-20050401.rdf"&gt;
+      &lt;dc:format&gt;
+        &lt;dcterm:IMT&gt;
+          &lt;rdf:value&gt;application/rdf+xml&lt;/rdf:value&gt;
+          &lt;rdfs:label xml:lang="en"&gt;RDF&lt;/rdfs:label&gt;
+        &lt;/dcterm:IMT&gt;
+      &lt;/dc:format&gt;
+    &lt;/rdf:Description&gt;
+  &lt;/dcterm:hasFormat&gt;				
+				</pre>
+				
+				
+				</dd>
+				
+			</dl>
+
+		<address>Contact <a href="http://purl.org/NET/iand">Ian Davis</a> for more information. &middot; Last modified: $Date: 2005/04/04 11:22:19 $</address>
+	</body>
+</html>

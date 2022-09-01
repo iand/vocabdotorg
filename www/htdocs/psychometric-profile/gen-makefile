@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xsltproc --param toolchain-dir "'../2004/03/toolchain/'" --param schema "'psych'" --param date "'20040427'" ../2004/03/toolchain/vocab-generate-makefile.xsl psych-vocab-20040427.rdf > Makefile-psych-20040427

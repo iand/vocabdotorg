@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Implementing Undo With ChangeSets</title>
+	</head>
+	<body>
+    <p>
+      This example shows how a history of changes can be used to implement an "undo" or "rollback" of changes to a particular 
+      resource description. The three changes from the "Linked ChangeSets" example and a series of subsequent ChangeSets 
+      are shown below in Turtle syntax:
+    </p>
+    <pre>
+<code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+@prefix cs: &lt;http://purl.org/vocab/changeset/schema#&gt;
+@prefix ex: &lt;http://example.com/res#&gt;
+&lt;ex:change1&gt;
+  a cs:ChangeSet ;
+  cs:subjectOfChange ex:thing ;
+  cs:createdDate "2006-01-01T00:00:00Z" ;
+  cs:creatorName "Anne Onymous" ;
+  cs:changeReason "Change of title" ;
+  cs:removal [
+    a rdf:Statement ;
+    rdf:subject ex:thing ;
+    rdf:predicate dc:title ;
+    rdf:object "Original Title" .
+  ] ;
+  cs:addition [
+    a rdf:Statement ;
+    rdf:subject ex:thing ;
+    rdf:predicate dc:title ;
+    rdf:object "New Title" .
+  ] .
+&lt;ex:change2&gt;
+  a cs:ChangeSet ;
+  cs:precedingChangeSet ex:change1 ;
+  cs:subjectOfChange ex:thing ;
+  cs:createdDate "2006-01-02T00:00:00Z" ;
+  cs:creatorName "Anne Onymous" ;
+  cs:changeReason "Addition of identifier" ;
+  cs:addition [
+    a rdf:Statement ;
+    rdf:subject ex:thing ;
+    rdf:predicate dc:identifier ;
+    rdf:object "Z875331" .
+  ] .
+&lt;ex:change3&gt;
+  a cs:ChangeSet ;
+  cs:precedingChangeSet ex:change2 ;
+  cs:subjectOfChange ex:thing ;
+  cs:createdDate "2006-01-03T00:00:00Z" ;
+  cs:creatorName "Anne Onymous" ;
+  cs:changeReason "Removal of description" ;
+  cs:removal [
+    a rdf:Statement ;
+    rdf:subject ex:thing ;
+    rdf:predicate dc:descripton ;
+    rdf:object "A short description of this resource" .
+  ] .
+&lt;ex:change4&gt;
+  a cs:ChangeSet ;
+  cs:precedingChangeSet ex:change3 ;
+  cs:subjectOfChange ex:thing ;
+  cs:createdDate "2006-01-04T00:00:00Z" ;
+  cs:creatorName "Anne Onymous" ;
+  cs:changeReason "New description" ;
+  cs:addition [
+    a rdf:Statement ;
+    rdf:subject ex:thing ;
+    rdf:predicate dc:descripton ;
+    rdf:object "Revised description of resource" .
+  ] .
+&lt;ex:change5&gt;
+  a cs:ChangeSet ;
+  cs:precedingChangeSet ex:change4 ;
+  cs:subjectOfChange ex:thing ;
+  cs:createdDate "2006-01-05T00:00:00Z" ;
+  cs:creatorName "Anne Onymous" ;
+  cs:changeReason "Added creator and date" ;
+  cs:addition [
+    a rdf:Statement ;
+    rdf:subject ex:thing ;
+    rdf:predicate dc:creator ;
+    rdf:object "Jim Bo" .
+  ] ;
+  cs:addition [
+    a rdf:Statement ;
+    rdf:subject ex:thing ;
+    rdf:predicate dc:date ;
+    rdf:object "2004-03-12T14:22:10Z" .
+  ] .</code></pre>
+    <p>The current version of the description is shown here, also in Turtle:</p>
+<pre><code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+@prefix cs: &lt;http://purl.org/vocab/changeset/schema#&gt;
+@prefix ex: &lt;http://example.com/res#&gt;
+&lt;ex:thing&gt;
+  dc:title "New Title" ;
+  dc:identifier "Z875331" ;
+  dc:description "Revised description of resource" ;
+  dc:creator "Jim Bo" ;
+  dc:date "2004-03-12T14:22:10Z" .</code></pre>
+    <p>
+      The ChangeSets form an ordered list representing the version history of the resource description. A hypothetical
+      user interface could present these changes, ordered using the precedingChangeSet property. Selecting a ChangeSet
+      could result in the undoing of all changes up to that point. For the most recent ChangeSet this operation is simply 
+      a matter of removing all additions and adding all removals specified in the ChangeSet. Rolling back more than one ChangeSet 
+      involves reversing the effects of each ChangeSet in reverse chronological order. For example if the user requested a rollback
+      up to and including the ChangeSet identified by <code>ex:change3</code> then the additions and removals of 
+      <code>ex:change5</code> would first have to be reversed, followed by those of the ChangeSet referenced by its
+      precedingChangeSet property, <code>ex:change4</code>, and finally those of <code>ex:change3</code>
+    </p>
+	</body>
+</html>

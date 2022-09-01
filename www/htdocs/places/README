@@ -1,0 +1,7 @@
+This project contains the source schema for the RDF Schema at http://purl.org/ontology/places
+
+To edit the schema, clone the repository, make your changes, check to make sure your change results in valid RDF (and says what you think you're saying) using a tool like rapper (http://librdf.org/raptor/rapper.html).
+
+If you are satisfied with your edits, send me a pull request (http://help.github.com/pull-requests/) I'll consider merging and publishing to vocab.org
+
+(Inspiration for this approach comes from https://github.com/iand/vocab-bio & https://github.com/rsinger/LinkedMARCCodes)

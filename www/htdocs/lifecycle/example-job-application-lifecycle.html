@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Job Application Example of Lifecycle Ontology</title>
+	
+</head>
+
+<body>
+	<p>
+		The following example (in Turtle) describes the lifecycle of a job application.
+	</p><p>
+		We have an applicant, a foaf agent:
+	</p>
+	<pre>
+		@prefix foaf: &lt;http://xmlns.com/foaf/spec/&gt;
+
+		&lt;http://example.com/foaf/geoff&gt;
+			a foaf:Person;
+			foaf:name "Geoff Foo".
+	</pre>
+	<p>
+		Geoff has applied for a job at example.com and his application has been received:
+	</p>
+	<pre>
+		@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+		@prefix lifecycle: &lt;http://purl.org/vocab/lifecycle/schema#&gt;
+		@prefix job: &lt;http://example.com/schemas/job-application/schema#&gt;
+		@prefix jobApplication: &lt;http://example.com/lifecycles/job-application#&gt;
+
+		&lt;http://example.com/jobs/application-12997&gt;
+			rdfs:label "Job application from Geoff Foo";
+			a job:Application;
+			job:applicant &lt;http://example.com/foaf/geoff&gt;;
+			lifecycle:state jobApplication:Received.
+	</pre>
+	<p>His application is being stored using a very basic example ontology:</p>
+	<pre>
+		@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+		@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+		@prefix foaf: &lt;http://xmlns.com/foaf/spec/&gt;
+		@prefix job: &lt;http://example.com/schemas/job-application/schema#&gt;
+
+		job:Application
+			a rdfs:Class;
+			rdfs:Label &quot;A class representing an application for a job&quot;.
+
+		job:applicant
+			a rdf:Property;
+			rdfs:Label &quot;A foaf agent who is applying for a job&quot;;
+			rdfs:domain job:Application;
+			rdfs:range foaf:Agent.
+	</pre>
+	<p>
+		We can see from the snippet for Geoff's application that his application is the "Received" state. Actions are already underway to process it:
+	</p>
+	<pre>
+		@prefix lifecycle: &lt;http://purl.org/vocab/lifecycle/schema#&gt;
+		@prefix jobApplication: &lt;http://example.com/lifecycles/job-application#&gt;
+
+		&lt;http://example.com/actions/124353648593626818&gt;
+			a lifecycle:Action;
+			lifecycle:resource &lt;http://example.com/jobs/application-12997&gt;;
+			lifecycle:task jobApplication:confirmRightToWork;
+			lifecycle:taskProgress lifecycle:Completed.
+
+		&lt;http://example.com/actions/985637ahj7826127y&gt;
+			a lifecycle:Action;
+			lifecycle:resource &lt;http://example.com/jobs/application-12997&gt;;
+			lifecycle:task jobApplication:checkForPreviousApplications;
+			lifecycle:taskProgress lifecycle:Started.
+	</pre>
+	<p>
+		The state of Geoff's application, and the actions that have taken place to process it thus far have been specified using the Lifecycle ontology. The specification of the job application process looks like this:
+	</p>
+	<pre>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+@prefix foaf: &lt;http://xmlns.com/foaf/spec/&gt;
+@prefix lifecycle: &lt;http://purl.org/vocab/lifecycle/schema#&gt;
+@prefix job: &lt;http://example.com/schemas/job-application/schema#&gt;
+@prefix jobApplication: &lt;http://example.com/lifecycles/job-application#&gt;
+
+jobApplication:ApplicationProcess
+	rdfs:Label &quot;Lifecycle for Processing Job Applications&quot;
+	a lifecycle:Lifecycle;
+	possibleState jobApplication:Received;
+	possibleState jobApplication:Reviewed;
+	possibleState jobApplication:ToInterview;
+	possibleState jobApplication:Interviewed;
+	possibleState jobApplication:Offered;
+	possibleState jobApplication:TheyDeclined;
+	possibleState jobApplication:WeDeclined;
+	possibleState jobApplication:Accepted.
+
+jobApplication:Received
+	a lifecycle:State;
+	rdfs:Label &quot;Received&quot;;
+	lifecycle:possibleTransition jobApplication:reviewApplication;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Reviewed
+	a lifecycle:State;
+	rdfs:Label &quot;Reviewed&quot;;
+	lifecycle:possibleTransition jobApplication:acceptApplication;
+	lifecycle:possibleTransition jobApplication:declineByLetter;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:ToInterview
+	a lifecycle:State;
+	rdfs:Label &quot;To Interview&quot;;
+	lifecycle:possibleTransition jobApplication:arrangeInterview;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Interviewed
+	a lifecycle:State;
+	rdfs:Label &quot;Interviewed&quot;;
+	lifecycle:possibleTransition jobApplication:makeOffer;
+	lifecycle:possibleTransition jobApplication:declineByPhone;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Offered
+	a lifecycle:State;
+	rdfs:Label &quot;An offer has been made&quot;;
+	lifecycle:possibleTransition jobApplication:acceptOffer;
+	lifecycle:possibleTransition jobApplication:declineOffer;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:Accepted
+	a lifecycle:State;
+	rdfs:Label &quot;The applicant has accepted this role&quot;;
+	lifecycle:possibleTransition jobApplication:withdrawApplication.
+
+jobApplication:TheyDeclined
+	a lifecycle:State;
+	rdfs:Label &quot;The applicant has declined this role&quot;.
+
+jobApplication:WeDeclined
+	a lifecycle:State;
+	rdfs:Label &quot;We have declined this applicant&quot;.
+
+jobApplication:acceptApplication
+	a lifecycle:Transition;
+	rdfs:Label &quot;Accept this application&quot;;
+	lifecycle:resultingState jobApplication:ToInterview.
+	
+jobApplication:acceptOffer
+	a lifecycle:Transition;
+	rdfs:Label &quot;Accept this offer&quot;;
+	lifecycle:resultingState jobApplication:Accepted.
+
+jobApplication:arrangeInterview
+	a lifecycle:Transition;
+	rdfs:Label &quot;Arrange an Interview&quot;;
+	lifecycle:taskGroup jobApplication:arrangeInternalDates;
+	lifecycle:task jobApplication:arrangeExternalDates;
+	lifecycle:task jobApplication:sendDetailsToEveryone;	
+	lifecycle:resultingState jobApplication:Interviewed.
+
+jobApplication:declineByLetter
+	a lifecycle:Transition;
+	rdfs:Label &quot;Decline this application by letter&quot;;
+	lifecycle:resultingState jobApplication:WeDeclined.
+
+jobApplication:declineByPhone
+	a lifecycle:Transition;
+	rdfs:Label &quot;Decline this application by phone&quot;;
+	lifecycle:resultingState jobApplication:WeDeclined.
+
+jobApplication:declineOffer
+	a lifecycle:Transition;
+	rdfs:Label &quot;Decline this offer&quot;;
+	lifecycle:resultingState jobApplication:TheyDeclined.
+
+jobApplication:makeOffer
+	a lifecycle:Transition;
+	rdfs:Label &quot;Make an offer to this applicant&quot;;
+	lifecycle:resultingState jobApplication:Offered.
+
+jobApplication:reviewApplication
+	a lifecycle:Transition;
+	rdfs:Label &quot;Review this application&quot;;
+	lifecycle:task jobApplication:confirmRightToWork;
+	lifecycle:task jobApplication:checkForPreviousApplications;	
+	lifecycle:resultingState jobApplication:Reviewed.
+
+jobApplication:withdrawApplication
+	a lifecycle:Transition;
+	rdfs:Label &quot;Withdraw this application&quot;;
+	lifecycle:resultingState jobApplication:TheyDeclined.
+
+jobApplication:confirmRightToWork
+	a lifecycle:Task;
+	rdfs:Label &quot;Confirm Right To Work&quot;;
+	lifecycle:mandatory &quot;true&quot;^^xsd:boolean;
+	lifecycle:next jobApplication:checkForPreviousApplications.
+	
+jobApplication:checkForPreviousApplications
+	a lifecycle:Task;
+	rdfs:Label &quot;Check for Previous Applications&quot;.
+
+jobApplication:arrangeInternalDates
+	a lifecycle:taskGroup;
+	rdfs:Label &quot;Arrange internal interviewer dates&quot;;
+	lifecycle:task jobApplication:findLineManagerDates;
+	lifecycle:task jobApplication:findSecondaryInterviewerDates;
+	lifecycle:next jobApplication:arrangeExternalDates.
+	
+jobApplication:arrangeExternalDates
+	a lifecycle:task;
+	rdfs:Label &quot;Arrange dates with applicant&quot;;
+	lifecycle:next jobApplication:sendDetailsToEveryone.
+	
+jobApplication:sendDetailsToEveryone
+	a lifecycle:task;
+	rdfs:Label &quot;Send interview details to everyone&quot;.
+
+jobApplication:findLineManagerDates
+	a lifecycle:task;
+	rdfs:Label &quot;Find available dates for interviewing manager&quot;;
+	lifecycle:next jobApplication:findSecondaryInterviewerDates.
+
+jobApplication:findSecondaryInterviewerDates
+	a lifecycle:task;
+	rdfs:Label &quot;Find available dates for secondary interviewers&quot;.
+	</pre>
+</body>
+</html>

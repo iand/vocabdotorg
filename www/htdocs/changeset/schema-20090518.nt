@@ -1,0 +1,199 @@
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/date> "2006-03-21" .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/title> "Changeset"@en .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This vocabulary defines a set of terms for describing changes to resource descriptions.\n    "@en .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      The vocabulary introduces the notion of a ChangeSet which encapsulates the delta between two versions of a \n      resource description. In this context a resource description is the set of triples that in some way comprise a \n      description of a resource. The delta is represented by two sets of triples: additions and removals. A ChangeSet can be used to \n      modify a resource description by first removing all triples from the description that are in the removals set and\n      adding the triples in the additions set.\n    "@en .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/identifier> "http://purl.org/vocab/changeset/schema-20060321" .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/changeset/schema#> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/creator> "Sam Tunnicliffe" .
+<http://iandavis.com/id/me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://iandavis.com/id/me> <http://xmlns.com/foaf/0.1/name> "Ian Davis" .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/rights> "Copyright \u00A9 2005 Talis Information Ltd." .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/changeset/schema-20051214> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/changeset/schema#" .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cs" .
+<http://vocab.org/changeset/changesets-example-20060321.html> <http://purl.org/dc/terms/title> "A Simple ChangeSet" .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example-20060321.html> .
+<http://vocab.org/changeset/changesets-example2-20060321.html> <http://purl.org/dc/terms/title> "Linked ChangeSets" .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example2-20060321.html> .
+<http://vocab.org/changeset/changesets-example3-20060321.html> <http://purl.org/dc/terms/title> "Implementing Undo With ChangeSets" .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example3-20060321.html> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "Improved documentation"@en .
+_:genid1 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid1 <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid1 .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "Introduced statement property"@en .
+_:genid2 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid2 <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid2 .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#label> "Updated dublin core properties to new namespace"@en .
+_:genid3 <http://purl.org/dc/terms/date> "2009-05-18" .
+_:genid3 <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid3 .
+_:genid4 <http://www.w3.org/2000/01/rdf-schema#label> "Fixed invalid RDF"@en .
+_:genid4 <http://purl.org/dc/terms/date> "2006-06-23" .
+_:genid4 <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid4 .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#label> "statement"@en .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2004/02/skos/core#definition> "a triple included in this set of changes"@en .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://purl.org/vocab/changeset/schema#statement> <http://purl.org/dc/terms/issued> "2006-03-21" .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2000/01/rdf-schema#label> "addition"@en .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2004/02/skos/core#definition> "a triple to be added to the resource description"@en .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      By convention the subject of the triple being added should be the same as the subjectOfChange\n    "@en .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/changeset/schema#statement> .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://purl.org/vocab/changeset/schema#addition> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid5 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid5 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definitition and documentation" .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid5 .
+_:genid6 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid6 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made owl:ObjectProperty" .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid6 .
+_:genid7 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid7 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made a sub-property of statement" .
+<http://purl.org/vocab/changeset/schema#addition> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid7 .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2000/01/rdf-schema#label> "removal"@en .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2004/02/skos/core#definition> "a triple to be removed from the resource description"@en .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      By convention the subject of the triple being removed should be the same as the subjectOfChange\n    "@en .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/changeset/schema#statement> .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://purl.org/vocab/changeset/schema#removal> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid8 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid8 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definitition and documentation" .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid8 .
+_:genid9 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid9 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made owl:ObjectProperty" .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid9 .
+_:genid10 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid10 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made a sub-property of statement" .
+<http://purl.org/vocab/changeset/schema#removal> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid10 .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/2000/01/rdf-schema#label> "subjectOfChange"@en .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/2004/02/skos/core#definition> "the resource to which this set of changes applies"@en .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid11 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid11 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definitition and documentation" .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid11 .
+_:genid12 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid12 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made owl:ObjectProperty" .
+<http://purl.org/vocab/changeset/schema#subjectOfChange> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid12 .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#label> "precedingChangeSet"@en .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2004/02/skos/core#definition> "the changeset that immediately precedes this one"@en .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This property can be used to build a history of changes to a particular resource description. The first\n      ChangeSet in the history will have no precedingChangeSet property. Each subsequent ChangeSet added\n      to the history references the preceding one resulting in a singly-linked list of changes.  Care must be taken\n      not to introduce cycles in the history.\n    "@en .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      In systems that assume a closed world, the most recent ChangeSet for a particular resource description \n      can be discovered by looking for the ChangeSet that is not the value of a precedingChangeSet property. \n      Conversely, the earliest ChangeSet is the one that is not the subject of a precedingChangeSet property.\n    "@en .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid13 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid13 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added definitition and documentation" .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid13 .
+_:genid14 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid14 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made owl:ObjectProperty" .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid14 .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#label> "createdDate"@en .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2004/02/skos/core#definition> "the date that the changeset was created"@en .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      The date should be in W3CDTF format\n    "@en .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid15 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid15 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made owl:DatatypeProperty" .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid15 .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://www.w3.org/2000/01/rdf-schema#label> "changeReason"@en .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://www.w3.org/2004/02/skos/core#definition> "a  short, human readable description of the purpose for the changeset"@en .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid16 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid16 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made owl:DatatypeProperty" .
+<http://purl.org/vocab/changeset/schema#changeReason> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid16 .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://www.w3.org/2000/01/rdf-schema#label> "creatorName"@en .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://www.w3.org/2004/02/skos/core#definition> "the name of the entity responsible for creating the changeset"@en .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid17 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid17 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Made owl:DatatypeProperty" .
+<http://purl.org/vocab/changeset/schema#creatorName> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid17 .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://www.w3.org/2000/01/rdf-schema#label> "ChangeSet"@en .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://www.w3.org/2004/02/skos/core#definition> "The encapsulation of a delta between two versions of a resource description"@en .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://purl.org/dc/terms/issued> "2005-12-14" .
+_:genid18 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid18 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Improved documentation" .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid18 .
+_:genid19 <http://purl.org/dc/terms/date> "2006-03-21" .
+_:genid19 <http://purl.org/dc/terms/creator> "Ian Davis" .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added property cardinality restrictions" .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid19 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/changeset/schema#statement> .
+_:genid21 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/changeset/schema#previousChangeSet> .
+_:genid23 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/changeset/schema#subjectOfChange> .
+_:genid25 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/changeset/schema#createdDate> .
+_:genid27 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/changeset/schema#creatorName> .
+_:genid29 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/changeset/schema#changeReason> .
+_:genid31 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
+<http://purl.org/vocab/changeset/schema#ChangeSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .

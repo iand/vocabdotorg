@@ -1,0 +1,213 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head>
+    <title>Participation Schema</title>
+    
+<!--
+  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
+  foreach ($formats as $format_uri) {
+    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
+    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
+    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
+  }
+-->
+    <style media="screen" type="text/css">
+      /* <!-- */
+code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080;
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style:italic;
+  }
+
+  pre {
+    border: 1px #9999cc dotted;
+    background-color: #f3f3ff;
+    color: #000000;
+    width: 90%;
+  }
+
+  blockquote {
+    border-style: solid;
+    border-color: #d0dbe7;
+    border-width: 0 0 0 .25em;
+    padding-left: 0.5em;
+  }
+
+  blockquote, q {
+    font-style: italic;
+  }
+
+  body {
+    font-family: verdana, geneva, arial, sans-serif;
+  }
+
+  a, p,blockquote, q, dl, dd, dt {
+    font-family: verdana, geneva, arial, sans-serif;
+    font-size: 1em;
+  }
+
+
+  dt {
+    font-weight: bold;
+  }
+
+
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; }
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; }
+h3 { font: 700 120% sans-serif }
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+.termuri { margin-bottom: 0.5em;}
+
+
+      /* --> */
+    </style>
+  </head>
+  <body>
+
+  <div id="header">
+    <h1>Participation Schema</h1>
+    <p id="layoutdims">Other formats:
+    
+      <a href="schema-20080925.rdf" rel="alternate" title="RDF/XML version of this document" type="application/rdf+xml">RDF/XML</a>
+    
+    </p>
+  </div>
+    <div class="colmask fullpage">
+      <div class="col1">
+      <p><dl class="doc-info"><dt>Creators</dt><dd><div class="lit">Rob Styles</div></dd><dd><div class="lit">Chris Wallace</div></dd><dd><div class="lit">Knud Moeller</div></dd></dl><div class="lit">The participation ontology is a simple model for describing the roles that people play within groups. It is intended that specific domains will create subclasses of roles within their own areas of expertise. The first of these is AIISO Roles (<a href="http://purl.org/vocab/aiiso-roles/schema">http://purl.org/vocab/aiiso-roles/schema</a>)<span class="lang">[en]</span></div><p>Copyright © 2008 Rob Styles, Chris Wallace, Knud Moeller<p>
+<h2 id="sec-history">History</h2>
+<ul><li>2008-09-25 &ndash; first issued</li><li>2008-09-25 &ndash; semantic change by Rob Styles: First cut of the ontology published, initial concepts extracted from original conference ontology at <a href="http://data.semanticweb.org/ns/swc/ontology">http://data.semanticweb.org/ns/swc/ontology</a></li></ul>
+<h2 id="sec-namespace">Namespace</h2>
+<p>The URI for this vocabulary is</p><pre><code><a href="http://purl.org/vocab/participation/schema#">http://purl.org/vocab/participation/schema#</a></code></pre>
+<p>When abbreviating terms the suggested prefix is <code>participation</code></p>
+<p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code><a href="http://purl.org/vocab/participation/schema#startDate">http://purl.org/vocab/participation/schema#startDate</a></code></pre></p>
+
+<h2 id="sec-summary">Terms Summary</h2>
+<p>An alphabetical list of all terms defined in this schema.</p><table><tr><th>Term</th><th>URI</th><th>Description</th></tr>
+<tr><td><a href="#Role">Role</a></td><td nowrap="nowrap">http://purl.org/vocab/participation/schema#Role</td></td><td>Roles describe the positions or functions we take up in participating in a group</td></tr>
+<tr><td><a href="#endDate">EndDate</a></td><td nowrap="nowrap">http://purl.org/vocab/participation/schema#endDate</td></td><td>The date on which this agent stopped performing this role</td></tr>
+<tr><td><a href="#holder">msg19:holder</a></td><td nowrap="nowrap">http://purl.org/vocab/participation/schema#holder</td></td><td>specifies the holder of a role</td></tr>
+<tr><td><a href="#holder_of">msg20:holder_of</a></td><td nowrap="nowrap">http://purl.org/vocab/participation/schema#holder_of</td></td><td>specifies roles that an agent holds</td></tr>
+<tr><td><a href="#role">Role</a></td><td nowrap="nowrap">http://purl.org/vocab/participation/schema#role</td></td><td>connects groups that have a role to the instance of that role</td></tr>
+<tr><td><a href="#role_at">Role</a></td><td nowrap="nowrap">http://purl.org/vocab/participation/schema#role_at</td></td><td>connects groups that have a role to the instance of that role</td></tr>
+<tr><td><a href="#startDate">StartDate</a></td><td nowrap="nowrap">http://purl.org/vocab/participation/schema#startDate</td></td><td>The date on which this agent started performing this role</td></tr>
+</table>
+<h2 id="sec-terms">Properties and Classes</h2>
+
+<p><h3 id="Role">Role</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#Role" class="uri"><a href="http://purl.org/vocab/participation/schema#Role">http://purl.org/vocab/participation/schema#Role</a></a></p><p class="terminfo">Roles describe the positions or functions we take up in participating in a group</p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-09-25 &ndash; first issued</li></ul>
+<h3 id="endDate">EndDate</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#endDate" class="uri"><a href="http://purl.org/vocab/participation/schema#endDate">http://purl.org/vocab/participation/schema#endDate</a></a></p><p class="terminfo">The date on which this agent stopped performing this role</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. Every value of this property is xsd:Date. </p>
+<h3 id="holder">Holder</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#holder" class="uri"><a href="http://purl.org/vocab/participation/schema#holder">http://purl.org/vocab/participation/schema#holder</a></a></p><p class="terminfo">specifies the holder of a role</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Agent" class="uri">foaf:Agent</a>. It is the inverse of <a href="http://purl.org/vocab/participation/schema#holder_of" class="uri">msg21:holder_of</a></p>
+<h3 id="holder_of">Holder</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#holder_of" class="uri"><a href="http://purl.org/vocab/participation/schema#holder_of">http://purl.org/vocab/participation/schema#holder_of</a></a></p><p class="terminfo">specifies roles that an agent holds</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Agent" class="uri">foaf:Agent</a>. Every value of this property is a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. It is the inverse of <a href="http://purl.org/vocab/participation/schema#holder" class="uri">msg22:holder</a></p>
+<h3 id="role">Role</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#role" class="uri"><a href="http://purl.org/vocab/participation/schema#role">http://purl.org/vocab/participation/schema#role</a></a></p><p class="terminfo">connects groups that have a role to the instance of that role</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid4. Every value of this property is a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. It is the inverse of <a href="http://purl.org/vocab/participation/schema#role_at" class="uri">Role</a></p>
+<h3 id="role_at">Role</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#role_at" class="uri"><a href="http://purl.org/vocab/participation/schema#role_at">http://purl.org/vocab/participation/schema#role_at</a></a></p><p class="terminfo">connects groups that have a role to the instance of that role</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. Every value of this property is genid7. It is the inverse of <a href="http://purl.org/vocab/participation/schema#role_at" class="uri">Role</a></p>
+<h3 id="startDate">StartDate</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#startDate" class="uri"><a href="http://purl.org/vocab/participation/schema#startDate">http://purl.org/vocab/participation/schema#startDate</a></a></p><p class="terminfo">The date on which this agent started performing this role</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. Every value of this property is xsd:Date. </p>
+<h2 id="sec-examples">Examples</h2></p>
+
+<p><h2 id="sec-examples">Other Information</h2>
+<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Types</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div><div class="res"><a href="http://web.resource.org/cc/Work" class="uri">msg23:Work</a></div></td></tr>
+<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-09-25</div></td></tr>
+<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit"><a href="http://purl.org/vocab/participation/schema-20080925">http://purl.org/vocab/participation/schema-20080925</a></div></td></tr>
+<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/participation/schema#" class="uri">Participation Schema</a><br />The participation ontology is a simple model for describing the roles that people play within groups. It is intended that specific domains will create subclasses of roles within their own areas of expertise. The first of these is AIISO Roles (<a href="http://purl.org/vocab/aiiso-roles/schema">http://purl.org/vocab/aiiso-roles/schema</a>)</div></td></tr>
+<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/participation/schema-20080925.html" class="uri"><a href="Http://purl.org/vocab/participation/schema-20080925.html">Http://purl.org/vocab/participation/schema-20080925.html</a></a></div><div class="res"><a href="http://purl.org/vocab/participation/schema-20080925.rdf" class="uri"><a href="Http://purl.org/vocab/participation/schema-20080925.rdf">Http://purl.org/vocab/participation/schema-20080925.rdf</a></a></div></td></tr>
+<tr><th valign="top" class="even><div class="label"><a href="http://web.resource.org/cc/license" class="uri">License</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://creativecommons.org/licenses/by/2.0/uk/" class="uri"><a href="Http://creativecommons.org/licenses/by/2.0/uk/">Http://creativecommons.org/licenses/by/2.0/uk/</a></a></div></td></tr>
+</table></p>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <!-- Page template based on http://matthewjamestaylor.com/blog/ultimate-1-column-full-page-ems.htm -->
+      <p></p>
+    </div>
+
+  </body>
+</html>
