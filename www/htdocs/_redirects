@@ -1,5 +1,20 @@
+/aiiso /aiiso/schema 302
+/aiiso/ /aiiso/schema 302
+
+/aiiso-roles /aiiso-roles/schema.html 302
+/aiiso-roles/ /aiiso-roles/schema.html 302
+
+/biblio /biblio/schema.html 302
+/biblio/ /biblio/schema.html 302
+
 /bio /bio/schema.html 302
 /bio/ /bio/schema.html 302
+
+/changeset /changeset/schema 302
+/changeset/ /changeset/schema 302
+
+/changesets /changeset/schema 301
+/changesets/* /changeset/:splat 301
 
 /vann/changes /vann/#changes 303
 /vann/example /vann/#example 303
