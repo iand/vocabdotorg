@@ -1,14 +1,14 @@
 /aiiso /aiiso/schema 302
 /aiiso/ /aiiso/schema 302
 
-/aiiso-roles /aiiso-roles/schema.html 302
-/aiiso-roles/ /aiiso-roles/schema.html 302
+/aiiso-roles /aiiso-roles/schema 302
+/aiiso-roles/ /aiiso-roles/schema 302
 
-/biblio /biblio/schema.html 302
-/biblio/ /biblio/schema.html 302
+/biblio /biblio/schema 302
+/biblio/ /biblio/schema 302
 
-/bio /bio/schema.html 302
-/bio/ /bio/schema.html 302
+/bio /bio/schema 302
+/bio/ /bio/schema 302
 
 /changeset /changeset/schema 302
 /changeset/ /changeset/schema 302
@@ -16,9 +16,57 @@
 /changesets /changeset/schema 301
 /changesets/* /changeset/:splat 301
 
+/desc /desc/schema 302
+/desc/ /desc/schema 302
+
+/evidence /evidence/terms 302
+/evidence/ /evidence/terms 302
+
+/frbr /frbr/core 302
+/frbr/ /frbr/core 302
+
+/genealogy /genealogy/time 302
+/genealogy/ /genealogy/time 302
+
+/kro /kro/top 302
+/kro/ /kro/top 302
+
+/lifecycle /lifecycle/schema 302
+/lifecycle/ /lifecycle/schema 302
+
+/multi-tenant-configuration /multi-tenant-configuration/schema-20090513 302
+/multi-tenant-configuration/ /multi-tenant-configuration/schema-20090513 302
+
+/participation /participation/schema 302
+/participation/ /participation/schema 302
+
+/places /places/schema.rdf 302
+/places/ /places/schema.rdf 302
+
+/resourcelist /resourcelist/schema 302
+/resourcelist/ /resourcelist/schema 302
+
+/reuters_regions /reuters_regions/1.0 302
+/reuters_regions/ /reuters_regions/1.0 302
+
+/reuters_topics /reuters_topics/1.0 302
+/reuters_topics/ /reuters_topics/1.0 302
+
+/review /review/terms 302
+/review/ /review/terms 302
+
+/transit /transit/terms 302
+/transit/ /transit/terms 302
+
 /vann/changes /vann/#changes 303
 /vann/example /vann/#example 303
 /vann/preferredNamespacePrefix /vann/#preferredNamespacePrefix 303
 /vann/preferredNamespaceUri /vann/#preferredNamespaceUri 303
 /vann/termGroup /vann/#termGroup 303
 /vann/usageNote /vann/#usageNote 303
+
+/waiver /waiver/terms 302
+/waiver/ /waiver/terms 302
+
+/whisky /whisky/terms 302
+/whisky/ /whisky/terms 302
