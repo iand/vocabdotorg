@@ -4,15 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
   <head>
     <title>BIO: A vocabulary for biographical information</title>
-    
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -144,29 +135,28 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
       <div class="col1">
       <p><dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="lit">David Galbraith</div></dd></dl><p class="abstract">This document describes a vocabulary for describing biographical information about people, both living and dead. </p><div class="lit"><div></p>
 
-<pre><code>    &lt;p&gt;The BIO vocabulary contains terms useful for finding out more about people and their backgrounds and has some cross-over into genealogical information. 
-    The approach taken is to describe a person's life as a series of interconnected key events, around which other information can be woven. 
-    This vocabulary defines the event framework and supplies a set of core event types that cover many use cases, but it is expected that it 
-    will be extended in other vocabularies to suit their needs. The intention of this vocabulary is to describe biographical events of people 
-    and this intention carries through to the definitions of the properties and classes which are person-centric rather than neutral. For example 
-    the Employment event puts the person being employed as the principal agent in the event rather than the employer.&lt;/p&gt;
-    &lt;p&gt;The BIO vocabulary defines a number of core classes and properties for describing biographical information: &lt;/p&gt;
-    &lt;p&gt;&lt;figure&gt;&lt;img src=&quot;/bio/core-classes.png&quot;&gt;&lt;/img&gt;&lt;br&gt;&lt;/br&gt;Figure: Biography Vocabulary Core Classes (&lt;a href=&quot;http://vocab.org/bio/core-classes.png&quot;&gt;PNG version&lt;/a&gt;, &lt;a href=&quot;http://vocab.org/bio/core-classes.svg&quot;&gt;SVG version&lt;/a&gt;)&lt;/figure&gt;&lt;/p&gt;
-    &lt;p&gt;At its heart the BIO vocabulary is concerned with people, their relationships and the events in their lives. Together these can be
+ <p>The BIO vocabulary contains terms useful for finding out more about people and their backgrounds and has some cross-over into genealogical information.
+    The approach taken is to describe a person's life as a series of interconnected key events, around which other information can be woven.
+    This vocabulary defines the event framework and supplies a set of core event types that cover many use cases, but it is expected that it
+    will be extended in other vocabularies to suit their needs. The intention of this vocabulary is to describe biographical events of people
+    and this intention carries through to the definitions of the properties and classes which are person-centric rather than neutral. For example
+    the Employment event puts the person being employed as the principal agent in the event rather than the employer.</p>
+    <p>The BIO vocabulary defines a number of core classes and properties for describing biographical information: </p>
+    <p><figure><img src=&quot;/bio/core-classes.png&quot;></img><br></br>Figure: Biography Vocabulary Core Classes (<a href=&quot;http://vocab.org/bio/core-classes.png&quot;>PNG version</a>, <a href=&quot;http://vocab.org/bio/core-classes.svg&quot;>SVG version</a>)</figure></p>
+    <p>At its heart the BIO vocabulary is concerned with people, their relationships and the events in their lives. Together these can be
     used to build up a narrative of a person's life and their interactions with other people, organizations and the world around them. Events bound intervals
     of time that may be associated with particular relationships between people and groups or organisations. Many different types of life event are
     defined in this vocabulary including the obvious Birth, Marriage and Death but also Coronation, Performance and even Murder. These events are not intended
     to be fully comprehensive but are representative of the types of events associated with biographical material. Currently the relationship segment of the
     vocabulary is underspecified with only a generic Relationship class available. It is envisaged that many types of relationship such as families, employments
-    and ownerships will be specified in the future.&lt;/p&gt;
-    &lt;p&gt;The sequence of events and intervals build a timeline of history against which people and their relationships can be placed. The aim is
+    and ownerships will be specified in the future.</p>
+    <p>The sequence of events and intervals build a timeline of history against which people and their relationships can be placed. The aim is
     to enable simple forms of genealogical reasoning such as determining whether a child was born out of wedlock or the location of a family
     given the fact one of their children was attending a particular school. Events are ordered in time by relating them to one another and to abstract
-    intervals of time:&lt;/p&gt;
-    &lt;p&gt;&lt;figure&gt;&lt;img src=&quot;/bio/timelines.png&quot;&gt;&lt;/img&gt;&lt;br&gt;&lt;/br&gt;Figure: Biography Vocabulary Timelines(&lt;a href=&quot;http://vocab.org/bio/timelines.png&quot;&gt;PNG version&lt;/a&gt;, &lt;a href=&quot;http://vocab.org/bio/timelines.svg&quot;&gt;SVG version&lt;/a&gt;)&lt;/figure&gt;&lt;/p&gt;
-    &lt;p&gt;Please see &lt;a href=&quot;https://github.com/iand/vocab-bio&quot;&gt;https://github.com/iand/vocab-bio&lt;/a&gt; for the master version of this vocabulary.&lt;/p&gt;
-  &lt;/div&gt;&lt;/div&gt;&lt;p&gt;Please direct feedback on this document to the &lt;a href=&quot;http://lists.foaf-project.org/mailman/listinfo/foaf-dev&quot;&gt;FOAF-DEV mailing list&quot;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Copyright © 2002-2010 Ian Davis and David Galbraith&lt;p&gt;
-</code></pre>
+    intervals of time:</p>
+    <p><figure><img src=&quot;/bio/timelines.png&quot;></img><br></br>Figure: Biography Vocabulary Timelines(<a href=&quot;http://vocab.org/bio/timelines.png&quot;>PNG version</a>, <a href=&quot;http://vocab.org/bio/timelines.svg&quot;>SVG version</a>)</figure></p>
+    <p>Please see <a href=&quot;https://github.com/iand/vocab-bio&quot;>https://github.com/iand/vocab-bio</a> for the master version of this vocabulary.</p>
+  </div></div><p>Please direct feedback on this document to the <a href=&quot;http://lists.foaf-project.org/mailman/listinfo/foaf-dev&quot;>FOAF-DEV mailing list&quot;</a></p><p>Copyright © 2002-2010 Ian Davis and David Galbraith<p>
 
 <h2 id="sec-history">History</h2>
 <ul><li>2003-03-07 - first issued</li><li>2003-07-28 - semantic change by Ian Davis: Added keywords property</li><li>2004-03-05 - editorial change by Ian Davis: Added Creative Commons license</li><li>2005-04-01 - editorial change by Ian Davis: Added examples</li><li>2009-05-19 - editorial change by Ian Davis: Minor changes to improve publishing process</li><li>2010-04-20 - editorial change by Ian Davis: Added change history</li><li>2010-05-10 - semantic change by Ian Davis: Major expansion of properties and classes</li><li>2010-05-20 - editorial change by Ian Davis: Batch of revisions based on community feedback</li><li>2010-06-05 - semantic change by Ian Davis: Added biography property</li><li>2010-06-06 - semantic change by Ian Davis: Added subproperty and equivalent property relations for bio:father, bio:mother and bio:child</li><li>2011-06-10 - semantic change by Ian Davis: Added bio:Formation and bio:Disbanding events</li><li>2011-06-10 - semantic change by Ian Davis: Added bio:Performance event</li><li>2011-06-14 - editorial change by Ian Davis: Expanded description and added diagrams</li><li>2011-06-14 - semantic change by Alexandre Passant: Added properties for Birth and Death Event types, motivated by JSON serialisations of RDF</li><li>2011-06-14 - semantic change by Ian Davis: Added bio:Relationship class and properties</li></ul>

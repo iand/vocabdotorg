@@ -4,16 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
   <head>
     <title>RELATIONSHIP: A vocabulary for describing relationships between people</title>
-    
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
-    <style media="screen" type="text/css">
+     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
       color: #000000;
@@ -142,7 +133,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
   </div>
     <div class="colmask fullpage">
       <div class="col1">
-      <p><dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="res">genid1</div></dd></dl><div class="lit">A vocabulary for describing relationships between people</div><p>Please direct feedback on this document to the <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF-DEV mailing list&rdquo;</a></p>
+      <p><dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="res">Eric Vitiello Jr</div></dd></dl><div class="lit">A vocabulary for describing relationships between people</div><p>Please direct feedback on this document to the <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF-DEV mailing list&rdquo;</a></p>
 <h2 id="sec-history">History</h2>
 <ul><li>2004-02-11 &ndash; first issued</li><li>2005-08-10 &ndash; editorial change by Ian Davis: Added isDefinedBy properties and updated documentation</li><li>2009-05-15 &ndash; semantic change by Ian Davis: Typed vocabulary as owl:Ontology</li><li>2010-02-09 &ndash; semantic change by Ian Davis: Asserted that foaf:knows is rdfs:subPropertyOf rel:knowsOf</li><li>2010-02-09 &ndash; semantic change by Ian Davis: Incorporated changes suggested by Henry Story on foaf-dev list</li><li>2010-04-19 &ndash; editorial change by Ian Davis: Inlined the examples that had been orphaned by publishing software changes</li></ul>
 <h2 id="sec-namespace">Namespace</h2>
