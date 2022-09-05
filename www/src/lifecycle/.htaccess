@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ /lifecycle/schema [R,L]
+RewriteRule ^schema$ /lifecycle/schema-20080603 [L]
+RewriteRule ^schema\.rdf$ /lifecycle/schema-20080603.rdf [L]
+RewriteRule ^schema\.html$ /lifecycle/schema-20080603.html [L]

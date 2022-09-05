@@ -1,0 +1,2 @@
+RedirectMatch /biblio/$ http://vocab.org/biblio/schema
+

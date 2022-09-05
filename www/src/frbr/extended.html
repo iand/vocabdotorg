@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Expression of Extended FRBR Concepts in RDF</title><link rel="meta" type="application/rdf+xml" title="Expression of Extended FRBR Concepts in RDF" href="http://purl.org/vocab/frbr/frbr-extended-20050810.rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Expression of Extended FRBR Concepts in RDF</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://purl.org/vocab/frbr/frbr-extended-20050810">http://purl.org/vocab/frbr/frbr-extended-20050810</a> [<a href="http://purl.org/vocab/frbr/frbr-extended-20050810.html">HTML</a>] [<a href="http://purl.org/vocab/frbr/frbr-extended-20050810.rdf">RDF</a>]</dd><dt>Latest Version</dt><dd><a href="http://purl.org/vocab/frbr/extended#">http://purl.org/vocab/frbr/extended#</a></dd><dt>Previous Version</dt><dd><a href="http://purl.org/vocab/frbr/frbr-extended-20050729">http://purl.org/vocab/frbr/frbr-extended-20050729</a></dd><dt>Authors</dt><dd>Ian Davis &lt;http://purl.org/NET/iand&gt;</dd><dd>Richard Newman</dd><dt>Contributors</dt></dl><p class="rights">Copyright © 2005 Richard Newman and Ian Davis</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-schema">RDF Schema</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><h2 id="sec-changes">Changes From Previous Version</h2><ul><li class="changeNote">2005-08-10 - editorial change by Ian Davis:
+			"Added isDefinedBy properties and updated documentation"
+    </li></ul><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://purl.org/vocab/frbr/extended#</code></pre><p>
+          When used in XML documents the suggested prefix is <code>frbre</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/frbr/extended#complementsExpression
+http://purl.org/vocab/frbr/extended#AutonomousWork</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>AutonomousWork
+ReferentialWork</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>complementsExpression
+complementsWork</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      4 classes 
+        
+      and 
+      52 properties 
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-AutonomousExpression" title="http://purl.org/vocab/frbr/extended#AutonomousExpression">AutonomousExpression</a></td><td>class</td><td></td></tr><tr><td><a href="#term-AutonomousWork" title="http://purl.org/vocab/frbr/extended#AutonomousWork">AutonomousWork</a></td><td>class</td><td></td></tr><tr><td><a href="#term-ReferentialExpression" title="http://purl.org/vocab/frbr/extended#ReferentialExpression">ReferentialExpression</a></td><td>class</td><td></td></tr><tr><td><a href="#term-ReferentialWork" title="http://purl.org/vocab/frbr/extended#ReferentialWork">ReferentialWork</a></td><td>class</td><td></td></tr><tr><td><a href="#term-complementsExpression" title="http://purl.org/vocab/frbr/extended#complementsExpression">complementsExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-complementsWork" title="http://purl.org/vocab/frbr/extended#complementsWork">complementsWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasDependentPartExpression" title="http://purl.org/vocab/frbr/extended#hasDependentPartExpression">hasDependentPartExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasDependentPartWork" title="http://purl.org/vocab/frbr/extended#hasDependentPartWork">hasDependentPartWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasIndependentPartExpression" title="http://purl.org/vocab/frbr/extended#hasIndependentPartExpression">hasIndependentPartExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasIndependentPartWork" title="http://purl.org/vocab/frbr/extended#hasIndependentPartWork">hasIndependentPartWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasPartExpression" title="http://purl.org/vocab/frbr/extended#hasPartExpression">hasPartExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasPartItem" title="http://purl.org/vocab/frbr/extended#hasPartItem">hasPartItem</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasPartManifestation" title="http://purl.org/vocab/frbr/extended#hasPartManifestation">hasPartManifestation</a></td><td>property</td><td></td></tr><tr><td><a href="#term-hasPartWork" title="http://purl.org/vocab/frbr/extended#hasPartWork">hasPartWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAReconfigurationOfItem" title="http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem">isAReconfigurationOfItem</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAReferentialSuccessorToExpression" title="http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression">isAReferentialSuccessorToExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAReferentialSuccessorToWork" title="http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork">isAReferentialSuccessorToWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAReproductionOfItem" title="http://purl.org/vocab/frbr/extended#isAReproductionOfItem">isAReproductionOfItem</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAReproductionOfManifestation" title="http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation">isAReproductionOfManifestation</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isARevisionOfExpression" title="http://purl.org/vocab/frbr/extended#isARevisionOfExpression">isARevisionOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isASuccessorToExpression" title="http://purl.org/vocab/frbr/extended#isASuccessorToExpression">isASuccessorToExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isASuccessorToWork" title="http://purl.org/vocab/frbr/extended#isASuccessorToWork">isASuccessorToWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isASummaryOfExpression" title="http://purl.org/vocab/frbr/extended#isASummaryOfExpression">isASummaryOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isASummaryOfWork" title="http://purl.org/vocab/frbr/extended#isASummaryOfWork">isASummaryOfWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isATransformationOfExpression" title="http://purl.org/vocab/frbr/extended#isATransformationOfExpression">isATransformationOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isATransformationOfWork" title="http://purl.org/vocab/frbr/extended#isATransformationOfWork">isATransformationOfWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isATranslationOfExpression" title="http://purl.org/vocab/frbr/extended#isATranslationOfExpression">isATranslationOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAnAbridgementOfExpression" title="http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression">isAnAbridgementOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAnAdaptationOfExpression" title="http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression">isAnAdaptationOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAnAdaptationOfWork" title="http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork">isAnAdaptationOfWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAnAlternativeManifestationTo" title="http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo">isAnAlternativeManifestationTo</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAnArrangementOfExpression" title="http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression">isAnArrangementOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAnImitationOfExpression" title="http://purl.org/vocab/frbr/extended#isAnImitationOfExpression">isAnImitationOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAnImitationOfWork" title="http://purl.org/vocab/frbr/extended#isAnImitationOfWork">isAnImitationOfWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">isAutonomouslyRelatedToExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isAutonomouslyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork">isAutonomouslyRelatedToWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isDependentPartOfExpression" title="http://purl.org/vocab/frbr/extended#isDependentPartOfExpression">isDependentPartOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isDependentPartOfWork" title="http://purl.org/vocab/frbr/extended#isDependentPartOfWork">isDependentPartOfWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isIndependentPartOfExpression" title="http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression">isIndependentPartOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isIndependentPartOfWork" title="http://purl.org/vocab/frbr/extended#isIndependentPartOfWork">isIndependentPartOfWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isPartOfExpression" title="http://purl.org/vocab/frbr/extended#isPartOfExpression">isPartOfExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isPartOfItem" title="http://purl.org/vocab/frbr/extended#isPartOfItem">isPartOfItem</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isPartOfManifestation" title="http://purl.org/vocab/frbr/extended#isPartOfManifestation">isPartOfManifestation</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isPartOfWork" title="http://purl.org/vocab/frbr/extended#isPartOfWork">isPartOfWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isReferentiallyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression">isReferentiallyRelatedToExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isReferentiallyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork">isReferentiallyRelatedToWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isRelatedToExpression">isRelatedToExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isRelatedToItem" title="http://purl.org/vocab/frbr/extended#isRelatedToItem">isRelatedToItem</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isRelatedToManifestation" title="http://purl.org/vocab/frbr/extended#isRelatedToManifestation">isRelatedToManifestation</a></td><td>property</td><td></td></tr><tr><td><a href="#term-isRelatedToWork" title="http://purl.org/vocab/frbr/extended#isRelatedToWork">isRelatedToWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-referentiallyComplementsExpression" title="http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression">referentiallyComplementsExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-referentiallyComplementsWork" title="http://purl.org/vocab/frbr/extended#referentiallyComplementsWork">referentiallyComplementsWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-referentiallySupplementsExpression" title="http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression">referentiallySupplementsExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-referentiallySupplementsWork" title="http://purl.org/vocab/frbr/extended#referentiallySupplementsWork">referentiallySupplementsWork</a></td><td>property</td><td></td></tr><tr><td><a href="#term-supplementsExpression" title="http://purl.org/vocab/frbr/extended#supplementsExpression">supplementsExpression</a></td><td>property</td><td></td></tr><tr><td><a href="#term-supplementsWork" title="http://purl.org/vocab/frbr/extended#supplementsWork">supplementsWork</a></td><td>property</td><td></td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-AutonomousExpression">Class: AutonomousExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#AutonomousExpression</td></tr><tr><th>Label:</th><td>autonomous expression</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Disjoint with</th><td><a href="#term-ReferentialExpression" title="http://purl.org/vocab/frbr/extended#ReferentialExpression">frbre:ReferentialExpression</a></td></tr><tr><th>Equivalent to</th><td>Intersection of 
+        
+          <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
+           and everything that is not a <a href="#term-ReferentialExpression" title="http://purl.org/vocab/frbr/extended#ReferentialExpression">frbre:ReferentialExpression</a>
+        
+      </td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-AutonomousExpression" title="http://purl.org/vocab/frbr/extended#AutonomousExpression">frbre:AutonomousExpression</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a> but  
+        is not a
+        <a href="#term-ReferentialExpression" title="http://purl.org/vocab/frbr/extended#ReferentialExpression">frbre:ReferentialExpression</a> and must be 
+          something that, amongst other things, is a 
+          <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a> and everything that is not a <a href="#term-ReferentialExpression" title="http://purl.org/vocab/frbr/extended#ReferentialExpression">frbre:ReferentialExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li class="historyNote">2005-08-10 - semantic change by Ian Davis:
+			"Changed complementOf to refer to ReferentialExpression instead of ReferentialWork"
+    </li></ul></div></div><div class="class"><h3 id="term-AutonomousWork">Class: AutonomousWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#AutonomousWork</td></tr><tr><th>Label:</th><td>autonomous work</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Disjoint with</th><td><a href="#term-ReferentialWork" title="http://purl.org/vocab/frbr/extended#ReferentialWork">frbre:ReferentialWork</a></td></tr><tr><th>Equivalent to</th><td>Intersection of 
+        
+          <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
+           and everything that is not a <a href="#term-ReferentialWork" title="http://purl.org/vocab/frbr/extended#ReferentialWork">frbre:ReferentialWork</a>
+        
+      </td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-AutonomousWork" title="http://purl.org/vocab/frbr/extended#AutonomousWork">frbre:AutonomousWork</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a> but  
+        is not a
+        <a href="#term-ReferentialWork" title="http://purl.org/vocab/frbr/extended#ReferentialWork">frbre:ReferentialWork</a> and must be 
+          something that, amongst other things, is a 
+          <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a> and everything that is not a <a href="#term-ReferentialWork" title="http://purl.org/vocab/frbr/extended#ReferentialWork">frbre:ReferentialWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-ReferentialExpression">Class: ReferentialExpression</h3><div class="description"><p class="comment">A referential expression is one which has little meaning when not studied in conjunction with the expression it refers to.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#ReferentialExpression</td></tr><tr><th>Label:</th><td>referential expression</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Disjoint with</th><td><a href="#term-AutonomousExpression" title="http://purl.org/vocab/frbr/extended#AutonomousExpression">frbre:AutonomousExpression</a></td></tr><tr><th>Equivalent to</th><td>Intersection of 
+        
+          <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
+           and  things that have  at least 1 <a href="http://purl.org/vocab/frbr/core#isReferentiallyRelatedToExpression">frbr:isReferentiallyRelatedToExpression</a> property
+        
+      </td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-ReferentialExpression" title="http://purl.org/vocab/frbr/extended#ReferentialExpression">frbre:ReferentialExpression</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a> but  
+        is not a
+        <a href="#term-AutonomousExpression" title="http://purl.org/vocab/frbr/extended#AutonomousExpression">frbre:AutonomousExpression</a> and must be 
+          something that, amongst other things, is a 
+          <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a> and  has  at least 1 <a href="http://purl.org/vocab/frbr/core#isReferentiallyRelatedToExpression">frbr:isReferentiallyRelatedToExpression</a> property</td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="class"><h3 id="term-ReferentialWork">Class: ReferentialWork</h3><div class="description"><p class="comment">A referential work is one which has little meaning when not studied in conjunction with the work it refers to.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#ReferentialWork</td></tr><tr><th>Label:</th><td>referential work</td></tr><tr><th>Subclass of</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Disjoint with</th><td><a href="#term-AutonomousWork" title="http://purl.org/vocab/frbr/extended#AutonomousWork">frbre:AutonomousWork</a></td></tr><tr><th>Equivalent to</th><td>Intersection of 
+        
+          <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
+           and  things that have  at least 1 <a href="http://purl.org/vocab/frbr/core#isReferentiallyRelatedToWork">frbr:isReferentiallyRelatedToWork</a> property
+        
+      </td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-ReferentialWork" title="http://purl.org/vocab/frbr/extended#ReferentialWork">frbre:ReferentialWork</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a> but  
+        is not a
+        <a href="#term-AutonomousWork" title="http://purl.org/vocab/frbr/extended#AutonomousWork">frbre:AutonomousWork</a> and must be 
+          something that, amongst other things, is a 
+          <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a> and  has  at least 1 <a href="http://purl.org/vocab/frbr/core#isReferentiallyRelatedToWork">frbr:isReferentiallyRelatedToWork</a> property</td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-complementsExpression">Property: complementsExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#complementsExpression</td></tr><tr><th>Label:</th><td>complements expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isRelatedToExpression">frbre:isRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-complementsWork">Property: complementsWork</h3><div class="description"><p class="comment">Referential: cadenza, libretto, choreography, ending for unfinished work, etc.
+Autonomous: incidental music, musical setting for a text, pendant, etc.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#complementsWork</td></tr><tr><th>Label:</th><td>complements work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToWork" title="http://purl.org/vocab/frbr/extended#isRelatedToWork">frbre:isRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasDependentPartExpression">Property: hasDependentPartExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasDependentPartExpression</td></tr><tr><th>Label:</th><td>has dependent part expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-hasPartExpression" title="http://purl.org/vocab/frbr/extended#hasPartExpression">frbre:hasPartExpression</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isDependentPartOfExpression" title="http://purl.org/vocab/frbr/extended#isDependentPartOfExpression">frbre:isDependentPartOfExpression</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasDependentPartExpression" title="http://purl.org/vocab/frbr/extended#hasDependentPartExpression">frbre:hasDependentPartExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasDependentPartWork">Property: hasDependentPartWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasDependentPartWork</td></tr><tr><th>Label:</th><td>has dependent part work</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-hasPartWork" title="http://purl.org/vocab/frbr/extended#hasPartWork">frbre:hasPartWork</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasDependentPartWork" title="http://purl.org/vocab/frbr/extended#hasDependentPartWork">frbre:hasDependentPartWork</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasIndependentPartExpression">Property: hasIndependentPartExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasIndependentPartExpression</td></tr><tr><th>Label:</th><td>has independent part expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-hasPartExpression" title="http://purl.org/vocab/frbr/extended#hasPartExpression">frbre:hasPartExpression</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isIndependentPartOfExpression" title="http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression">frbre:isIndependentPartOfExpression</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasIndependentPartExpression" title="http://purl.org/vocab/frbr/extended#hasIndependentPartExpression">frbre:hasIndependentPartExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasIndependentPartWork">Property: hasIndependentPartWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasIndependentPartWork</td></tr><tr><th>Label:</th><td>has independent part work</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isIndependentPartOfWork" title="http://purl.org/vocab/frbr/extended#isIndependentPartOfWork">frbre:isIndependentPartOfWork</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasIndependentPartWork" title="http://purl.org/vocab/frbr/extended#hasIndependentPartWork">frbre:hasIndependentPartWork</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasPartExpression">Property: hasPartExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasPartExpression</td></tr><tr><th>Label:</th><td>has part expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isPartOfExpression" title="http://purl.org/vocab/frbr/extended#isPartOfExpression">frbre:isPartOfExpression</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasPartExpression" title="http://purl.org/vocab/frbr/extended#hasPartExpression">frbre:hasPartExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasPartItem">Property: hasPartItem</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasPartItem</td></tr><tr><th>Label:</th><td>has part item</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isPartOfItem" title="http://purl.org/vocab/frbr/extended#isPartOfItem">frbre:isPartOfItem</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasPartItem" title="http://purl.org/vocab/frbr/extended#hasPartItem">frbre:hasPartItem</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasPartManifestation">Property: hasPartManifestation</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasPartManifestation</td></tr><tr><th>Label:</th><td>has part manifestation</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isPartOfManifestation" title="http://purl.org/vocab/frbr/extended#isPartOfManifestation">frbre:isPartOfManifestation</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasPartManifestation" title="http://purl.org/vocab/frbr/extended#hasPartManifestation">frbre:hasPartManifestation</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-hasPartWork">Property: hasPartWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#hasPartWork</td></tr><tr><th>Label:</th><td>has part work</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isPartOfWork" title="http://purl.org/vocab/frbr/extended#isPartOfWork">frbre:isPartOfWork</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-hasPartWork" title="http://purl.org/vocab/frbr/extended#hasPartWork">frbre:hasPartWork</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAReconfigurationOfItem">Property: isAReconfigurationOfItem</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem</td></tr><tr><th>Label:</th><td>is a reconfiguration of item</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToItem" title="http://purl.org/vocab/frbr/extended#isRelatedToItem">frbre:isRelatedToItem</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAReferentialSuccessorToExpression">Property: isAReferentialSuccessorToExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression</td></tr><tr><th>Label:</th><td>is a referential successor to expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isReferentiallyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression">frbre:isReferentiallyRelatedToExpression</a> and <a href="#term-isASuccessorToExpression" title="http://purl.org/vocab/frbr/extended#isASuccessorToExpression">frbre:isASuccessorToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAReferentialSuccessorToWork">Property: isAReferentialSuccessorToWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork</td></tr><tr><th>Label:</th><td>is a referential successor to work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isASuccessorToWork" title="http://purl.org/vocab/frbr/extended#isASuccessorToWork">frbre:isASuccessorToWork</a> and <a href="#term-isReferentiallyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork">frbre:isReferentiallyRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAReproductionOfItem">Property: isAReproductionOfItem</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAReproductionOfItem</td></tr><tr><th>Label:</th><td>is a reproduction of item</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToItem" title="http://purl.org/vocab/frbr/extended#isRelatedToItem">frbre:isRelatedToItem</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAReproductionOfManifestation">Property: isAReproductionOfManifestation</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation</td></tr><tr><th>Label:</th><td>is a reproduction of manifestation</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Endeavour">frbr:Endeavour</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToManifestation" title="http://purl.org/vocab/frbr/extended#isRelatedToManifestation">frbre:isRelatedToManifestation</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isARevisionOfExpression">Property: isARevisionOfExpression</h3><div class="description"><p class="comment">Between expressions of the SAME WORK.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isARevisionOfExpression</td></tr><tr><th>Label:</th><td>is a revision of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isASuccessorToExpression">Property: isASuccessorToExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isASuccessorToExpression</td></tr><tr><th>Label:</th><td>is a successor to expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isRelatedToExpression">frbre:isRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isASuccessorToWork">Property: isASuccessorToWork</h3><div class="description"><p class="comment">Referential: sequel, etc.
+Autonomous: sequel, succeeding work, etc.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isASuccessorToWork</td></tr><tr><th>Label:</th><td>is a sucessor to work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToWork" title="http://purl.org/vocab/frbr/extended#isRelatedToWork">frbre:isRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isASummaryOfExpression">Property: isASummaryOfExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isASummaryOfExpression</td></tr><tr><th>Label:</th><td>is a summary of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isASummaryOfWork">Property: isASummaryOfWork</h3><div class="description"><p class="comment">Digest, abstract, etc.
+The subject is not dependent on the object for meaning.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isASummaryOfWork</td></tr><tr><th>Label:</th><td>is a summary of work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork">frbre:isAutonomouslyRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isATransformationOfExpression">Property: isATransformationOfExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isATransformationOfExpression</td></tr><tr><th>Label:</th><td>is a transformation of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isATransformationOfWork">Property: isATransformationOfWork</h3><div class="description"><p class="comment">Dramatisation, novelisation, versification, screenplay, etc.
+The subject is not dependent on the object for meaning.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isATransformationOfWork</td></tr><tr><th>Label:</th><td>is a transformation of work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork">frbre:isAutonomouslyRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isATranslationOfExpression">Property: isATranslationOfExpression</h3><div class="description"><p class="comment">Between expressions of the SAME WORK.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isATranslationOfExpression</td></tr><tr><th>Label:</th><td>is a translation of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAnAbridgementOfExpression">Property: isAnAbridgementOfExpression</h3><div class="description"><p class="comment">Between expressions of the SAME WORK.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression</td></tr><tr><th>Label:</th><td>is an abridgement of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAnAdaptationOfExpression">Property: isAnAdaptationOfExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression</td></tr><tr><th>Label:</th><td>is an adaptation of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAnAdaptationOfWork">Property: isAnAdaptationOfWork</h3><div class="description"><p class="comment">Adaptation, paraphrase, free translation, variation (music), harmonisation (music), fantasy (music), etc.
+The subject is not dependent on the object for meaning.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork</td></tr><tr><th>Label:</th><td>is adaption of work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork">frbre:isAutonomouslyRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAnAlternativeManifestationTo">Property: isAnAlternativeManifestationTo</h3><div class="description"><p class="comment">Alternate is an Americanism.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo</td></tr><tr><th>Label:</th><td>is an alternative manifestation to</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Endeavour">frbr:Endeavour</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToManifestation" title="http://purl.org/vocab/frbr/extended#isRelatedToManifestation">frbre:isRelatedToManifestation</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAnArrangementOfExpression">Property: isAnArrangementOfExpression</h3><div class="description"><p class="comment">Between expressions of the SAME WORK.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression</td></tr><tr><th>Label:</th><td>is an arrangement of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAnImitationOfExpression">Property: isAnImitationOfExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAnImitationOfExpression</td></tr><tr><th>Label:</th><td>is an imitation of expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isAutonomouslyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression">frbre:isAutonomouslyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAnImitationOfWork">Property: isAnImitationOfWork</h3><div class="description"><p class="comment">Parody, imitation, travesty, etc.
+The subject is not dependent on the object for meaning.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAnImitationOfWork</td></tr><tr><th>Label:</th><td>is an imitation of work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Inverse of</th><td><a href="#term-isAutonomouslyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork">frbre:isAutonomouslyRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAutonomouslyRelatedToExpression">Property: isAutonomouslyRelatedToExpression</h3><div class="description"><p class="comment">A relation between two expressions which does not result in the subject becoming a referential expression (i.e. one which has little meaning without the object).</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</td></tr><tr><th>Label:</th><td>is autonomously related to expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isRelatedToExpression">frbre:isRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isAutonomouslyRelatedToWork">Property: isAutonomouslyRelatedToWork</h3><div class="description"><p class="comment">The subject is not dependent on the object for meaning.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork</td></tr><tr><th>Label:</th><td>is autonomously related to work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToWork" title="http://purl.org/vocab/frbr/extended#isRelatedToWork">frbre:isRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isDependentPartOfExpression">Property: isDependentPartOfExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isDependentPartOfExpression</td></tr><tr><th>Label:</th><td>is dependent part of expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isPartOfExpression" title="http://purl.org/vocab/frbr/extended#isPartOfExpression">frbre:isPartOfExpression</a></td></tr><tr><th>Inverse of</th><td><a href="#term-hasDependentPartExpression" title="http://purl.org/vocab/frbr/extended#hasDependentPartExpression">frbre:hasDependentPartExpression</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isDependentPartOfExpression" title="http://purl.org/vocab/frbr/extended#isDependentPartOfExpression">frbre:isDependentPartOfExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isDependentPartOfWork">Property: isDependentPartOfWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isDependentPartOfWork</td></tr><tr><th>Label:</th><td>is dependent part of work</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isPartOfWork" title="http://purl.org/vocab/frbr/extended#isPartOfWork">frbre:isPartOfWork</a></td></tr><tr><th>Inverse of</th><td><a href="#term-hasDependentPartWork" title="http://purl.org/vocab/frbr/extended#hasDependentPartWork">frbre:hasDependentPartWork</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isDependentPartOfWork" title="http://purl.org/vocab/frbr/extended#isDependentPartOfWork">frbre:isDependentPartOfWork</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isIndependentPartOfExpression">Property: isIndependentPartOfExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression</td></tr><tr><th>Label:</th><td>is independent part of expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isPartOfExpression" title="http://purl.org/vocab/frbr/extended#isPartOfExpression">frbre:isPartOfExpression</a></td></tr><tr><th>Inverse of</th><td><a href="#term-hasIndependentPartExpression" title="http://purl.org/vocab/frbr/extended#hasIndependentPartExpression">frbre:hasIndependentPartExpression</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isIndependentPartOfExpression" title="http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression">frbre:isIndependentPartOfExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isIndependentPartOfWork">Property: isIndependentPartOfWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isIndependentPartOfWork</td></tr><tr><th>Label:</th><td>is independent part of work</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isPartOfWork" title="http://purl.org/vocab/frbr/extended#isPartOfWork">frbre:isPartOfWork</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isIndependentPartOfWork" title="http://purl.org/vocab/frbr/extended#isIndependentPartOfWork">frbre:isIndependentPartOfWork</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isPartOfExpression">Property: isPartOfExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isPartOfExpression</td></tr><tr><th>Label:</th><td>is part of expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Inverse of</th><td><a href="#term-hasPartExpression" title="http://purl.org/vocab/frbr/extended#hasPartExpression">frbre:hasPartExpression</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isPartOfExpression" title="http://purl.org/vocab/frbr/extended#isPartOfExpression">frbre:isPartOfExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isPartOfItem">Property: isPartOfItem</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isPartOfItem</td></tr><tr><th>Label:</th><td>is part of item</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr><tr><th>Inverse of</th><td><a href="#term-hasPartItem" title="http://purl.org/vocab/frbr/extended#hasPartItem">frbre:hasPartItem</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isPartOfItem" title="http://purl.org/vocab/frbr/extended#isPartOfItem">frbre:isPartOfItem</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isPartOfManifestation">Property: isPartOfManifestation</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isPartOfManifestation</td></tr><tr><th>Label:</th><td>is part of manifestation</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr><tr><th>Inverse of</th><td><a href="#term-hasPartManifestation" title="http://purl.org/vocab/frbr/extended#hasPartManifestation">frbre:hasPartManifestation</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isPartOfManifestation" title="http://purl.org/vocab/frbr/extended#isPartOfManifestation">frbre:isPartOfManifestation</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isPartOfWork">Property: isPartOfWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isPartOfWork</td></tr><tr><th>Label:</th><td>is part of work</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isPartOfWork" title="http://purl.org/vocab/frbr/extended#isPartOfWork">frbre:isPartOfWork</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isReferentiallyRelatedToExpression">Property: isReferentiallyRelatedToExpression</h3><div class="description"><p class="comment">A relation between two expressions which results in the subject becoming a referential expression (i.e. one which has little meaning without the object).</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression</td></tr><tr><th>Label:</th><td>is referentially related to expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isRelatedToExpression">frbre:isRelatedToExpression</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isReferentiallyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression">frbre:isReferentiallyRelatedToExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isReferentiallyRelatedToWork">Property: isReferentiallyRelatedToWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork</td></tr><tr><th>Label:</th><td>is referentially related to work</td></tr><tr><th>Domain</th><td>Union of 
+        
+          <a href="http://purl.org/vocab/frbr/extended#Work">frbre:Work</a>
+           or a <a href="http://purl.org/vocab/frbr/extended#Expression">frbre:Expression</a>
+        
+      </td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToWork" title="http://purl.org/vocab/frbr/extended#isRelatedToWork">frbre:isRelatedToWork</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isReferentiallyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork">frbre:isReferentiallyRelatedToWork</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="http://purl.org/vocab/frbr/extended#Work">frbre:Work</a> or a <a href="http://purl.org/vocab/frbr/extended#Expression">frbre:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isRelatedToExpression">Property: isRelatedToExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isRelatedToExpression</td></tr><tr><th>Label:</th><td>is related to expression</td></tr><tr><th>Domain</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="http://purl.org/vocab/frbr/core#relatedEndeavour">frbr:relatedEndeavour</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isRelatedToExpression">frbre:isRelatedToExpression</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isRelatedToItem">Property: isRelatedToItem</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isRelatedToItem</td></tr><tr><th>Label:</th><td>is related to item</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a></td></tr><tr><th>Subproperty of</th><td><a href="http://purl.org/vocab/frbr/core#relatedEndeavour">frbr:relatedEndeavour</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isRelatedToManifestation">Property: isRelatedToManifestation</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isRelatedToManifestation</td></tr><tr><th>Label:</th><td>is related to manifestation</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a></td></tr><tr><th>Subproperty of</th><td><a href="http://purl.org/vocab/frbr/core#relatedEndeavour">frbr:relatedEndeavour</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-isRelatedToWork">Property: isRelatedToWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#isRelatedToWork</td></tr><tr><th>Label:</th><td>is related to work</td></tr><tr><th>Domain</th><td>Union of 
+        
+          <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
+           or a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
+        
+      </td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="http://purl.org/vocab/frbr/core#relatedEndeavour">frbr:relatedEndeavour</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-isRelatedToWork" title="http://purl.org/vocab/frbr/extended#isRelatedToWork">frbre:isRelatedToWork</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a> or a <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-referentiallyComplementsExpression">Property: referentiallyComplementsExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression</td></tr><tr><th>Label:</th><td>referentially complements expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-complementsExpression" title="http://purl.org/vocab/frbr/extended#complementsExpression">frbre:complementsExpression</a> and <a href="#term-isReferentiallyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression">frbre:isReferentiallyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-referentiallyComplementsWork">Property: referentiallyComplementsWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#referentiallyComplementsWork</td></tr><tr><th>Label:</th><td>referentially complements work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isReferentiallyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork">frbre:isReferentiallyRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-referentiallySupplementsExpression">Property: referentiallySupplementsExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression</td></tr><tr><th>Label:</th><td>referentially supplements expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-supplementsExpression" title="http://purl.org/vocab/frbr/extended#supplementsExpression">frbre:supplementsExpression</a> and <a href="#term-isReferentiallyRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression">frbre:isReferentiallyRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-referentiallySupplementsWork">Property: referentiallySupplementsWork</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#referentiallySupplementsWork</td></tr><tr><th>Label:</th><td>referentially supplements work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-supplementsWork" title="http://purl.org/vocab/frbr/extended#supplementsWork">frbre:supplementsWork</a> and <a href="#term-isReferentiallyRelatedToWork" title="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork">frbre:isReferentiallyRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-supplementsExpression">Property: supplementsExpression</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#supplementsExpression</td></tr><tr><th>Label:</th><td>supplements expression</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToExpression" title="http://purl.org/vocab/frbr/extended#isRelatedToExpression">frbre:isRelatedToExpression</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><div class="property"><h3 id="term-supplementsWork">Property: supplementsWork</h3><div class="description"><p class="comment">Referential: index, concordance, teacher's guide, gloss, supplement, appendix, etc.
+Autonomous: supplement, appendix, etc.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/frbr/extended#supplementsWork</td></tr><tr><th>Label:</th><td>supplements work</td></tr><tr><th>Range</th><td><a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a></td></tr><tr><th>Subproperty of</th><td><a href="#term-isRelatedToWork" title="http://purl.org/vocab/frbr/extended#isRelatedToWork">frbre:isRelatedToWork</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"/></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://purl.org/vocab/frbr/frbr-extended-20050810.rdf">http://purl.org/vocab/frbr/frbr-extended-20050810.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"></span>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2005-08-10</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Expression of Extended FRBR Concepts in RDF</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/frbr/frbr-extended-20050810</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Ian Davis &lt;http://purl.org/NET/iand&gt;</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Richard Newman</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span><span class="text">Copyright © 2005 Richard Newman and Ian Davis</span><span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;dct:replaces</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/frbr-extended-20050729</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/frbr/extended#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">frbre</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;rdf:Description</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/frbr-extended-20050810.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/rdf:Description&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;rdf:Description</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/frbr-extended-20050810.rdf</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/rdf:Description&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2005-07-29</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added isDefinedBy properties and updated documentation</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2005-08-10</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Ian Davis</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"></span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:type</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/dc/dcmitype/Text</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialWork</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#AutonomousWork</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/owl:equivalentClass&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialExpression</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#AutonomousExpression</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/owl:equivalentClass&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#AutonomousWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">autonomous work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:disjointWith</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialWork</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:intersectionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>            <span class="elem">&lt;owl:complementOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialWork</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;/owl:Class&gt;</span>
+        <span class="elem">&lt;/owl:intersectionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/owl:equivalentClass&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">referential work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A referential work is one which has little meaning when not studied in </span>
+      <span class="text">conjunction with the work it refers to.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:disjointWith</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#AutonomousWork</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:intersectionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;owl:minCardinality</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#int</span>"<span class="elem">&gt;</span>
+<span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+            <span class="elem">&lt;owl:onProperty</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#isReferentiallyRelatedToWork</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;/owl:Restriction&gt;</span>
+        <span class="elem">&lt;/owl:intersectionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/owl:equivalentClass&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#AutonomousExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">autonomous expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:disjointWith</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:intersectionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>            <span class="elem">&lt;owl:complementOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialExpression</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;/owl:Class&gt;</span>
+        <span class="elem">&lt;/owl:intersectionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/owl:equivalentClass&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Changed complementOf to refer to ReferentialExpression instead of ReferentialWork</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2005-08-10</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Ian Davis</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#ReferentialExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">referential expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A referential expression is one which has little meaning when not </span>
+      <span class="text">studied in conjunction with the expression it refers to.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:disjointWith</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#AutonomousExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:equivalentClass</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:intersectionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;owl:minCardinality</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#int</span>"<span class="elem">&gt;</span>
+<span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+            <span class="elem">&lt;owl:onProperty</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#isReferentiallyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;/owl:Restriction&gt;</span>
+        <span class="elem">&lt;/owl:intersectionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/owl:equivalentClass&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#complementsExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">complements expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#complementsWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">complements work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Referential: cadenza, libretto, choreography, ending for unfinished </span>
+      <span class="text">work, etc. Autonomous: incidental music, musical setting for a text, </span>
+      <span class="text">pendant, etc.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasDependentPartExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has dependent part expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isDependentPartOfExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasDependentPartWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has dependent part work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasIndependentPartExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has independent part expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has part expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartItem</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has part item</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfItem</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartManifestation</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has part manifestation</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Manifestation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Manifestation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfManifestation</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has part work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAnAbridgementOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is an abridgement of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Between expressions of the SAME WORK.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAnAdaptationOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is an adaptation of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAnAdaptationOfWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is adaption of work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Adaptation, paraphrase, free translation, variation (music), </span>
+      <span class="text">harmonisation (music), fantasy (music), etc. The subject is not </span>
+      <span class="text">dependent on the object for meaning.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAnAlternativeManifestationTo</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is an alternative manifestation to</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Alternate is an Americanism.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Endeavour</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToManifestation</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAnArrangementOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is an arrangement of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Between expressions of the SAME WORK.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAnImitationOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is an imitation of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAReconfigurationOfItem</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a reconfiguration of item</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToItem</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a referential successor to expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isASuccessorToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAReferentialSuccessorToWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a referential successor to work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isASuccessorToWork</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAReproductionOfItem</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a reproduction of item</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToItem</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAReproductionOfManifestation</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a reproduction of manifestation</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Endeavour</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToManifestation</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isARevisionOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a revision of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Between expressions of the SAME WORK.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isASuccessorToExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a successor to expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isASuccessorToWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a sucessor to work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Referential: sequel, etc. Autonomous: sequel, succeeding work, etc.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isASummaryOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a summary of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isASummaryOfWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a summary of work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Digest, abstract, etc. The subject is not dependent on the object for </span>
+      <span class="text">meaning.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isATransformationOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a transformation of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isATransformationOfWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a transformation of work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Dramatisation, novelisation, versification, screenplay, etc. The subject </span>
+      <span class="text">is not dependent on the object for meaning.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isATranslationOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is a translation of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Between expressions of the SAME WORK.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is autonomously related to expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A relation between two expressions which does not result in the subject </span>
+      <span class="text">becoming a referential expression (i.e. one which has little meaning </span>
+      <span class="text">without the object).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is autonomously related to work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">The subject is not dependent on the object for meaning.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isDependentPartOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is dependent part of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasDependentPartExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isDependentPartOfWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is dependent part of work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfWork</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasDependentPartWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isIndependentPartOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is independent part of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasIndependentPartExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isIndependentPartOfWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is independent part of work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is part of expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfItem</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is part of item</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartItem</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfManifestation</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is part of manifestation</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Manifestation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Manifestation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasPartManifestation</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isPartOfWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is part of work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is referentially related to expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A relation between two expressions which results in the subject becoming </span>
+      <span class="text">a referential expression (i.e. one which has little meaning without the </span>
+      <span class="text">object).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is referentially related to work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#Work</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#Expression</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is related to expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#relatedEndeavour</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToItem</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is related to item</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Item</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#relatedEndeavour</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToManifestation</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is related to manifestation</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Manifestation</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#relatedEndeavour</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is related to work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#relatedEndeavour</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">referentially complements expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#complementsExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#referentiallyComplementsWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">referentially complements work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#referentiallySupplementsExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">referentially supplements expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#supplementsExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#referentiallySupplementsWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">referentially supplements work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#supplementsWork</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#supplementsExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">supplements expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Expression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToExpression</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#supplementsWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">supplements work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Referential: index, concordance, teacher's guide, gloss, supplement, </span>
+      <span class="text">appendix, etc. Autonomous: supplement, appendix, etc.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAnImitationOfWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">is an imitation of work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Parody, imitation, travesty, etc. The subject is not dependent on the </span>
+      <span class="text">object for meaning.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isAutonomouslyRelatedToWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#hasIndependentPartWork</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">has independent part work</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/core#Work</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/frbr/extended#isIndependentPartOfWork</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.<p>The following section is informational only, please refer to the 
+			<a href="http://creativecommons.org/licenses/by/2.0/uk/">Original License</a> for complete license terms.
+		</p><p>This license grants the following rights:</p><ul><li>making multiple copies
+						(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+					</li><li>distribution, public display, and publicly performance
+						(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+					</li><li>creation and distribution of derivative works
+						(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+					</li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license notices be kept intact
+						(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+					</li><li>credit be given to copyright holder and/or author
+						(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+					</li></ul></p></body></html>

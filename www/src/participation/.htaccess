@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ /participation/schema [R,L]
+RewriteRule ^schema$ /participation/schema-20080925 [L]
+RewriteRule ^schema\.rdf$ /participation/schema-20080925.rdf [L]
+RewriteRule ^schema\.html$ /participation/schema-20080925.html [L]

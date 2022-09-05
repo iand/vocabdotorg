@@ -1,0 +1,535 @@
+<http://purl.org/vocab/aiiso-roles/schema#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/elements/1.1/title> "Academic Institution Internal Structure Ontology Roles (AIISO Roles)"@en .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://www.w3.org/2000/01/rdf-schema#comment> "The AIISO Roles schema provides common roles found in academic institutions in higher education. It is intended for use with Participation (http://purl.org/vocab/participation/schema), FOAF (http://xmlns.com/foaf/0.1/) and AIISO (http://purl.org/vocab/aiiso/schema) to describe the roles that people play within an institution.\n    \t"@en .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/aiiso-roles/schema-20100610" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/elements/1.1/creator> "Chris Wallace" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2008 Rob Styles, Chris Wallace" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/aiiso-roles/schema#" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aiiso-roles" .
+<http://purl.org/vocab/aiiso-roles/schema-20100610.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text/html" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@en .
+<http://purl.org/vocab/aiiso-roles/schema-20100610.html> <http://purl.org/dc/elements/1.1/format> _:genid1 .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/aiiso-roles/schema-20100610.html> .
+<http://purl.org/vocab/aiiso-roles/schema-20100610.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/rdf+xml" .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "RDF"@en .
+<http://purl.org/vocab/aiiso-roles/schema-20100610.rdf> <http://purl.org/dc/elements/1.1/format> _:genid2 .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/aiiso-roles/schema-20100610.rdf> .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid3 <http://purl.org/dc/elements/1.1/date> "2008-05-14" .
+_:genid3 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "First cut of the aiiso roles published" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid3 .
+_:genid4 <http://purl.org/dc/elements/1.1/date> "2010-06-10" .
+_:genid4 <http://purl.org/dc/elements/1.1/creator> "Josef Petr\u00E1k" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added additional roles and corrected rdfs:subClassOf" .
+<http://purl.org/vocab/aiiso-roles/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid4 .
+<file:///home/iand/web/vocab.org/www/src/aiiso-roles/schema-20100610.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/web/vocab.org/www/src/aiiso-roles/schema-20100610.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Computer_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Principal Computer Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Computer_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Computer_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Assistant Computer Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Computer_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Computer Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#External_Programmes_Advisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Programmes_Advisor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Programmes_Advisor> <http://www.w3.org/2000/01/rdf-schema#label> "External Programmes Advisor"@en .
+<http://purl.org/vocab/aiiso-roles/schema#External_Programmes_Advisor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Programmes_Advisor> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/2000/01/rdf-schema#label> "External Examiner"@en .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Technician> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Technician> <http://www.w3.org/2000/01/rdf-schema#label> "Technician"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Technician> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Technician> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Technician> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Technician> <http://www.w3.org/2000/01/rdf-schema#label> "Senior Technician"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Technician> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Technician> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Electronics_Technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Electronics_Technician> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Electronics_Technician> <http://www.w3.org/2000/01/rdf-schema#label> "Principal Electronics Technician"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Electronics_Technician> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Electronics_Technician> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Technician> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Technician> <http://www.w3.org/2000/01/rdf-schema#label> "Principal Technician"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Technician> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Technician> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Member> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Member> <http://www.w3.org/2000/01/rdf-schema#label> "Member"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Member> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Member> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Researcher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Researcher> <http://www.w3.org/2000/01/rdf-schema#label> "Researcher"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Researcher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Researcher> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Director> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Director> <http://www.w3.org/2000/01/rdf-schema#label> "Director"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Director> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Project_Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Project_Manager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Project_Manager> <http://www.w3.org/2000/01/rdf-schema#label> "Project Manager"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Project_Manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Project_Manager> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#PC_Systems_Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#PC_Systems_Manager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#PC_Systems_Manager> <http://www.w3.org/2000/01/rdf-schema#label> "PC Systems Manager"@en .
+<http://purl.org/vocab/aiiso-roles/schema#PC_Systems_Manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#PC_Systems_Manager> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Chair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Chair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Chair> <http://www.w3.org/2000/01/rdf-schema#label> "Chair"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Chair> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Chair> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Clerk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Clerk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Clerk> <http://www.w3.org/2000/01/rdf-schema#label> "Clerk"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Clerk> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Clerk> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Manager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Manager> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Manager"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Manager> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Senior_Research_Fellow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Senior_Research_Fellow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Senior_Research_Fellow> <http://www.w3.org/2000/01/rdf-schema#label> "Visiting Senior Research Fellow"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Senior_Research_Fellow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Senior_Research_Fellow> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Associate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Associate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Associate> <http://www.w3.org/2000/01/rdf-schema#label> "Research Associate"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Associate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Associate> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Modular_Scheme_Administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Modular_Scheme_Administrator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Modular_Scheme_Administrator> <http://www.w3.org/2000/01/rdf-schema#label> "Modular Scheme Administrator"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Modular_Scheme_Administrator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Modular_Scheme_Administrator> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Field_Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Field_Leader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Field_Leader> <http://www.w3.org/2000/01/rdf-schema#label> "Field Leader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Field_Leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Field_Leader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_and_Resources_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_and_Resources_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_and_Resources_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Finance and Resources Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_and_Resources_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_and_Resources_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_Assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_Assistant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_Assistant> <http://www.w3.org/2000/01/rdf-schema#label> "Finance Assistant"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_Assistant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Finance_Assistant> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Chair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Chair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Chair> <http://www.w3.org/2000/01/rdf-schema#label> "Deputy Chair"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Chair> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Chair> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Resources_Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Resources_Manager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Resources_Manager> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Resources Manager"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Resources_Manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Resources_Manager> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Director> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Director> <http://www.w3.org/2000/01/rdf-schema#label> "Research Director"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Director> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Fellow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Fellow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Fellow> <http://www.w3.org/2000/01/rdf-schema#label> "Fellow"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Fellow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Fellow> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#CAD_Instructor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#CAD_Instructor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#CAD_Instructor> <http://www.w3.org/2000/01/rdf-schema#label> "CAD Instructor"@en .
+<http://purl.org/vocab/aiiso-roles/schema#CAD_Instructor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#CAD_Instructor> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant> <http://www.w3.org/2000/01/rdf-schema#label> "Assistant"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Receptionist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Receptionist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Receptionist> <http://www.w3.org/2000/01/rdf-schema#label> "Receptionist"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Receptionist> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Receptionist> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Team_Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Team_Leader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Team_Leader> <http://www.w3.org/2000/01/rdf-schema#label> "Team Leader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Team_Leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Team_Leader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Fellow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Fellow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Fellow> <http://www.w3.org/2000/01/rdf-schema#label> "Research Fellow"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Fellow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Fellow> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Associate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate> <http://www.w3.org/2000/01/rdf-schema#label> "Associate"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Associate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Administrative_Assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Administrative_Assistant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Administrative_Assistant> <http://www.w3.org/2000/01/rdf-schema#label> "Administrative Assistant"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Administrative_Assistant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Administrative_Assistant> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Librarian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Librarian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Librarian> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Librarian"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Librarian> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Librarian> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Librarian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Librarian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Librarian> <http://www.w3.org/2000/01/rdf-schema#label> "Deputy Librarian"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Librarian> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Librarian> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Campus_Library_Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Campus_Library_Manager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Campus_Library_Manager> <http://www.w3.org/2000/01/rdf-schema#label> "Campus Library Manager"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Campus_Library_Manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Campus_Library_Manager> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Administrator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Administrator> <http://www.w3.org/2000/01/rdf-schema#label> "Research Administrator"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Administrator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Administrator> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Convenor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Convenor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Convenor> <http://www.w3.org/2000/01/rdf-schema#label> "Convenor"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Convenor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Convenor> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#CPDA_Coordinator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#CPDA_Coordinator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#CPDA_Coordinator> <http://www.w3.org/2000/01/rdf-schema#label> "CPDA Coordinator"@en .
+<http://purl.org/vocab/aiiso-roles/schema#CPDA_Coordinator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#CPDA_Coordinator> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Dean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Dean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Dean> <http://www.w3.org/2000/01/rdf-schema#label> "Associate Dean"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Dean> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Dean> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Lecturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Lecturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Lecturer> <http://www.w3.org/2000/01/rdf-schema#label> "Senior Lecturer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Lecturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Lecturer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_Department> <http://www.w3.org/2000/01/rdf-schema#label> "Head of Department"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_Department> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_Department> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Lecturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Lecturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Lecturer> <http://www.w3.org/2000/01/rdf-schema#label> "Associate Lecturer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Lecturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Lecturer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Professor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Professor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Professor> <http://www.w3.org/2000/01/rdf-schema#label> "Professor"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Professor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Professor> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Lecturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Lecturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Lecturer> <http://www.w3.org/2000/01/rdf-schema#label> "Principal Lecturer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Lecturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Lecturer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary> <http://www.w3.org/2000/01/rdf-schema#label> "Secretary"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Reader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Reader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Reader> <http://www.w3.org/2000/01/rdf-schema#label> "Reader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Reader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Reader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Leader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Leader> <http://www.w3.org/2000/01/rdf-schema#label> "Research Leader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Leader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_International_Assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_International_Assistant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_International_Assistant> <http://www.w3.org/2000/01/rdf-schema#label> "Marketing and International Assistant"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_International_Assistant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_International_Assistant> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Marketing Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Admissions_and_International_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Admissions_and_International_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Admissions_and_International_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Admissions and International Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Admissions_and_International_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Admissions_and_International_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Web_Development_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Web_Development_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Web_Development_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Web Development Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Web_Development_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Web_Development_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_Admissions_Assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_Admissions_Assistant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_Admissions_Assistant> <http://www.w3.org/2000/01/rdf-schema#label> "Marketing and Admissions Assistant"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_Admissions_Assistant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Marketing_and_Admissions_Assistant> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Admission_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Admission_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Admission_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Admission Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Admission_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Admission_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Student> <http://www.w3.org/2000/01/rdf-schema#label> "Research Student"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Research_Student> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Audio_Visual_and_Graphics_Technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Audio_Visual_and_Graphics_Technician> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Audio_Visual_and_Graphics_Technician> <http://www.w3.org/2000/01/rdf-schema#label> "Audio Visual and Graphics Technician"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Audio_Visual_and_Graphics_Technician> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Audio_Visual_and_Graphics_Technician> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Placement_Post> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Placement_Post> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Placement_Post> <http://www.w3.org/2000/01/rdf-schema#label> "Placement Post"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Placement_Post> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Placement_Post> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Manager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Manager> <http://www.w3.org/2000/01/rdf-schema#label> "Manager"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Manager> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Purchasing_Assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Purchasing_Assistant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Purchasing_Assistant> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Purchasing Assistant"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Purchasing_Assistant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Technical_Purchasing_Assistant> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Team_Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Team_Leader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Team_Leader> <http://www.w3.org/2000/01/rdf-schema#label> "Senior Team Leader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Team_Leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Senior_Team_Leader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#User_Services_Manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#User_Services_Manager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#User_Services_Manager> <http://www.w3.org/2000/01/rdf-schema#label> "User Services Manager"@en .
+<http://purl.org/vocab/aiiso-roles/schema#User_Services_Manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#User_Services_Manager> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Dean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Dean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Dean> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Assistant to Dean"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Dean> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Dean> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Associate_Dean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Associate_Dean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Associate_Dean> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Assistant to Associate Dean"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Associate_Dean> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Associate_Dean> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary_to_Head_of_Schools> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary_to_Head_of_Schools> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary_to_Head_of_Schools> <http://www.w3.org/2000/01/rdf-schema#label> "Secretary to Head of Schools"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary_to_Head_of_Schools> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Secretary_to_Head_of_Schools> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Executive_Support_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Executive_Support_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Executive_Support_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Executive Support Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Executive_Support_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Executive_Support_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Representative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Representative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Representative> <http://www.w3.org/2000/01/rdf-schema#label> "Student Representative"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Representative> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Representative> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Administrator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Administrator> <http://www.w3.org/2000/01/rdf-schema#label> "Administrator"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Administrator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Administrator> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Research> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Research> <http://www.w3.org/2000/01/rdf-schema#label> "Research"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Research> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Research> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Principal Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Principal_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Administrator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Administrator> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Administrator"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Administrator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Faculty_Administrator> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Adviser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Adviser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Adviser> <http://www.w3.org/2000/01/rdf-schema#label> "Student Adviser"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Adviser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Adviser> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Team_Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Team_Leader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Team_Leader> <http://www.w3.org/2000/01/rdf-schema#label> "Computer Team Leader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Team_Leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Computer_Team_Leader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Group_Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Group_Leader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Group_Leader> <http://www.w3.org/2000/01/rdf-schema#label> "Group Leader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Group_Leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Group_Leader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_Department> <http://www.w3.org/2000/01/rdf-schema#label> "Deputy Head of Department"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_Department> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_Department> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Hourly_Paid_Lecturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Hourly_Paid_Lecturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Hourly_Paid_Lecturer> <http://www.w3.org/2000/01/rdf-schema#label> "Hourly Paid Lecturer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Hourly_Paid_Lecturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Hourly_Paid_Lecturer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#First_Aider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#First_Aider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#First_Aider> <http://www.w3.org/2000/01/rdf-schema#label> "First Aider"@en .
+<http://purl.org/vocab/aiiso-roles/schema#First_Aider> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#First_Aider> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#ADP_student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#ADP_student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#ADP_student> <http://www.w3.org/2000/01/rdf-schema#label> "ADP student"@en .
+<http://purl.org/vocab/aiiso-roles/schema#ADP_student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#ADP_student> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Special_Needs_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Special_Needs_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Special_Needs_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Special Needs Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Special_Needs_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Special_Needs_Officer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Joint_Head_of_Technical_Services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Joint_Head_of_Technical_Services> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Joint_Head_of_Technical_Services> <http://www.w3.org/2000/01/rdf-schema#label> "Joint Head of Technical Services"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Joint_Head_of_Technical_Services> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Joint_Head_of_Technical_Services> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Academic_Registrar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Academic_Registrar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Academic_Registrar> <http://www.w3.org/2000/01/rdf-schema#label> "Deputy Academic Registrar"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Academic_Registrar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Academic_Registrar> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_School> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_School> <http://www.w3.org/2000/01/rdf-schema#label> "Deputy Head of School"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_School> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_School> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_School> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_School> <http://www.w3.org/2000/01/rdf-schema#label> "Head of School"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_School> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Head_of_School> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Undergraduate_Scheme_Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Undergraduate_Scheme_Director> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Undergraduate_Scheme_Director> <http://www.w3.org/2000/01/rdf-schema#label> "Undergraduate Scheme Director"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Undergraduate_Scheme_Director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Undergraduate_Scheme_Director> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Postgraduate_Scheme_Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Postgraduate_Scheme_Director> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Postgraduate_Scheme_Director> <http://www.w3.org/2000/01/rdf-schema#label> "Postgraduate Scheme Director"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Postgraduate_Scheme_Director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Postgraduate_Scheme_Director> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Director> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Director> <http://www.w3.org/2000/01/rdf-schema#label> "Associate Director"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Director> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Professor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Professor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Professor> <http://www.w3.org/2000/01/rdf-schema#label> "Visiting Professor"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Professor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Professor> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Researcher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Researcher> <http://www.w3.org/2000/01/rdf-schema#label> "Visiting Researcher"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Researcher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Visiting_Researcher> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Director> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Director> <http://www.w3.org/2000/01/rdf-schema#label> "Assistant Director"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Assistant_Director> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Internal_Moderator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Internal_Moderator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Internal_Moderator> <http://www.w3.org/2000/01/rdf-schema#label> "Internal Moderator"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Internal_Moderator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Internal_Moderator> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Leader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Leader> <http://www.w3.org/2000/01/rdf-schema#label> "Module Leader"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Leader> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Lecturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Lecturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Lecturer> <http://www.w3.org/2000/01/rdf-schema#label> "Lecturer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Lecturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Lecturer> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Tutor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Tutor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Tutor> <http://www.w3.org/2000/01/rdf-schema#label> "Tutor"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Tutor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Tutor> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/2000/01/rdf-schema#label> "External Examiner"@en .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Examiner> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Coordinator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Coordinator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Coordinator> <http://www.w3.org/2000/01/rdf-schema#label> "Module Coordinator"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Coordinator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Module_Coordinator> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Professor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Professor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Professor> <http://www.w3.org/2000/01/rdf-schema#label> "Associate Professor"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Professor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Associate_Professor> <http://purl.org/dc/terms/issued> "2010-06-10" .
+<http://purl.org/vocab/aiiso-roles/schema#External_Lecturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Lecturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Lecturer> <http://www.w3.org/2000/01/rdf-schema#label> "External Lecturer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#External_Lecturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#External_Lecturer> <http://purl.org/dc/terms/issued> "2010-06-10" .
+<http://purl.org/vocab/aiiso-roles/schema#PHD_Candidate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#PHD_Candidate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#PHD_Candidate> <http://www.w3.org/2000/01/rdf-schema#label> "Ph.D. Candidate"@en .
+<http://purl.org/vocab/aiiso-roles/schema#PHD_Candidate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#PHD_Candidate> <http://purl.org/dc/terms/issued> "2010-06-10" .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Affairs_Officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Affairs_Officer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/participation/schema#Role> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Affairs_Officer> <http://www.w3.org/2000/01/rdf-schema#label> "Student Affairs Officer"@en .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Affairs_Officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso-roles/schema#> .
+<http://purl.org/vocab/aiiso-roles/schema#Student_Affairs_Officer> <http://purl.org/dc/terms/issued> "2010-06-10" .

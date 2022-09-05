@@ -1,0 +1,22 @@
+location /bio/0.1 {
+  rewrite ^ http://vocab.org/bio/ permanent;
+}
+
+location /vann/changes {
+  return 303 http://vocab.org/vann/#changes;
+}
+location /vann/example {
+  return 303 http://vocab.org/vann/#example;
+}
+location /vann/preferredNamespacePrefix {
+  return 303 http://vocab.org/vann/#preferredNamespacePrefix;
+}
+location /vann/preferredNamespaceUri {
+  return 303 http://vocab.org/vann/#preferredNamespaceUri;
+}
+location /vann/termGroup {
+  return 303 http://vocab.org/vann/#termGroup;
+}
+location /vann/usageNote {
+  return 303 http://vocab.org/vann/#usageNote;
+}

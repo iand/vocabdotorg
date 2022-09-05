@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="robots" content="INDEX/FOLLOW" />
+    <meta name="author" content="iand@InternetAlchemy.org" />
+
+    
+    <meta name="copyright" content="Copyright (c) 1999-2002 Ian Davis" />
+    <meta name="HandheldFriendly" content="True" />
+		<title>Reuters Topics Vocabulary</title>
+    </head>
+
+    <body id="body">
+				<h1>Reuters Topics Vocabulary</h1>
+<p>This document contains embedded XML/RDF statements defining and describing a vocabulary
+compatible with the topic codes used within the <a href="http://about.reuters.com/researchandstandards/corpus/">Reuters news corpus</a>.</p>
+<p>Please note that this vocabulary is not officially endorsed by Reuters.</p>
+
+
+<p>The RDF schema is also embedded in the source of this document.</p>
+
+<pre>
+&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" &gt;
+
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/1POL"
+  rdfs:label="CURRENT NEWS - POLITICS" /&gt;
+  
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/2ECO"
+  rdfs:label="CURRENT NEWS - ECONOMICS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/3SPO"
+  rdfs:label="CURRENT NEWS - SPORT" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/4GEN"
+  rdfs:label="CURRENT NEWS - GENERAL" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/6INS"
+  rdfs:label="CURRENT NEWS - INSURANCE" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/7RSK"
+  rdfs:label="CURRENT NEWS - RISK NEWS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/8YDB"
+  rdfs:label="TEMPORARY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/9BNX"
+  rdfs:label="TEMPORARY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/ADS10"
+  rdfs:label="CURRENT NEWS - ADVERTISING" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/BNW14"
+  rdfs:label="CURRENT NEWS - BUSINESS NEWS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/BRP11"
+  rdfs:label="CURRENT NEWS - BRANDS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C11"
+  rdfs:label="STRATEGY/PLANS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C12"
+  rdfs:label="LEGAL/JUDICIAL" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C13"
+  rdfs:label="REGULATION/POLICY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C14"
+  rdfs:label="SHARE LISTINGS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C15"
+  rdfs:label="PERFORMANCE" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C151"
+  rdfs:label="ACCOUNTS/EARNINGS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C1511"
+  rdfs:label="ANNUAL RESULTS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C151"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C152"
+  rdfs:label="COMMENT/FORECASTS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C16"
+  rdfs:label="INSOLVENCY/LIQUIDITY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C17"
+  rdfs:label="FUNDING/CAPITAL" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C171"
+  rdfs:label="SHARE CAPITAL"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C172"
+  rdfs:label="BONDS/DEBT ISSUES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C173"
+  rdfs:label="LOANS/CREDITS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C174"
+  rdfs:label="CREDIT RATINGS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C18"
+  rdfs:label="OWNERSHIP CHANGES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C181"
+  rdfs:label="MERGERS/ACQUISITIONS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C18"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C182"
+  rdfs:label="ASSET TRANSFERS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C18"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C183"
+  rdfs:label="PRIVATISATIONS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C18"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C21"
+  rdfs:label="PRODUCTION/SERVICES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C22"
+  rdfs:label="NEW PRODUCTS/SERVICES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C23"
+  rdfs:label="RESEARCH/DEVELOPMENT" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C24"
+  rdfs:label="CAPACITY/FACILITIES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C31"
+  rdfs:label="MARKETS/MARKETING" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C311"
+  rdfs:label="DOMESTIC MARKETS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C31"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C312"
+  rdfs:label="EXTERNAL MARKETS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C31"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C313"
+  rdfs:label="MARKET SHARE"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C31"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C32"
+  rdfs:label="ADVERTISING/PROMOTION" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C33"
+  rdfs:label="CONTRACTS/ORDERS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C331"
+  rdfs:label="DEFENCE CONTRACTS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C33"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C34"
+  rdfs:label="MONOPOLIES/COMPETITION" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C41"
+  rdfs:label="MANAGEMENT" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C411"
+  rdfs:label="MANAGEMENT MOVES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C41"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C42"
+  rdfs:label="LABOUR" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/CCAT"
+  rdfs:label="CORPORATE/INDUSTRIAL" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E11"
+  rdfs:label="ECONOMIC PERFORMANCE" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E12"
+  rdfs:label="MONETARY/ECONOMIC" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E121"
+  rdfs:label="MONEY SUPPLY"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E12"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E13"
+  rdfs:label="INFLATION/PRICES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E131"
+  rdfs:label="CONSUMER PRICES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E13"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E132"
+  rdfs:label="WHOLESALE PRICES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E14"
+  rdfs:label="CONSUMER FINANCE" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E141"
+  rdfs:label="PERSONAL INCOME"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E14"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E142"
+  rdfs:label="CONSUMER CREDIT"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E14"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E143"
+  rdfs:label="RETAIL SALES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E14"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E21"
+  rdfs:label="GOVERNMENT FINANCE" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E211"
+  rdfs:label="EXPENDITURE/REVENUE"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E21"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E212"
+  rdfs:label="GOVERNMENT BORROWING"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E21"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E31"
+  rdfs:label="OUTPUT/CAPACITY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E311"
+  rdfs:label="INDUSTRIAL PRODUCTION"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E31"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E312"
+  rdfs:label="CAPACITY UTILIZATION"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E31"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E313"
+  rdfs:label="INVENTORIES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E31"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E41"
+  rdfs:label="EMPLOYMENT/LABOUR" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E411"
+  rdfs:label="UNEMPLOYMENT"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E41"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E51"
+  rdfs:label="TRADE/RESERVES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E511"
+  rdfs:label="BALANCE OF PAYMENTS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E51"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E512"
+  rdfs:label="MERCHANDISE TRADE"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E51"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E513"
+  rdfs:label="RESERVES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E51"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E61"
+  rdfs:label="HOUSING STARTS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E71"
+  rdfs:label="LEADING INDICATORS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/ECAT"
+  rdfs:label="ECONOMICS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/ENT12"
+  rdfs:label="CURRENT NEWS - ENTERTAINMENT" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G11"
+  rdfs:label="SOCIAL AFFAIRS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G111"
+  rdfs:label="HEALTH/SAFETY"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G11"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G112"
+  rdfs:label="SOCIAL SECURITY"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G11"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G113"
+  rdfs:label="EDUCATION/RESEARCH"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G11"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G12"
+  rdfs:label="INTERNAL POLITICS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G13"
+  rdfs:label="INTERNATIONAL RELATIONS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G131"
+  rdfs:label="DEFENCE"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G13"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G14"
+  rdfs:label="ENVIRONMENT" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G15"
+  rdfs:label="EUROPEAN COMMUNITY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G151"
+  rdfs:label="EC INTERNAL MARKET"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G152"
+  rdfs:label="EC CORPORATE POLICY"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G153"
+  rdfs:label="EC AGRICULTURE POLICY"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G154"
+  rdfs:label="EC MONETARY/ECONOMIC"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G155"
+  rdfs:label="EC INSTITUTIONS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G156"
+  rdfs:label="EC ENVIRONMENT ISSUES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G157"
+  rdfs:label="EC COMPETITION/SUBSIDY"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G158"
+  rdfs:label="EC EXTERNAL RELATIONS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G159"
+  rdfs:label="EC GENERAL"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GCAT"
+  rdfs:label="GOVERNMENT/SOCIAL" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GCRIM"
+  rdfs:label="CRIME, LAW ENFORCEMENT" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GDEF"
+  rdfs:label="DEFENCE" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GDIP"
+  rdfs:label="INTERNATIONAL RELATIONS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GDIS"
+  rdfs:label="DISASTERS AND ACCIDENTS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GEDU"
+  rdfs:label="EDUCATION" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GENT"
+  rdfs:label="ARTS, CULTURE, ENTERTAINMENT" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GENV"
+  rdfs:label="ENVIRONMENT AND NATURAL WORLD" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GFAS"
+  rdfs:label="FASHION" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GHEA"
+  rdfs:label="HEALTH" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GJOB"
+  rdfs:label="LABOUR ISSUES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GMIL"
+  rdfs:label="MILLENNIUM ISSUES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GOBIT"
+  rdfs:label="OBITUARIES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GODD"
+  rdfs:label="HUMAN INTEREST" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GPOL"
+  rdfs:label="DOMESTIC POLITICS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GPRO"
+  rdfs:label="BIOGRAPHIES, PERSONALITIES, PEOPLE" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GREL"
+  rdfs:label="RELIGION" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GSCI"
+  rdfs:label="SCIENCE AND TECHNOLOGY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GSPO"
+  rdfs:label="SPORTS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GTOUR"
+  rdfs:label="TRAVEL AND TOURISM" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GVIO"
+  rdfs:label="WAR, CIVIL WAR" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GVOTE"
+  rdfs:label="ELECTIONS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GWEA"
+  rdfs:label="WEATHER" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GWELF"
+  rdfs:label="WELFARE, SOCIAL SERVICES" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M11"
+  rdfs:label="EQUITY MARKETS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M12"
+  rdfs:label="BOND MARKETS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M13"
+  rdfs:label="MONEY MARKETS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M131"
+  rdfs:label="INTERBANK MARKETS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M13"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M132"
+  rdfs:label="FOREX MARKETS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M13"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M14"
+  rdfs:label="COMMODITY MARKETS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M141"
+  rdfs:label="SOFT COMMODITIES"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M14"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M142"
+  rdfs:label="METALS TRADING"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M14"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M143"
+  rdfs:label="ENERGY MARKETS"&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M14"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/MCAT"
+  rdfs:label="MARKETS" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/MEUR"
+  rdfs:label="EURO CURRENCY" /&gt;
+
+&lt;rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/PRB13"
+  rdfs:label="CURRENT NEWS - PRESS RELEASE WIRES" /&gt;
+
+&lt;/rdf:RDF&gt;
+</pre>
+
+<!-- Begin embedded RDF -->
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" >
+
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/1POL"
+  rdfs:label="CURRENT NEWS - POLITICS" />
+  
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/2ECO"
+  rdfs:label="CURRENT NEWS - ECONOMICS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/3SPO"
+  rdfs:label="CURRENT NEWS - SPORT" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/4GEN"
+  rdfs:label="CURRENT NEWS - GENERAL" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/6INS"
+  rdfs:label="CURRENT NEWS - INSURANCE" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/7RSK"
+  rdfs:label="CURRENT NEWS - RISK NEWS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/8YDB"
+  rdfs:label="TEMPORARY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/9BNX"
+  rdfs:label="TEMPORARY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/ADS10"
+  rdfs:label="CURRENT NEWS - ADVERTISING" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/BNW14"
+  rdfs:label="CURRENT NEWS - BUSINESS NEWS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/BRP11"
+  rdfs:label="CURRENT NEWS - BRANDS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C11"
+  rdfs:label="STRATEGY/PLANS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C12"
+  rdfs:label="LEGAL/JUDICIAL" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C13"
+  rdfs:label="REGULATION/POLICY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C14"
+  rdfs:label="SHARE LISTINGS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C15"
+  rdfs:label="PERFORMANCE" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C151"
+  rdfs:label="ACCOUNTS/EARNINGS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C1511"
+  rdfs:label="ANNUAL RESULTS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C151"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C152"
+  rdfs:label="COMMENT/FORECASTS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C16"
+  rdfs:label="INSOLVENCY/LIQUIDITY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C17"
+  rdfs:label="FUNDING/CAPITAL" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C171"
+  rdfs:label="SHARE CAPITAL">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C172"
+  rdfs:label="BONDS/DEBT ISSUES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C173"
+  rdfs:label="LOANS/CREDITS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C174"
+  rdfs:label="CREDIT RATINGS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C17"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C18"
+  rdfs:label="OWNERSHIP CHANGES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C181"
+  rdfs:label="MERGERS/ACQUISITIONS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C18"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C182"
+  rdfs:label="ASSET TRANSFERS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C18"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C183"
+  rdfs:label="PRIVATISATIONS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C18"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C21"
+  rdfs:label="PRODUCTION/SERVICES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C22"
+  rdfs:label="NEW PRODUCTS/SERVICES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C23"
+  rdfs:label="RESEARCH/DEVELOPMENT" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C24"
+  rdfs:label="CAPACITY/FACILITIES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C31"
+  rdfs:label="MARKETS/MARKETING" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C311"
+  rdfs:label="DOMESTIC MARKETS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C31"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C312"
+  rdfs:label="EXTERNAL MARKETS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C31"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C313"
+  rdfs:label="MARKET SHARE">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C31"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C32"
+  rdfs:label="ADVERTISING/PROMOTION" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C33"
+  rdfs:label="CONTRACTS/ORDERS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C331"
+  rdfs:label="DEFENCE CONTRACTS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C33"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C34"
+  rdfs:label="MONOPOLIES/COMPETITION" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C41"
+  rdfs:label="MANAGEMENT" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C411"
+  rdfs:label="MANAGEMENT MOVES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/C41"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/C42"
+  rdfs:label="LABOUR" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/CCAT"
+  rdfs:label="CORPORATE/INDUSTRIAL" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E11"
+  rdfs:label="ECONOMIC PERFORMANCE" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E12"
+  rdfs:label="MONETARY/ECONOMIC" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E121"
+  rdfs:label="MONEY SUPPLY">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E12"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E13"
+  rdfs:label="INFLATION/PRICES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E131"
+  rdfs:label="CONSUMER PRICES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E13"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E132"
+  rdfs:label="WHOLESALE PRICES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E14"
+  rdfs:label="CONSUMER FINANCE" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E141"
+  rdfs:label="PERSONAL INCOME">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E14"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E142"
+  rdfs:label="CONSUMER CREDIT">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E14"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E143"
+  rdfs:label="RETAIL SALES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E14"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E21"
+  rdfs:label="GOVERNMENT FINANCE" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E211"
+  rdfs:label="EXPENDITURE/REVENUE">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E21"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E212"
+  rdfs:label="GOVERNMENT BORROWING">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E21"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E31"
+  rdfs:label="OUTPUT/CAPACITY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E311"
+  rdfs:label="INDUSTRIAL PRODUCTION">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E31"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E312"
+  rdfs:label="CAPACITY UTILIZATION">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E31"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E313"
+  rdfs:label="INVENTORIES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E31"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E41"
+  rdfs:label="EMPLOYMENT/LABOUR" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E411"
+  rdfs:label="UNEMPLOYMENT">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E41"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E51"
+  rdfs:label="TRADE/RESERVES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E511"
+  rdfs:label="BALANCE OF PAYMENTS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E51"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E512"
+  rdfs:label="MERCHANDISE TRADE">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E51"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E513"
+  rdfs:label="RESERVES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/E51"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E61"
+  rdfs:label="HOUSING STARTS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/E71"
+  rdfs:label="LEADING INDICATORS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/ECAT"
+  rdfs:label="ECONOMICS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/ENT12"
+  rdfs:label="CURRENT NEWS - ENTERTAINMENT" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G11"
+  rdfs:label="SOCIAL AFFAIRS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G111"
+  rdfs:label="HEALTH/SAFETY">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G11"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G112"
+  rdfs:label="SOCIAL SECURITY">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G11"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G113"
+  rdfs:label="EDUCATION/RESEARCH">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G11"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G12"
+  rdfs:label="INTERNAL POLITICS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G13"
+  rdfs:label="INTERNATIONAL RELATIONS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G131"
+  rdfs:label="DEFENCE">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G13"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G14"
+  rdfs:label="ENVIRONMENT" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G15"
+  rdfs:label="EUROPEAN COMMUNITY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G151"
+  rdfs:label="EC INTERNAL MARKET">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G152"
+  rdfs:label="EC CORPORATE POLICY">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G153"
+  rdfs:label="EC AGRICULTURE POLICY">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G154"
+  rdfs:label="EC MONETARY/ECONOMIC">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G155"
+  rdfs:label="EC INSTITUTIONS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G156"
+  rdfs:label="EC ENVIRONMENT ISSUES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G157"
+  rdfs:label="EC COMPETITION/SUBSIDY">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G158"
+  rdfs:label="EC EXTERNAL RELATIONS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/G159"
+  rdfs:label="EC GENERAL">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/G15"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GCAT"
+  rdfs:label="GOVERNMENT/SOCIAL" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GCRIM"
+  rdfs:label="CRIME, LAW ENFORCEMENT" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GDEF"
+  rdfs:label="DEFENCE" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GDIP"
+  rdfs:label="INTERNATIONAL RELATIONS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GDIS"
+  rdfs:label="DISASTERS AND ACCIDENTS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GEDU"
+  rdfs:label="EDUCATION" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GENT"
+  rdfs:label="ARTS, CULTURE, ENTERTAINMENT" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GENV"
+  rdfs:label="ENVIRONMENT AND NATURAL WORLD" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GFAS"
+  rdfs:label="FASHION" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GHEA"
+  rdfs:label="HEALTH" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GJOB"
+  rdfs:label="LABOUR ISSUES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GMIL"
+  rdfs:label="MILLENNIUM ISSUES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GOBIT"
+  rdfs:label="OBITUARIES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GODD"
+  rdfs:label="HUMAN INTEREST" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GPOL"
+  rdfs:label="DOMESTIC POLITICS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GPRO"
+  rdfs:label="BIOGRAPHIES, PERSONALITIES, PEOPLE" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GREL"
+  rdfs:label="RELIGION" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GSCI"
+  rdfs:label="SCIENCE AND TECHNOLOGY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GSPO"
+  rdfs:label="SPORTS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GTOUR"
+  rdfs:label="TRAVEL AND TOURISM" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GVIO"
+  rdfs:label="WAR, CIVIL WAR" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GVOTE"
+  rdfs:label="ELECTIONS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GWEA"
+  rdfs:label="WEATHER" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/GWELF"
+  rdfs:label="WELFARE, SOCIAL SERVICES" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M11"
+  rdfs:label="EQUITY MARKETS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M12"
+  rdfs:label="BOND MARKETS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M13"
+  rdfs:label="MONEY MARKETS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M131"
+  rdfs:label="INTERBANK MARKETS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M13"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M132"
+  rdfs:label="FOREX MARKETS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M13"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M14"
+  rdfs:label="COMMODITY MARKETS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M141"
+  rdfs:label="SOFT COMMODITIES">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M14"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M142"
+  rdfs:label="METALS TRADING">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M14"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/M143"
+  rdfs:label="ENERGY MARKETS">
+  <rdfs:subClassOf rdf:resource="http://purl.org/vocab/reuters_topics/1.0/M14"/>
+</rdfs:Class>
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/MCAT"
+  rdfs:label="MARKETS" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/MEUR"
+  rdfs:label="EURO CURRENCY" />
+
+<rdfs:Class 
+  rdf:about="http://purl.org/vocab/reuters_topics/1.0/PRB13"
+  rdfs:label="CURRENT NEWS - PRESS RELEASE WIRES" />
+
+</rdf:RDF>
+
+  </body>
+</html>

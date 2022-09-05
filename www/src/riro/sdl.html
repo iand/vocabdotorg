@@ -1,0 +1,915 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en">
+<head>
+ <title>RDF-in/RDF-out (RIRO) Service Descriptions</title>
+ <link rel="meta" type="application/rdf+xml" title="RDF-in/RDF-out (RIRO) Service Descriptions"
+  href="http://purl.org/vocab/riro/sdl.rdf" />
+ <link href="rdfdoc.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <br />
+
+ <h1>RDF-in/RDF-out (RIRO) Service Descriptions</h1>
+
+ <dl class="doc-info">
+  <dt>This Version</dt>
+  <dd><a href="http://purl.org/vocab/riro/sdl">http://purl.org/vocab/riro/sdl</a>
+   [<a href="http://purl.org/vocab/riro/sdl.html">HTML</a>] 
+   [<a href="http://purl.org/vocab/riro/sdl.owl">OWL</a>]</dd>
+  <dt>Latest Version</dt>
+  <dd><a href="http://purl.org/vocab/riro/sdl#">http://purl.org/vocab/riro/sdl#</a></dd>
+  <dt>Authors</dt>
+  <dd>Sergei Egorov &lt;esl<span>@</span>ariadnegenomics.com&gt;</dd>
+  <dt>Contributors</dt>
+  <dd>&nbsp;</dd>
+ </dl>
+ <p class="rights">Copyright &copy; 2006 Sergei Egorov</p>
+ <p class="rights">OWL metadata &amp; format Copyright &copy; 2005 Richard Newman and Ian Davis</p>
+ <p class="license">
+  This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.5/">
+   Creative Commons License</a>.</p>
+
+ <h2 id="toc">Table of Contents</h2>
+
+ <ul class="toc">
+  <li><a href="#sec-introduction">Introduction</a></li>
+  <li><a href="#sec-namespace">Namespace</a></li>
+  <li><a href="#sec-terms">Summary of Terms</a></li>
+  <li><a href="#sec-classes">Vocabulary Classes</a></li>
+  <li><a href="#sec-properties">Vocabulary Properties</a></li>
+  <li><a href="#sec-examples">Examples</a></li>
+  <li><a href="#sec-schema">RDF Schema</a></li>
+  <li><a href="#sec-license">License</a></li>
+ </ul>
+
+ <h2 id="sec-introduction">Introduction</h2>
+
+ <p class="comment">
+  This vocabulary defines terms used to describe RIRO services. A RIRO service is
+  characterised by its connection point, its command name and description, its input
+  pattern, and its output template. RIRO Service Description contains all the information
+  needed to use the service.
+ </p>
+ <p class="comment">
+  The description is built as a set of properties of the connection point resource
+  (a node which URI is the URL of the service).
+ </p>
+ <p class="comment">
+  Input patterns and output templates are described using the accompanying RDF Graph
+  Patterns and Templates vocabulary (<a href="http://purl.org/vocab/riro/gpt">http://purl.org/vocab/riro/gpt</a>).
+ </p>
+ <h2 id="sec-changes">
+  Changes From Previous Version</h2>
+ <ul>
+  <li class="historyNote">2006-03-05 - semantic change by Sergei Egorov: "First version"</li>
+ </ul>
+
+ <h2 id="sec-namespace">Namespace</h2>
+
+ <p>
+  The URI for this vocabulary is
+ </p>
+ <pre><code>http://purl.org/vocab/riro/sdl#</code></pre>
+ <p>
+  When used in XML documents the suggested prefix is <code>sdl</code></p>
+ <p>
+  Each class or property in the vocabulary has a URI constructed by appending a term
+  name to the vocabulary URI. For example:</p>
+ <pre><code>http://purl.org/vocab/riro/sdl#commandName http://purl.org/vocab/riro/sdl#RIROService</code></pre>
+ <p>
+  The term name for a class always starts with an uppercase character. Where the term
+  name is comprised of multiple concatenated words, the leading character of each
+  word will be an uppercase character. For example:
+ </p>
+ <pre><code>RIROService </code></pre>
+ <p>
+  The term name for a property always starts with an lowercase character. Where the
+  term name is comprised of multiple concatenated words, the leading character of
+  the second and each subsequent word will be an uppercase character. For example:
+ </p>
+ <pre><code>commandName commandDescription</code></pre>
+
+ <h2 id="sec-terms">Summary of Terms</h2>
+
+ <p>
+  This vocabulary defines one class and 6 properties .
+ </p>
+ <table style="width: 90%">
+  <tbody>
+   <tr>
+    <th>
+     Term Name</th>
+    <th style="width: 15%">
+     Type</th>
+    <th>
+     Definition</th>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-RIROService" title="http://purl.org/vocab/riro/sdl#RIROService">RIROService</a></td>
+    <td>
+     class</td>
+    <td>
+     A RDF-in/RDF-out (RIRO) Service.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-commandName" title="http://purl.org/vocab/riro/sdl#commandName">commandName</a></td>
+    <td>
+     property</td>
+    <td>
+     The name of the command to invoke the service.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-commandDescription" title="http://purl.org/vocab/riro/sdl#commandDescription">
+      commandDescription</a></td>
+    <td>
+     property</td>
+    <td>
+     The description of the command to invoke the service.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-fileUnder" title="http://purl.org/vocab/riro/sdl#fileUnder">fileUnder</a></td>
+    <td>
+     property</td>
+    <td>
+     The category/subcategory of the command to invoke the service.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-inputPattern" title="http://purl.org/vocab/riro/sdl#inputPattern">
+      inputPattern</a></td>
+    <td>
+     property</td>
+    <td>
+     The pattern matching proper input graphs.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-outputTemplate" title="http://purl.org/vocab/riro/sdl#outputTemplate">
+      outputTemplate</a></td>
+    <td>
+     property</td>
+    <td>
+     The template for output graphs produced by the service.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-method" title="http://purl.org/vocab/riro/sdl#method">method</a></td>
+    <td>
+     property</td>
+    <td>
+     Query method ('get' or 'post').
+    </td>
+   </tr>
+  </tbody>
+ </table>
+
+ <h2 id="sec-classes">
+  Vocabulary Classes</h2>
+ <div class="class">
+  <h3 id="term-RIROService">
+   Class: RIROService</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>A RDF-in/RDF-out (RIRO) Service.
+   </p>
+   <p class="comment">
+    A member of this class is a service supporting the RIRO protocol. As a rule, a member
+    of this class is assigned a URI; if so, the URI is interpreted as URL of the service's
+    connection point.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/sdl#RIROService</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       RIRO Service</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>
+       (a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-05</span> - first issued</li><li class="changeNote">
+     2006-03-05 - editorial change by Sergei Egorov: "Added comment" </li>
+   </ul>
+  </div>
+ </div>
+
+ <h2 id="sec-properties">Vocabulary Properties</h2>
+
+ <div class="property">
+  <h3 id="term-commandName">
+   Property: commandName</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The name of the command
+    to invoke the service.
+   </p>
+   <p class="comment">
+    Please supply short and descriptive name, suitable for use in menus, command lists
+    etc. Recommended length is 10-40 characters.
+   </p>
+   <p class="comment">
+    Example: 'Resolve LSRN to Record, URLs'.
+   </p>
+   <p class="comment">
+    This property is required.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/sdl#commandName</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       command name</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-RIROService" title="http://purl.org/vocab/riro/sdl#RIROService">sdl:RIROService</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-05</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <div class="property">
+  <h3 id="term-commandDescription">
+   Property: commandDescription</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The description of
+    the command to invoke the service.
+   </p>
+   <p class="comment">
+    Please keep the description brief - no longer than 25-30 words. The description
+    should be suitable for use in tooltips, help texts etc.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/sdl#commandDescription</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       command description</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-RIROService" title="http://purl.org/vocab/riro/sdl#RIROService">sdl:RIROService</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-05</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <div class="property">
+  <h3 id="term-fileUnder">
+   Property: fileUnder</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The category/subcategory
+    of the command to invoke the service.
+   </p>
+   <p class="comment">
+    This property allows one to group related services together. The format of the property
+    is category/subcategory/subsubcategory/..., similar to the convention used in the
+    Open Directory Project (dmoz.org). Category names should follow the conventions
+    for command names (10-40 characters, capitalized).
+   </p>
+   <p class="comment">
+    Example: 'Related/Journal Articles'
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/sdl#fileUnder</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       file under</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-RIROService" title="http://purl.org/vocab/riro/sdl#RIROService">sdl:RIROService</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-05</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <div class="property">
+  <h3 id="term-inputPattern">
+   Property: inputPattern</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The pattern matching
+    proper input graphs.
+   </p>
+   <p class="comment">
+    Graph patterns should be expressed via the RDF Graph Patterns and Templates vocabulary
+    (http://purl.org/vocab/riro/gpt).
+   </p>
+   <p class="comment">
+    This property is required.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/sdl#inputPattern</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       input pattern</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-RIROService" title="http://purl.org/vocab/riro/sdl#RIROService">sdl:RIROService</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-06</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <div class="property">
+  <h3 id="term-outputTemplate">
+   Property: outputTemplate</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The template for output
+    graphs produced by the service.
+   </p>
+   <p class="comment">
+    Graph patterns should be expressed via the RDF Graph Patterns and Templates vocabulary
+    (http://purl.org/vocab/riro/gpt).
+   </p>
+   <p class="comment">
+    The input pattern and output template can share blank nodes. In real calls, the query
+    and the reply graph will also share corresponding blank nodes by reusing nodeIDs;
+    the reply is considered to be in the same nodeID namespace as the query.
+   </p>
+   <p class="comment">
+    This property is required.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/sdl#outputTemplate</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       output template</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-RIROService" title="http://purl.org/vocab/riro/sdl#RIROService">sdl:RIROService</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-06</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <div class="property">
+  <h3 id="term-method">
+   Property: method</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] Query method ('get'
+    or 'post').
+   </p>
+   <p class="comment">
+    If the query method is 'get', the service is assumed to be idempotent (the query
+    will have no side effects).
+   </p>
+   <p class="comment">
+    This property is required.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/sdl#method</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       HTTP method</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-RIROService" title="http://purl.org/vocab/riro/sdl#RIROService">sdl:RIROService</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       "get", "post"</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-06</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <h2 id="sec-examples">Examples</h2>
+ 
+ <div class="example">
+ <p><a href="sdl-example.rdf">sdl-example.rdf</a></p>
+ <p><a href="sdl-example.ttl">sdl-example.ttl</a></p>
+ </div>
+
+ <h2 id="sec-schema">RDF Schema</h2>
+
+ <p>
+  The schema included here is informational only. The normative schema can be found
+  at <a href="http://purl.org/vocab/riro/sdl.rdf">http://purl.org/vocab/riro/sdl.rdf</a>
+ </p>
+
+<pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:gpt</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"
+   <span class="attr">xmlns:sdl</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>" 
+   <span class="attr">xml:base</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"></span>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF-in/RDF-out (RIRO) Service Descriptions</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">This vocabulary defines terms used to describe RIRO services. A RIRO </span>
+      <span class="text">service is characterised by its connection point, its command name and </span>
+      <span class="text">description, its input pattern, and its output template. RIRO Service </span>
+      <span class="text">Description contains all the information needed to use the service.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The description is built as a set of properties of the connection point </span>
+      <span class="text">resource (a node which URI is the URL of the service).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Input patterns and output templates are described using the accompanying </span>
+      <span class="text">RDF Graph Patterns and Templates vocabulary </span>
+      <span class="text">(http://purl.org/vocab/riro/gpt).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/riro/sdl</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Sergei Egorov &lt;esl@ariadnegenomics.com&gt;</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span>
+      <span class="text">Copyright &copy; 2006 Sergei Egorov</span>
+    <span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span>
+      <span class="text">OWL metadata &amp; format Copyright &copy; 2005 Richard Newman and Ian Davis</span>
+    <span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/riro/sdl#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">sdl</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl.owl</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">OWL</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+
+    <span class="elem">&lt;skos:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">sdl-example.rdf</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">sdl-example.ttl</span>"<span class="elem">/&gt;</span>
+
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-05</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">First version</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-03-05</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"></span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.5/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.5/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/format</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/hasFormat</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/isVersionOf</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/replaces</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/type</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/rights</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/date</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/identifier</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/contributor</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/title</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespacePrefix</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespaceUri</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/changes</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#value</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/License</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Permission</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Requirement</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/permits</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/requires</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/license</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#RIROService</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RIRO Service</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A RDF-in/RDF-out (RIRO) Service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A member of this class is a service supporting the RIRO protocol. As a rule, </span>
+      <span class="text">a member of this class is assigned a URI; if so, the URI is interpreted </span>
+      <span class="text">as URL of the service's connection point.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#commandName</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#commandDescription</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#fileUnder</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#inputPattern</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#outputTemplate</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#method</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-05</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added comment</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-03-05</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#commandName</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">command name</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The name of the command to invoke the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Please supply short and descriptive name, suitable for use in menus, </span>
+      <span class="text">command lists etc. Recommended length is 10-40 characters.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Example: 'Resolve LSRN to Record, URLs'.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">This property is required.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#RIROService</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-05</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#commandDescription</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">command description</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The description of the command to invoke the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Please keep the description brief - no longer than 25-30 words. The </span>
+      <span class="text">description should be suitable for use in tooltips, help texts etc.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#RIROService</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-05</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#fileUnder</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">file under</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The category/subcategory of the command to invoke the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">This property allows one to group related services together. The format </span>
+      <span class="text">of the property is category/subcategory/subsubcategory/..., similar to </span>
+      <span class="text">the convention used in the Open Directory Project (dmoz.org). Category </span>
+      <span class="text">names should follow the conventions for command names (10-40 characters, </span>
+      <span class="text">capitalized).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Example: 'Related/Journal Articles'</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#RIROService</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-05</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#inputPattern</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">input pattern</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The pattern matching proper input graphs.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Graph patterns should be expressed via the RDF Graph Patterns and </span>
+      <span class="text">Templates vocabulary (http://purl.org/vocab/riro/gpt).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">This property is required.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#RIROService</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-06</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#outputTemplate</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">output template</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The template for output graphs produced by the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Graph patterns should be expressed via the RDF Graph Patterns and </span>
+      <span class="text">Templates vocabulary (http://purl.org/vocab/riro/gpt).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The input pattern and output template can share blank nodes. In real calls, </span>
+      <span class="text">the query and the reply graph will also share corresponding blank nodes </span>
+      <span class="text">by reusing nodeIDs; the reply is considered to be in the same nodeID </span>
+      <span class="text">namespace as the query.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">This property is required.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#RIROService</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-06</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#method</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTTP method</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Query method ('get' or 'post').</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">If the query method is 'get', the service is assumed to be idempotent </span>
+      <span class="text">(the query will have no side effects).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">This property is required.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/sdl#RIROService</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:DataRange</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:oneOf</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;rdf:List</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:first</span>
+              <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+              <span class="text">get</span><span class="elem">&lt;/rdf:first&gt;</span>
+            <span class="elem">&lt;rdf:rest</span><span class="elem">&gt;</span>
+              <span class="elem">&lt;rdf:List</span><span class="elem">&gt;</span>
+                <span class="elem">&lt;rdf:first</span>
+                  <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+                  <span class="text">post</span><span class="elem">&lt;/rdf:first&gt;</span>
+                <span class="elem">&lt;rdf:rest</span> 
+                  <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#nil</span>"<span class="elem">/&gt;</span>
+              <span class="elem">&lt;/rdf:List&gt;</span>
+            <span class="elem">&lt;/rdf:rest&gt;</span>
+          <span class="elem">&lt;/rdf:List&gt;</span>
+        <span class="elem">&lt;/owl:oneOf&gt;</span>
+      <span class="elem">&lt;/owl:DataRange&gt;</span>
+    <span class="elem">&lt;/rdfs:range&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-06</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre> 
+
+ <h2 id="sec-license">License</h2>
+
+ <p class="license">
+   This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.5/">
+   Creative Commons License</a>.<p>
+   The following section is informational only, please refer to the <a href="http://creativecommons.org/licenses/by/2.5/">
+   Original License</a> for complete license terms.
+ </p>
+ <p>
+   This license grants the following rights:</p>
+ <ul>
+   <li>(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+   </li>
+   <li>(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+   </li>
+   <li>(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+   </li>
+ </ul>
+ <p>
+  This license imposes the following restrictions:</p>
+ <ul>
+   <li>(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+   </li>
+   <li>(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+   </li>
+  </ul>
+ </p>
+ <div id="footer">
+  Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org
+  toolchain</a>.
+ </div>
+</body>
+</html>

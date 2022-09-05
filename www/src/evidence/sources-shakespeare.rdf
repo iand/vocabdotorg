@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:z="http://www.zotero.org/namespaces/export#"
+         xmlns:link="http://purl.org/rss/1.0/modules/link/"
+         xmlns:vcard="http://nwalsh.com/rdf/vCard#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:bib="http://purl.org/net/biblio#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bib:Book RDF:about="urn:isbn:9780719016325"
+                   z:itemType="book"
+                   dc:title="Sir Thomas More"
+                   dc:date="2002"
+                   bib:pages="272"
+                   dc:identifier="ISBN 0719016320, 9780719016325"
+                   z:repository="Google Books">
+    <bib:authors RDF:resource="http://vocab.org/evidence/data/wz9np"/>
+    <bib:contributors RDF:resource="http://vocab.org/evidence/data/Bz9np"/>
+  </bib:Book>
+  <foaf:Person RDF:about="http://vocab.org/evidence/data/xz9np"
+                   foaf:surname="Chettle"
+                   foaf:givenname="Henry" />
+  <RDF:Seq RDF:about="http://vocab.org/evidence/data/wz9np">
+    <RDF:li RDF:resource="http://vocab.org/evidence/data/vz9np"/>
+    <RDF:li RDF:resource="http://vocab.org/evidence/data/xz9np"/>
+    <RDF:li RDF:resource="http://vocab.org/evidence/data/yz9np"/>
+    <RDF:li RDF:resource="http://vocab.org/evidence/data/zz9np"/>
+  </RDF:Seq>
+  <foaf:Person RDF:about="http://vocab.org/evidence/data/Az9np"
+                   foaf:surname="Melchiori"
+                   foaf:givenname="Vittorio Gabrieli, Giorgio" />
+  <foaf:Organization RDF:about="http://vocab.org/evidence/data/Cz9np"
+                   foaf:name="University of Missouri Press" />
+  <bib:Book RDF:ID="item_12807"
+                   z:itemType="book"
+                   dc:title="Sources of Four Plays Ascribed to Shakespeare"
+                   dc:date="1989"
+                   z:repository="Google Scholar">
+    <dc:publisher RDF:resource="http://vocab.org/evidence/data/Cz9np"/>
+    <bib:authors RDF:resource="http://vocab.org/evidence/data/Ez9np"/>
+  </bib:Book>
+  <RDF:Seq RDF:about="http://vocab.org/evidence/data/Ez9np">
+    <RDF:li RDF:resource="http://vocab.org/evidence/data/Dz9np"/>
+  </RDF:Seq>
+  <dcterms:URI RDF:about="http://vocab.org/evidence/data/uz9np"
+                   RDF:value="http://www.archive.org/details/shakespeareshand00polluoft" />
+  <bib:Book RDF:about="http://www.archive.org/details/shakespeareshand00polluoft"
+                   z:itemType="book"
+                   dc:title="Internet Archive: Details: Shakespeare's hand in the play of Sir Thomas More; papers by Alfred W. Pollard [and others] With the text of Ill May day scenes"
+                   z:shortTitle="Internet Archive"
+                   dcterms:dateSubmitted="2008-09-25 10:46:20"
+                   z:repository="Internet Archive">
+    <dc:identifier RDF:resource="http://vocab.org/evidence/data/uz9np"/>
+  </bib:Book>
+  <foaf:Person RDF:about="http://vocab.org/evidence/data/zz9np"
+                   foaf:surname="Melchiori"
+                   foaf:givenname="Giorgio" />
+  <RDF:Seq RDF:about="http://vocab.org/evidence/data/Bz9np">
+    <RDF:li RDF:resource="http://vocab.org/evidence/data/Az9np"/>
+  </RDF:Seq>
+  <foaf:Person RDF:about="http://vocab.org/evidence/data/yz9np"
+                   foaf:surname="Gabrieli"
+                   foaf:givenname="Vittorio" />
+  <foaf:Person RDF:about="http://vocab.org/evidence/data/Dz9np"
+                   foaf:surname="Metz"
+                   foaf:givenname="G. H." />
+  <foaf:Person RDF:about="http://vocab.org/evidence/data/vz9np"
+                   foaf:surname="Munday"
+                   foaf:givenname="Anthony" />
+</RDF:RDF>

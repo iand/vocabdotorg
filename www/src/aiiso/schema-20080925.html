@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en"><head><title>Academic Institution Internal Structure Ontology (AIISO)</title><link rel="meta" type="application/rdf+xml" title="Academic Institution Internal Structure Ontology (AIISO)" href="http://purl.org/vocab/aiiso/schema-20080925.rdf"/><style type="text/css">
+    code.xml .text {
+      color: #000000;
+      background: transparent;
+    }
+    code.xml .elem {
+      color: #000080; 
+      background: transparent;
+    }
+    code.xml .attr {
+      color: #008080;
+      background: transparent;
+    }
+    code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+    }
+    code.xml .highlight {
+      background: #ffff00;
+    }
+    
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+	}    
+	
+	pre {
+	  border: 1px #9999cc dotted;
+	  background-color: #f3f3ff;
+	  color: #000000; 
+    width: 90%;
+	}
+	
+	blockquote {
+	  border-style: solid;
+	  border-color: #d0dbe7;
+	  border-width: 0 0 0 .25em;
+	  padding-left: 0.5em;
+	}
+	
+	blockquote, q {
+	  font-style: italic;
+	} 
+	
+	body {
+		font-family: verdana, geneva, arial, sans-serif;
+	}
+	
+	a, p,blockquote, q, dl, dd, dt {
+		font-family: verdana, geneva, arial, sans-serif;
+		font-size: 1em;
+	}
+	
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+:link:active, :visited:active { color: #C00; background: transparent }
+:link:hover, :visited:hover { background: #ffa; }
+code :link, code :visited { color: inherit; }
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #996633; background: transparent; }
+h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+h3 { font: 700 120% sans-serif } 
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+	
+pre { margin-left: 2em; /* overflow: auto; */ }
+h1 + h2 { margin-top: 0; }
+h2 { margin: 3em 0 1em 0; }
+h2 + h3 { margin-top: 0; }
+h3 { margin: 2em 0 1em 0; }
+h4 { margin: 1.5em 0 0.75em 0; }
+h5, h6 { margin: 1.5em 0 1em; }
+p { margin: 1em 0; }
+dl, dd { margin-top: 0; margin-bottom: 0; }
+dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+dd dt { margin-top: 0.25em; margin-bottom: 0; }
+dd p { margin-top: 0; }
+p + * &gt; li, dd li { margin: 1em 0; }
+dt, dfn { font-weight: bold; font-style: normal; }
+pre, code { font-size: inherit; font-family: monospace; }
+pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+body ins, body del { display: block; }
+body * ins, body * del { display: inline; }
+
+table.properties { width: 90%; }
+table.properties th { text-align: right; width: 9em; font-weight: normal;}
+
+table { border-collapse: collapse;  border: solid #999999 1px;}
+table thead { border-bottom: solid #999999 2px; }
+table td, table th { border-left: solid #999999 1px; border-right: solid #999999 1px; border-bottom: solid #999999 1px;; vertical-align: top; padding: 0.2em; }
+
+.historyList {
+  font-size: 0.9em;
+}
+
+    </style></head><body><h1>Academic Institution Internal Structure Ontology (AIISO)</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://purl.org/vocab/aiiso/schema-20080925">http://purl.org/vocab/aiiso/schema-20080925</a> [<a href="http://purl.org/vocab/aiiso/schema-20080925.html">HTML</a>] [<a href="http://purl.org/vocab/aiiso/schema-20080925.rdf">RDF</a>]</dd><dt>Latest Version</dt><dd><a href="http://purl.org/vocab/aiiso/schema#">http://purl.org/vocab/aiiso/schema#</a></dd><dt>Previous Version</dt><dd><a href="http://purl.org/vocab/aiiso/schema-20080520">http://purl.org/vocab/aiiso/schema-20080520</a></dd><dt>Authors</dt><dd>Rob Styles</dd><dd>Nadeem Shabir</dd><dt>Contributors</dt><dd>Ian Corns</dd><dd>Sarah Bartlett</dd><dd>Chris Wallace</dd></dl><p class="rights">Copyright © 2008 Talis Information Ltd</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-schema">RDF Schema</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="comment">
+			The Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (http://purl.org/vocab/participation/schema), FOAF (http://xmlns.com/foaf/0.1/) and aiiso-roles (http://purl.org/vocab/aiiso-roles/schema) to describe the roles that people play within an institution.
+    	</p><h2 id="sec-changes">Changes From Previous Version</h2><ul><li class="historyNote">2008-05-14 - semantic change by Rob Styles:
+			"First cut of the ontology published"
+    </li><li class="historyNote">2008-05-20 - semantic change by Rob Styles:
+			"Corrected classes with more than one possible domain class to use owl:unionOf"
+    </li><li class="historyNote">2008-05-20 - semantic change by Nadeem Shabir:
+			"Added statement of responsibility for both knowledgeGrouping and organizationalUnit"
+    </li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Changed subclassing to subclass from foaf:Organization and deprecated organizationalUnit"
+    </li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Deprecated name in favour of foaf:name"
+    </li></ul><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://purl.org/vocab/aiiso/schema#</code></pre><p>
+          When used in XML documents the suggested prefix is <code>aiiso</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/aiiso/schema#name
+http://purl.org/vocab/aiiso/schema#organizationalUnit</code></pre><p>The term name for a class always starts with an uppercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of each word will be an uppercase character. For example:
+      </p><pre><code>organizationalUnit
+Institution</code></pre><p>The term name for a property always starts with an lowercase character. Where the term name is comprised of multiple 
+      concatenated words, the leading character of the second and each subsequent word will be an uppercase character. For example:
+      </p><pre><code>name
+code</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+      15 classes 
+        
+      and 
+      10 properties 
+        
+      .
+    </p><table><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr><tr><td><a href="#term-Center" title="http://purl.org/vocab/aiiso/schema#Center">Center</a></td><td>class</td><td>A Center is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a center.</td></tr><tr><td><a href="#term-College" title="http://purl.org/vocab/aiiso/schema#College">College</a></td><td>class</td><td>A College is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a college.</td></tr><tr><td><a href="#term-Course" title="http://purl.org/vocab/aiiso/schema#Course">Course</a></td><td>class</td><td>A Course is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a course.</td></tr><tr><td><a href="#term-Department" title="http://purl.org/vocab/aiiso/schema#Department">Department</a></td><td>class</td><td>A Department is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a department.</td></tr><tr><td><a href="#term-Division" title="http://purl.org/vocab/aiiso/schema#Division">Division</a></td><td>class</td><td>A Division is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a division.</td></tr><tr><td><a href="#term-Faculty" title="http://purl.org/vocab/aiiso/schema#Faculty">Faculty</a></td><td>class</td><td>A Faculty is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a faculty.</td></tr><tr><td><a href="#term-Institute" title="http://purl.org/vocab/aiiso/schema#Institute">Institute</a></td><td>class</td><td>An Institute is a group of people recognised by an organization as forming a cohesive group referred to by the organization as an institute.</td></tr><tr><td><a href="#term-Institution" title="http://purl.org/vocab/aiiso/schema#Institution">Institution</a></td><td>class</td><td>An Institution is the upper most level of an academic institution.</td></tr><tr><td><a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">KnowledgeGrouping</a></td><td>class</td><td>A KnowledgeGrouping represents a collection of resources, learning objectives, timetables, and other materials. The more specific subclasses of Subject, Programme, Course and Module are preferred.</td></tr><tr><td><a href="#term-Module" title="http://purl.org/vocab/aiiso/schema#Module">Module</a></td><td>class</td><td>A Module is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a module.</td></tr><tr><td><a href="#term-Programme" title="http://purl.org/vocab/aiiso/schema#Programme">Programme</a></td><td>class</td><td>A Programme is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a programme.</td></tr><tr><td><a href="#term-ResearchGroup" title="http://purl.org/vocab/aiiso/schema#ResearchGroup">ResearchGroup</a></td><td>class</td><td>A Research Group is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a research group.</td></tr><tr><td><a href="#term-School" title="http://purl.org/vocab/aiiso/schema#School">School</a></td><td>class</td><td>A School is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a school. This class refers schools within a higher education institution such as 'Harvard Law School' it does not refer to schools involved in earlier education.</td></tr><tr><td><a href="#term-Subject" title="http://purl.org/vocab/aiiso/schema#Subject">Subject</a></td><td>class</td><td>A Subject is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a subject.</td></tr><tr><td><a href="#term-organizationalUnit" title="http://purl.org/vocab/aiiso/schema#organizationalUnit">organizationalUnit</a></td><td>class</td><td>organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy. More specific classes of Institution, Department, Faculty, School, College, Center, Division and Institute exist were previously subclassed from here. They now subclass foaf:Organization.</td></tr><tr><td><a href="#term-code" title="http://purl.org/vocab/aiiso/schema#code">code</a></td><td>property</td><td>The code used by an Institution to refer to a KnowledgeGrouping or Organization.</td></tr><tr><td><a href="#term-description" title="http://purl.org/vocab/aiiso/schema#description">description</a></td><td>property</td><td>A Description of the KnowledgeGrouping or Organization.</td></tr><tr><td><a href="#term-knowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#knowledgeGrouping">knowledgeGrouping</a></td><td>property</td><td>A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping.</td></tr><tr><td><a href="#term-name" title="http://purl.org/vocab/aiiso/schema#name">name</a></td><td>property</td><td>Deprecated in favour of foaf:name. The name given to a KnowledgeGrouping or Organization.</td></tr><tr><td><a href="#term-organization" title="http://purl.org/vocab/aiiso/schema#organization">organization</a></td><td>property</td><td>A foaf Organization may contain other subsidiary Organizations using organization.</td></tr><tr><td><a href="#term-organizationalUnit" title="http://purl.org/vocab/aiiso/schema#organizationalUnit">organizationalUnit</a></td><td>property</td><td>Deprecated due to poor naming, you should use organization and part_of instead. An organizationalUnit may contain other organizationalUnits using organizationalUnit.</td></tr><tr><td><a href="#term-part_of" title="http://purl.org/vocab/aiiso/schema#part_of">part_of</a></td><td>property</td><td>A foaf Organization may refer to its parent Organizations using part_of.</td></tr><tr><td><a href="#term-responsibilityOf" title="http://purl.org/vocab/aiiso/schema#responsibilityOf">responsibilityOf</a></td><td>property</td><td/></tr><tr><td><a href="#term-responsibleFor" title="http://purl.org/vocab/aiiso/schema#responsibleFor">responsibleFor</a></td><td>property</td><td/></tr><tr><td><a href="#term-teaches" title="http://purl.org/vocab/aiiso/schema#teaches">teaches</a></td><td>property</td><td>An organization may specify the Knowledge Groupings that it teaches using this property.</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Center">Class: Center</h3><div class="description"><p class="comment">A Center is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a center.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Center</td></tr><tr><th>Label:</th><td>Center</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Center" title="http://purl.org/vocab/aiiso/schema#Center">aiiso:Center</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-College">Class: College</h3><div class="description"><p class="comment">A College is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a college.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#College</td></tr><tr><th>Label:</th><td>College</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-College" title="http://purl.org/vocab/aiiso/schema#College">aiiso:College</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Course">Class: Course</h3><div class="description"><p class="comment">A Course is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a course.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Course</td></tr><tr><th>Label:</th><td>Course</td></tr><tr><th>Subclass of</th><td><a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Course" title="http://purl.org/vocab/aiiso/schema#Course">aiiso:Course</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Department">Class: Department</h3><div class="description"><p class="comment">A Department is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a department.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Department</td></tr><tr><th>Label:</th><td>Department</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Department" title="http://purl.org/vocab/aiiso/schema#Department">aiiso:Department</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Division">Class: Division</h3><div class="description"><p class="comment">A Division is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a division.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Division</td></tr><tr><th>Label:</th><td>Division</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Division" title="http://purl.org/vocab/aiiso/schema#Division">aiiso:Division</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Faculty">Class: Faculty</h3><div class="description"><p class="comment">A Faculty is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a faculty.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Faculty</td></tr><tr><th>Label:</th><td>Faculty</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Faculty" title="http://purl.org/vocab/aiiso/schema#Faculty">aiiso:Faculty</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Institute">Class: Institute</h3><div class="description"><p class="comment">An Institute is a group of people recognised by an organization as forming a cohesive group referred to by the organization as an institute.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Institute</td></tr><tr><th>Label:</th><td>Institute</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Institute" title="http://purl.org/vocab/aiiso/schema#Institute">aiiso:Institute</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Institution">Class: Institution</h3><div class="description"><p class="comment">An Institution is the upper most level of an academic institution.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Institution</td></tr><tr><th>Label:</th><td>Institution</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Institution" title="http://purl.org/vocab/aiiso/schema#Institution">aiiso:Institution</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-KnowledgeGrouping">Class: KnowledgeGrouping</h3><div class="description"><p class="comment">A KnowledgeGrouping represents a collection of resources, learning objectives, timetables, and other materials. The more specific subclasses of Subject, Programme, Course and Module are preferred.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</td></tr><tr><th>Label:</th><td>KnowledgeGrouping</td></tr><tr><th>Disjoint with</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a>
+                 is something that, amongst other things, 
+                
+        is not a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Deprecated in favour of foaf:Organization"
+    </li></ul></div></div><div class="class"><h3 id="term-Module">Class: Module</h3><div class="description"><p class="comment">A Module is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a module.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Module</td></tr><tr><th>Label:</th><td>Module</td></tr><tr><th>Subclass of</th><td><a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Module" title="http://purl.org/vocab/aiiso/schema#Module">aiiso:Module</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Programme">Class: Programme</h3><div class="description"><p class="comment">A Programme is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a programme.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Programme</td></tr><tr><th>Label:</th><td>Programme</td></tr><tr><th>Subclass of</th><td><a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Programme" title="http://purl.org/vocab/aiiso/schema#Programme">aiiso:Programme</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-ResearchGroup">Class: ResearchGroup</h3><div class="description"><p class="comment">A Research Group is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a research group.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#ResearchGroup</td></tr><tr><th>Label:</th><td>Research Group</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-ResearchGroup" title="http://purl.org/vocab/aiiso/schema#ResearchGroup">aiiso:ResearchGroup</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-School">Class: School</h3><div class="description"><p class="comment">A School is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a school. This class refers schools within a higher education institution such as 'Harvard Law School' it does not refer to schools involved in earlier education.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#School</td></tr><tr><th>Label:</th><td>School</td></tr><tr><th>Subclass of</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-School" title="http://purl.org/vocab/aiiso/schema#School">aiiso:School</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-Subject">Class: Subject</h3><div class="description"><p class="comment">A Subject is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a subject.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#Subject</td></tr><tr><th>Label:</th><td>Subject</td></tr><tr><th>Subclass of</th><td><a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+              
+                  A <a href="#term-Subject" title="http://purl.org/vocab/aiiso/schema#Subject">aiiso:Subject</a>
+                 is something that, amongst other things, 
+                
+        is a
+        <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li></ul></div></div><div class="class"><h3 id="term-organizationalUnit">Class: organizationalUnit</h3><div class="description"><p class="comment">organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy. More specific classes of Institution, Department, Faculty, School, College, Center, Division and Institute exist were previously subclassed from here. They now subclass foaf:Organization.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#organizationalUnit</td></tr><tr><th>Label:</th><td>organizational Unit</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Deprecated in favour of foaf:Organization"
+    </li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-code">Property: code</h3><div class="description"><p class="comment">The code used by an Institution to refer to a KnowledgeGrouping or Organization.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#code</td></tr><tr><th>Label:</th><td>code</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a>
+					 or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-code" title="http://purl.org/vocab/aiiso/schema#code">aiiso:code</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a> or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li><li class="historyNote">2008-05-20 - semantic change by Rob Styles:
+			"Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both."
+    </li></ul></div></div><div class="property"><h3 id="term-description">Property: description</h3><div class="description"><p class="comment">A Description of the KnowledgeGrouping or Organization.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#description</td></tr><tr><th>Label:</th><td>description</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a>
+					 or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-description" title="http://purl.org/vocab/aiiso/schema#description">aiiso:description</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a> or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li><li class="historyNote">2008-05-20 - semantic change by Rob Styles:
+			"Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both."
+    </li></ul></div></div><div class="property"><h3 id="term-knowledgeGrouping">Property: knowledgeGrouping</h3><div class="description"><p class="comment">A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#knowledgeGrouping</td></tr><tr><th>Label:</th><td>knowledgeGrouping</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a>
+					 or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-knowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#knowledgeGrouping">aiiso:knowledgeGrouping</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a> or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li><li class="historyNote">2008-05-20 - semantic change by Rob Styles:
+			"Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both."
+    </li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Deprecated due to poor and ambiguous naming"
+    </li></ul></div></div><div class="property"><h3 id="term-name">Property: name</h3><div class="description"><p class="comment">Deprecated in favour of foaf:name. The name given to a KnowledgeGrouping or Organization.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#name</td></tr><tr><th>Label:</th><td>name</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a>
+					 or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Subproperty of</th><td><a href="http://www.w3.org/2000/01/rdf-schema#Label">rdfs:Label</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-name" title="http://purl.org/vocab/aiiso/schema#name">aiiso:name</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a> or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li><li class="historyNote">2008-05-20 - semantic change by Rob Styles:
+			"Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both."
+    </li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Deprecated in favour of foaf:name"
+    </li></ul></div></div><div class="property"><h3 id="term-organization">Property: organization</h3><div class="description"><p class="comment">A foaf Organization may contain other subsidiary Organizations using organization.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#organization</td></tr><tr><th>Label:</th><td>organization</td></tr><tr><th>Domain</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Range</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Inverse of</th><td><a href="#term-part_of" title="http://purl.org/vocab/aiiso/schema#part_of">aiiso:part_of</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-organization" title="http://purl.org/vocab/aiiso/schema#organization">aiiso:organization</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-09-25</span> - first issued</li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"introduced to replace organizationalUnit"
+    </li></ul></div></div><div class="property"><h3 id="term-organizationalUnit">Property: organizationalUnit</h3><div class="description"><p class="comment">Deprecated due to poor naming, you should use organization and part_of instead. An organizationalUnit may contain other organizationalUnits using organizationalUnit.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#organizationalUnit</td></tr><tr><th>Label:</th><td>organizationalUnit</td></tr><tr><th>Domain</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Range</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-organizationalUnit" title="http://purl.org/vocab/aiiso/schema#organizationalUnit">aiiso:organizationalUnit</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-14</span> - first issued</li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Deprecated due to poor and ambiguous naming"
+    </li></ul></div></div><div class="property"><h3 id="term-part_of">Property: part_of</h3><div class="description"><p class="comment">A foaf Organization may refer to its parent Organizations using part_of.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#part_of</td></tr><tr><th>Label:</th><td>part of</td></tr><tr><th>Domain</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Range</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Inverse of</th><td><a href="#term-organization" title="http://purl.org/vocab/aiiso/schema#organization">aiiso:organization</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-part_of" title="http://purl.org/vocab/aiiso/schema#part_of">aiiso:part_of</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-09-25</span> - first issued</li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"introduced to replace organizationalUnit"
+    </li></ul></div></div><div class="property"><h3 id="term-responsibilityOf">Property: responsibilityOf</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#responsibilityOf</td></tr><tr><th>Label:</th><td>responsibility of</td></tr><tr><th>Domain</th><td>Union of 
+				
+					<a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a>
+					 or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a>
+				
+			</td></tr><tr><th>Range</th><td><a href="http://xmlns.com/foaf/spec/Agent">http://xmlns.com/foaf/spec/Agent</a></td></tr><tr><th>Inverse of</th><td><a href="#term-responsibleFor" title="http://purl.org/vocab/aiiso/schema#responsibleFor">aiiso:responsibleFor</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-responsibilityOf" title="http://purl.org/vocab/aiiso/schema#responsibilityOf">aiiso:responsibilityOf</a>
+                    implies being
+                  
+          something that, amongst other things, is a 
+          <a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a> or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-05-20</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-responsibleFor">Property: responsibleFor</h3><div class="description"><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#responsibleFor</td></tr><tr><th>Label:</th><td>responsible for</td></tr><tr><th>Domain</th><td><a href="http://xmlns.com/foaf/spec/Agent">http://xmlns.com/foaf/spec/Agent</a></td></tr><tr><th>Range</th><td>Union of 
+				
+					<a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a>
+					 or a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a>
+				
+			</td></tr><tr><th>Inverse of</th><td><a href="#term-responsibilityOf" title="http://purl.org/vocab/aiiso/schema#responsibilityOf">aiiso:responsibilityOf</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-responsibleFor" title="http://purl.org/vocab/aiiso/schema#responsibleFor">aiiso:responsibleFor</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://xmlns.com/foaf/spec/Agent">http://xmlns.com/foaf/spec/Agent</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-09-25</span> - first issued</li><li class="historyNote">2008-09-25 - semantic change by Rob Styles:
+			"Added as inverse of Responsibility Of"
+    </li></ul></div></div><div class="property"><h3 id="term-teaches">Property: teaches</h3><div class="description"><p class="comment">An organization may specify the Knowledge Groupings that it teaches using this property.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://purl.org/vocab/aiiso/schema#teaches</td></tr><tr><th>Label:</th><td>teaches</td></tr><tr><th>Domain</th><td><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr><tr><th>Range</th><td><a href="#term-KnowledgeGrouping" title="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">aiiso:KnowledgeGrouping</a></td></tr><tr><th>Paraphrase (experimental)</th><td>
+                    Having a <a href="#term-teaches" title="http://purl.org/vocab/aiiso/schema#teaches">aiiso:teaches</a>
+                    implies being
+                   something that, amongst other things, is a <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2008-09-25</span> - first issued</li></ul></div></div><h2 id="sec-schema">RDF Schema</h2><p>The schema included here is informational only. The normative schema can be found at <a href="http://purl.org/vocab/aiiso/schema-20080925.rdf">http://purl.org/vocab/aiiso/schema-20080925.rdf</a></p><pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:vs</span>="<span class="attrVal">http://www.w3.org/2003/06/sw-vocab-status/ns#</span>"
+   <span class="attr">xmlns:foaf</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/</span>"
+   <span class="attr">xmlns:xsd</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:aiiso</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"/>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2008-05-20</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Academic Institution Internal Structure Ontology (AIISO)</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The Academic Institution Internal Structure Ontology (AIISO) provides </span>
+      <span class="text">classes and properties to describe the internal organizational structure </span>
+      <span class="text">of an academic institution. AIISO is designed to work in partnership </span>
+      <span class="text">with Participation (http://purl.org/vocab/participation/schema), FOAF </span>
+      <span class="text">(http://xmlns.com/foaf/0.1/) and aiiso-roles </span>
+      <span class="text">(http://purl.org/vocab/aiiso-roles/schema) to describe the roles that </span>
+      <span class="text">people play within an institution.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/aiiso/schema-20080925</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Rob Styles</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Nadeem Shabir</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:contributor</span><span class="elem">&gt;</span><span class="text">Ian Corns</span><span class="elem">&lt;/dc:contributor&gt;</span>
+    <span class="elem">&lt;dc:contributor</span><span class="elem">&gt;</span><span class="text">Sarah Bartlett</span><span class="elem">&lt;/dc:contributor&gt;</span>
+    <span class="elem">&lt;dc:contributor</span><span class="elem">&gt;</span><span class="text">Chris Wallace</span><span class="elem">&lt;/dc:contributor&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span><span class="text">Copyright © 2008 Talis Information Ltd</span><span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/aiiso/schema#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">aiiso</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+    <span class="elem">&lt;vann:usageNote</span> <span class="attr">rdf:resource</span>="<span class="attrVal">usagenote.html</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:replaces</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema-20080520</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema-20080925.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema-20080925.rdf</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">First cut of the ontology published</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-14</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Corrected classes with more than one possible domain class to use owl:unionOf</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-20</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added statement of responsibility for both knowledgeGrouping and organizationalUnit</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-20</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Nadeem Shabir</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Changed subclassing to subclass from foaf:Organization and deprecated organizationalUnit</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated name in favour of foaf:name</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"/>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.0/uk/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#organizationalUnit</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;vs:term_status</span><span class="elem">&gt;</span><span class="text">Deprecated</span><span class="elem">&lt;/vs:term_status&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">organizational Unit</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">organizationalUnit is now deprecated, it was used to describe a group of </span>
+      <span class="text">people that form a part of an organizations institutional hierarchy. </span>
+      <span class="text">More specific classes of Institution, Department, Faculty, School, </span>
+      <span class="text">College, Center, Division and Institute exist were previously subclassed </span>
+      <span class="text">from here. They now subclass foaf:Organization.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated in favour of foaf:Organization</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Institution</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Institution</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">An Institution is the upper most level of an academic institution.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Department</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Department</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Department is a group of people recognised by an organization as </span>
+      <span class="text">forming a cohesive group referred to by the organization as a department.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Faculty</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Faculty</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Faculty is a group of people recognised by an organization as forming </span>
+      <span class="text">a cohesive group referred to by the organization as a faculty.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#School</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">School</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A School is a group of people recognised by an organization as forming a </span>
+      <span class="text">cohesive group referred to by the organization as a school. This class </span>
+      <span class="text">refers schools within a higher education institution such as 'Harvard </span>
+      <span class="text">Law School' it does not refer to schools involved in earlier education.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#College</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">College</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A College is a group of people recognised by an organization as forming </span>
+      <span class="text">a cohesive group referred to by the organization as a college.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Center</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Center</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Center is a group of people recognised by an organization as forming a </span>
+      <span class="text">cohesive group referred to by the organization as a center.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Division</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Division</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Division is a group of people recognised by an organization as forming </span>
+      <span class="text">a cohesive group referred to by the organization as a division.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Institute</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Institute</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">An Institute is a group of people recognised by an organization as </span>
+      <span class="text">forming a cohesive group referred to by the organization as an institute.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#ResearchGroup</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Research Group</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Research Group is a group of people recognised by an organization as </span>
+      <span class="text">forming a cohesive group referred to by the organization as a research </span>
+      <span class="text">group.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">KnowledgeGrouping</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A KnowledgeGrouping represents a collection of resources, learning </span>
+      <span class="text">objectives, timetables, and other materials. The more specific </span>
+      <span class="text">subclasses of Subject, Programme, Course and Module are preferred.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:disjointWith</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated in favour of foaf:Organization</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Programme</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Programme</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Programme is a KnowledgeGrouping that represents a cohesive collection </span>
+      <span class="text">of educational material referred to by the owning organization as a </span>
+      <span class="text">programme.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Subject</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Subject</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Subject is a KnowledgeGrouping that represents a cohesive collection </span>
+      <span class="text">of educational material referred to by the owning organization as a </span>
+      <span class="text">subject.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Course</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Course</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Course is a KnowledgeGrouping that represents a cohesive collection of </span>
+      <span class="text">educational material referred to by the owning organization as a course.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdfs:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#Module</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Module</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A Module is a KnowledgeGrouping that represents a cohesive collection of </span>
+      <span class="text">educational material referred to by the owning organization as a module.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdfs:Class&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#name</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;vs:term_status</span><span class="elem">&gt;</span><span class="text">Deprecated</span><span class="elem">&lt;/vs:term_status&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">name</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">Deprecated in favour of foaf:name. The name given to a KnowledgeGrouping </span>
+      <span class="text">or Organization.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:subPropertyOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Label</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-20</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated in favour of foaf:name</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#code</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">code</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">The code used by an Institution to refer to a KnowledgeGrouping or </span>
+      <span class="text">Organization.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-20</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#description</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">description</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+<span class="text">A Description of the KnowledgeGrouping or Organization.</span><span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-20</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#organizationalUnit</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;vs:term_status</span><span class="elem">&gt;</span><span class="text">Deprecated</span><span class="elem">&lt;/vs:term_status&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">organizationalUnit</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">Deprecated due to poor naming, you should use organization and part_of </span>
+      <span class="text">instead. An organizationalUnit may contain other organizationalUnits </span>
+      <span class="text">using organizationalUnit.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated due to poor and ambiguous naming</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#organization</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">organization</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A foaf Organization may contain other subsidiary Organizations using </span>
+      <span class="text">organization.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-09-25</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">introduced to replace organizationalUnit</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#part_of</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#part_of</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">part of</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A foaf Organization may refer to its parent Organizations using part_of.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-09-25</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">introduced to replace organizationalUnit</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#organization</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#knowledgeGrouping</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;vs:term_status</span><span class="elem">&gt;</span><span class="text">Deprecated</span><span class="elem">&lt;/vs:term_status&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">knowledgeGrouping</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">A KnowledgeGrouping may be contained by another KnowledgeGrouping or an </span>
+      <span class="text">organizationalUnit using knowledgeGrouping.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-14</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-05-20</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Deprecated due to poor and ambiguous naming</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#teaches</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">teaches</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">&gt;</span>
+      <span class="text">An organization may specify the Knowledge Groupings that it teaches </span>
+      <span class="text">using this property.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-09-25</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#responsibilityOf</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">responsibility of</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:domain&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/spec/Agent</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-05-20</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#responsibleFor</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+  
+  <span class="elem">&lt;rdf:Property</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#responsibleFor</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">responsible for</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;rdfs:range</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Class</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:unionOf</span> <span class="attr">rdf:parseType</span>="<span class="attrVal">Collection</span>"<span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</span>"<span class="elem">/&gt;</span>
+          <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://xmlns.com/foaf/0.1/Organization</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:unionOf&gt;</span>
+      <span class="elem">&lt;/owl:Class&gt;</span>
+    <span class="elem">&lt;/rdfs:range&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://xmlns.com/foaf/spec/Agent</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2008-09-25</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added as inverse of Responsibility Of</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2008-09-25</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Rob Styles</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;owl:inverseOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/aiiso/schema#responsibilityOf</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/rdf:Property&gt;</span>
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.0/uk/">Creative Commons License</a>.<p>The following section is informational only, please refer to the 
+			<a href="http://creativecommons.org/licenses/by/2.0/uk/">Original License</a> for complete license terms.
+		</p><p>This license grants the following rights:</p><ul><li>making multiple copies
+						(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+					</li><li>distribution, public display, and publicly performance
+						(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+					</li><li>creation and distribution of derivative works
+						(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+					</li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license notices be kept intact
+						(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+					</li><li>credit be given to copyright holder and/or author
+						(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+					</li></ul></p><div id="footer">
+      Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

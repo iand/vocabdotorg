@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:gpt="http://purl.org/vocab/riro/gpt#">
+<!--
+  Pattern from SPARQL example:
+
+  PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+  SELECT ?name ?mbox
+  WHERE { ?x foaf:name  ?name ;
+          foaf:mbox  ?mbox .
+          FILTER isLiteral(?mbox) }
+-->
+  <gpt:Filter>
+    <gpt:onPattern>
+      <gpt:Graph>
+        <gpt:allOf rdf:parseType="Collection">
+          <gpt:Statement>
+            <gpt:subject rdf:nodeID="x"/>
+            <gpt:predicate rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+            <gpt:object rdf:nodeID="name"/>
+          </gpt:Statement>
+          <gpt:Statement>
+            <gpt:subject rdf:nodeID="x"/>
+            <gpt:predicate rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+            <gpt:object rdf:nodeID="mbox"/>
+          </gpt:Statement>
+        </gpt:allOf>
+      </gpt:Graph>
+    </gpt:onPattern>
+    <gpt:valueConstraint>
+      <gpt:ISLITERAL>
+        <gpt:arg1 rdf:nodeID="mbox"/>
+      </gpt:ISLITERAL>
+    </gpt:valueConstraint>
+  </gpt:Filter>
+</rdf:RDF>
+

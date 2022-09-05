@@ -1,0 +1,231 @@
+﻿<!DOCTYPE rdf:RDF [
+    <!ENTITY changeset  "http://purl.org/vocab/changeset/schema#" >
+    <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY foaf  "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY cc  "http://web.resource.org/cc/" >
+    <!ENTITY vocabid  "http://purl.org/vocab/changeset/schema-20060321" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:vann="http://purl.org/vocab/vann/" 
+    xmlns:dct="http://purl.org/dc/terms/" 
+    xmlns:dctype="http://purl.org/dc/dcmitype/" 
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://vocab.org/changeset/schema"
+    >
+    
+
+  <owl:Ontology rdf:about="http://purl.org/vocab/changeset/schema" dc:date="2006-03-21">
+    <dc:title xml:lang="en">Changeset</dc:title>
+    <rdfs:comment xml:lang="en">
+      This vocabulary defines a set of terms for describing changes to resource descriptions.
+    </rdfs:comment>
+    <rdfs:comment xml:lang="en">
+      The vocabulary introduces the notion of a ChangeSet which encapsulates the delta between two versions of a 
+      resource description. In this context a resource description is the set of triples that in some way comprise a 
+      description of a resource. The delta is represented by two sets of triples: additions and removals. A ChangeSet can be used to 
+      modify a resource description by first removing all triples from the description that are in the removals set and
+      adding the triples in the additions set.
+    </rdfs:comment>
+
+
+    <dc:identifier>&vocabid;</dc:identifier>
+    <dct:isVersionOf rdf:resource="&changeset;"/>
+    <dc:creator>Sam Tunnicliffe</dc:creator>
+    <dc:creator>Ian Davis &lt;http://purl.org/NET/iand&gt;</dc:creator>
+    <dc:rights>Copyright © 2005 Talis Information Ltd.</dc:rights>
+    <dct:replaces rdf:resource="http://purl.org/vocab/changeset/schema-20051214"/>
+    <vann:preferredNamespaceUri>&changeset;</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>cs</vann:preferredNamespacePrefix>
+    <vann:example rdf:resource="./changesets-example-20060321.html" dc:title="A Simple ChangeSet"/>
+    <vann:example rdf:resource="./changesets-example2-20060321.html" dc:title="Linked ChangeSets"/>
+    <vann:example rdf:resource="./changesets-example3-20060321.html" dc:title="Implementing Undo With ChangeSets"/>
+
+    <dct:hasFormat>
+      <dctype:Text rdf:about="&vocabid;.html">
+        <dc:format>
+          <dct:IMT>
+            <rdf:value>text/html</rdf:value>
+            <rdfs:label xml:lang="en">HTML</rdfs:label>
+          </dct:IMT>
+        </dc:format>
+      </dctype:Text>
+    </dct:hasFormat>
+
+    <dct:hasFormat>
+      <dctype:Text rdf:about="&vocabid;.rdf">
+        <dc:format>
+          <dct:IMT>
+            <rdf:value>application/rdf+xml</rdf:value>
+            <rdfs:label xml:lang="en">RDF</rdfs:label>
+          </dct:IMT>
+        </dc:format>
+      </dctype:Text>
+    </dct:hasFormat>
+
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:changeNote rdf:value="Improved documentation" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Introduced statement property" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:changeNote rdf:value="Fixed invalid RDF" dc:date="2006-06-23" dc:creator="Ian Davis"/>
+  </owl:Ontology>
+
+  <owl:ObjectProperty rdf:about="&changeset;statement">
+    <rdfs:label xml:lang="en">statement</rdfs:label>        
+    <skos:definition xml:lang="en">a triple included in this set of changes</skos:definition>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <dct:issued>2006-03-21</dct:issued>
+  </owl:ObjectProperty>
+
+
+  <owl:ObjectProperty rdf:about="&changeset;addition">
+    <rdfs:label xml:lang="en">addition</rdfs:label>        
+    <skos:definition xml:lang="en">a triple to be added to the resource description</skos:definition>
+    <rdfs:comment xml:lang="en">
+      By convention the subject of the triple being added should be the same as the subjectOfChange
+    </rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="&changeset;statement"/>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:changeNote rdf:value="Added definitition and documentation" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Made owl:ObjectProperty" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Made a sub-property of statement" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+  </owl:ObjectProperty>
+
+
+  <owl:ObjectProperty rdf:about="&changeset;removal">
+    <rdfs:label xml:lang="en">removal</rdfs:label>        
+    <skos:definition xml:lang="en">a triple to be removed from the resource description</skos:definition>
+    <rdfs:comment xml:lang="en">
+      By convention the subject of the triple being removed should be the same as the subjectOfChange
+    </rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="&changeset;statement"/>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:changeNote rdf:value="Added definitition and documentation" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Made owl:ObjectProperty" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Made a sub-property of statement" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+  </owl:ObjectProperty>
+
+
+  <owl:ObjectProperty rdf:about="&changeset;subjectOfChange">
+    <rdfs:label xml:lang="en">subjectOfChange</rdfs:label>        
+    <skos:definition xml:lang="en">the resource to which this set of changes applies</skos:definition>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:changeNote rdf:value="Added definitition and documentation" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Made owl:ObjectProperty" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+  </owl:ObjectProperty>
+
+
+  <owl:ObjectProperty rdf:about="&changeset;precedingChangeSet">
+    <rdfs:label xml:lang="en">precedingChangeSet</rdfs:label>        
+    <skos:definition xml:lang="en">the changeset that immediately precedes this one</skos:definition>
+    <rdfs:comment xml:lang="en">
+      This property can be used to build a history of changes to a particular resource description. The first
+      ChangeSet in the history will have no precedingChangeSet property. Each subsequent ChangeSet added
+      to the history references the preceding one resulting in a singly-linked list of changes.  Care must be taken
+      not to introduce cycles in the history.
+    </rdfs:comment>
+    <rdfs:comment xml:lang="en">
+      In systems that assume a closed world, the most recent ChangeSet for a particular resource description 
+      can be discovered by looking for the ChangeSet that is not the value of a precedingChangeSet property. 
+      Conversely, the earliest ChangeSet is the one that is not the subject of a precedingChangeSet property.
+    </rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <rdfs:range rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:changeNote rdf:value="Added definitition and documentation" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Made owl:ObjectProperty" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+  </owl:ObjectProperty>
+
+
+  <owl:DatatypeProperty rdf:about="&changeset;createdDate">
+    <rdfs:label xml:lang="en">createdDate</rdfs:label>      
+    <skos:definition xml:lang="en">the date that the changeset was created</skos:definition>
+    <rdfs:comment xml:lang="en">
+      The date should be in W3CDTF format
+    </rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:historyNote rdf:value="Made owl:DatatypeProperty" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+  </owl:DatatypeProperty>
+
+
+  <owl:DatatypeProperty rdf:about="&changeset;changeReason">
+    <rdfs:label xml:lang="en">changeReason</rdfs:label>
+    <skos:definition xml:lang="en">a  short, human readable description of the purpose for the changeset</skos:definition>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:historyNote rdf:value="Made owl:DatatypeProperty" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+  </owl:DatatypeProperty>  
+
+
+  <owl:DatatypeProperty rdf:about="&changeset;creatorName">
+    <rdfs:label xml:lang="en">creatorName</rdfs:label>
+    <skos:definition xml:lang="en">the name of the entity responsible for creating the changeset</skos:definition>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:historyNote rdf:value="Made owl:DatatypeProperty" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+  </owl:DatatypeProperty>
+
+
+  <owl:Class rdf:about="&changeset;ChangeSet">
+    <rdfs:label xml:lang="en">ChangeSet</rdfs:label>
+    <skos:definition xml:lang="en">The encapsulation of a delta between two versions of a resource description</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+    <dct:issued>2005-12-14</dct:issued>
+    <skos:changeNote rdf:value="Improved documentation" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+    <skos:historyNote rdf:value="Added property cardinality restrictions" dc:date="2006-03-21" dc:creator="Ian Davis"/>
+
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&changeset;statement"/>
+            <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&changeset;previousChangeSet"/>
+            <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&changeset;subjectOfChange"/>
+            <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&changeset;createdDate"/>
+            <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&changeset;creatorName"/>
+            <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&changeset;changeReason"/>
+            <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+</rdf:RDF>

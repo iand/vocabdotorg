@@ -1,0 +1,36 @@
+# RIRO Service description example
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix sdl: <http://purl.org/vocab/riro/sdl#>.
+@prefix lsrn: <http://www.lsrn.org/lsrn/name.owl#>.
+@prefix lsrs: <http://www.lsrn.org/lsrn/schema.owl#>.
+@prefix : <http://purl.org/vocab/riro/gpt#>.
+
+<http://riro.lsrn.org/resolver> a sdl:RIROService;
+  rdfs:label "LSRN Resolver";
+  dc:creator "Sergei Egorov";
+  foaf:homepage <http://www.lsrn.org/resolver/>;
+  sdl:commandName "Resolve LSRN to Record, URLs";
+  sdl:commandDescription "Resolve LSRN to the corresponging database record and its URLs";
+  sdl:fileUnder "Life Sciences/Identity Services";
+  sdl:inputPattern
+    [a :Filter; :onPattern
+      [a :Graph; :allOf 
+        ([a :Statement;  :subject _:n;  :predicate rdf:type;  :object lsrn:Name]
+         [a :Statement;  :subject _:n;  :predicate rdf:value;  :object _:lsrn])];
+      :valueConstraint
+        [a :ISLITERAL; :arg1 _:lsrn]];
+  sdl:outputTemplate
+    [a :Graph; :allOf 
+      ([a :Statement;  :subject _:n;  :predicate lsrn:schema;   :object _:s]
+       [a :Statement;  :subject _:s;  :predicate rdf:type;      :object lsrs:Schema]
+       [a :Statement;  :subject _:s;  :predicate rdf:label;     :object _:sn]
+       [a :Statement;  :subject _:n;  :predicate lsrn:id;       :object _:i]
+       [a :Statement;  :subject _:r;  :predicate dc:identifier; :object _:n]
+       [a :Statement;  :subject _:r;  :predicate rdf:type;      :object lsrn:Record]
+       [a :Statement;  :subject _:r;  :predicate rdfs:seeAlso;  :object _:d]
+       [a :Statement;  :subject _:d;  :predicate rdf:type;      :object foaf:Document])];
+  sdl:method "get".

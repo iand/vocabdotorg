@@ -1,0 +1,62 @@
+XSLT=xsltproc
+
+all: psych-vocab-20040427.html psych-term-profile-20040427.html psych-term-PsychologicalProfile-20040427.html psych-term-PoliticalCompassProfile-20040427.html psych-term-social-20040427.html psych-term-economic-20040427.html
+	cp -f psych-vocab-20040427.html index.html
+	cp -f psych-vocab-20040427.rdf index.rdf
+	cp -f psych-term-profile-20040427.html profile.html
+	cp -f psych-term-profile-20040427.rdf profile.rdf
+	cp -f psych-term-PsychologicalProfile-20040427.html PsychologicalProfile.html
+	cp -f psych-term-PsychologicalProfile-20040427.rdf PsychologicalProfile.rdf
+	cp -f psych-term-PoliticalCompassProfile-20040427.html PoliticalCompassProfile.html
+	cp -f psych-term-PoliticalCompassProfile-20040427.rdf PoliticalCompassProfile.rdf
+	cp -f psych-term-social-20040427.html social.html
+	cp -f psych-term-social-20040427.rdf social.rdf
+	cp -f psych-term-economic-20040427.html economic.html
+	cp -f psych-term-economic-20040427.rdf economic.rdf
+
+psych-vocab-20040427.html: psych-vocab-20040427.rdf
+	$(XSLT) $(XSLTOPT)  -o psych-vocab-20040427.html ../2004/03/toolchain/vocab-html-docs.xsl psych-vocab-20040427.rdf
+
+psych-term-profile-20040427.html: psych-term-profile-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/profile'"  --param identifier "'http://purl.org/vocab/psychological-psych-term-profile-20040427'"  -o psych-term-profile-20040427.html ../2004/03/toolchain/vocab-html-docs.xsl psych-term-profile-20040427.rdf
+
+psych-term-profile-20040427.rdf: psych-vocab-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/profile'"  --param identifier "'http://purl.org/vocab/psychological-psych-term-profile-20040427'"  -o psych-term-profile-20040427.rdf ../2004/03/toolchain/vocab-extract-term-rdf.xsl psych-vocab-20040427.rdf
+
+psych-term-PsychologicalProfile-20040427.html: psych-term-PsychologicalProfile-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/PsychologicalProfile'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-PsychologicalProfile-20040427'"  -o psych-term-PsychologicalProfile-20040427.html ../2004/03/toolchain/vocab-html-docs.xsl psych-term-PsychologicalProfile-20040427.rdf
+
+psych-term-PsychologicalProfile-20040427.rdf: psych-vocab-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/PsychologicalProfile'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-PsychologicalProfile-20040427'"  -o psych-term-PsychologicalProfile-20040427.rdf ../2004/03/toolchain/vocab-extract-term-rdf.xsl psych-vocab-20040427.rdf
+
+psych-term-PoliticalCompassProfile-20040427.html: psych-term-PoliticalCompassProfile-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/PoliticalCompassProfile'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-PoliticalCompassProfile-20040427'"  -o psych-term-PoliticalCompassProfile-20040427.html ../2004/03/toolchain/vocab-html-docs.xsl psych-term-PoliticalCompassProfile-20040427.rdf
+
+psych-term-PoliticalCompassProfile-20040427.rdf: psych-vocab-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/PoliticalCompassProfile'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-PoliticalCompassProfile-20040427'"  -o psych-term-PoliticalCompassProfile-20040427.rdf ../2004/03/toolchain/vocab-extract-term-rdf.xsl psych-vocab-20040427.rdf
+
+psych-term-social-20040427.html: psych-term-social-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/social'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-social-20040427'"  -o psych-term-social-20040427.html ../2004/03/toolchain/vocab-html-docs.xsl psych-term-social-20040427.rdf
+
+psych-term-social-20040427.rdf: psych-vocab-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/social'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-social-20040427'"  -o psych-term-social-20040427.rdf ../2004/03/toolchain/vocab-extract-term-rdf.xsl psych-vocab-20040427.rdf
+
+psych-term-economic-20040427.html: psych-term-economic-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/economic'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-economic-20040427'"  -o psych-term-economic-20040427.html ../2004/03/toolchain/vocab-html-docs.xsl psych-term-economic-20040427.rdf
+
+psych-term-economic-20040427.rdf: psych-vocab-20040427.rdf
+	$(XSLT) $(XSLTOPT)  --param term "'http://purl.org/vocab/psychological-profile/economic'"  --param identifier "'http://purl.org/vocab/psychological-profile/psych-term-economic-20040427'"  -o psych-term-economic-20040427.rdf ../2004/03/toolchain/vocab-extract-term-rdf.xsl psych-vocab-20040427.rdf
+
+clean: 
+	rm -f psych-term-profile-20040427.html
+	rm -f psych-term-profile-20040427.rdf
+	rm -f psych-term-PsychologicalProfile-20040427.html
+	rm -f psych-term-PsychologicalProfile-20040427.rdf
+	rm -f psych-term-PoliticalCompassProfile-20040427.html
+	rm -f psych-term-PoliticalCompassProfile-20040427.rdf
+	rm -f psych-term-social-20040427.html
+	rm -f psych-term-social-20040427.rdf
+	rm -f psych-term-economic-20040427.html
+	rm -f psych-term-economic-20040427.rdf
+	rm -f psych-vocab-20040427.html
+

@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /resourcelist
+RewriteRule .*  index.php [L]
+
+
+

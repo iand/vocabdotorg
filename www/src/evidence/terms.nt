@@ -1,0 +1,42 @@
+<http://vocab.org/evidence/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.org/evidence/terms> <http://purl.org/dc/terms/title> "Evidence"@en .
+<http://vocab.org/evidence/terms> <http://www.w3.org/2000/01/rdf-schema#comment> "This vocabulary defines terms for describing forms of evidence and the hypotheses that may be formed from it. It was created at vocamp oxford 2008"@en .
+<http://iandavis.com/id/me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://iandavis.com/id/me> <http://xmlns.com/foaf/0.1/name> "Ian Davis" .
+<http://vocab.org/evidence/terms> <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Ben O'Steen" .
+<http://vocab.org/evidence/terms> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Keith Alexander" .
+<http://vocab.org/evidence/terms> <http://purl.org/dc/terms/contributor> _:genid2 .
+<http://vocab.org/evidence/terms/Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/evidence/terms/Hypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "hypothesis" .
+<http://vocab.org/evidence/terms/Hypothesis> <http://www.w3.org/2004/02/skos/core#definition> "a reasoned proposal suggesting a possible correlation between multiple phenomena" .
+<http://vocab.org/evidence/terms/Hypothesis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/evidence/terms> .
+<http://vocab.org/evidence/terms/Conclusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/evidence/terms/Conclusion> <http://www.w3.org/2000/01/rdf-schema#label> "conclusion" .
+<http://vocab.org/evidence/terms/Conclusion> <http://www.w3.org/2004/02/skos/core#definition> "a proposition arrived at after consideration of evidence" .
+<http://vocab.org/evidence/terms/Conclusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/evidence/terms> .
+<http://vocab.org/evidence/terms/Evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.org/evidence/terms/Evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence" .
+<http://vocab.org/evidence/terms/Evidence> <http://www.w3.org/2004/02/skos/core#definition> "something that is used to determine or demonstrate the truth of a hypothesis" .
+<http://vocab.org/evidence/terms/Evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/evidence/terms> .
+<http://vocab.org/evidence/terms/conclusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://vocab.org/evidence/terms/conclusion> <http://www.w3.org/2000/01/rdf-schema#label> "conclusion" .
+<http://vocab.org/evidence/terms/conclusion> <http://www.w3.org/2004/02/skos/core#definition> "a conclusion derived from a hypothesis" .
+<http://vocab.org/evidence/terms/conclusion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/evidence/terms/Hypothesis> .
+<http://vocab.org/evidence/terms/conclusion> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/evidence/terms/Conclusion> .
+<http://vocab.org/evidence/terms/conclusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/evidence/terms> .
+<http://vocab.org/evidence/terms/supportingEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://vocab.org/evidence/terms/supportingEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "supporting evidence" .
+<http://vocab.org/evidence/terms/supportingEvidence> <http://www.w3.org/2004/02/skos/core#definition> "evidence that supports this hypothesis" .
+<http://vocab.org/evidence/terms/supportingEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/evidence/terms/Hypothesis> .
+<http://vocab.org/evidence/terms/supportingEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/evidence/terms/Evidence> .
+<http://vocab.org/evidence/terms/supportingEvidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/evidence/terms> .
+<http://vocab.org/evidence/terms/refutingEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://vocab.org/evidence/terms/refutingEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "refuting evidence" .
+<http://vocab.org/evidence/terms/refutingEvidence> <http://www.w3.org/2004/02/skos/core#definition> "evidence that refutes this hypothesis" .
+<http://vocab.org/evidence/terms/refutingEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/evidence/terms/Hypothesis> .
+<http://vocab.org/evidence/terms/refutingEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/evidence/terms/Evidence> .
+<http://vocab.org/evidence/terms/refutingEvidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/evidence/terms> .

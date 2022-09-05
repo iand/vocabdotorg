@@ -1,0 +1,20 @@
+<http://vocab.org/desc/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.org/desc/schema> <http://purl.org/dc/terms/title> "A Schema for Linking Resource Descriptions" .
+<http://vocab.org/desc/schema> <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> .
+<http://vocab.org/desc/schema> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://vocab.org/desc/schema/" .
+<http://vocab.org/desc/schema> <http://purl.org/vocab/vann/preferredNamespacePrefix> "desc" .
+<http://vocab.org/desc/schema> <http://purl.org/dc/terms/rights> "This work is hereby released into the Public Domain. To view a copy of the public domain dedication, visit http://creativecommons.org/licenses/publicdomain or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA." .
+<http://vocab.org/desc/schema/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.org/desc/schema/description> <http://www.w3.org/2000/01/rdf-schema#label> "Description" .
+<http://vocab.org/desc/schema/description> <http://www.w3.org/2004/02/skos/core#definition> "the relationship between a resource and its description." .
+<http://vocab.org/desc/schema/description> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of a resource contains data about that resource. It may also describe multiple resources." .
+<http://vocab.org/desc/schema/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/desc/schema> .
+<http://vocab.org/desc/schema/description> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+<http://vocab.org/desc/schema/isDescriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.org/desc/schema/isDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is Description Of" .
+<http://vocab.org/desc/schema/isDescriptionOf> <http://www.w3.org/2004/02/skos/core#definition> "the relationship between a description and the resource it describes." .
+<http://vocab.org/desc/schema/isDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/desc/schema> .
+<http://vocab.org/desc/schema/isDescriptionOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://vocab.org/desc/schema/description> .
+<http://vocab.org/desc/schema/isDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+<http://iandavis.com/id/me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://iandavis.com/id/me> <http://xmlns.com/foaf/0.1/name> "Ian Davis" .

@@ -1,0 +1,205 @@
+title: Academic Institution Internal Structure Ontology (AIISO)
+uri: http://purl.org/vocab/aiiso/schema#
+sourcerdf: schema-20080925.rdf
+----
+<dl class="doc-info"><dt>Creators</dt><dd><div class="lit">Rob Styles</div></dd><dd><div class="lit">Nadeem Shabir</div></dd><dt>Contributors</dt><dd><div class="lit">Ian Corns</div></dd><dd><div class="lit">Sarah Bartlett</div></dd><dd><div class="lit">Chris Wallace</div></dd></dl><div class="lit">
+			The Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (http://purl.org/vocab/participation/schema), FOAF (http://xmlns.com/foaf/0.1/) and aiiso-roles (http://purl.org/vocab/aiiso-roles/schema) to describe the roles that people play within an institution.
+	<span class="lang">[en]</span></div><p>Copyright © 2008 Talis Information Ltd<p>
+<h2 id="sec-history">History</h2>
+<ul><li>2008-05-14 - first issued</li><li>2008-05-14 - semantic change by Rob Styles: First cut of the ontology published</li><li>2008-05-20 - semantic change by Nadeem Shabir: Added statement of responsibility for both knowledgeGrouping and organizationalUnit</li><li>2008-05-20 - semantic change by Rob Styles: Corrected classes with more than one possible domain class to use owl:unionOf</li><li>2008-09-25 - semantic change by Rob Styles: Changed subclassing to subclass from foaf:Organization and deprecated organizationalUnit</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated name in favour of foaf:name</li></ul>
+<h2 id="sec-namespace">Namespace</h2>
+<p>The URI for this vocabulary is</p><pre><code>http://purl.org/vocab/aiiso/schema#</code></pre>
+<p>When abbreviating terms the suggested prefix is <code>aiiso</code></p>
+<p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/aiiso/schema#Institute</code></pre>
+
+<h2 id="sec-summary">Terms Summary</h2>
+<p>An alphabetical list of all terms defined in this schema.</p><table><tr><th>Term</th><th>URI</th><th>Description</th></tr>
+<tr><td><a href="#Center">Center</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Center</td></td><td>A Center is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a center</td></tr>
+<tr><td><a href="#College">College</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#College</td></td><td>A College is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a college</td></tr>
+<tr><td><a href="#Course">Course</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Course</td></td><td>A Course is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a course</td></tr>
+<tr><td><a href="#Department">Department</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Department</td></td><td>A Department is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a department</td></tr>
+<tr><td><a href="#Division">Division</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Division</td></td><td>A Division is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a division</td></tr>
+<tr><td><a href="#Faculty">Faculty</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Faculty</td></td><td>A Faculty is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a faculty</td></tr>
+<tr><td><a href="#Institute">Institute</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Institute</td></td><td>An Institute is a group of people recognised by an organization as forming a cohesive group referred to by the organization as an institute</td></tr>
+<tr><td><a href="#Institution">Institution</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Institution</td></td><td>An Institution is the upper most level of an academic institution</td></tr>
+<tr><td><a href="#KnowledgeGrouping">KnowledgeGrouping</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</td></td><td>A KnowledgeGrouping represents a collection of resources, learning objectives, timetables, and other materials</td></tr>
+<tr><td><a href="#Module">Module</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Module</td></td><td>A Module is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a module</td></tr>
+<tr><td><a href="#Programme">Programme</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Programme</td></td><td>A Programme is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a programme</td></tr>
+<tr><td><a href="#ResearchGroup">Research Group</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#ResearchGroup</td></td><td>A Research Group is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a research group</td></tr>
+<tr><td><a href="#School">School</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#School</td></td><td>A School is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a school</td></tr>
+<tr><td><a href="#Subject">Subject</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#Subject</td></td><td>A Subject is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a subject</td></tr>
+<tr><td><a href="#code">Code</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#code</td></td><td>The code used by an Institution to refer to a KnowledgeGrouping or Organization</td></tr>
+<tr><td><a href="#description">Description</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#description</td></td><td>A Description of the KnowledgeGrouping or Organization</td></tr>
+<tr><td><a href="#knowledgeGrouping">KnowledgeGrouping</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#knowledgeGrouping</td></td><td>A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping</td></tr>
+<tr><td><a href="#name">Name</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#name</td></td><td>Deprecated in favour of foaf:name</td></tr>
+<tr><td><a href="#organization">Organization</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#organization</td></td><td>A foaf Organization may contain other subsidiary Organizations using organization</td></tr>
+<tr><td><a href="#organizationalUnit">Organizational Unit</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#organizationalUnit</td></td><td>organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy</td></tr>
+<tr><td><a href="#organizationalUnit">Organizational Unit</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#organizationalUnit</td></td><td>organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy</td></tr>
+<tr><td><a href="#part_of">Part of</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#part_of</td></td><td>A foaf Organization may refer to its parent Organizations using part_of</td></tr>
+<tr><td><a href="#responsibilityOf">Responsibility of</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#responsibilityOf</td></td><td></td></tr>
+<tr><td><a href="#responsibleFor">Responsible for</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#responsibleFor</td></td><td></td></tr>
+<tr><td><a href="#teaches">Teaches</a></td><td nowrap="nowrap">http://purl.org/vocab/aiiso/schema#teaches</td></td><td>An organization may specify the Knowledge Groupings that it teaches using this property</td></tr>
+</table>
+<h2 id="sec-terms">Properties and Classes</h2>
+
+<h3 id="Center">Center</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Center" class="uri">http://purl.org/vocab/aiiso/schema#Center</a></p><p class="terminfo">A Center is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a center.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="College">College</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#College" class="uri">http://purl.org/vocab/aiiso/schema#College</a></p><p class="terminfo">A College is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a college.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Course">Course</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Course" class="uri">http://purl.org/vocab/aiiso/schema#Course</a></p><p class="terminfo">A Course is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a course.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Department">Department</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Department" class="uri">http://purl.org/vocab/aiiso/schema#Department</a></p><p class="terminfo">A Department is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a department.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Division">Division</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Division" class="uri">http://purl.org/vocab/aiiso/schema#Division</a></p><p class="terminfo">A Division is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a division.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Faculty">Faculty</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Faculty" class="uri">http://purl.org/vocab/aiiso/schema#Faculty</a></p><p class="terminfo">A Faculty is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a faculty.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Institute">Institute</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Institute" class="uri">http://purl.org/vocab/aiiso/schema#Institute</a></p><p class="terminfo">An Institute is a group of people recognised by an organization as forming a cohesive group referred to by the organization as an institute.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Institution">Institution</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Institution" class="uri">http://purl.org/vocab/aiiso/schema#Institution</a></p><p class="terminfo">An Institution is the upper most level of an academic institution.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="KnowledgeGrouping">KnowledgeGrouping</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">http://purl.org/vocab/aiiso/schema#KnowledgeGrouping</a></p><p class="terminfo">A KnowledgeGrouping represents a collection of resources, learning objectives, timetables, and other materials. The more specific subclasses of Subject, Programme, Course and Module are preferred.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">No member of this class can also be a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/aiiso/schema#knowledgeGrouping" class="uri">KnowledgeGrouping</a> or <a href="http://purl.org/vocab/aiiso/schema#teaches" class="uri">Teaches</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated in favour of foaf:Organization</li></ul>
+<h3 id="Module">Module</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Module" class="uri">http://purl.org/vocab/aiiso/schema#Module</a></p><p class="terminfo">A Module is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a module.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Programme">Programme</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Programme" class="uri">http://purl.org/vocab/aiiso/schema#Programme</a></p><p class="terminfo">A Programme is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a programme.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="ResearchGroup">Research Group</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#ResearchGroup" class="uri">http://purl.org/vocab/aiiso/schema#ResearchGroup</a></p><p class="terminfo">A Research Group is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a research group.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="School">School</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#School" class="uri">http://purl.org/vocab/aiiso/schema#School</a></p><p class="terminfo">A School is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a school. This class refers schools within a higher education institution such as &#39;Harvard Law School&#39; it does not refer to schools involved in earlier education.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="Subject">Subject</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#Subject" class="uri">http://purl.org/vocab/aiiso/schema#Subject</a></p><p class="terminfo">A Subject is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a subject.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. 
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li></ul>
+<h3 id="code">Code</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#code" class="uri">http://purl.org/vocab/aiiso/schema#code</a></p><p class="terminfo">The code used by an Institution to refer to a KnowledgeGrouping or Organization.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid15. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li></ul>
+<h3 id="description">Description</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#description" class="uri">http://purl.org/vocab/aiiso/schema#description</a></p><p class="terminfo">A Description of the KnowledgeGrouping or Organization.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid19. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li></ul>
+<h3 id="knowledgeGrouping">KnowledgeGrouping</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#knowledgeGrouping" class="uri">http://purl.org/vocab/aiiso/schema#knowledgeGrouping</a></p><p class="terminfo">A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid26. Every value of this property is a <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated due to poor and ambiguous naming</li></ul>
+<h3 id="name">Name</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#name" class="uri">http://purl.org/vocab/aiiso/schema#name</a></p><p class="terminfo">Deprecated in favour of foaf:name. The name given to a KnowledgeGrouping or Organization.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid10. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. It is a sub-property of <a href="http://www.w3.org/2000/01/rdf-schema#Label" class="uri">rdfs:Label</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated in favour of foaf:name</li></ul>
+<h3 id="organization">Organization</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#organization" class="uri">http://purl.org/vocab/aiiso/schema#organization</a></p><p class="terminfo">A foaf Organization may contain other subsidiary Organizations using organization.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#part_of" class="uri">Part of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-09-25 - first issued</li><li>2008-09-25 - semantic change by Rob Styles: introduced to replace organizationalUnit</li></ul>
+<h3 id="organizationalUnit">Organizational Unit</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#organizationalUnit" class="uri">http://purl.org/vocab/aiiso/schema#organizationalUnit</a></p><p class="terminfo">organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy. More specific classes of Institution, Department, Faculty, School, College, Center, Division and Institute exist were previously subclassed from here. They now subclass foaf:Organization.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li><li>2008-05-14 - first issued</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated due to poor and ambiguous naming</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated in favour of foaf:Organization</li></ul>
+<h3 id="organizationalUnit">Organizational Unit</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#organizationalUnit" class="uri">http://purl.org/vocab/aiiso/schema#organizationalUnit</a></p><p class="terminfo">organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy. More specific classes of Institution, Department, Faculty, School, College, Center, Division and Institute exist were previously subclassed from here. They now subclass foaf:Organization.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-14 - first issued</li><li>2008-05-14 - first issued</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated due to poor and ambiguous naming</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated in favour of foaf:Organization</li></ul>
+<h3 id="part_of">Part of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#part_of" class="uri">http://purl.org/vocab/aiiso/schema#part_of</a></p><p class="terminfo">A foaf Organization may refer to its parent Organizations using part_of.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#organization" class="uri">Organization</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-09-25 - first issued</li><li>2008-09-25 - semantic change by Rob Styles: introduced to replace organizationalUnit</li></ul>
+<h3 id="responsibilityOf">Responsibility of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#responsibilityOf" class="uri">http://purl.org/vocab/aiiso/schema#responsibilityOf</a></p><p class="terminfo"></p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid31. Every value of this property is a <a href="http://xmlns.com/foaf/spec/Agent" class="uri">spec:Agent</a>. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#responsibleFor" class="uri">Responsible for</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-05-20 - first issued</li></ul>
+<h3 id="responsibleFor">Responsible for</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#responsibleFor" class="uri">http://purl.org/vocab/aiiso/schema#responsibleFor</a></p><p class="terminfo"></p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/spec/Agent" class="uri">msg0:Agent</a>. Every value of this property is genid34. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#responsibilityOf" class="uri">Responsibility of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-09-25 - first issued</li><li>2008-09-25 - semantic change by Rob Styles: Added as inverse of Responsibility Of</li></ul>
+<h3 id="teaches">Teaches</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#teaches" class="uri">http://purl.org/vocab/aiiso/schema#teaches</a></p><p class="terminfo">An organization may specify the Knowledge Groupings that it teaches using this property.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>. Every value of this property is a <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-09-25 - first issued</li></ul>
+<h2 id="sec-examples">Other Information</h2>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-05-20</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">http://purl.org/vocab/aiiso/schema-20080925</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema#" class="uri">Academic Institution Internal Structure Ontology (AIISO)</a><br />
+			The Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (http://purl.org/vocab/participation/schema), FOAF (http://xmlns.com/foaf/0.1/) and aiiso-roles (http://purl.org/vocab/aiiso-roles/schema) to describe the roles that people play within an institution.
+	</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/vocab/vann/usageNote" class="uri">Usage </a></div></th><td valign="top" width="80%" class="odd"><div class="res">file:///home/iand/web/vocab.org/www/src/aiiso/usagenote.html</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080520" class="uri">aiiso:schema-20080520</a></div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.html" class="uri">Http://purl.org/vocab/aiiso/schema-20080925.html</a></div><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.rdf" class="uri">Http://purl.org/vocab/aiiso/schema-20080925.rdf</a></div></td></tr>
+</table>

@@ -1,0 +1,38 @@
+﻿title: vocab.org Privacy Policy
+----
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://vocab.org/2004/02/privacy-20040205">http://vocab.org/2004/02/privacy-20040205</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://vocab.org/policies/privacy">http://vocab.org/policies/privacy</a></dd>
+<dt>Previous version:</dt>
+<dd>None</dd>
+<dt>Author:</dt>
+<dd><address><a href="http://purl.org/NET/iand">Ian Davis</a></address></dd>
+</dl>
+
+<dl>
+<dt><strong>Summary:</strong></dt>
+<dd>We make no effort to identify public users of our site. No 
+identifying data is disclosed to any third party for any purpose. Data
+that we collect is used only for server administration.</dd>
+</dl>
+
+<p>This statement applies to interactions with the vocab.org 
+Web servers. Any questions regarding the web site and the privacy 
+policy can be directed to privacy@vocab.org. </p>
+
+<p>As is typical, we log http requests to our server. This means that
+we know the originating IP (e.g. 18.29.0.1) address of a user agent 
+requesting a URL. We also know the Referer and User-Agent information
+accompanied with an HTTP request. We do not log the specific identity
+of visitors. We occasionally analyze the log files to determine which 
+files are most requested and the previous site or user agent which 
+prompted the request. Our logging is passive; we do not use 
+technologies such as cookies to maintain any information on users.</p>
+
+Logged information is kept indefinitely as admistrative and research 
+material; it is not disclosed outside of vocab.org host site personnel. 
+Aggregate (completely non-identifying) statistics generated from these 
+logs may be reported as part of research results.

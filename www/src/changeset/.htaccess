@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /changeset
+RewriteRule .*  index.php [L]
+
+RewriteRule ^$ /changeset/schema [R]
+RewriteRule ^schema/$ /changeset/schema [R]
+
+
+RewriteRule ^schema$ /changeset/schema-20060321 [L]
+RewriteRule ^schema\.rdf$ /changeset/schema-20060321.rdf [L]
+RewriteRule ^schema\.html$ /changeset/schema-20060321.html [L]
+
+

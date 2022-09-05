@@ -1,0 +1,17 @@
+# Pattern from SPARQL example:
+#
+# PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+# SELECT ?name ?mbox
+# WHERE { ?x foaf:name  ?name ;
+#           foaf:mbox  ?mbox .
+#         FILTER isLiteral(?mbox) }
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix gpt: <http://purl.org/vocab/riro/gpt#>.
+
+[a gpt:Filter; gpt:onPattern
+  [a gpt:Graph; gpt:allOf 
+    ([a gpt:Statement;  gpt:subject _:x;  gpt:predicate foaf:name;  gpt:object _:name]
+     [a gpt:Statement;  gpt:subject _:x;  gpt:predicate foaf:mbox;  gpt:object _:mbox])];
+ gpt:valueConstraint
+   [a gpt:ISLITERAL; gpt:arg1 _:mbox]].

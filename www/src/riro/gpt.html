@@ -1,0 +1,1727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en">
+<head>
+ <title>RDF Graph Patterns and Templates</title>
+ <link rel="meta" type="application/rdf+xml" title="RDF Graph Patterns and Templates"
+  href="http://purl.org/vocab/riro/gpt.rdf" />
+ <link href="rdfdoc.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <br />
+
+ <h1>RDF Graph Patterns and Templates</h1>
+
+ <dl class="doc-info">
+  <dt>This Version</dt>
+  <dd><a href="http://purl.org/vocab/riro/gpt">http://purl.org/vocab/riro/gpt</a>
+   [<a href="http://purl.org/vocab/riro/gpt.html">HTML</a>] 
+   [<a href="http://purl.org/vocab/riro/gpt.owl">OWL</a>]</dd>
+  <dt>Latest Version</dt>
+  <dd><a href="http://purl.org/vocab/riro/gpt#">http://purl.org/vocab/riro/gpt#</a></dd>
+  <dt>Authors</dt>
+  <dd>Sergei Egorov &lt;esl<span>@</span>ariadnegenomics.com&gt;</dd>
+  <dt>Contributors</dt>
+  <dd>&nbsp;</dd>
+ </dl>
+ <p class="rights">Copyright &copy; 2006 Sergei Egorov</p>
+ <p class="rights">OWL metadata &amp; format Copyright &copy; 2005 Richard Newman and Ian Davis</p>
+ <p class="license">
+  This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.5/">
+   Creative Commons License</a>.</p>
+
+ <h2 id="toc">Table of Contents</h2>
+
+ <ul class="toc">
+  <li><a href="#sec-introduction">Introduction</a></li>
+  <li><a href="#sec-namespace">Namespace</a></li>
+  <li><a href="#sec-terms">Summary of Terms</a></li>
+  <li><a href="#sec-classes">Vocabulary Classes</a></li>
+  <li><a href="#sec-properties">Vocabulary Properties</a></li>
+  <li><a href="#sec-examples">Examples</a></li>
+  <li><a href="#sec-schema">RDF Schema</a></li>
+  <li><a href="#sec-license">License</a></li>
+ </ul>
+
+ <h2 id="sec-introduction">Introduction</h2>
+
+ <p class="comment">
+  This vocabulary defines terms used to describe RDF Graph patterns and templates
+  as used in RDF Query languages (e.g. SPARQL) and elsewhere.
+ </p>
+ <p class="comment">
+  The goal of the design is to model common parts of these languages in RDF in a way
+  that allows for the generation of the actual queries in their native format. Note that only
+  patterns and templates are modeled, not complete queries.
+ </p>
+ <p class="comment">
+  A basic pattern/template is a set of reified RDF statements (reification is similar
+  to the one built-in into RDF). Leaves of a reified triple are URIs, literals (stand
+  for themselves) or blank nodes (variables). Variables have no names; blank nodes
+  can be assigned nodeIDs and shared in a normal RDF way.
+ </p>
+ <p class="comment">
+  More complex patterns are built by joining and filtering simpler patterns. Joining
+  (cf. SPARQL UNION, regexp |) allows specification of alternative patterns; filtering
+  (cf. SPARQL FILTER) constrains the allowable binding of variables.
+ </p>
+ <h2 id="sec-changes">
+  Changes From Previous Version</h2>
+ <ul>
+  <li class="changeNote">2007-02-21 - editorial change by Sergei Egorov: "Fixed rdf:Resource bug"</li>
+  <li class="changeNote">2006-03-06 - editorial change by Sergei Egorov: "Fixed cardinality type error"</li>
+  <li class="changeNote">2006-02-26 - editorial change by Sergei Egorov: "Added examples" </li>
+  <li class="changeNote">2006-02-21 - editorial change by Sergei Egorov: "Added OWL ontology metadata" </li>
+  <li class="historyNote">2006-02-21 - semantic change by Sergei Egorov: "First version"</li>
+ </ul>
+
+ <h2 id="sec-namespace">Namespace</h2>
+
+ <p>
+  The URI for this vocabulary is
+ </p>
+ <pre><code>http://purl.org/vocab/riro/gpt#</code></pre>
+ <p>
+  When used in XML documents the suggested prefix is <code>gpt</code></p>
+ <p>
+  Each class or property in the vocabulary has a URI constructed by appending a term
+  name to the vocabulary URI. For example:</p>
+ <pre><code>http://purl.org/vocab/riro/gpt#subject http://purl.org/vocab/riro/gpt#Statement</code></pre>
+ <p>
+  The term name for a class always starts with an uppercase character. Where the term
+  name is comprised of multiple concatenated words, the leading character of each
+  word will be an uppercase character. For example:
+ </p>
+ <pre><code>Statement Graph</code></pre>
+ <p>
+  The term name for a property always starts with an lowercase character. Where the
+  term name is comprised of multiple concatenated words, the leading character of
+  the second and each subsequent word will be an uppercase character. For example:
+ </p>
+ <pre><code>subject allOf</code></pre>
+
+ <h2 id="sec-terms">Summary of Terms</h2>
+
+ <p>
+  This vocabulary defines 10 classes and 9 properties.
+ </p>
+ <table style="width: 90%">
+  <tbody>
+   <tr>
+    <th>
+     Term Name</th>
+    <th style="width: 15%">
+     Type</th>
+    <th>
+     Definition</th>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-Statement" title="http://purl.org/vocab/riro/gpt#Statement">Statement</a></td>
+    <td>
+     class</td>
+    <td>
+     A pattern or template for a single RDF Statement (triple).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-subject" title="http://purl.org/vocab/riro/gpt#subject">subject</a></td>
+    <td>
+     property</td>
+    <td>
+     The pattern/template for the statement's subject.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-predicate" title="http://purl.org/vocab/riro/gpt#predicate">predicate</a></td>
+    <td>
+     property</td>
+    <td>
+     The pattern/template for the statement's predicate.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-object" title="http://purl.org/vocab/riro/gpt#object">object</a></td>
+    <td>
+     property</td>
+    <td>
+     The pattern/template for the statement's object.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-Graph" title="http://purl.org/vocab/riro/gpt#Graph">Graph</a></td>
+    <td>
+     class</td>
+    <td>
+     A pattern/template for an RDF Graph.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-Union" title="http://purl.org/vocab/riro/gpt#Union">Union</a></td>
+    <td>
+     class</td>
+    <td>
+     A set of alternative patterns.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-allOf" title="http://purl.org/vocab/riro/gpt#allOf">allOf</a></td>
+    <td>
+     property</td>
+    <td>
+     The set enumerated in a list form.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-Filter" title="http://purl.org/vocab/riro/gpt#Filter">Filter</a></td>
+    <td>
+     class</td>
+    <td>
+     A pattern with constraints on its variables.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-onPattern" title="http://purl.org/vocab/riro/gpt#onPattern">onPattern</a></td>
+    <td>
+     property</td>
+    <td>
+     The pattern which variables are restricted.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-valueConstraint" title="http://purl.org/vocab/riro/gpt#valueConstraint">
+      valueConstraint</a></td>
+    <td>
+     property</td>
+    <td>
+     The expression restricting values of variables.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+      ConstraintExpression</a></td>
+    <td>
+     class</td>
+    <td>
+     Any constraint expression.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-arg1" title="http://purl.org/vocab/riro/gpt#arg1">arg1</a></td>
+    <td>
+     property</td>
+    <td>
+     The first argument of a constraint expression.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-arg2" title="http://purl.org/vocab/riro/gpt#arg2">arg2</a></td>
+    <td>
+     property</td>
+    <td>
+     The second argument of a constraint expression.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-arg3" title="http://purl.org/vocab/riro/gpt#arg3">arg3</a></td>
+    <td>
+     property</td>
+    <td>
+     The third argument of a constraint expression.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-ISBLANK" title="http://purl.org/vocab/riro/gpt#ISBLANK">ISBLANK</a></td>
+    <td>
+     class</td>
+    <td>
+     True if A is a blank node.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-ISLITERAL" title="http://purl.org/vocab/riro/gpt#ISLITERAL">ISLITERAL</a></td>
+    <td>
+     class</td>
+    <td>
+     True if A is a literal.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-ISURI" title="http://purl.org/vocab/riro/gpt#ISURI">ISURI</a></td>
+    <td>
+     class</td>
+    <td>
+     True if A is an IRI/URI.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-EQUAL" title="http://purl.org/vocab/riro/gpt#EQUAL">EQUAL</a></td>
+    <td>
+     class</td>
+    <td>
+     True if A and B are the same RDF terms.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="#term-OR" title="http://purl.org/vocab/riro/gpt#OR">OR</a></td>
+    <td>
+     class</td>
+    <td>
+     True if A or B are true.</td>
+   </tr>
+  </tbody>
+ </table>
+
+ <h2 id="sec-classes">Vocabulary Classes</h2>
+
+ <div class="class">
+  <h3 id="term-Statement">
+   Class: Statement</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>A pattern or template for a single RDF Statement (triple).
+   </p>
+   <p class="comment">
+    A member of this class describes a pattern that can be matched against any RDF statement
+    or a template that can be used to build such a statement from its three components.
+    A pattern matches if its subject, predicate, and object match the corresponding
+    components of the statement.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#Statement</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       RDF Statement Pattern/Template</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>(a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li><li class="changeNote">
+     2006-02-12 - editorial change by Sergei Egorov: "Added comment" </li>
+   </ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-Graph">
+   Class: Graph</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>A pattern/template for an RDF Graph.</p>
+   <p class="comment">
+    A member of this class describes a pattern/template for an RDF graph. A graph pattern
+    is represented as a set of patterns/templates (one per RDF statement).
+   </p>
+   <p class="comment">
+    A graph pattern matches if all its statement patterns match some statements in the
+    target graph (shared blank nodes should match the same RDF resource). The result
+    of a match is a set of solutions, each solution being a substitution providing replacement
+    values for all blank nodes in the pattern graph. Replacement values can be literals,
+    URIs, or other blank nodes.
+   </p>
+   <p class="comment">
+    The set is modeled as an RDF list to make it closed with the assumption that the elements
+    of the list are members of the set being modeled (cf. owl:oneOf). The graph pattern
+    node and the list are connected with the 
+    <a href="#term-allOf" title="http://purl.org/vocab/riro/gpt#allOf">gpt:allOf</a> predicate.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#Graph</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       RDF Graph Pattern/Template</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>(a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li><li class="changeNote">
+     2006-02-21 - editorial change by Sergei Egorov: "Added comment" </li>
+   </ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-Union">
+   Class: Union</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>A set of alternative patterns.</p>
+   <p class="comment">
+    A member of this class describes pattern alternatives. A union pattern matches if
+    any of the alternative patterns match. Alternative patterns can be instances of
+    <a href="#term-Graph" title="http://purl.org/vocab/riro/gpt#Graph">gpt:Graph</a>, 
+    <a href="#term-Filter" title="http://purl.org/vocab/riro/gpt#Filter">gpt:Filter</a>, 
+    or another <a href="#term-Union" title="http://purl.org/vocab/riro/gpt#Union">gpt:Union</a>.
+   </p>
+   <p class="comment">
+    The set of alternatives is modeled as an RDF list to make it closed with the assumption
+    that the elements of the list are members of the set being modeled (cf. owl:oneOf).
+    The union pattern node and the list are connected with the
+    <a href="#term-allOf" title="http://purl.org/vocab/riro/gpt#allOf">gpt:allOf</a> predicate.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#Union</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       Union of Patterns</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>(a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li><li class="changeNote">
+     2006-02-21 - editorial change by Sergei Egorov: "Added comment" </li>
+   </ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-Filter">
+   Class: Filter</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>A pattern with constraints on its variables.
+   </p>
+   <p class="comment">
+    A member of this class describes a pattern with a boolean expression imposing constraints
+    on possible values of its variables. A filter pattern matches if its base pattern
+    matches and the filter expression evaluates to true for the given solution (a set
+    of values corresponding to the blank nodes in the graph patterns).
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#Filter</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       Filter Pattern</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>(a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li><li class="changeNote">
+     2006-02-21 - editorial change by Sergei Egorov: "Added comment" </li>
+   </ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-ConstraintExpression">
+   Class: ConstraintExpression</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>Any constraint expression.</p>
+   <p class="comment">
+    This is the base class for all constraint expressions. Constraint expressions are
+    distinguished by their class; they have zero or more arguments as defined by the
+    corresponding class. The vocabulary of constraint expressions now covers a very
+    small subset of SPARQL FILTER expressions; more expressions will be added later
+    (possibly in a separate namespace).
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#ConstraintExpression</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       Value Constraint Expression</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>(a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li><li class="changeNote">
+     2006-02-21 - editorial change by Sergei Egorov: "Added comment" </li>
+   </ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-ISBLANK">
+   Class: ISBLANK</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>True if A is a blank node.</p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#ISBLANK</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       isBlank(A)</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a>, (a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-ISLITERAL">
+   Class: ISLITERAL</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>True if A is a literal.</p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#ISLITERAL</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       isLiteral(A)</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a>, (a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-ISURI">
+   Class: ISURI</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>True if A is an IRI/URI.</p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#ISURI</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       isURI(A)</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a>, (a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-EQUAL">
+   Class: EQUAL</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>True if A and B are the same RDF terms.</p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#EQUAL</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       RDFterm-equal(A, B)</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a> (a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="class">
+  <h3 id="term-OR">
+   Class: OR</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>True if A or B are true.</p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#OR</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       A || B</td>
+     </tr>
+     <tr>
+      <th>
+       Subclass of</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a>, (a composite term, see schema)</td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <h2 id="sec-properties">Vocabulary Properties</h2>
+
+ <div class="property">
+  <h3 id="term-subject">
+   Property: subject</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The pattern/template
+    for the statement's subject.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#subject</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       pattern for subject</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-Statement" title="http://purl.org/vocab/riro/gpt#Statement">gpt:Statement</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-predicate">
+   Property: predicate</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The pattern/template
+    for the statement's predicate.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#predicate</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       pattern for predicate</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-Statement" title="http://purl.org/vocab/riro/gpt#Statement">gpt:Statement</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-object">
+   Property: object</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The pattern/template
+    for the statement's object.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#object</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       pattern for object</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-Statement" title="http://purl.org/vocab/riro/gpt#Statement">gpt:Statement</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-allOf">
+   Property: allOf</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The set enumerated
+    in a list form.</p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#allOf</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       members of a set</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">rdf:List</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li>
+    <li class="changeNote">2007-02-21 - editorial change by Sergei Egorov: "Fixed rdf:Resource bug"</li>
+   </ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-onPattern">
+   Property: onPattern</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The pattern which variables
+    are restricted.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#onPattern</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       base pattern for filtering</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-Filter" title="http://purl.org/vocab/riro/gpt#Filter">gpt:Filter</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-valueConstraint">
+   Property: valueConstraint</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The expression restricting
+    values of variables.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#valueConstraint</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       value constraint expression</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-Filter" title="http://purl.org/vocab/riro/gpt#Filter">gpt:Filter</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-arg1">
+   Property: arg1</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The first argument
+    of a constraint expression.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#arg1</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       first argument</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-arg2">
+   Property: arg2</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The second argument
+    of a constraint expression.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#arg2</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       second argument</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-arg3">
+   Property: arg3</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The third argument
+    of a constraint expression.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/gpt#arg3</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="#term-ConstraintExpression" title="http://purl.org/vocab/riro/gpt#ConstraintExpression">
+        gpt:ConstraintExpression</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-02-21</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <h2 id="sec-examples">Examples</h2>
+
+ <div class="example">
+ <p><a href="gpt-example.rdf">gpt-example.rdf</a></p>
+ <p><a href="gpt-example.ttl">gpt-example.ttl</a></p>
+ </div>
+
+ <h2 id="sec-schema">RDF Schema</h2>
+
+ <p>
+  The schema included here is informational only. The normative schema can be found
+  at <a href="http://purl.org/vocab/riro/gpt.rdf">http://purl.org/vocab/riro/gpt.rdf</a></p>
+ 
+<pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:gpt</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+   <span class="attr">xml:base</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"></span>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF Graph Patterns and Templates</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">This vocabulary defines terms used to describe RDF Graph patterns and </span>
+      <span class="text">templates as used in RDF Query languages (e.g. SPARQL) and elsewhere.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The goal of the design is to model common parts of these languages in </span>
+      <span class="text">RDF in a way that allows for the generation of the actual queries in their </span>
+      <span class="text">native format. Note that only patterns and templates are modeled, not </span>
+      <span class="text">complete queries.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A basic pattern/template is a set of reified RDF statements (reification </span>
+      <span class="text">is similar to the one built-in into RDF). Leaves of a reified triple are </span>
+      <span class="text">URIs, literals (stand for themselves) or blank nodes (variables). </span>
+      <span class="text">Variables have no names; blank nodes can be assigned nodeIDs and shared </span>
+      <span class="text">in a normal RDF way.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">More complex patterns are built by joining and filtering simpler </span>
+      <span class="text">patterns. Joining (cf. SPARQL UNION, regexp |) allows specification of </span>
+      <span class="text">alternative patterns; filtering (cf. SPARQL FILTER) constrains the </span>
+      <span class="text">allowable binding of variables.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/riro/gpt</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Sergei Egorov &lt;esl@ariadnegenomics.com&gt;</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span>
+      <span class="text">Copyright &copy; 2006 Sergei Egorov</span>
+    <span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span>
+      <span class="text">OWL metadata &amp; format Copyright &copy; 2005 Richard Newman and Ian Davis</span>
+    <span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/riro/gpt#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">gpt</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt.owl</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">OWL</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+
+    <span class="elem">&lt;skos:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">gpt-example.rdf</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">gpt-example.ttl</span>"<span class="elem">/&gt;</span>
+
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Fixed rdf:Resource bug</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2007-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Fixed cardinality type error</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-03-06</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added examples</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-26</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added OWL ontology metadata</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">First version</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"></span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.5/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.5/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/format</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/hasFormat</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/isVersionOf</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/replaces</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/type</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/rights</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/date</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/identifier</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/contributor</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/title</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespacePrefix</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespaceUri</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/changes</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#value</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/License</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Permission</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Requirement</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/permits</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/requires</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/license</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Statement</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF Statement Pattern/Template</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A pattern or template for a single RDF Statement (triple).</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A member of this class describes a pattern that can be matched against </span>
+      <span class="text">any RDF statement or a template that can be used to build such a </span>
+      <span class="text">statement from its three components. A pattern matches if its subject, </span>
+      <span class="text">predicate, and object match the corresponding components of the statement.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#subject</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span> 
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#predicate</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#object</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added comment</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-12</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#subject</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">pattern for subject</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The pattern/template for the statement's subject.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Statement</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#predicate</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">pattern for predicate</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The pattern/template for the statement's predicate.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Statement</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#object</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">pattern for object</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The pattern/template for the statement's object.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Statement</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Graph</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF Graph Pattern/Template</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A pattern/template for an RDF Graph.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A member of this class describes a pattern/template for an RDF graph. A </span>
+      <span class="text">graph pattern is represented as a set of patterns/templates (one per RDF </span>
+      <span class="text">statement).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A graph pattern matches if all its statement patterns match some </span>
+      <span class="text">statements in the target graph (shared blank nodes should match the same </span>
+      <span class="text">RDF resource). The result of a match is a set of solutions, each </span>
+      <span class="text">solution being a substitution providing replacement values for all blank </span>
+      <span class="text">nodes in the pattern graph. Replacement values can be literals, URIs, or </span>
+      <span class="text">other blank nodes.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The set is modeled as an RDF list to make it closed with the assumption that </span>
+      <span class="text">the elements of the list are members of the set being modeled (cf. </span>
+      <span class="text">owl:oneOf). The graph pattern node and the list are connected with the </span>
+      <span class="text">gpt:allOf predicate.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#allOf</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added comment</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#allOf</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">members of a set</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The set enumerated in a list form.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#List</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Fixed rdf:Resource bug</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2007-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Union</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Union of Patterns</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A set of alternative patterns.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A member of this class describes pattern alternatives. A union pattern </span>
+      <span class="text">matches if any of the alternative patterns match. Alternative patterns </span>
+      <span class="text">can be instances of gpt:Graph, gpt:Filter, or another gpt:Union.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The set of alternatives is modeled as an RDF list to make it closed with </span>
+      <span class="text">assumption that the elements of the list are members of the set being </span>
+      <span class="text">modeled (cf. owl:oneOf). The union pattern node and the list are </span>
+      <span class="text">connected with the gpt:allOf predicate.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#allOf</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added comment</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Filter</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Filter Pattern</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A pattern with constraints on its variables.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A member of this class describes a pattern with a boolean expression </span>
+      <span class="text">imposing constraints on possible values of its variables. A filter </span>
+      <span class="text">pattern matches if its base pattern matches and the filter expression </span>
+      <span class="text">evaluates to true for the given solution (a set of values corresponding </span>
+      <span class="text">to the blank nodes in the graph patterns).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#onPattern</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#valueConstraint</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added comment</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#onPattern</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">base pattern for filtering</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The pattern which variables are restricted.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Filter</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#valueConstraint</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">value constraint expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The expression restricting values of variables.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#Filter</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">Value Constraint Expression</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">Any constraint expression.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">This is the base class for all constraint expressions. Constraint </span>
+      <span class="text">expressions are distinguished by their class; they have zero or more </span>
+      <span class="text">arguments as defined by the corresponding class. The vocabulary of </span>
+      <span class="text">constraint expressions now covers a very small subset of SPARQL FILTER </span>
+      <span class="text">expressions; more expressions will be added later (possibly in a </span>
+      <span class="text">separate namespace).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#onPattern</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#valueConstraint</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:changeNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">Added comment</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-02-21</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg1</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">first argument</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The first argument of a constraint expression.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg2</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">second argument</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The second argument of a constraint expression.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg3</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The third argument of a constraint expression.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:ObjectProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ISURI</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">isURI(A)</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">True if A is an IRI/URI.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg1</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ISBLANK</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">isBlank(A)</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">True if A is a blank node.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg1</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ISLITERAL</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">isLiteral(A)</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">True if A is a literal.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg1</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#EQUAL</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDFterm-equal(A, B)</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">True if A and B are the same RDF terms.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg1</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg2</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+  
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#OR</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">A || B</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">True if A or B are true.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#ConstraintExpression</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg1</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;rdfs:subClassOf</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;owl:Restriction</span><span class="elem">&gt;</span>
+        <span class="elem">&lt;owl:onProperty</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/gpt#arg2</span>"<span class="elem">/&gt;</span>
+        <span class="elem">&lt;/owl:onProperty&gt;</span>
+        <span class="elem">&lt;owl:minCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:minCardinality&gt;</span>
+        <span class="elem">&lt;owl:maxCardinality</span>
+          <span class="attr">rdf:datatype</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#nonNegativeInteger</span>"<span class="elem">&gt;</span>
+          <span class="text">1</span><span class="elem">&lt;/owl:maxCardinality&gt;</span>
+      <span class="elem">&lt;/owl:Restriction&gt;</span>
+    <span class="elem">&lt;/rdfs:subClassOf&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-02-21</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:Class&gt;</span>
+
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre>
+
+ <h2 id="sec-license">
+  License</h2>
+ <p class="license">
+  This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.5/">
+   Creative Commons License</a>.</p>
+ <p>
+  The following section is informational only, please refer to the <a href="http://creativecommons.org/licenses/by/2.5/">
+   Original License</a> for complete license terms.
+ </p>
+ <p>
+  This license grants the following rights:</p>
+ <ul>
+  <li>making multiple copies (<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+  </li>
+  <li>distribution, public display, and publicly performance (<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+  </li>
+  <li>creation and distribution of derivative works (<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+  </li>
+ </ul>
+ <p>
+  This license imposes the following restrictions:</p>
+ <ul>
+  <li>copyright and license notices be kept intact (<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+  </li>
+  <li>credit be given to copyright holder and/or author (<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+  </li>
+ </ul>
+ <p>
+ </p>
+ <div id="footer">
+  Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org
+   toolchain</a>.
+ </div>
+</body>
+</html>

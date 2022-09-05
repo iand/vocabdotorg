@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ /aiiso/schema [R,L]
+RewriteRule ^schema$ /aiiso/schema-20080925 [L]
+RewriteRule ^schema\.rdf$ /aiiso/schema-20080925.rdf [L]
+RewriteRule ^schema\.html$ /aiiso/schema-20080925.html [L]

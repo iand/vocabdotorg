@@ -1,0 +1,71 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:vann="http://purl.org/vocab/vann/" 
+  xmlns:dc="http://purl.org/dc/terms/" 
+  xmlns:dctype="http://purl.org/dc/dcmitype/" 
+  xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <owl:Ontology rdf:about="http://vocab.org/evidence/terms">
+    <dc:title xml:lang="en">Evidence</dc:title>
+    <rdfs:comment xml:lang="en">This vocabulary defines terms for describing forms of evidence and the hypotheses that may be formed from it. It was created at vocamp oxford 2008</rdfs:comment>
+    <dc:creator><foaf:Person rdf:about="http://iandavis.com/id/me"><foaf:name>Ian Davis</foaf:name></foaf:Person></dc:creator>
+    <dc:creator><foaf:Person><foaf:name>Ben O'Steen</foaf:name></foaf:Person></dc:creator>
+    <dc:contributor><foaf:Person><foaf:name>Keith Alexander</foaf:name></foaf:Person></dc:contributor>
+  </owl:Ontology>
+  
+  
+  <rdfs:Class rdf:about="http://vocab.org/evidence/terms/Hypothesis">
+    <rdfs:label>hypothesis</rdfs:label>
+    <skos:definition>a reasoned proposal suggesting a possible correlation between multiple phenomena</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/evidence/terms" />
+  </rdfs:Class>
+  
+  <rdfs:Class rdf:about="http://vocab.org/evidence/terms/Conclusion">
+    <rdfs:label>conclusion</rdfs:label>
+    <skos:definition>a proposition arrived at after consideration of evidence</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/evidence/terms" />
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocab.org/evidence/terms/Evidence">
+    <rdfs:label>evidence</rdfs:label>
+    <skos:definition>something that is used to determine or demonstrate the truth of a hypothesis</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/evidence/terms" />
+  </rdfs:Class>
+
+  <rdfs:Property rdf:about="http://vocab.org/evidence/terms/conclusion">
+    <rdfs:label>conclusion</rdfs:label>
+    <skos:definition>a conclusion derived from a hypothesis</skos:definition>
+    <rdfs:domain rdf:resource="http://vocab.org/evidence/terms/Hypothesis" />
+    <rdfs:range rdf:resource="http://vocab.org/evidence/terms/Conclusion" />
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/evidence/terms" />
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://vocab.org/evidence/terms/supportingEvidence">
+    <rdfs:label>supporting evidence</rdfs:label>
+    <skos:definition>evidence that supports this hypothesis</skos:definition>
+    <rdfs:domain rdf:resource="http://vocab.org/evidence/terms/Hypothesis" />
+    <rdfs:range rdf:resource="http://vocab.org/evidence/terms/Evidence" />
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/evidence/terms" />
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://vocab.org/evidence/terms/refutingEvidence">
+    <rdfs:label>refuting evidence</rdfs:label>
+    <skos:definition>evidence that refutes this hypothesis</skos:definition>
+    <rdfs:domain rdf:resource="http://vocab.org/evidence/terms/Hypothesis" />
+    <rdfs:range rdf:resource="http://vocab.org/evidence/terms/Evidence" />
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/evidence/terms" />
+  </rdfs:Property>
+
+
+
+
+<!--
+  <rdfs:Property rdf:about="http://vocab.org/evidence/terms/">
+    <rdfs:label></rdfs:label>
+  </rdfs:Property>
+-->  
+  
+</rdf:RDF>

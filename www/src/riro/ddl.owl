@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY cc "http://web.resource.org/cc/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+    <!ENTITY vocabid "http://purl.org/vocab/riro/ddl" >
+    <!ENTITY ddl "http://purl.org/vocab/riro/ddl#" >
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:dct="http://purl.org/dc/terms/" 
+  xmlns:dctype="http://purl.org/dc/dcmitype/" 
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:ddl="http://purl.org/vocab/riro/ddl#"
+  xml:base="http://purl.org/vocab/riro/ddl">
+ <owl:Ontology rdf:about="" dc:date="2006-03-07">
+  <dc:title xml:lang="en">RDF Service Discovery Descriptions</dc:title>
+  <rdfs:comment xml:lang="en">
+   This vocabulary defines terms used to describe RDF services so that they
+   can be discovered. A RDF service is characterised by the vocabularies,
+   classes, properties, and concepts it can handle.
+  </rdfs:comment>
+  <rdfs:comment xml:lang="en">
+   The description is built as a set of properties of the connection point 
+   resource (a node which URI is the URL of the service). Services can
+   publish their SDDs as sets of 'keywords', so they can be discovered via
+   keyword-based lookups. In absense of RDF-aware search engines, regular
+   search engines can be used (see RDFGoo &lt;http://labs.intellidimension.com/rdfgoo/&gt;
+   and RDF Facets &lt;http://swdev.nokia.com/facets/RDF_Facets.pdf&gt; for details). 
+  </rdfs:comment>
+  <dc:identifier>&vocabid;</dc:identifier>
+  <dct:isVersionOf rdf:resource="&ddl;"/>
+  <dc:creator>Sergei Egorov &lt;esl@ariadnegenomics.com&gt;</dc:creator>
+  <dc:rights>Copyright © 2006 Sergei Egorov</dc:rights>
+  <dc:rights>OWL metadata &amp; format Copyright © 2005 Richard Newman and Ian Davis</dc:rights>
+  <vann:preferredNamespaceUri>&ddl;</vann:preferredNamespaceUri>
+  <vann:preferredNamespacePrefix>ddl</vann:preferredNamespacePrefix>
+
+  <dct:hasFormat>
+    <dctype:Text rdf:about="&vocabid;.html">
+     <dc:format>
+      <dct:IMT>
+       <rdf:value>text/html</rdf:value>
+       <rdfs:label xml:lang="en">HTML</rdfs:label>
+      </dct:IMT>
+     </dc:format>
+    </dctype:Text>
+  </dct:hasFormat>
+
+  <dct:hasFormat>
+    <dctype:Text rdf:about="&vocabid;.owl">
+     <dc:format>
+      <dct:IMT>
+       <rdf:value>application/rdf+xml</rdf:value>
+       <rdfs:label xml:lang="en">OWL</rdfs:label>
+      </dct:IMT>
+     </dc:format>
+    </dctype:Text>
+  </dct:hasFormat>
+
+ <skos:example rdf:resource="ddl-example.rdf"/>
+ <skos:example rdf:resource="ddl-example.ttl"/>
+
+ <dct:issued>2006-03-05</dct:issued>
+ <skos:historyNote rdf:value="First version" dc:date="2006-03-07" dc:creator="Sergei Egorov"/>
+
+ </owl:Ontology>
+
+ <cc:Work rdf:about="">
+   <cc:license rdf:resource="http://creativecommons.org/licenses/by/2.5/"/>
+ </cc:Work>
+ <cc:License rdf:about="http://creativecommons.org/licenses/by/2.5/">
+   <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+   <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+   <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+   <cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+   <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+ </cc:License>
+
+ <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+ <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+
+ <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf"/>
+ <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/replaces"/>
+ <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+
+ <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+ <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+ <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+ <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+ <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+ <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+ <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+ <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/changes"/>
+
+ <owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+
+ <owl:Class rdf:about="&cc;License"/>
+ <owl:Class rdf:about="&cc;Permission"/>
+ <owl:Class rdf:about="&cc;Requirement"/>
+ <owl:ObjectProperty rdf:about="&cc;permits"/>
+ <owl:ObjectProperty rdf:about="&cc;requires"/>
+ <owl:AnnotationProperty rdf:about="&cc;license"/>
+ <cc:Permission rdf:about="&cc;Reproduction"/>
+ <cc:Permission rdf:about="&cc;Distribution"/>
+ <cc:Requirement rdf:about="&cc;Notice"/>
+ <cc:Requirement rdf:about="&cc;Attribution"/>
+ <cc:Permission rdf:about="&cc;DerivativeWorks"/>
+  
+ <owl:DatatypeProperty rdf:about="&ddl;handlesNamespaceUri">
+   <rdfs:label xml:lang="en">handles namespace URI</rdfs:label>
+   <skos:definition xml:lang="en">
+    The URI of the namespace understood by the service.
+   </skos:definition>
+   <rdfs:comment xml:lang="en">
+    The URI should include trailing # or /. The format is the
+    same as used in N3 @prefix, RDF/XML xmlns declarations, and 
+    vann:preferredNamespaceUri annotations.
+   </rdfs:comment>
+   <rdfs:isDefinedBy rdf:resource="&ddl;"/>
+   <rdfs:domain rdf:resource="&rdfs;Resource"/>
+   <rdfs:range rdf:resource="&xsd;string"/>
+   <dct:issued>2006-03-07</dct:issued>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:about="&ddl;handlesInstancesOf">
+   <rdfs:label xml:lang="en">handles instances of</rdfs:label>
+   <skos:definition xml:lang="en">
+    A Class of resources understood by the service.
+   </skos:definition>
+   <rdfs:comment xml:lang="en">
+    A resource belonging to this class (having it as its rdf:type)
+    may serve as a potential input to the service.
+   </rdfs:comment>
+   <rdfs:isDefinedBy rdf:resource="&ddl;"/>
+   <rdfs:domain rdf:resource="&rdfs;Resource"/>
+   <rdfs:range rdf:resource="&rdfs;Class"/>
+   <dct:issued>2006-03-07</dct:issued>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:about="&ddl;handlesProperty">
+   <rdfs:label xml:lang="en">handles property</rdfs:label>
+   <skos:definition xml:lang="en">
+    A property (relation) understood by the service.
+   </skos:definition>
+   <rdfs:comment xml:lang="en">
+    An RDF statement expressed via this property
+    may serve as a potential input to the service.
+   </rdfs:comment>
+   <rdfs:isDefinedBy rdf:resource="&ddl;"/>
+   <rdfs:domain rdf:resource="&rdfs;Resource"/>
+   <rdfs:range rdf:resource="&rdf;Property"/>
+   <dct:issued>2006-03-07</dct:issued>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:about="&ddl;handlesConceptsIn">
+   <rdfs:label xml:lang="en">handles concepts in</rdfs:label>
+   <skos:definition xml:lang="en">
+    A SKOS concept scheme understood by the service.
+   </skos:definition>
+   <rdfs:comment xml:lang="en">
+    A concept in this scheme may serve as a potential input to the service.
+   </rdfs:comment>
+   <rdfs:isDefinedBy rdf:resource="&ddl;"/>
+   <rdfs:domain rdf:resource="&rdfs;Resource"/>
+   <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+   <dct:issued>2006-03-07</dct:issued>
+ </owl:DatatypeProperty>
+
+</rdf:RDF>

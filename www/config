@@ -1,0 +1,19 @@
+TEMPLATES = tmpl
+SOURCE = src
+OUTPUT = htdocs
+TITLE = vocab.org - A URI space for vocabularies
+URL = http://vocab.org
+AUTHOR = Ian Davis
+
+*.php:
+	ignore
+
+.htaccess:
+	ignore
+
+
+*.md:
+	config
+	ext .html
+	markdown
+	template page

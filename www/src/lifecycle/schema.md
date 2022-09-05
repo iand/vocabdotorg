@@ -1,0 +1,154 @@
+title: Lifecycle Schema
+uri: http://purl.org/vocab/lifecycle/schema#
+sourcerdf: schema-20080603.rdf
+----
+<dl class="doc-info"><dt>Creators</dt><dd><div class="lit">Rob Styles</div></dd><dd><div class="lit">Nadeem Shabir</div></dd></dl><div class="lit">
+			The Lifecycle Schema provides classes and properties that allow the specification of a lifecycle that any resource may pass through. It&#39;s intention to allow the description of the states and transitions that constitute a given lifecycle without imposing any constraint on the way in which transitions happen or how long it may take to move through a lifecycle.
+	<span class="lang">[en]</span></div><p>Copyright © 2008 Talis Information Ltd<p>
+<h2 id="sec-history">History</h2>
+<ul><li>2008-06-03 - first issued</li><li>2008-06-03 - semantic change by Rob Styles: First cut of the ontology published</li></ul>
+<h2 id="sec-namespace">Namespace</h2>
+<p>The URI for this vocabulary is</p><pre><code>http://purl.org/vocab/lifecycle/schema#</code></pre>
+<p>When abbreviating terms the suggested prefix is <code>lifecycle</code></p>
+<p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/lifecycle/schema#taskProgress</code></pre>
+
+<h2 id="sec-summary">Terms Summary</h2>
+<p>An alphabetical list of all terms defined in this schema.</p><table><tr><th>Term</th><th>URI</th><th>Description</th></tr>
+<tr><td><a href="#Action">Action</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#Action</td></td><td>Represents an instance of a task taking place against a given resource</td></tr>
+<tr><td><a href="#Completed">Completed</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#Completed</td></td><td>Represents that an individual task has been completed</td></tr>
+<tr><td><a href="#Lifecycle">Lifecycle</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#Lifecycle</td></td><td>A lifecycle is a series of states connected by allowable transitions</td></tr>
+<tr><td><a href="#OnHold">On Hold</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#OnHold</td></td><td>Represents that an individual task has been placed on hold</td></tr>
+<tr><td><a href="#Started">Started</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#Started</td></td><td>Represents that an individual task has been started</td></tr>
+<tr><td><a href="#State">State</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#State</td></td><td>A state describes one possible state that a resource can be in at a given time</td></tr>
+<tr><td><a href="#Task">Task</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#Task</td></td><td>Represents a task in a workflow</td></tr>
+<tr><td><a href="#TaskGroup">Task Group</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#TaskGroup</td></td><td>Represents a collection of tasks grouped together for convenience</td></tr>
+<tr><td><a href="#Transition">Transition</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#Transition</td></td><td>A transition describes the way in which a resource moves from one state to another state and may also describe the tasks required to make that transition</td></tr>
+<tr><td><a href="#completed">Completed</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#completed</td></td><td>This uses a boolean to represent if an action has been completed</td></tr>
+<tr><td><a href="#mandatory">Mandatory</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#mandatory</td></td><td>Sepcifies if a task is mandatory or optional</td></tr>
+<tr><td><a href="#next">Next</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#next</td></td><td>provides a simple ordering relationship to allow tasks to be ordered in user interfaces</td></tr>
+<tr><td><a href="#possibleState">Possible state</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#possibleState</td></td><td>The possible state property is used to identify the states that occur within a given lifecycle and are thus the possible states of a resource going through that lifecycle</td></tr>
+<tr><td><a href="#possibleTransition">Possible transition</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#possibleTransition</td></td><td>When in a state there may be many possible transitions</td></tr>
+<tr><td><a href="#resource">Resource</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#resource</td></td><td>The resource on which the action being taken</td></tr>
+<tr><td><a href="#resultingState">Resulting state</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#resultingState</td></td><td>Once a transition is completed the state of the resource should change to the state specified as the resulting state</td></tr>
+<tr><td><a href="#state">State</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#state</td></td><td>The state property relates any resource with the state that it is currently in</td></tr>
+<tr><td><a href="#stateOf">State of</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#stateOf</td></td><td>The &#39;state of&#39; property is the inverse of the state property, relating a state to all of the resources currently in that state</td></tr>
+<tr><td><a href="#task">Task</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#task</td></td><td>A task related to this transition</td></tr>
+<tr><td><a href="#taskGroup">Task group</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#taskGroup</td></td><td>A task group related to this transition</td></tr>
+<tr><td><a href="#taskProgress">Task progress</a></td><td nowrap="nowrap">http://purl.org/vocab/lifecycle/schema#taskProgress</td></td><td>The current progress on this task</td></tr>
+</table>
+<h2 id="sec-terms">Properties and Classes</h2>
+
+<h3 id="Action">Action</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#Action" class="uri">http://purl.org/vocab/lifecycle/schema#Action</a></p><p class="terminfo">Represents an instance of a task taking place against a given resource</p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="Completed">Completed</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#Completed" class="uri">http://purl.org/vocab/lifecycle/schema#Completed</a></p><p class="terminfo">Represents that an individual task has been completed.</p>
+<h3 id="Lifecycle">Lifecycle</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#Lifecycle" class="uri">http://purl.org/vocab/lifecycle/schema#Lifecycle</a></p><p class="terminfo">A lifecycle is a series of states connected by allowable transitions. It may be used to describe the lifecycle of business objects or equally the lifecycle of a butterfly.</p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="OnHold">On Hold</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#OnHold" class="uri">http://purl.org/vocab/lifecycle/schema#OnHold</a></p><p class="terminfo">Represents that an individual task has been placed on hold.</p>
+<h3 id="Started">Started</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#Started" class="uri">http://purl.org/vocab/lifecycle/schema#Started</a></p><p class="terminfo">Represents that an individual task has been started.</p>
+<h3 id="State">State</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#State" class="uri">http://purl.org/vocab/lifecycle/schema#State</a></p><p class="terminfo">A state describes one possible state that a resource can be in at a given time. Resources may be in one state in a given lifecycle at any given time, states are considered mutually exclusive within a lifecycle.</p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="Task">Task</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#Task" class="uri">http://purl.org/vocab/lifecycle/schema#Task</a></p><p class="terminfo">Represents a task in a workflow</p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="TaskGroup">Task Group</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#TaskGroup" class="uri">http://purl.org/vocab/lifecycle/schema#TaskGroup</a></p><p class="terminfo">Represents a collection of tasks grouped together for convenience</p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="Transition">Transition</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#Transition" class="uri">http://purl.org/vocab/lifecycle/schema#Transition</a></p><p class="terminfo">A transition describes the way in which a resource moves from one state to another state and may also describe the tasks required to make that transition.</p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="completed">Completed</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#completed" class="uri">http://purl.org/vocab/lifecycle/schema#completed</a></p><p class="terminfo">This uses a boolean to represent if an action has been completed. This is a simple alternative to the taskProgress property.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being an <a href="http://purl.org/vocab/lifecycle/schema#Action" class="uri">Action</a>. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#boolean" class="uri">xsd:boolean</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="mandatory">Mandatory</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#mandatory" class="uri">http://purl.org/vocab/lifecycle/schema#mandatory</a></p><p class="terminfo">Sepcifies if a task is mandatory or optional.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/lifecycle/schema#Task" class="uri">Task</a>. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#boolean" class="uri">xsd:boolean</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="next">Next</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#next" class="uri">http://purl.org/vocab/lifecycle/schema#next</a></p><p class="terminfo">provides a simple ordering relationship to allow tasks to be ordered in user interfaces.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid4. Every value of this property is genid7. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="possibleState">Possible state</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#possibleState" class="uri">http://purl.org/vocab/lifecycle/schema#possibleState</a></p><p class="terminfo">The possible state property is used to identify the states that occur within a given lifecycle and are thus the possible states of a resource going through that lifecycle.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/lifecycle/schema#Lifecycle" class="uri">Lifecycle</a>. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#State" class="uri">State</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="possibleTransition">Possible transition</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#possibleTransition" class="uri">http://purl.org/vocab/lifecycle/schema#possibleTransition</a></p><p class="terminfo">When in a state there may be many possible transitions.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/lifecycle/schema#State" class="uri">State</a>. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#Transition" class="uri">Transition</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="resource">Resource</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#resource" class="uri">http://purl.org/vocab/lifecycle/schema#resource</a></p><p class="terminfo">The resource on which the action being taken. This is a resource that is being processed through a lifecycle.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being an <a href="http://purl.org/vocab/lifecycle/schema#Action" class="uri">Action</a>. Every value of this property is a <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource" class="uri">rdf:Resource</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="resultingState">Resulting state</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#resultingState" class="uri">http://purl.org/vocab/lifecycle/schema#resultingState</a></p><p class="terminfo">Once a transition is completed the state of the resource should change to the state specified as the resulting state.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/lifecycle/schema#Transition" class="uri">Transition</a>. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#State" class="uri">State</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="state">State</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#state" class="uri">http://purl.org/vocab/lifecycle/schema#state</a></p><p class="terminfo">The state property relates any resource with the state that it is currently in.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource" class="uri">rdf:Resource</a>. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#State" class="uri">State</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="stateOf">State of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#stateOf" class="uri">http://purl.org/vocab/lifecycle/schema#stateOf</a></p><p class="terminfo">The &#39;state of&#39; property is the inverse of the state property, relating a state to all of the resources currently in that state.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/lifecycle/schema#State" class="uri">State</a>. Every value of this property is a <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource" class="uri">rdf:Resource</a>. It is the inverse of <a href="http://purl.org/vocab/lifecycle/schema#state" class="uri">State</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="task">Task</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#task" class="uri">http://purl.org/vocab/lifecycle/schema#task</a></p><p class="terminfo">A task related to this transition.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being genid10. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#Task" class="uri">Task</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="taskGroup">Task group</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#taskGroup" class="uri">http://purl.org/vocab/lifecycle/schema#taskGroup</a></p><p class="terminfo">A task group related to this transition.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/lifecycle/schema#Transition" class="uri">Transition</a>. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#TaskGroup" class="uri">Task Group</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h3 id="taskProgress">Task progress</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#taskProgress" class="uri">http://purl.org/vocab/lifecycle/schema#taskProgress</a></p><p class="terminfo">The current progress on this task. Some resources are defined in this ontology for this, but you are free to define your own.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being an <a href="http://purl.org/vocab/lifecycle/schema#Action" class="uri">Action</a>. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#TaskProgress" class="uri">lifecycle:TaskProgress</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2008-06-03 - first issued</li></ul>
+<h2 id="sec-examples">Examples</h2>
+
+<h2 id="sec-examples">Other Information</h2>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-06-03</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">http://purl.org/vocab/lifecycle/schema-20080603</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/lifecycle/schema#" class="uri">Lifecycle Schema</a><br />
+			The Lifecycle Schema provides classes and properties that allow the specification of a lifecycle that any resource may pass through. It&#39;s intention to allow the description of the states and transitions that constitute a given lifecycle without imposing any constraint on the way in which transitions happen or how long it may take to move through a lifecycle.
+	</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/lifecycle/schema-20080603" class="uri">msg0:schema-20080603</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/lifecycle/schema-20080603.html" class="uri">Http://purl.org/vocab/lifecycle/schema-20080603.html</a></div><div class="res"><a href="http://purl.org/vocab/lifecycle/schema-20080603.rdf" class="uri">Http://purl.org/vocab/lifecycle/schema-20080603.rdf</a></div></td></tr>
+</table>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:bibo="http://purl.org/ontology/bibo/" 
+  xmlns:cc="http://web.resource.org/cc/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:dct="http://purl.org/dc/terms/" 
+  xmlns:dctype="http://purl.org/dc/dcmitype/" 
+  xmlns:foaf="http://xmlns.com/foaf/spec/" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:resource="http://purl.org/vocab/resourcelist/schema#" 
+  xmlns:sioc="http://rdfs.org/sioc/spec/" 
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+  xmlns:vann="http://purl.org/vocab/vann/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:lifeycle="http://purl.org/vocab/lifecycle/schema#"
+>
+  <resource:List rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self">
+    <resource:created>20080520110000</resource:created>
+    <resource:lastUpdated>20090701110000</resource:lastUpdated>
+    <sioc:has_creator rdf:resource="http://list.hogwarts.ac.uk/people/umbridge_dolores#self"/>
+    <sioc:name xml:lang="en">Introduction to Defence Against The Dark Arts</sioc:name>
+    <resource:description xml:lang="en">This list contains a number of resources that provide a good introduction to defence against the dark arts</resource:description>
+    <resource:status rdf:resource="http://purl.org/vocab/resourcelist/schema#StatusPublished"/>
+    <resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self"/>
+    <resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self"/>
+    <resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self"/>
+    <resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self"/>
+    <resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self"/>
+    <resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self"/>
+    <resource:contains rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self"/>
+	<sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self" />
+	<sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self" />
+	<sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self" />
+	<rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self" />
+	<rdf:_2 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self" />
+	<rdf:_3 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self" />
+	<lifecyle:state rdf:resource="http://purl.org/vocab/resourcelist/schema#status-published" />
+  </resource:List>
+  <resource:Section rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self">
+    <sioc:name xml:lang="en">Week 1</sioc:name>
+    <resource:description xml:lang="en">This section contains resources that are relevant to study in Week One of this course</resource:description>
+    <sioc:has_parent rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self"/>
+    <sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self"/>
+	<rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self" />    
+  </resource:Section>
+  <resource:Section rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self">
+    <sioc:name xml:lang="en">Week 2</sioc:name>
+    <resource:description xml:lang="en">This section contains resources that are relevant to study in Week Two of this course</resource:description>
+    <sioc:has_parent rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self"/>
+    <sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self"/>
+	<rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self" />
+  </resource:Section>
+  <resource:Section rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self">
+    <sioc:name xml:lang="en">Week 3</sioc:name>
+    <resource:description xml:lang="en">This section contains resources that are relevant to study in Week Three of this course</resource:description>
+    <sioc:has_parent rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self"/>
+    <sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self"/>
+    <sioc:container_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self"/>
+    <rdf:_1 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self" />
+    <rdf:_2 rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self" />
+  </resource:Section>
+  <resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/1#self">
+    <resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/1#self"/>
+    <sioc:note xml:lang="en">First lesson text, read this.</sioc:note>
+    <sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self"/>
+  </resource:Item>
+  <resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/2#self">
+    <resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/2#self"/>
+    <sioc:note xml:lang="en">All students should read this.</sioc:note>
+    <sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self"/>
+  </resource:Item>
+  <resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self">
+    <resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/3#self"/>
+    <sioc:note xml:lang="en">All students should read this.</sioc:note>
+    <sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self"/>
+    <resource:next rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self"/>
+  </resource:Item>
+  <resource:Item rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/4#self">
+    <resource:resource rdf:resource="http://list.hogwarts.ac.uk/resources/4#self"/>
+    <sioc:note xml:lang="en">All students should read this.</sioc:note>
+    <sioc:has_container rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self"/>
+    <resource:previous rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/items/3#self"/>
+  </resource:Item>
+  <bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/1#self">
+    <dc:title xml:lang="en">Basics for Beginners</dc:title>
+    <bibo:locator xml:lang="en">1</bibo:locator>
+    <dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/>
+  </bibo:Chapter>
+  <bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/2#self">
+    <dc:title xml:lang="en">Common Defensive Theories and their Derivation</dc:title>
+    <bibo:locator xml:lang="en">2</bibo:locator>
+    <dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/>
+  </bibo:Chapter>
+  <bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/3#self">
+    <dc:title xml:lang="en">The Case for Non-Offensive Responses to Magical Attack</dc:title>
+    <bibo:pageStart>34</bibo:pageStart>
+    <bibo:locator xml:lang="en">3</bibo:locator>
+    <dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/>
+  </bibo:Chapter>
+  <bibo:Chapter rdf:about="http://list.hogwarts.ac.uk/resources/4#self">
+    <dc:title xml:lang="en">Non-Retaliation and Negotiation</dc:title>
+    <bibo:locator xml:lang="en">34</bibo:locator>
+    <dct:isPartOf rdf:resource="http://list.hogwarts.ac.uk/resources/5#self"/>
+  </bibo:Chapter>
+  <bibo:Book rdf:about="http://list.hogwarts.ac.uk/resources/5#self">
+    <bibo:uri rdf:resource="http://www.hp-lexicon.org/wizworld/books.html#Defensive_Magical_Theory"/>
+    <bibo:isbn13 xml:lang="en">978-0-596-52932-1</bibo:isbn13>
+    <dct:title xml:lang="en">Defensive Magical Theory</dct:title>
+    <bibo:authorList>
+      <rdf:Description>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://list.hogwarts.ac.uk/people/slinkhard_Wilbert"/>
+      </rdf:Description>
+    </bibo:authorList>
+    <bibo:edition xml:lang="en">First Edition</bibo:edition>
+    <bibo:isbn10 xml:lang="en">0-596-52932-5</bibo:isbn10>
+  </bibo:Book>
+  <foaf:Person rdf:about="http://list.hogwarts.ac.uk/people/slinkhard_Wilbert">
+    <foaf:firstName xml:lang="en">Wilbert</foaf:firstName>
+    <foaf:surname>Slinkhard</foaf:surname>
+    <foaf:homepage>http://www.hp-lexicon.org/wizworld/books_authors.html#slinkhard_wilbert</foaf:homepage>
+  </foaf:Person>
+</rdf:RDF>

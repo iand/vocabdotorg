@@ -1,0 +1,319 @@
+<http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/title> "Academic Institution Internal Structure Ontology (AIISO)"@en .
+<http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\tThe Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (http://purl.org/vocab/participation/schema), FOAF (http://xmlns.com/foaf/0.1/) and aiiso-roles (http://purl.org/vocab/aiiso-roles/schema) to describe the roles that people play within an institution.\n    \t"@en .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/aiiso/schema-20080925" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/contributor> "Ian Corns" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/contributor> "Sarah Bartlett" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/contributor> "Chris Wallace" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2008 Talis Information Ltd" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/aiiso/schema#" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aiiso" .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/vocab/vann/usageNote> <file:///home/iand/web/vocab.org/www/src/aiiso/usagenote.html> .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/aiiso/schema-20080520> .
+<http://purl.org/vocab/aiiso/schema-20080925.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text/html" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@en .
+<http://purl.org/vocab/aiiso/schema-20080925.html> <http://purl.org/dc/elements/1.1/format> _:genid1 .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/aiiso/schema-20080925.html> .
+<http://purl.org/vocab/aiiso/schema-20080925.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/rdf+xml" .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "RDF"@en .
+<http://purl.org/vocab/aiiso/schema-20080925.rdf> <http://purl.org/dc/elements/1.1/format> _:genid2 .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/aiiso/schema-20080925.rdf> .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid3 <http://purl.org/dc/elements/1.1/date> "2008-05-14" .
+_:genid3 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "First cut of the ontology published" .
+<http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid3 .
+_:genid4 <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+_:genid4 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Corrected classes with more than one possible domain class to use owl:unionOf" .
+<http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid4 .
+_:genid5 <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+_:genid5 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added statement of responsibility for both knowledgeGrouping and organizationalUnit" .
+<http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid5 .
+_:genid6 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid6 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Changed subclassing to subclass from foaf:Organization and deprecated organizationalUnit" .
+<http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid6 .
+_:genid7 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid7 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated name in favour of foaf:name" .
+<http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid7 .
+<file:///home/iand/web/vocab.org/www/src/aiiso/schema-20080925.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/web/vocab.org/www/src/aiiso/schema-20080925.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "Deprecated" .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "organizational Unit"@en .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy. More specific classes of Institution, Department, Faculty, School, College, Center, Division and Institute exist were previously subclassed from here. They now subclass foaf:Organization."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid8 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid8 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated in favour of foaf:Organization" .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid8 .
+<http://purl.org/vocab/aiiso/schema#Institution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Institution> <http://www.w3.org/2000/01/rdf-schema#label> "Institution"@en .
+<http://purl.org/vocab/aiiso/schema#Institution> <http://www.w3.org/2000/01/rdf-schema#comment> "An Institution is the upper most level of an academic institution."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Institution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#Institution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Institution> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department"@en .
+<http://purl.org/vocab/aiiso/schema#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "A Department is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a department."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#Department> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Department> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Faculty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Faculty> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty"@en .
+<http://purl.org/vocab/aiiso/schema#Faculty> <http://www.w3.org/2000/01/rdf-schema#comment> "A Faculty is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a faculty."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Faculty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#Faculty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Faculty> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#School> <http://www.w3.org/2000/01/rdf-schema#label> "School"@en .
+<http://purl.org/vocab/aiiso/schema#School> <http://www.w3.org/2000/01/rdf-schema#comment> "A School is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a school. This class refers schools within a higher education institution such as 'Harvard Law School' it does not refer to schools involved in earlier education."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#School> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#School> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#School> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#College> <http://www.w3.org/2000/01/rdf-schema#label> "College"@en .
+<http://purl.org/vocab/aiiso/schema#College> <http://www.w3.org/2000/01/rdf-schema#comment> "A College is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a college."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#College> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#College> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#College> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Center> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Center> <http://www.w3.org/2000/01/rdf-schema#label> "Center"@en .
+<http://purl.org/vocab/aiiso/schema#Center> <http://www.w3.org/2000/01/rdf-schema#comment> "A Center is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a center."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Center> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#Center> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Center> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Division> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Division> <http://www.w3.org/2000/01/rdf-schema#label> "Division"@en .
+<http://purl.org/vocab/aiiso/schema#Division> <http://www.w3.org/2000/01/rdf-schema#comment> "A Division is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a division."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Division> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#Division> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Division> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Institute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Institute> <http://www.w3.org/2000/01/rdf-schema#label> "Institute"@en .
+<http://purl.org/vocab/aiiso/schema#Institute> <http://www.w3.org/2000/01/rdf-schema#comment> "An Institute is a group of people recognised by an organization as forming a cohesive group referred to by the organization as an institute."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Institute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#Institute> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Institute> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Research Group"@en .
+<http://purl.org/vocab/aiiso/schema#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A Research Group is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a research group."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#ResearchGroup> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeGrouping"@en .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#comment> "A KnowledgeGrouping represents a collection of resources, learning objectives, timetables, and other materials. The more specific subclasses of Subject, Programme, Course and Module are preferred."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/2002/07/owl#disjointWith> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid9 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid9 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated in favour of foaf:Organization" .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid9 .
+<http://purl.org/vocab/aiiso/schema#Programme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Programme> <http://www.w3.org/2000/01/rdf-schema#label> "Programme"@en .
+<http://purl.org/vocab/aiiso/schema#Programme> <http://www.w3.org/2000/01/rdf-schema#comment> "A Programme is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a programme."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Programme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#Programme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Programme> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Subject> <http://www.w3.org/2000/01/rdf-schema#label> "Subject"@en .
+<http://purl.org/vocab/aiiso/schema#Subject> <http://www.w3.org/2000/01/rdf-schema#comment> "A Subject is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a subject."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#Subject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Subject> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Course> <http://www.w3.org/2000/01/rdf-schema#label> "Course"@en .
+<http://purl.org/vocab/aiiso/schema#Course> <http://www.w3.org/2000/01/rdf-schema#comment> "A Course is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a course."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Course> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#Course> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Course> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#Module> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/aiiso/schema#Module> <http://www.w3.org/2000/01/rdf-schema#label> "Module"@en .
+<http://purl.org/vocab/aiiso/schema#Module> <http://www.w3.org/2000/01/rdf-schema#comment> "A Module is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a module."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#Module> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#Module> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#Module> <http://purl.org/dc/terms/issued> "2008-05-14" .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "Deprecated" .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of foaf:name. The name given to a KnowledgeGrouping or Organization."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#Label> .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#name> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid13 <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+_:genid13 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both." .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid13 .
+_:genid14 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid14 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated in favour of foaf:name" .
+<http://purl.org/vocab/aiiso/schema#name> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid14 .
+<http://purl.org/vocab/aiiso/schema#code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#code> <http://www.w3.org/2000/01/rdf-schema#label> "code"@en .
+<http://purl.org/vocab/aiiso/schema#code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#code> <http://www.w3.org/2000/01/rdf-schema#comment> "The code used by an Institution to refer to a KnowledgeGrouping or Organization."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+<http://purl.org/vocab/aiiso/schema#code> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid15 .
+<http://purl.org/vocab/aiiso/schema#code> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#code> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid18 <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+_:genid18 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both." .
+<http://purl.org/vocab/aiiso/schema#code> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid18 .
+<http://purl.org/vocab/aiiso/schema#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+<http://purl.org/vocab/aiiso/schema#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#description> <http://www.w3.org/2000/01/rdf-schema#comment> "A Description of the KnowledgeGrouping or Organization."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
+<http://purl.org/vocab/aiiso/schema#description> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+<http://purl.org/vocab/aiiso/schema#description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#description> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid22 <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+_:genid22 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both." .
+<http://purl.org/vocab/aiiso/schema#description> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid22 .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "Deprecated" .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "organizationalUnit"@en .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated due to poor naming, you should use organization and part_of instead. An organizationalUnit may contain other organizationalUnits using organizationalUnit."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid23 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid23 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated due to poor and ambiguous naming" .
+<http://purl.org/vocab/aiiso/schema#organizationalUnit> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid23 .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/2000/01/rdf-schema#label> "organization"@en .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/2000/01/rdf-schema#comment> "A foaf Organization may contain other subsidiary Organizations using organization."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#organization> <http://purl.org/dc/terms/issued> "2008-09-25" .
+_:genid24 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid24 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "introduced to replace organizationalUnit" .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid24 .
+<http://purl.org/vocab/aiiso/schema#organization> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/aiiso/schema#part_of> .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/2000/01/rdf-schema#label> "part of"@en .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/2000/01/rdf-schema#comment> "A foaf Organization may refer to its parent Organizations using part_of."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://purl.org/dc/terms/issued> "2008-09-25" .
+_:genid25 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid25 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "introduced to replace organizationalUnit" .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid25 .
+<http://purl.org/vocab/aiiso/schema#part_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/aiiso/schema#organization> .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "Deprecated" .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#label> "knowledgeGrouping"@en .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#comment> "A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid26 .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://purl.org/dc/terms/issued> "2008-05-14" .
+_:genid29 <http://purl.org/dc/elements/1.1/date> "2008-05-20" .
+_:genid29 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both." .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid29 .
+_:genid30 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid30 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated due to poor and ambiguous naming" .
+<http://purl.org/vocab/aiiso/schema#knowledgeGrouping> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid30 .
+<http://purl.org/vocab/aiiso/schema#teaches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#teaches> <http://www.w3.org/2000/01/rdf-schema#label> "teaches"@en .
+<http://purl.org/vocab/aiiso/schema#teaches> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#teaches> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization may specify the Knowledge Groupings that it teaches using this property."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/aiiso/schema#teaches> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/vocab/aiiso/schema#teaches> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#teaches> <http://purl.org/dc/terms/issued> "2008-09-25" .
+<http://purl.org/vocab/aiiso/schema#responsibilityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#responsibilityOf> <http://www.w3.org/2000/01/rdf-schema#label> "responsibility of"@en .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+<http://purl.org/vocab/aiiso/schema#responsibilityOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid31 .
+<http://purl.org/vocab/aiiso/schema#responsibilityOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/spec/Agent> .
+<http://purl.org/vocab/aiiso/schema#responsibilityOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#responsibilityOf> <http://purl.org/dc/terms/issued> "2008-05-20" .
+<http://purl.org/vocab/aiiso/schema#responsibilityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/aiiso/schema#responsibleFor> .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://www.w3.org/2000/01/rdf-schema#label> "responsible for"@en .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> .
+<http://purl.org/vocab/aiiso/schema#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/2002/07/owl#unionOf> _:genid35 .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid34 .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/spec/Agent> .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/aiiso/schema#> .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://purl.org/dc/terms/issued> "2008-09-25" .
+_:genid37 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
+_:genid37 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added as inverse of Responsibility Of" .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid37 .
+<http://purl.org/vocab/aiiso/schema#responsibleFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/aiiso/schema#responsibilityOf> .

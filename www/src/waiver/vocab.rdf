@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rel  "http://purl.org/vocab/relationship/" >
+    <!ENTITY vocabid  "http://purl.org/vocab/relationship/rel-vocab-20050810" >
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+
+>
+  <owl:Ontology rdf:about="http://vocab.org/waiver/terms/">
+    <dc:creator><foaf:Person rdf:about="http://iandavis.com/id/me"><foaf:name>Ian Davis</foaf:name></foaf:Person></dc:creator>
+    <dc:title xml:lang="en">WAIVER: A vocabulary for waivers of rights</dc:title>
+    <dc:description xml:lang="en">This vocabulary defines properties for use when describing waivers of rights over data and content. A waiver is the voluntary relinquishment or surrender of some known right or privilege. This vocabulary is designed for use with the Open Data Commons Public Domain Dedication and License and with the Creative Commons CC-0 waiver</dc:description>
+    <rdfs:seeAlso rdf:resource="http://wiki.creativecommons.org/CC0" dc:title="CC0 FAQ"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" dc:title="CC0 1.0 Universal"/>
+    <rdfs:seeAlso rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/" dc:title="ODC Public Domain Dedication and Licence (PDDL)" />
+    <dc:identifier>http://vocab.org/waive/terms/</dc:identifier>
+    <vann:preferredNamespaceUri>http://vocab.org/waive/terms/</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>wv</vann:preferredNamespacePrefix>
+    <dc:issued>2009-07-06</dc:issued>
+  </owl:Ontology>
+
+  <rdf:Property rdf:about="http://vocab.org/waiver/terms/waiver">
+    <rdfs:label xml:lang="en">waiver</rdfs:label>
+    <skos:definition xml:lang="en">The waiver of rights over a resource.</skos:definition>
+    <rdfs:comment xml:lang="en">Best practice is use the URI of a waiver legal document as the value of this property. For example http://creativecommons.org/publicdomain/zero/1.0/ or http://www.opendatacommons.org/odc-public-domain-dedication-and-licence/</rdfs:comment>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/waiver/terms/"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.org/waiver/terms/declaration">
+    <rdfs:label xml:lang="en">declaration</rdfs:label>
+    <skos:definition xml:lang="en">A human readable statement describing the waiver in the context of the resource and the agent waiving their rights.</skos:definition>
+    <rdfs:comment xml:lang="en">Best practice is to include the name of the resource in which rights are being waived, and the name of the waiver. For example "To the extent possible under law, {{your name or organisation}} has waived all copyright and related or neighboring rights to {{name of dataset}}"</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/waiver/terms/"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.org/waiver/terms/norms">
+    <rdfs:label xml:lang="en">norms</rdfs:label>
+    <skos:definition xml:lang="en">The community norms for access and use of a resource.</skos:definition>
+    <rdfs:comment xml:lang="en">Norms are not legally binding but represent the general principles or "code of conduct" adopted by a community for access and use of resources. Best practice is to use the URI of a document describing these norms as the value of this property. For example http://www.opendatacommons.org/norms/odc-by-sa/</rdfs:comment>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.org/waiver/terms/"/>
+  </rdf:Property>
+</rdf:RDF>

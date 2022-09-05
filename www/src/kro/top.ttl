@@ -1,0 +1,261 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cc: <http://web.resource.org/cc/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix k: <http://vocab.org/kro/top/> .
+
+<http://vocab.org/kro/top>
+  a owl:Ontology ;
+  dc:title "KR Ontology Top Level Terms" ;
+  rdfs:comment "An RDF representation of the top levels of the KR Ontology, which is defined in the book Knowledge Representation by John F. Sowa" ;
+  dc:source <http://www.jfsowa.com/ontology/toplevel.htm> ;
+  dc:creator <http://iandavis.com/id/me> ;
+  .
+  
+k:Continuant
+  a owl:Class ;
+  rdfs:label "continuant" ;
+  skos:definition "entities whose identity continues to be recognizable over some extended interval of time.";
+  rdfs:comment "A physical continuant is an object and an abstract continuant is a schema that may be used to characterize some object." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  . 
+  
+k:Occurrent
+  a owl:Class ;
+  rdfs:label "occurrent" ;
+  skos:definition "entities that do not have a stable identity during any interval of time." ;
+  rdfs:comment "A person's lifetime, for example, is an occurrent. Different stages of a life cannot be reliably identified unless some continuant, such as the person's fingerprints or DNA, is recognized by suitable identity conditions at each stage. Even then, the identification depends on an inference that presupposes the uniqueness of the identity conditions. The temporal parts of an occurrent, which are called stages, exist at different times. # The spatial parts of an occurrent, which are called participants, may exist at the same time, but an occurrent may have different participants at different stages. There are no identity conditions that can be used to identify two occurrents that are observed in nonoverlapping space-time regions." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  . 
+  
+  
+k:Independent
+  a owl:Class ;
+  rdfs:label "independent" ;
+  skos:definition "entities characterized by some inherent Firstness, independent of any relationships they may have to other entities." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  . 
+  
+k:Physical
+  a owl:Class ;
+  rdfs:label "physical" ;
+  skos:definition "entities that have a location in space-time." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  . 
+  
+k:Relative
+  a owl:Class ;
+  rdfs:label "relative" ;
+  skos:definition "entities in a relationship to some other entity." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  . 
+  
+k:Abstract
+  a owl:Class ;
+  rdfs:label "abstract" ;
+  skos:definition "information as distinguished from any particular encoding of the information in a physical medium." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  . 
+  
+k:Mediating
+  a owl:Class ;
+  rdfs:label "mediating" ;
+  skos:definition "entities characterized by some Thirdness that brings other entities into a relationship. ";
+  rdfs:comment "An independent entity need not have any relationship to anything else, a relative entity must have some relationship to something else, and a mediating entity creates a relationship between two other entities. An example of a mediating entity is a marriage, which creates a relationship between a husband and a wife." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  . 
+  
+k:Actuality
+  a owl:Class ;
+  rdfs:label "actuality" ;
+  skos:definition "entities whose existence is independent of any other entity." ;
+  rdfs:comment "This includes both objects and processes." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Independent ;
+  rdfs:subClassOf k:Physical ;
+  . 
+  
+k:Form
+  a owl:Class ;
+  rdfs:label "form" ;
+  skos:definition "abstract information independent of any encoding or embodiment. ";
+  rdfs:comment "Can be said to exist in the same sense as mathematical objects such as sets and relations, but instances of forms cannot exist at a particular place and time without some physical encoding or embodiment. They are independent of space and time. " ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Independent ;
+  rdfs:subClassOf k:Abstract ;
+  . 
+  
+k:Prehension
+  a owl:Class ;
+  rdfs:label "prehension" ;
+  skos:definition "entities relative to some entity or entities. " ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Physical ;
+  rdfs:subClassOf k:Relative ;
+  . 
+  
+k:Proposition
+  a owl:Class ;
+  rdfs:label "proposition" ;
+  skos:definition "abstractions that relate some entity or entities." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Abstract ;
+  rdfs:subClassOf k:Relative ;
+  . 
+  
+k:Nexus
+  a owl:Class ;
+  rdfs:label "nexus" ;
+  skos:definition "entities mediating two or more other entities.";
+  rdfs:comment "Each nexus is a bundle of prehensions, which may be the junctures of an object or the participants of a process. Examples include an arch that consists of junctures of stones or an action that consists of what one participant called an agent is doing to another participant called a patient." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Physical ;
+  rdfs:subClassOf k:Mediating ;
+  . 
+  
+k:Intention
+  a owl:Class ;
+  rdfs:label "intention" ;
+  skos:definition "abstraction considered as mediating other entities.";
+  rdfs:comment "Examples of intentions include the hopes, fears, wishes, and purposes that mediate some agent's actions." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Abstract ;
+  rdfs:subClassOf k:Mediating ;
+  . 
+  
+k:Object
+  a owl:Class ;
+  rdfs:label "object" ;
+  skos:definition "actuality considered as a continuant, which retains its identity over some interval of time.";
+  rdfs:comment "Although no physical entity is ever permanent, an object can be recognized by identity conditions that remain stable during its lifetime. The type Object includes ordinary physical objects as well as the instantiations of classes in object-oriented programming languages." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Continuant ;
+  rdfs:subClassOf k:Actuality ;
+  . 
+  
+k:Process
+  a owl:Class ;
+  rdfs:label "process" ;
+  skos:definition "actuality considered as an Occurrent during the interval of interest.";
+  rdfs:comment "Depending on the time scale and level of detail, the same actual entity may be viewed as a stable object or a dynamic process. Even an entity as stable as a diamond could be considered a process when viewed over a long time period or at the atomic level of vibrating particles." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Occurrent ;
+  rdfs:subClassOf k:Actuality ;
+  . 
+  
+k:Schema
+  a owl:Class ;
+  rdfs:label "schema" ;
+  skos:definition "a form that has the structure of a continuant.";
+  rdfs:comment "A schema is an abstract form whose structure does not specify time or timelike relationships. Examples include geometric forms, the syntactic structures of sentences in some language, or the encodings of pictures in a multimedia system. " ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Continuant ;
+  rdfs:subClassOf k:Form ;
+  . 
+  
+k:Script
+  a owl:Class ;
+  rdfs:label "script" ;
+  skos:definition "A form that has the structure of an occurrent.";
+  rdfs:comment "A script is an abstract form that represents time sequences. Examples include computer programs, a recipe for baking a cake, a sheet of music to be played on a piano, or a differential equation that governs the evolution of a physical process. A movie can be described by several different kinds of scripts: the first is a specification of the actions and dialog to be acted out by humans; but the sequence of frames in a reel of film is also a script that determines a process carried out by a projector that generates flickering images on a screen." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Occurrent ;
+  rdfs:subClassOf k:Form ;
+  . 
+  
+k:Juncture
+  a owl:Class ;
+  rdfs:label "juncture" ;
+  skos:definition "a prehension considered as a continuant during some time interval.";
+  rdfs:comment "The prehending entity is an object in a stable relationship to some prehended entity during that interval. An example of a juncture is the relationship between two adjacent stones in an arch. The arch itself is a nexus that both mediates and consists of the multiple junctures." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Continuant ;
+  rdfs:subClassOf k:Prehension ;
+  . 
+  
+k:Participation
+  a owl:Class ;
+  rdfs:label "participation" ;
+  skos:definition "A prehension considered as an Occurrent during the interval of interest.";
+  rdfs:comment "The prehending entity is a process, and the prehended entity is called a participant. " ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Occurrent ;
+  rdfs:subClassOf k:Prehension ;
+  . 
+  
+k:Description
+  a owl:Class ;
+  rdfs:label "description" ;
+  skos:definition "A proposition that states how some schema characterizes some aspect or configuration of a continuant." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Continuant ;
+  rdfs:subClassOf k:Proposition ;
+  . 
+  
+k:History
+  a owl:Class ;
+  rdfs:label "history" ;
+  skos:definition "propositions that relate some script to the stages of some occurrent." ;
+  rdfs:comment "A computer program, for example, is a script; a computer executing the program is a process; and the abstract information encoded in a trace of the instructions executed is a history. Like any proposition, a history need not be true, and it need not be predicated of the past: a myth is a history of an imaginary past; a prediction is a history of an expected future; and a scenario is a history of some hypothetical occurrent. " ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Occurrent ;
+  rdfs:subClassOf k:Proposition ;
+  . 
+  
+k:Structure
+  a owl:Class ;
+  rdfs:label "structure" ;
+  skos:definition "A nexus considered as a continuant.";
+  rdfs:comment "A structure mediates multiple objects whose junctures constitute the structure." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Continuant ;
+  rdfs:subClassOf k:Nexus ;
+  . 
+  
+k:Situation
+  a owl:Class ;
+  rdfs:label "situation" ;
+  skos:definition "A nexus considered as an occurrent.";
+  rdfs:comment "A situation mediates the participants of some process, whose stages may involve different participants at different times. " ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Occurrent ;
+  rdfs:subClassOf k:Nexus ;
+  . 
+  
+k:Reason
+  a owl:Class ;
+  rdfs:label "reason" ;
+  skos:definition "Intention that has the form of a continuant.";
+  rdfs:comment "For a birthday party, a description might list the presents, but a reason would explain why the presents are relevant to the party. " ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Continuant ;
+  rdfs:subClassOf k:Intention ;
+  . 
+  
+  
+<http://iandavis.com/id/me>
+  a foaf:Person ;
+  foaf:name "Ian Davis" ;
+  .
+  
+k:Purpose
+  a owl:Class ;
+  rdfs:label "purpose" ;
+  skos:definition "Intention that has the form of an Occurrent.";
+  rdfs:comment "As an example, the words and notes of the song 'Happy Birthday' constitute a script; a description of how people at a party sang the song is history; and the intention that explains the situation is a purpose." ;
+  rdfs:isDefinedBy <http://vocab.org/kro/top> ;
+  rdfs:subClassOf k:Occurrent ;
+  rdfs:subClassOf k:Intention ;
+  . 
+
+
+<http://iandavis.com/id/me>
+  a foaf:Person ;
+  foaf:name "Ian Davis" ;
+  .
+    

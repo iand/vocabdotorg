@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en" lang="en">
+<head>
+ <title>RDF Service Discovery Descriptions</title>
+ <link rel="meta" type="application/rdf+xml" title="RDF Service Discovery Descriptions"
+  href="http://purl.org/vocab/riro/ddl.rdf" />
+ <link href="rdfdoc.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <br />
+
+ <h1>RDF Service Discovery Descriptions</h1>
+
+ <dl class="doc-info">
+  <dt>This Version</dt>
+  <dd><a href="http://purl.org/vocab/riro/ddl">http://purl.org/vocab/riro/ddl</a>
+   [<a href="http://purl.org/vocab/riro/ddl.html">HTML</a>] 
+   [<a href="http://purl.org/vocab/riro/ddl.owl">OWL</a>]</dd>
+  <dt>Latest Version</dt>
+  <dd><a href="http://purl.org/vocab/riro/ddl#">http://purl.org/vocab/riro/ddl#</a></dd>
+  <dt>Authors</dt>
+  <dd>Sergei Egorov &lt;esl<span>@</span>ariadnegenomics.com&gt;</dd>
+  <dt>Contributors</dt>
+  <dd>&nbsp;</dd>
+ </dl>
+ <p class="rights">Copyright &copy; 2006 Sergei Egorov</p>
+ <p class="rights">OWL metadata &amp; format Copyright &copy; 2005 Richard Newman and Ian Davis</p>
+ <p class="license">
+  This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.5/">
+   Creative Commons License</a>.</p>
+
+ <h2 id="toc">Table of Contents</h2>
+
+ <ul class="toc">
+  <li><a href="#sec-introduction">Introduction</a></li>
+  <li><a href="#sec-namespace">Namespace</a></li>
+  <li><a href="#sec-terms">Summary of Terms</a></li>
+  <li><a href="#sec-properties">Vocabulary Properties</a></li>
+  <li><a href="#sec-examples">Examples</a></li>
+  <li><a href="#sec-schema">RDF Schema</a></li>
+  <li><a href="#sec-license">License</a></li>
+ </ul>
+
+ <h2 id="sec-introduction">Introduction</h2>
+
+ <p class="comment">
+  This vocabulary defines terms used to describe RDF services so that they can be
+  discovered. A RDF service is characterised by the vocabularies, classes, properties,
+  and concepts it can handle.
+ </p>
+ <p class="comment">
+  The description is built as a set of properties of the connection point resource
+  (a node which URI is the URL of the service). Services can publish their SDDs as
+  sets of 'keywords', so they can be discovered via keyword-based lookups. In absense
+  of RDF-aware search engines, regular search engines can be used (see 
+  <a href="http://labs.intellidimension.com/rdfgoo/">RDFGoo</a> and
+  <a href="http://swdev.nokia.com/facets/RDF_Facets.pdf">RDF Facets</a> for details).
+ </p>
+ <h2 id="sec-changes">
+  Changes From Previous Version</h2>
+ <ul>
+  <li class="historyNote">2006-03-07 - semantic change by Sergei Egorov: "First version"
+  </li>
+ </ul>
+ <h2 id="sec-namespace">
+  Namespace</h2>
+ <p>
+  The URI for this vocabulary is
+ </p>
+ <pre><code>http://purl.org/vocab/riro/ddl#</code></pre>
+ <p>
+  When used in XML documents the suggested prefix is <code>ddl</code></p>
+ <p>
+  Each class or property in the vocabulary has a URI constructed by appending a term
+  name to the vocabulary URI. For example:</p>
+ <pre><code>http://purl.org/vocab/riro/ddl#handlesNamespaceUri </code></pre>
+ <p>
+  The term name for a property always starts with an lowercase character. Where the
+  term name is comprised of multiple concatenated words, the leading character of
+  the second and each subsequent word will be an uppercase character. For example:
+ </p>
+ <pre><code>handlesNamespaceUri handlesInstancesOf</code></pre>
+
+ <h2 id="sec-terms">Summary of Terms</h2>
+
+ <p>
+  This vocabulary defines no classes and 4 properties .
+ </p>
+ <table style="width: 90%">
+  <tr>
+   <th>
+    Term Name</th>
+   <th style="width: 15%">
+    Type</th>
+   <th>
+    Definition</th>
+  </tr>
+  <tr>
+   <td>
+    <a href="#term-handlesNamespaceUri" title="http://purl.org/vocab/riro/ddl#handlesNamespaceUri">
+     handlesNamespaceUri</a></td>
+   <td>
+    property</td>
+   <td>
+    The URI of the namespace understood by the service.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <a href="#term-handlesInstancesOf" title="http://purl.org/vocab/riro/ddl#handlesInstancesOf">
+     handlesInstancesOf</a></td>
+   <td>
+    property</td>
+   <td>
+    A Class of resources understood by the service.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <a href="#term-handlesProperty" title="http://purl.org/vocab/riro/ddl#handlesProperty">
+     handlesProperty</a></td>
+   <td>
+    property</td>
+   <td>
+    A property (relation) understood by the service.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <a href="#term-handlesConceptsIn" title="http://purl.org/vocab/riro/ddl#handlesConceptsIn">
+     handlesConceptsIn</a></td>
+   <td>
+    property</td>
+   <td>
+    A SKOS concept scheme understood by the service.
+   </td>
+  </tr>
+ </table>
+ 
+<h2 id="sec-properties">Vocabulary Properties</h2>
+
+ <div class="property">
+  <h3 id="term-handlesNamespaceUri">
+   Property: handlesNamespaceUri</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] The URI of the namespace
+    understood by the service.
+   </p>
+   <p class="comment">
+    The URI should include trailing # or /. The format is the same as used in N3 @prefix,
+    RDF/XML xmlns declarations, and vann:preferredNamespaceUri annotations.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/ddl#handlesNamespaceUri</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       handles namespace URI</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-07</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-handlesInstancesOf">
+   Property: handlesInstancesOf</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] A Class of resources
+    understood by the service.
+   </p>
+   <p class="comment">
+    A resource belonging to this class (having it as its rdf:type) may serve as a potential
+    input to the service.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/ddl#handlesInstancesOf</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       handles instances of</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-07</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-handlesProperty">
+   Property: handlesProperty</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] A property (relation)
+    understood by the service.
+   </p>
+   <p class="comment">
+    An RDF statement expressed via this property may serve as a potential input to the
+    service.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/ddl#handlesProperty</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       handles property</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">rdf:Property</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-07</span> - first issued</li></ul>
+  </div>
+ </div>
+ <div class="property">
+  <h3 id="term-handlesConceptsIn">
+   Property: handlesConceptsIn</h3>
+  <div class="description">
+   <p class="definition">
+    <strong>Definition: </strong>[The value of this property is] A SKOS concept scheme
+    understood by the service.
+   </p>
+   <p class="comment">
+    A concept in this scheme may serve as a potential input to the service.
+   </p>
+   <table class="properties">
+    <tbody>
+     <tr>
+      <th>
+       URI:</th>
+      <td>
+       http://purl.org/vocab/riro/ddl#handlesConceptsIn</td>
+     </tr>
+     <tr>
+      <th>
+       Label:</th>
+      <td>
+       handles concepts in</td>
+     </tr>
+     <tr>
+      <th>
+       Domain</th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a></td>
+     </tr>
+     <tr>
+      <th>
+       Range</th>
+      <td>
+       <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a></td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    History</h4>
+   <ul class="historyList">
+    <li><span class="date">2006-03-07</span> - first issued</li></ul>
+  </div>
+ </div>
+
+ <h2 id="sec-examples">Examples</h2>
+ 
+ <div class="example">
+ <p><a href="ddl-example.rdf">ddl-example.rdf</a></p>
+ <p><a href="ddl-example.ttl">ddl-example.ttl</a></p>
+ </div>
+
+ <h2 id="sec-schema">RDF Schema</h2>
+
+ <p>
+  The schema included here is informational only. The normative schema can be found
+  at <a href="http://purl.org/vocab/riro/ddl.rdf">http://purl.org/vocab/riro/ddl.rdf</a></p>
+
+<pre><code class="xml"><span class="elem">&lt;rdf:RDF</span>
+   <span class="attr">xmlns:ddl</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#</span>"
+   <span class="attr">xmlns:skos</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#</span>"
+   <span class="attr">xmlns:vann</span>="<span class="attrVal">http://purl.org/vocab/vann/</span>"
+   <span class="attr">xmlns:cc</span>="<span class="attrVal">http://web.resource.org/cc/</span>"
+   <span class="attr">xmlns:dctype</span>="<span class="attrVal">http://purl.org/dc/dcmitype/</span>"
+   <span class="attr">xmlns:dct</span>="<span class="attrVal">http://purl.org/dc/terms/</span>"
+   <span class="attr">xmlns:dc</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/</span>"
+   <span class="attr">xmlns:owl</span>="<span class="attrVal">http://www.w3.org/2002/07/owl#</span>"
+   <span class="attr">xmlns:rdfs</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#</span>"
+   <span class="attr">xmlns:rdf</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+   <span class="attr">xml:base</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl</span>"<span class="elem">&gt;</span>
+  
+  <span class="elem">&lt;owl:Ontology</span>
+     <span class="attr">rdf:about</span>="<span class="attrVal"></span>"
+     <span class="attr">dc:date</span>="<span class="attrVal">2006-03-07</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;dc:title</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">RDF Service Discovery Descriptions</span><span class="elem">&lt;/dc:title&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">This vocabulary defines terms used to describe RDF services so that they </span>
+      <span class="text">can be discovered. A RDF service is characterised by the vocabularies, </span>
+      <span class="text">classes, properties, and concepts it can handle.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The description is built as a set of properties of the connection point </span>
+      <span class="text">resource (a node which URI is the URL of the service). Services can </span>
+      <span class="text">publish their SDDs as sets of 'keywords', so they can be discovered via </span>
+      <span class="text">keyword-based lookups. In absense of RDF-aware search engines, regular </span>
+      <span class="text">search engines can be used (see RDFGoo </span>
+      <span class="text">&lt;http://labs.intellidimension.com/rdfgoo/&gt; and RDF Facets </span>
+      <span class="text">&lt;http://swdev.nokia.com/facets/RDF_Facets.pdf&gt; for details).</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+
+    <span class="elem">&lt;dc:identifier</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/riro/ddl</span><span class="elem">&lt;/dc:identifier&gt;</span>
+    <span class="elem">&lt;dct:isVersionOf</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dc:creator</span><span class="elem">&gt;</span><span class="text">Sergei Egorov &lt;esl@ariadnegenomics.com&gt;</span><span class="elem">&lt;/dc:creator&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span>
+      <span class="text">Copyright &copy; 2006 Sergei Egorov</span>
+    <span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;dc:rights</span><span class="elem">&gt;</span>
+      <span class="text">OWL metadata &amp; format Copyright &copy; 2005 Richard Newman and Ian Davis</span>
+    <span class="elem">&lt;/dc:rights&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespaceUri</span><span class="elem">&gt;</span><span class="text">http://purl.org/vocab/riro/ddl#</span><span class="elem">&lt;/vann:preferredNamespaceUri&gt;</span>
+    <span class="elem">&lt;vann:preferredNamespacePrefix</span><span class="elem">&gt;</span><span class="text">ddl</span><span class="elem">&lt;/vann:preferredNamespacePrefix&gt;</span>
+
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl.html</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">text/html</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">HTML</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+    <span class="elem">&lt;dct:hasFormat</span><span class="elem">&gt;</span>
+      <span class="elem">&lt;dctype:Text</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl.owl</span>"<span class="elem">&gt;</span>
+        <span class="elem">&lt;dc:format</span><span class="elem">&gt;</span>
+          <span class="elem">&lt;dct:IMT</span><span class="elem">&gt;</span>
+            <span class="elem">&lt;rdf:value</span><span class="elem">&gt;</span><span class="text">application/rdf+xml</span><span class="elem">&lt;/rdf:value&gt;</span>
+            <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">OWL</span><span class="elem">&lt;/rdfs:label&gt;</span>
+          <span class="elem">&lt;/dct:IMT&gt;</span>
+        <span class="elem">&lt;/dc:format&gt;</span>
+      <span class="elem">&lt;/dctype:Text&gt;</span>
+    <span class="elem">&lt;/dct:hasFormat&gt;</span>
+
+    <span class="elem">&lt;skos:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">ddl-example.rdf</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;skos:example</span> <span class="attr">rdf:resource</span>="<span class="attrVal">ddl-example.ttl</span>"<span class="elem">/&gt;</span>
+
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-05</span><span class="elem">&lt;/dct:issued&gt;</span>
+    <span class="elem">&lt;skos:historyNote</span>
+       <span class="attr">rdf:value</span>="<span class="attrVal">First version</span>"
+       <span class="attr">dc:date</span>="<span class="attrVal">2006-03-07</span>"
+       <span class="attr">dc:creator</span>="<span class="attrVal">Sergei Egorov</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/owl:Ontology&gt;</span>
+  
+  <span class="elem">&lt;cc:Work</span> <span class="attr">rdf:about</span>="<span class="attrVal"></span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:license</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.5/</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:Work&gt;</span>
+  
+  <span class="elem">&lt;cc:License</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://creativecommons.org/licenses/by/2.5/</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:requires</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;cc:permits</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;/cc:License&gt;</span>
+  
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/format</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/hasFormat</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/isVersionOf</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/terms/replaces</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/type</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/rights</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/date</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/identifier</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/contributor</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/dc/elements/1.1/title</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespacePrefix</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/preferredNamespaceUri</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/vann/changes</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#value</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/License</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Permission</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:Class</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Requirement</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/permits</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:ObjectProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/requires</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;owl:AnnotationProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/license</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Reproduction</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Distribution</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Notice</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Requirement</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/Attribution</span>"<span class="elem">/&gt;</span>
+  <span class="elem">&lt;cc:Permission</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://web.resource.org/cc/DerivativeWorks</span>"<span class="elem">/&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#handlesNamespaceUri</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">handles namespace URI</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span><span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The URI of the namespace understood by the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">The URI should include trailing # or /. The format is the same as used </span>
+      <span class="text">in N3 @prefix, RDF/XML xmlns declarations, and </span>
+      <span class="text">vann:preferredNamespaceUri annotations.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2001/XMLSchema#string</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-07</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#handlesInstancesOf</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">handles instances of</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A Class of resources understood by the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A resource belonging to this class (having it as its rdf:type) may serve </span>
+      <span class="text">as a potential input to the service.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Class</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-07</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#handlesProperty</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">handles property</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A property (relation) understood by the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">An RDF statement expressed via this property may serve as a potential </span>
+      <span class="text">input to the service.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-07</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+  
+  <span class="elem">&lt;owl:DatatypeProperty</span> <span class="attr">rdf:about</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#handlesConceptsIn</span>"<span class="elem">&gt;</span>
+    <span class="elem">&lt;rdfs:label</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span><span class="text">handles concepts in</span><span class="elem">&lt;/rdfs:label&gt;</span>
+    <span class="elem">&lt;skos:definition</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A SKOS concept scheme understood by the service.</span>
+    <span class="elem">&lt;/skos:definition&gt;</span>
+    <span class="elem">&lt;rdfs:comment</span> <span class="attr">xml:lang</span>="<span class="attrVal">en</span>"<span class="elem">&gt;</span>
+      <span class="text">A concept in this scheme may serve as a potential input to the service.</span>
+    <span class="elem">&lt;/rdfs:comment&gt;</span>
+    <span class="elem">&lt;rdfs:isDefinedBy</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://purl.org/vocab/riro/ddl#</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:domain</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2000/01/rdf-schema#Resource</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;rdfs:range</span> <span class="attr">rdf:resource</span>="<span class="attrVal">http://www.w3.org/2004/02/skos/core#ConceptScheme</span>"<span class="elem">/&gt;</span>
+    <span class="elem">&lt;dct:issued</span><span class="elem">&gt;</span><span class="text">2006-03-07</span><span class="elem">&lt;/dct:issued&gt;</span>
+  <span class="elem">&lt;/owl:DatatypeProperty&gt;</span>
+
+<span class="elem">&lt;/rdf:RDF&gt;</span>
+</code></pre>
+
+ <h2 id="sec-license">License</h2>
+ 
+<p class="license">
+  This work is licensed under a <a href="http://creativecommons.org/licenses/by/2.5/">
+   Creative Commons License</a>.<p>
+    The following section is informational only, please refer to the <a href="http://creativecommons.org/licenses/by/2.5/">
+     Original License</a> for complete license terms.
+   </p>
+  <p>
+   This license grants the following rights:</p>
+  <ul>
+   <li>(<a href="http://web.resource.org/cc/Reproduction">http://web.resource.org/cc/Reproduction</a>)
+   </li>
+   <li>(<a href="http://web.resource.org/cc/Distribution">http://web.resource.org/cc/Distribution</a>)
+   </li>
+   <li>(<a href="http://web.resource.org/cc/DerivativeWorks">http://web.resource.org/cc/DerivativeWorks</a>)
+   </li>
+  </ul>
+  <p>
+   This license imposes the following restrictions:</p>
+  <ul>
+   <li>(<a href="http://web.resource.org/cc/Notice">http://web.resource.org/cc/Notice</a>)
+   </li>
+   <li>(<a href="http://web.resource.org/cc/Attribution">http://web.resource.org/cc/Attribution</a>)
+   </li>
+  </ul>
+ </p>
+ <div id="footer">
+  Documentation generated using the <a href="http://vocab.org/2004/03/toolchain">vocab.org
+   toolchain</a>.
+ </div>
+</body>
+</html>

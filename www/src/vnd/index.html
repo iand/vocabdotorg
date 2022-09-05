@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Private Vocabulary URI Space</title>
+		<meta name="cvsid" content="$Id: index.html,v 1.2 2004/11/26 13:29:26 ian Exp $" />
+	</head>
+	<body>
+		<h1>Private Vocabulary URI Space</h1>
+
+    <h2><a id="what" name="what">What Is It?</a></h2>
+    <p>
+        This URI space may be used by any third party to provide persistent URIs for vocabulary terms. 
+        No registration of terms or URIs is required, instead a naming scheme is provide to partition the URI space. It is intended
+        for safe creation of private, experimental or ad-hoc vocabularies.  Third parties
+        can add documentation for the URI space by contacting the operator of vocab.org (Ian Davis &lt;iand@internetalchemy.org&gt;), 
+        however users of the URIs defined here should not expect representations or documentation to be available.
+    </p>
+		
+		<h2><a id="status" name="status">Status</a></h2>
+		<p>This URI space is STABLE and there are no plans to change it in the future.</p>
+
+		<h2><a id="naming" name="naming">Naming Scheme</a></h2>
+		<p>URIs in this space take the general form:</p>
+		
+		<pre><code>http://vocab.org/vnd/DOMAIN/DATE/OPAQUE</code></pre>
+
+		<p>The <code>DOMAIN</code> part comprises a domain name that is or has been under the control of the naming entity.</p>
+		<p>
+      The <code>DATE</code> part comprises a date on which the domain name was under control of the naming entity. 
+      The date may expressed either as a 4 digit year, a four digit year plus a two digit month, or a 
+      four digit year, a two digit month and a two digit day. Any year, month and day components must be separated by a hyphen '-'. 
+      A date consisting solely of a four digit year is interpreted as representing the first day of that year. Dates consisting of a 
+      four digit year followed by a two digit month are interpreted as representing the first day of that month in that year. All dates
+      represent a time of midnight on the specified day.
+    </p>
+    <p>
+      The <code>OPAQUE</code> part comprises any character sequence required by the naming entity with the constraint
+      that the combination of all parts must form a valid URI as defined by RFC2396 and its successors.
+    </p>     
+
+		<h2><a id="examples" name="examples">Examples</a></h2>
+		<dl>
+			<dt><code>http://vocab.org/vnd/innovateer.com/2004-06-15/shapes/square</code></dt>
+			<dd>
+        A URI created by the entity who controlled innovateer.com on the 15th June 2004
+			</dd>
+
+			<dt><code>http://vocab.org/vnd/innovateer.com/2004-06/sounds/ping</code></dt>
+			<dd>
+        A URI created by the entity who controlled innovateer.com on the 1st June 2004
+			</dd>
+
+			<dt><code>http://vocab.org/vnd/innovateer.com/2004/colours/indigo</code></dt>
+			<dd>
+        A URI created by the entity who controlled innovateer.com on the 1st January 2004
+			</dd>
+
+		</dl>
+
+		<h2><a id="mappings" name="mappings">Mappings</a></h2>
+    <p>
+      The vocab.org domain is mapped from the PURL <code>http://purl.org/vocab/</code>. Any URI of the form
+      <code>http://vocab.org/vnd/DOMAIN/DATE/OPAQUE</code> may additionaly be reached via the URI
+      <code>http://purl.org/vocab/vnd/DOMAIN/DATE/OPAQUE</code>
+     </p>
+
+      <p>
+        It is recommended that all vocabularies using the third party URI space define their term URIs 
+        using the PURL rather than the vocab.org domain. The PURL is expected to persist longer than vocab.org, although every effort will be
+        made to ensure that vocab.org persists for as long as possible. (Please see the <a href="/policies/availability">availability statement</a> for more
+        information on this topic)
+    </p>
+	</body>
+</html>			
+		

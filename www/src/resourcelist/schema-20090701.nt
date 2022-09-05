@@ -1,0 +1,246 @@
+<http://purl.org/vocab/resourcelist/schema#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/date> "2008-05-14" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/title> "Resource List Ontology"@en .
+<http://purl.org/vocab/resourcelist/schema#> <http://www.w3.org/2000/01/rdf-schema#comment> "\nThe Resource List ontology describes collections of Items grouped together in Sections and explicitly ordered. Items refer to resources, currently bibo:Documents. The ontology subclasses SIOC for Container and Item relationships as well as providing additional properties for explicit ordering and optimisations for retrieving deeply structured Lists.\nThe Resource List ontology is intended for use describing academic reading lists, bookmarks, bibliographies and similar structured collections of references.\n    \t"@en .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/resourcelist/schema#" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/contributor> "Ian Corns" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/contributor> "Sarah Bartlett" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2008 Talis Information Ltd" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/resourcelist/schema#" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "resource" .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/vocab/vann/example> <http://purl.org/vocab/resourcelist/ontology_diagram-20090701.html> .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/vocab/vann/example> <http://purl.org/vocab/resourcelist/readinglist-example-20090701.html> .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/vocab/vann/usageNote> <http://purl.org/vocab/resourcelist/usagenote.html> .
+<http://purl.org/vocab/resourcelist/schema-20080519.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text/html" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@en .
+<http://purl.org/vocab/resourcelist/schema-20080519.html> <http://purl.org/dc/elements/1.1/format> _:genid1 .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/resourcelist/schema-20080519.html> .
+<http://purl.org/vocab/resourcelist/schema-20080519.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/rdf+xml" .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "RDF"@en .
+<http://purl.org/vocab/resourcelist/schema-20080519.rdf> <http://purl.org/dc/elements/1.1/format> _:genid2 .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/resourcelist/schema-20080519.rdf> .
+<http://purl.org/vocab/resourcelist/schema#> <http://purl.org/dc/terms/issued> "2008-05-19" .
+_:genid3 <http://purl.org/dc/elements/1.1/date> "2008-05-19" .
+_:genid3 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "First cut of the ontology published" .
+<http://purl.org/vocab/resourcelist/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid3 .
+_:genid4 <http://purl.org/dc/elements/1.1/date> "2008-07-31" .
+_:genid4 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Ontology updated, lifecycle integrated" .
+<http://purl.org/vocab/resourcelist/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid4 .
+_:genid5 <http://purl.org/dc/elements/1.1/date> "2009-07-01" .
+_:genid5 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Ontology updated, updated to reflect new properties, and change to using rdf:Seq of ordering of items/sections" .
+<http://purl.org/vocab/resourcelist/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid5 .
+<http://purl.org/vocab/resourcelist/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<http://purl.org/vocab/resourcelist/schema> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Notice> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/requires> <http://web.resource.org/cc/Attribution> .
+<http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/DerivativeWorks> .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/2000/01/rdf-schema#label> "Resource List"@en .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/2000/01/rdf-schema#comment> "A Resource List represents an ordered collection of Items each which refers to a resource (currently bibo:Documents) for such purposes as managing a bibliography, circulating a reading list or similar."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/sioc/spec/Container> .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> .
+<http://purl.org/vocab/resourcelist/schema#List> <http://purl.org/dc/terms/issued> "2008-05-19" .
+_:genid6 <http://purl.org/dc/elements/1.1/date> "2009-07-01" .
+_:genid6 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Updated, List now also subclasses rdf:Seq" .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid6 .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/2000/01/rdf-schema#label> "Section"@en .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/2000/01/rdf-schema#comment> "A Section denotes a grouping of resources within a Resource List that are considered related in some way."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/sioc/spec/Container> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://purl.org/dc/terms/issued> "2008-05-19" .
+_:genid7 <http://purl.org/dc/elements/1.1/date> "2009-07-01" .
+_:genid7 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Updated, Section now also subclasses rdf:Seq" .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid7 .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/2000/01/rdf-schema#label> "Item"@en .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "An Item represents a resource in the context of the list in which it is contained. This differs from the resource itself in that a resource may be referenced in many lists or many times within a single list. Item provides the means to contextualize the specific reference to a resource on each list."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/sioc/spec/Item> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#AlternativeItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/vocab/resourcelist/schema#AlternativeItem> <http://www.w3.org/2000/01/rdf-schema#label> "Alternative Item"@en .
+<http://purl.org/vocab/resourcelist/schema#AlternativeItem> <http://www.w3.org/2000/01/rdf-schema#comment> "An Alternative Item is an Item that is used specifically as an alternative to the Item it is associated with. This allows resource list creators to specify alternative resources when the core items on their list are unavailable, or simply in addition to them within a given context."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#AlternativeItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#AlternativeItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#AlternativeItem> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#list> <http://www.w3.org/2000/01/rdf-schema#label> "list"@en .
+<http://purl.org/vocab/resourcelist/schema#list> <http://www.w3.org/2000/01/rdf-schema#comment> "Sections and Items are contained within Lists, the list property allows an easy way to get from Items and Sections that may be several levels deep to their parent List."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#list> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/resourcelist/schema#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+<http://purl.org/vocab/resourcelist/schema#list> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid8 .
+<http://purl.org/vocab/resourcelist/schema#list> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#list> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+<http://purl.org/vocab/resourcelist/schema#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "A List may contain many Sections and Items organised in a hierarchical structure. the contains property provides a relationshiop between the parent List and all Sections and Items within it, whether they are attached directly or deeper within the structure. This allows a List and all of its parts to be retrieved with a single DESCRIBE. This is an optimisation that precludes the need for recursive querying."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+<http://purl.org/vocab/resourcelist/schema#contains> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
+<http://purl.org/vocab/resourcelist/schema#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/resourcelist/schema#List> .
+<http://purl.org/vocab/resourcelist/schema#contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#contains> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#next> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#next> <http://www.w3.org/2000/01/rdf-schema#label> "next"@en .
+<http://purl.org/vocab/resourcelist/schema#next> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+<http://purl.org/vocab/resourcelist/schema#next> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+<http://purl.org/vocab/resourcelist/schema#next> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+<http://purl.org/vocab/resourcelist/schema#next> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#next> <http://purl.org/dc/terms/issued> "2008-05-19" .
+_:genid20 <http://purl.org/dc/elements/1.1/date> "2009-07-01" .
+_:genid20 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable" .
+<http://purl.org/vocab/resourcelist/schema#next> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid20 .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://www.w3.org/2000/01/rdf-schema#label> "previous"@en .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://www.w3.org/2000/01/rdf-schema#range> _:genid21 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid24 .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://purl.org/dc/terms/issued> "2008-05-19" .
+_:genid27 <http://purl.org/dc/elements/1.1/date> "2009-07-01" .
+_:genid27 <http://purl.org/dc/elements/1.1/creator> "Nadeem Shabir" .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable" .
+<http://purl.org/vocab/resourcelist/schema#previous> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid27 .
+<http://purl.org/vocab/resourcelist/schema#resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#resource> <http://www.w3.org/2000/01/rdf-schema#label> "resource"@en .
+<http://purl.org/vocab/resourcelist/schema#resource> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource property relates an Item as it occurs in a List or Section to the resource it refers to. In our current view of Resource Lists the Items refer to resources all of which can be described using Bibliontology."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#resource> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/bibo/Document> .
+<http://purl.org/vocab/resourcelist/schema#resource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#resource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#resource> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#usedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#usedBy> <http://www.w3.org/2000/01/rdf-schema#label> "List Used By"@en .
+<http://purl.org/vocab/resourcelist/schema#usedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The usedBy property relates a List to the those rdf:resources that refer to it."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#usedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/resourcelist/schema#List> .
+<http://purl.org/vocab/resourcelist/schema#usedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#usedBy> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#usesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#usesList> <http://www.w3.org/2000/01/rdf-schema#label> "Uses Resource List"@en .
+<http://purl.org/vocab/resourcelist/schema#usesList> <http://www.w3.org/2000/01/rdf-schema#comment> "The usesList property is used to relate any rdf:resource to a Resource List it makes use of."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#usesList> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/resourcelist/schema#List> .
+<http://purl.org/vocab/resourcelist/schema#usesList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#usesList> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#alternative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#alternative> <http://www.w3.org/2000/01/rdf-schema#label> "Alternative"@en .
+<http://purl.org/vocab/resourcelist/schema#alternative> <http://www.w3.org/2000/01/rdf-schema#comment> "The alternative property is used to relate one item to another as an alternative."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#alternative> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#alternative> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/resourcelist/schema#AlernativeItem> .
+<http://purl.org/vocab/resourcelist/schema#alternative> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#alternative> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#created> <http://www.w3.org/2000/01/rdf-schema#label> "Created Date"@en .
+<http://purl.org/vocab/resourcelist/schema#created> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to capture the date a list, item, or section was created"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid29 .
+<http://purl.org/vocab/resourcelist/schema#created> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid28 .
+<http://purl.org/vocab/resourcelist/schema#created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#created> <http://purl.org/dc/terms/issued> "2008-07-31" .
+<http://purl.org/vocab/resourcelist/schema#lastUpdated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#label> "Last Updated Date"@en .
+<http://purl.org/vocab/resourcelist/schema#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to capture the date a list, item, or section last updated"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Item> .
+<http://purl.org/vocab/resourcelist/schema#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#Section> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+<http://purl.org/vocab/resourcelist/schema#Section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/resourcelist/schema#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+<http://purl.org/vocab/resourcelist/schema#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
+<http://purl.org/vocab/resourcelist/schema#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid32 .
+<http://purl.org/vocab/resourcelist/schema#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#lastUpdated> <http://purl.org/dc/terms/issued> "2009-07-01" .
+<http://purl.org/vocab/resourcelist/schema#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://purl.org/vocab/resourcelist/schema#description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
+<http://purl.org/vocab/resourcelist/schema#description> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to provide a description of a Resource List."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/resourcelist/schema#List> .
+<http://purl.org/vocab/resourcelist/schema#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#description> <http://purl.org/dc/terms/issued> "2008-05-19" .
+<http://purl.org/vocab/resourcelist/schema#status-draft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/lifecycle/schema#State> .
+<http://purl.org/vocab/resourcelist/schema#status-draft> <http://www.w3.org/2000/01/rdf-schema#label> "Draft"@en .
+<http://purl.org/vocab/resourcelist/schema#status-draft> <http://www.w3.org/2000/01/rdf-schema#comment> "This State is used to indicate that something is Draft."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#status-draft> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#status-draft> <http://purl.org/dc/terms/issued> "2008-07-31" .
+<http://purl.org/vocab/resourcelist/schema#status-published> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/lifecycle/schema#State> .
+<http://purl.org/vocab/resourcelist/schema#status-published> <http://www.w3.org/2000/01/rdf-schema#label> "Published"@en .
+<http://purl.org/vocab/resourcelist/schema#status-published> <http://www.w3.org/2000/01/rdf-schema#comment> "This State is used to indicate that something is Published."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/vocab/resourcelist/schema#status-published> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/resourcelist/schema#> .
+<http://purl.org/vocab/resourcelist/schema#status-published> <http://purl.org/dc/terms/issued> "2008-07-31" .

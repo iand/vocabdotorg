@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ /resourcelist/schema [R,L]
+RewriteRule ^schema$ /resourcelist/schema-20090701 [L]
+RewriteRule ^schema\.rdf$ /resourcelist/schema-20090701.rdf [L]
+RewriteRule ^schema\.html$ /resourcelist/schema-20090701.html [L]

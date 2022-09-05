@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ /aiiso-roles/schema [R,L]
+RewriteRule ^schema$ /aiiso-roles/schema-20100610 [L]
+RewriteRule ^schema\.rdf$ /aiiso-roles/schema-20100610.rdf [L]
+RewriteRule ^schema\.html$ /aiiso-roles/schema-20100610.html [L]

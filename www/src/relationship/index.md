@@ -1,0 +1,403 @@
+title: RELATIONSHIP: A vocabulary for describing relationships between people
+uri: http://purl.org/vocab/relationship/
+sourcerdf: rel-vocab-20100607.rdf
+----
+<dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="res">genid1</div></dd></dl><div class="lit">A vocabulary for describing relationships between people</div><p>Please direct feedback on this document to the <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF-DEV mailing list"</a></p>
+<h2 id="sec-history">History</h2>
+<ul><li>2004-02-11 - first issued</li><li>2005-08-10 - editorial change by Ian Davis: Added isDefinedBy properties and updated documentation</li><li>2009-05-15 - semantic change by Ian Davis: Typed vocabulary as owl:Ontology</li><li>2010-02-09 - semantic change by Ian Davis: Asserted that foaf:knows is rdfs:subPropertyOf rel:knowsOf</li><li>2010-02-09 - semantic change by Ian Davis: Incorporated changes suggested by Henry Story on foaf-dev list</li><li>2010-04-19 - editorial change by Ian Davis: Inlined the examples that had been orphaned by publishing software changes</li></ul>
+<h2 id="sec-namespace">Namespace</h2>
+<p>The URI for this vocabulary is</p><pre><code>http://purl.org/vocab/relationship</code></pre>
+<p>When abbreviating terms the suggested prefix is <code>rel</code></p>
+<p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://purl.org/vocab/relationship/childOf</code></pre>
+
+<h2 id="sec-summary">Terms Summary</h2>
+<p>An alphabetical list of all terms defined in this schema.</p><table><tr><th>Term</th><th>URI</th><th>Description</th></tr>
+<tr><td><a href="#acquaintanceOf">Acquaintance Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/acquaintanceOf</td></td><td>A person having more than slight or superficial knowledge of this person but short of friendship</td></tr>
+<tr><td><a href="#ambivalentOf">Ambivalent Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/ambivalentOf</td></td><td>A person towards whom this person has mixed feelings or emotions</td></tr>
+<tr><td><a href="#ancestorOf">Ancestor Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/ancestorOf</td></td><td>A person who is a descendant of this person</td></tr>
+<tr><td><a href="#antagonistOf">Antagonist Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/antagonistOf</td></td><td>A person who opposes and contends against this person</td></tr>
+<tr><td><a href="#apprenticeTo">Apprentice To</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/apprenticeTo</td></td><td>A person to whom this person serves as a trusted counselor or teacher</td></tr>
+<tr><td><a href="#childOf">Child Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/childOf</td></td><td>A person who was given birth to or nurtured and raised by this person</td></tr>
+<tr><td><a href="#closeFriendOf">Close Friend Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/closeFriendOf</td></td><td>A person who shares a close mutual friendship with this person</td></tr>
+<tr><td><a href="#collaboratesWith">Collaborates With</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/collaboratesWith</td></td><td>A person who works towards a common goal with this person</td></tr>
+<tr><td><a href="#colleagueOf">Colleague Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/colleagueOf</td></td><td>A person who is a member of the same profession as this person</td></tr>
+<tr><td><a href="#descendantOf">Descendant Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/descendantOf</td></td><td>A person from whom this person is descended</td></tr>
+<tr><td><a href="#employedBy">Employed By</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/employedBy</td></td><td>A person for whom this person&#39;s services have been engaged</td></tr>
+<tr><td><a href="#employerOf">Employer Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/employerOf</td></td><td>A person who engages the services of this person</td></tr>
+<tr><td><a href="#enemyOf">Enemy Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/enemyOf</td></td><td>A person towards whom this person feels hatred, intends injury to, or opposes the interests of</td></tr>
+<tr><td><a href="#engagedTo">Engaged To</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/engagedTo</td></td><td>A person to whom this person is betrothed</td></tr>
+<tr><td><a href="#friendOf">Friend Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/friendOf</td></td><td>A person who shares mutual friendship with this person</td></tr>
+<tr><td><a href="#grandchildOf">Grandchild Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/grandchildOf</td></td><td>A person who is a child of any of this person&#39;s children</td></tr>
+<tr><td><a href="#grandparentOf">Grandparent Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/grandparentOf</td></td><td>A person who is the parent of any of this person&#39;s parents</td></tr>
+<tr><td><a href="#hasMet">Has Met</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/hasMet</td></td><td>A person who has met this person whether in passing or longer</td></tr>
+<tr><td><a href="#influencedBy">Influenced By</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/influencedBy</td></td><td>a person who has influenced this person</td></tr>
+<tr><td><a href="#knowsByReputation">Knows By Reputation</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/knowsByReputation</td></td><td>A person known by this person primarily for a particular action, position or field of endeavour</td></tr>
+<tr><td><a href="#knowsInPassing">Knows In Passing</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/knowsInPassing</td></td><td>A person whom this person has slight or superficial knowledge of</td></tr>
+<tr><td><a href="#knowsOf">Knows Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/knowsOf</td></td><td>A person who has come to be known to this person through their actions or position</td></tr>
+<tr><td><a href="#lifePartnerOf">Life Partner of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/lifePartnerOf</td></td><td>A person who has made a long-term commitment to this person&#39;s</td></tr>
+<tr><td><a href="#livesWith">Lives With</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/livesWith</td></td><td>A person who shares a residence with this person</td></tr>
+<tr><td><a href="#livesWith">Lives With</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/livesWith</td></td><td>A person who shares a residence with this person</td></tr>
+<tr><td><a href="#lostContactWith">Lost Contact With</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/lostContactWith</td></td><td>A person who was once known by this person but has subsequently become uncontactable</td></tr>
+<tr><td><a href="#mentorOf">Mentor Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/mentorOf</td></td><td>A person who serves as a trusted counselor or teacher to this person</td></tr>
+<tr><td><a href="#neighborOf">Neighbor Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/neighborOf</td></td><td>A person who lives in the same locality as this person</td></tr>
+<tr><td><a href="#parentOf">Parent Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/parentOf</td></td><td>A person who has given birth to or nurtured and raised this person</td></tr>
+<tr><td><a href="#participant">Participant</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/participant</td></td><td></td></tr>
+<tr><td><a href="#participantIn">Participant In</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/participantIn</td></td><td></td></tr>
+<tr><td><a href="#Relationship">Relationship</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/Relationship</td></td><td>A particular type of connection existing between people related to or having dealings with each other</td></tr>
+<tr><td><a href="#siblingOf">Sibling Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/siblingOf</td></td><td>A person having one or both parents in common with this person</td></tr>
+<tr><td><a href="#spouseOf">Spouse Of</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/spouseOf</td></td><td>A person who is married to this person</td></tr>
+<tr><td><a href="#worksWith">Works With</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/worksWith</td></td><td>A person who works for the same employer as this person</td></tr>
+<tr><td><a href="#wouldLikeToKnow">Would Like To Know</a></td><td nowrap="nowrap">http://purl.org/vocab/relationship/wouldLikeToKnow</td></td><td>A person whom this person would desire to know more closely</td></tr>
+</table>
+<h2 id="sec-terms">Properties and Classes</h2>
+
+<h3 id="acquaintanceOf">Acquaintance Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/acquaintanceOf" class="uri">http://purl.org/vocab/relationship/acquaintanceOf</a></p><p class="terminfo">A person having more than slight or superficial knowledge of this person but short of friendship.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/acquaintanceOf" class="uri">relationship:acquaintanceOf</a></div></td></tr>
+</table>
+<h3 id="ambivalentOf">Ambivalent Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/ambivalentOf" class="uri">http://purl.org/vocab/relationship/ambivalentOf</a></p><p class="terminfo">A person towards whom this person has mixed feelings or emotions.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows due to reciprocity requirements. It is possible for one to be ambivalent of another without that person knowing the first.</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/ambivalentOf" class="uri">schemas:ambivalentOf</a></div></td></tr>
+</table>
+<h3 id="ancestorOf">Ancestor Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/ancestorOf" class="uri">http://purl.org/vocab/relationship/ancestorOf</a></p><p class="terminfo">A person who is a descendant of this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is transitive. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/descendantOf" class="uri">Descendant Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows. foaf:knows requires a reciprocation that may not be possible for distant ancestors.</li></ul>
+<h3 id="antagonistOf">Antagonist Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/antagonistOf" class="uri">http://purl.org/vocab/relationship/antagonistOf</a></p><p class="terminfo">A person who opposes and contends against this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/antagonistOf" class="uri">msg0:antagonistOf</a></div></td></tr>
+</table>
+<h3 id="apprenticeTo">Apprentice To</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/apprenticeTo" class="uri">http://purl.org/vocab/relationship/apprenticeTo</a></p><p class="terminfo">A person to whom this person serves as a trusted counselor or teacher.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/mentorOf" class="uri">Mentor Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="childOf">Child Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/childOf" class="uri">http://purl.org/vocab/relationship/childOf</a></p><p class="terminfo">A person who was given birth to or nurtured and raised by this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/parentOf" class="uri">Parent Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/childOf" class="uri">msg1:childOf</a></div></td></tr>
+</table>
+<h3 id="closeFriendOf">Close Friend Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/closeFriendOf" class="uri">http://purl.org/vocab/relationship/closeFriendOf</a></p><p class="terminfo">A person who shares a close mutual friendship with this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="collaboratesWith">Collaborates With</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/collaboratesWith" class="uri">http://purl.org/vocab/relationship/collaboratesWith</a></p><p class="terminfo">A person who works towards a common goal with this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="colleagueOf">Colleague Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/colleagueOf" class="uri">http://purl.org/vocab/relationship/colleagueOf</a></p><p class="terminfo">A person who is a member of the same profession as this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="descendantOf">Descendant Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/descendantOf" class="uri">http://purl.org/vocab/relationship/descendantOf</a></p><p class="terminfo">A person from whom this person is descended.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is transitive. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/ancestorOf" class="uri">Ancestor Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows. foaf:knows requires a reciprocation that may not be possible for distant descendants.</li></ul>
+<h3 id="employedBy">Employed By</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/employedBy" class="uri">http://purl.org/vocab/relationship/employedBy</a></p><p class="terminfo">A person for whom this person&#39;s services have been engaged.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/employerOf" class="uri">Employer Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="employerOf">Employer Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/employerOf" class="uri">http://purl.org/vocab/relationship/employerOf</a></p><p class="terminfo">A person who engages the services of this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/employedBy" class="uri">Employed By</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="enemyOf">Enemy Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/enemyOf" class="uri">http://purl.org/vocab/relationship/enemyOf</a></p><p class="terminfo">A person towards whom this person feels hatred, intends injury to, or opposes the interests of.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/enemyOf" class="uri">msg2:enemyOf</a></div></td></tr>
+</table>
+<h3 id="engagedTo">Engaged To</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/engagedTo" class="uri">http://purl.org/vocab/relationship/engagedTo</a></p><p class="terminfo">A person to whom this person is betrothed.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="friendOf">Friend Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/friendOf" class="uri">http://purl.org/vocab/relationship/friendOf</a></p><p class="terminfo">A person who shares mutual friendship with this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/friendOf" class="uri">msg3:friendOf</a></div></td></tr>
+</table>
+<h3 id="grandchildOf">Grandchild Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/grandchildOf" class="uri">http://purl.org/vocab/relationship/grandchildOf</a></p><p class="terminfo">A person who is a child of any of this person&#39;s children.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/grandparentOf" class="uri">Grandparent Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/grandchildOf" class="uri">msg4:grandchildOf</a></div></td></tr>
+</table>
+<h3 id="grandparentOf">Grandparent Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/grandparentOf" class="uri">http://purl.org/vocab/relationship/grandparentOf</a></p><p class="terminfo">A person who is the parent of any of this person&#39;s parents.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/grandchildOf" class="uri">Grandchild Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="hasMet">Has Met</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/hasMet" class="uri">http://purl.org/vocab/relationship/hasMet</a></p><p class="terminfo">A person who has met this person whether in passing or longer.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="influencedBy">Influenced By</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/influencedBy" class="uri">http://purl.org/vocab/relationship/influencedBy</a></p><p class="terminfo">a person who has influenced this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows due to reciprocity requirements. It is possible for one to be influenced by another by reputation without that person knowing the first.</li></ul>
+<h3 id="knowsByReputation">Knows By Reputation</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/knowsByReputation" class="uri">http://purl.org/vocab/relationship/knowsByReputation</a></p><p class="terminfo">A person known by this person primarily for a particular action, position or field of endeavour.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows due to reciprocity requirements. It is possible for one to know of another by reputation without that person knowing the first.</li></ul>
+<h3 id="knowsInPassing">Knows In Passing</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/knowsInPassing" class="uri">http://purl.org/vocab/relationship/knowsInPassing</a></p><p class="terminfo">A person whom this person has slight or superficial knowledge of.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="knowsOf">Knows Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/knowsOf" class="uri">http://purl.org/vocab/relationship/knowsOf</a></p><p class="terminfo">A person who has come to be known to this person through their actions or position.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Assert that foaf:knows is rdfs:subPropertyOf rel:knowsOf</li><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows due to reciprocity requirements. It is possible for one to know of another without that person knowing the first.</li></ul>
+<h3 id="lifePartnerOf">Life Partner of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/lifePartnerOf" class="uri">http://purl.org/vocab/relationship/lifePartnerOf</a></p><p class="terminfo">A person who has made a long-term commitment to this person&#39;s.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="livesWith">Lives With</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/livesWith" class="uri">http://purl.org/vocab/relationship/livesWith</a></p><p class="terminfo">A person who shares a residence with this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical and transitive. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="livesWith">Lives With</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/livesWith" class="uri">http://purl.org/vocab/relationship/livesWith</a></p><p class="terminfo">A person who shares a residence with this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical and transitive. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="lostContactWith">Lost Contact With</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/lostContactWith" class="uri">http://purl.org/vocab/relationship/lostContactWith</a></p><p class="terminfo">A person who was once known by this person but has subsequently become uncontactable.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="mentorOf">Mentor Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/mentorOf" class="uri">http://purl.org/vocab/relationship/mentorOf</a></p><p class="terminfo">A person who serves as a trusted counselor or teacher to this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/apprenticeTo" class="uri">Apprentice To</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h3 id="neighborOf">Neighbor Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/neighborOf" class="uri">http://purl.org/vocab/relationship/neighborOf</a></p><p class="terminfo">A person who lives in the same locality as this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is transitive.</li></ul>
+<h3 id="parentOf">Parent Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/parentOf" class="uri">http://purl.org/vocab/relationship/parentOf</a></p><p class="terminfo">A person who has given birth to or nurtured and raised this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a> and the inverse of <a href="http://purl.org/vocab/relationship/childOf" class="uri">Child Of</a></p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/parentOf" class="uri">msg5:parentOf</a></div></td></tr>
+</table>
+<h3 id="participant">Participant</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/participant" class="uri">http://purl.org/vocab/relationship/participant</a></p><p class="terminfo"></p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/relationship/Relationship" class="uri">Relationship</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows.</li></ul>
+<h3 id="participantIn">Participant In</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/participantIn" class="uri">http://purl.org/vocab/relationship/participantIn</a></p><p class="terminfo"></p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://purl.org/vocab/relationship/Relationship" class="uri">Relationship</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows.</li></ul>
+<h3 id="Relationship">Relationship</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/Relationship" class="uri">http://purl.org/vocab/relationship/Relationship</a></p><p class="terminfo">A particular type of connection existing between people related to or having dealings with each other.</p>
+<h3 id="siblingOf">Sibling Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/siblingOf" class="uri">http://purl.org/vocab/relationship/siblingOf</a></p><p class="terminfo">A person having one or both parents in common with this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/siblingOf" class="uri">msg6:siblingOf</a></div></td></tr>
+</table>
+<h3 id="spouseOf">Spouse Of</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/spouseOf" class="uri">http://purl.org/vocab/relationship/spouseOf</a></p><p class="terminfo">A person who is married to this person</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li></ul>
+<h4 id="sec-examples">Other Information</h4>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2002/07/owl#equivalentClass" class="uri">Equivalent </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.perceive.net/schemas/relationship/spouseOf" class="uri">msg7:spouseOf</a></div></td></tr>
+</table>
+<h3 id="worksWith">Works With</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/worksWith" class="uri">http://purl.org/vocab/relationship/worksWith</a></p><p class="terminfo">A person who works for the same employer as this person.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">This property is symmetrical. Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://xmlns.com/foaf/0.1/knows" class="uri">Knows</a> and <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is transitive.</li></ul>
+<h3 id="wouldLikeToKnow">Would Like To Know</h3>
+<p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/relationship/wouldLikeToKnow" class="uri">http://purl.org/vocab/relationship/wouldLikeToKnow</a></p><p class="terminfo">A person whom this person would desire to know more closely.</p>
+<h4>Semantics</h4>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. Every value of this property is a <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. It is a sub-property of <a href="http://www.w3.org/2002/07/owl#differentFrom" class="uri">owl:differentFrom</a>. </p>
+<h4 id="sec-status">Status</h4>
+<ul><li>2010-02-09 - semantic change by Ian Davis: Asserted that this property is a sub-property of owl:differentFrom, indicating that this is a relationship between different individuals</li><li>2010-02-09 - semantic change by Ian Davis: Removed assertion that this property is a sub-property of foaf:knows which would imply that the two people already know one another.</li></ul>
+<h2 id="sec-examples">Examples</h2>
+
+<h3>Using With FOAF</h3>
+<p><div class="lit"><p>The RELATIONSHIP vocabulary can be used without modification with <a href="http://xmlns.com/foaf/0.1/">FOAF</a> documents. Simply replace <code>foaf:knows</code> properties with a more specific property from this vocabulary. For backwards compatibility with older, non-RDF aware,  tools, you may want to keep the <code>foaf:knows</code> property as well.</p>     <pre>
+<code class="xml">
+&lt;rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:rel="http://purl.org/vocab/relationship/"
+      &gt;
+
+  &lt;foaf:Person rdf:nodeID="ian"&gt;
+    &lt;foaf:name&gt;Ian Davis&lt;/foaf:name&gt;
+    &lt;foaf:title&gt;Mr&lt;/foaf:title&gt;
+    &lt;foaf:firstName&gt;Ian&lt;/foaf:firstName&gt;
+    &lt;foaf:surname&gt;Davis&lt;/foaf:surname&gt;
+
+    &lt;rel:hasMet&gt;
+      &lt;foaf:Person&gt;
+        &lt;foaf:name&gt;William Tell&lt;/foaf:name&gt;
+      &lt;/foaf:Person&gt;
+    &lt;/rel:hasMet&gt;
+
+    &lt;rel:collaboratesWith rdf:nodeID="eric"/&gt;
+  &lt;/foaf:Person&gt;
+
+  &lt;foaf:Person rdf:nodeID="eric"&gt;
+    &lt;foaf:nick&gt;pixel&lt;/foaf:nick&gt;
+  &lt;/foaf:Person&gt;
+
+
+
+&lt;/rdf:RDF&gt;
+</code>
+    </pre>
+</div></p>
+<h3>Using With HTML and XHTML</h3>
+<p><div class="lit"><p>
+
+The relationship vocabulary can be used to describe relationships with the people linked from a web page. This is particularly useful for blogrolls or contact lists but can be used with any type of link. The HTML <code>a</code> element provides two attributes, <a href="http://www.w3.org/TR/html401/struct/links.html#adef-rel">rel and rev</a>, that can be used to specify the relationship. Both <code>rel</code> and <code>rev</code> take a space separated list of keywords as their value. To use a term from the relationship vocabulary just drop the <code>http://purl.org/vocab/relationship/</code> namespace to leave the property name, e.g. <code>http://purl.org/vocab/relationship/worksWith</code> would become <code>worksWith</code> which can be added as the value of <code>rel</code> or <code>rev</code>.
+</p>
+<dl>
+<dt>
+<code>rel</code>
+</dt>
+<dd>
+<p>
+The <code>rel</code> attribute specifies a relationship that the author of the <em>linked</em> page has with the author of the <em>linking</em> page.
+For example:
+</p>
+<pre><code><span class="elem">&lt;a</span><span class="attr">href</span>="<span class="attrVal">http://example.com/boats</span>" <span class="attr highlight">rel</span>="<span class="attrVal">childOf</span>"<span class="elem">&gt;</span><span class="text">The boat we restored</span><span class="elem">"&lt;/a&gt;</span></code></pre>
+        <p>This link states that the author of <code>http://example.com/boats</code> is a child of the author of the html above. </p>
+      </dd>
+      <dt>
+        <code>rev</code>
+      </dt>
+      <dd>
+        <p>
+          The <code>rev</code> attribute specifies a relationship that the author of the <em>linking</em> page has with the author of the   <em>linked</em> page. The example here is:
+        </p>
+        <pre><code><span class="elem">&lt;a</span><span class="attr">href</span>="<span class="attrVal">http://example.com/boats</span>" <span class="attr highlight">rev</span>="<span class="attrVal">childOf</span>"<span class="elem">&gt;</span><span class="text">The boat we restored</span><span class="elem">"&lt;/a&gt;</span></code></pre>
+<p>In this case the meaning of the link is reversed: the author of the html above is a child of the author of <code>http://example.com/boats</code>.</p>
+</dd>
+</dl>
+<p>The HTML and XHTML recommendations require an HTML document to declare a custom profile if it uses any non-standard <code>rel</code> or <code>rev</code> types. This is done by adding a <code>profile</code> attribute with a value of <code>http://purl.org/vocab/relationship/</code> to the document's <code>head</code> element. </p>
+<pre><code>  &lt;head profile="http://purl.org/vocab/relationship/"&gt;
+    &lt;title&gt;People I Know&lt;/title&gt;
+  &lt;/head&gt;</code></pre>
+<h3>Complete Example</h3>
+<pre><code>  &lt;html profile="http://purl.org/vocab/relationship/"&gt;
+    &lt;head&gt;
+      &lt;title&gt;People I Know&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;p&gt;Here are the people I know:&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="http://example.com/~freddy" rel="closeFriendOf"&gt;Freddy (he's cool!)&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="http://frooble.com/" rel="mentorOf"&gt;Jimbo&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="http://mmmm.com/klm" rel="friendOf"&gt;Katie&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="http://example.com/~omah" rel="worksWith"&gt;Omah (does the coding)&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="http://example.com/~jason" rev="closeFriendOf employedBy"&gt;Jason, my henchman&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+<h3>RDF Interpretation</h3>
+<p>Custom parsers that extract RDF from (X)HTML can use the relationships expressed in the links to infer the
+equivilent RDF triples. It should be remembered that the relationship is between the authors of the pages not between
+the pages themselves. Given the following link on a document at <code>http://example.com/mypage.html</code>:
+</p>
+<pre><code><span class="elem">&lt;a</span><span class="attr">href</span>="<span class="attrVal">http://example.com/boats</span>" <span class="attr highlight">rel</span>="<span class="attrVal">childOf</span>"<span class="elem">&gt;</span><span class="text">The boat we restored</span><span class="elem">"&lt;/a&gt;</span></code></pre>
+    <p>a suggested RDF extraction is:</p>
+    <pre><code>  &lt;foaf:Person&gt;
+    &lt;foaf:maker rdf:resource="http://example.com/boats"/&gt;
+    &lt;rel:childOf&gt;
+      &lt;foaf:Person&gt;
+        &lt;foaf:maker rdf:resource="http://example.com/mypage.html"/&gt;
+      &lt;/foaf:Person&gt;
+    &lt;/rel:childOf&gt;
+  &lt;/foaf:Person&gt;</code></pre>
+</div></p>
+<h2 id="sec-examples">Other Information</h2>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="even"><div class="lit">http://purl.org/vocab/relationship/rel-vocab-20050810</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/relationship/" class="uri">RELATIONSHIP: A vocabulary for describing relationships between people</a><br />A vocabulary for describing relationships between people</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/relationship/rel-vocab-20090515" class="uri">rel:rel-vocab-20090515</a></div></td></tr>
+</table>

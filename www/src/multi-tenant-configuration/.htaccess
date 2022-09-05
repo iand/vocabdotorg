@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ /multi-tenant-configuration/schema [R,L]
+RewriteRule ^schema$ /multi-tenant-configuration/schema-20090513 [L]
+RewriteRule ^schema\.rdf$ /multi-tenant-configuration/schema-20090513.rdf [L]
+RewriteRule ^schema\.html$ /multi-tenant-configuration/schema-20090513.html [L]

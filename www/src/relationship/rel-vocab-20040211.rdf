@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:wot="http://xmlns.com/wot/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xml:base="http://www.perceive.net/schemas/20031015/relationship">
+
+	<rdf:Description rdf:about="">
+		<dc:author>Eric Vitiello Jr</dc:author>
+		<dc:title>Relationships Schema</dc:title>
+		<dc:description>Schema for Defining Relationships in FOAF</dc:description>
+		<wot:assurance rdf:resource="relationship.asc" />
+	</rdf:Description>
+
+	<!--properties-->
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/friendOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Friend Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/acquaintanceOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Acquaintance Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/parentOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Parent Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/siblingOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Sibling Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/childOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Child Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/grandchildOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Grandchild Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/spouseOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Spouse Of</rdfs:label>
+	</rdf:Description>
+
+	<!-- negative relationships -->
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/enemyOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Enemy Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/antagonistOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Antagonist Of</rdfs:label>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.perceive.net/schemas/relationship/ambivalentOf">
+		<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/knows"/>
+		<rdfs:label>Ambivalent Of</rdfs:label>
+	</rdf:Description>
+
+</rdf:RDF>

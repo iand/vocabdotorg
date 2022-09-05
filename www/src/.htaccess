@@ -1,0 +1,51 @@
+# .htaccess - Apache configuration file
+# Copyright (C) 2003 Ian Davis.
+#
+# This program is free software; you can redistribute it and/or modify it under the 
+# terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 2 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT 
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+# for more details.
+#
+# You should have received a copy of the GNU General Public License along with this 
+# program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, 
+# Suite 330, Boston, MA 02111-1307 USA
+#
+# $Id: .htaccess,v 1.8 2006/06/23 15:43:01 ian Exp $
+#
+Options MultiViews
+Options +FollowSymLinks
+Options +Indexes
+IndexIgnore CVS
+
+AddType image/svg+xml svg
+AddType image/svg+xml svgz
+AddType application/rss+xml rss
+# Use qs=0.9 so that this has lower priority than html in content neg.
+AddType application/rdf+xml;charset=UTF-8;qs=0.9 rdf
+AddType text/html;charset=UTF-8;qs=1 html
+AddType application/xhtml+xml;charset=UTF-8;qs=0.8 xhtml
+AddType text/plain;qs=0.6 asc
+
+AddEncoding gzip svgz
+DirectoryIndex index.html index.rdf
+
+
+RewriteEngine On
+RewriteBase /
+
+# Canonical hostname
+RewriteCond %{HTTP_HOST}   !^vocab\.org [NC]
+RewriteCond %{HTTP_HOST}   !^vocab\.org\.local [NC]
+RewriteCond %{HTTP_HOST}   !^$
+RewriteRule ^(.*)         http://vocab\.org/$1 [L,R]
+
+RewriteRule ^policies/availability /2004/02/availability-20040205.html [L]
+RewriteRule ^policies/privacy /2004/02/privacy-20040205.html [L]
+RewriteRule ^policies/copyright /2004/02/copyright-20040205.html [L]
+
+
+RedirectPermanent /changesets http://vocab.org/changeset
