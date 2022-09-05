@@ -5,14 +5,6 @@
   <head>
     <title>Evidence</title>
     
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -173,7 +165,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4>Semantics</h4>
 <p class="termsemantics">Having this property implies being a <a href="http://vocab.org/evidence/terms/Hypothesis" class="uri">Hypothesis</a>. Every value of this property is an <a href="http://vocab.org/evidence/terms/Evidence" class="uri">Evidence</a>. </p>
 <h2 id="sec-examples">Other Information</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
 </table></p>
 
       </div>

@@ -5,14 +5,6 @@
   <head>
     <title>Changeset</title>
     
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -143,14 +135,14 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
     <div class="colmask fullpage">
       <div class="col1">
       <p><dl class="doc-info"><dt>Creators</dt><dd><div class="lit">Sam Tunnicliffe</div></dd><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd></dl><div class="lit">
-      This vocabulary defines a set of terms for describing changes to resource descriptions.
-    <span class="lang">[en]</span></div><div class="lit">
-      The vocabulary introduces the notion of a ChangeSet which encapsulates the delta between two versions of a
-      resource description. In this context a resource description is the set of triples that in some way comprise a
-      description of a resource. The delta is represented by two sets of triples: additions and removals. A ChangeSet can be used to
-      modify a resource description by first removing all triples from the description that are in the removals set and
-      adding the triples in the additions set.
-    <span class="lang">[en]</span></div><p>Copyright © 2005 Talis Information Ltd.<p>
+This vocabulary defines a set of terms for describing changes to resource descriptions.
+<span class="lang">[en]</span></div><div class="lit">
+The vocabulary introduces the notion of a ChangeSet which encapsulates the delta between two versions of a
+resource description. In this context a resource description is the set of triples that in some way comprise a
+description of a resource. The delta is represented by two sets of triples: additions and removals. A ChangeSet can be used to
+modify a resource description by first removing all triples from the description that are in the removals set and
+adding the triples in the additions set.
+<span class="lang">[en]</span></div><p>Copyright © 2005 Talis Information Ltd.<p>
 <h2 id="sec-history">History</h2>
 <ul><li>2005-12-14 &ndash; first issued</li><li>2006-03-21 &ndash; editorial change: Improved documentation</li><li>2006-03-21 &ndash; semantic change: Introduced statement property</li><li>2006-06-23 &ndash; editorial change: Fixed invalid RDF</li><li>2009-05-18 &ndash; semantic change: Updated dublin core properties to new namespace</li></ul>
 <h2 id="sec-namespace">Namespace</h2>
@@ -245,16 +237,16 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-12-14 &ndash; first issued</li><li>2006-03-21 &ndash; editorial change by Ian Davis: Added definitition and documentation</li><li>2006-03-21 &ndash; semantic change by Ian Davis: Made owl:ObjectProperty</li></ul>
 <h2 id="sec-examples">Examples</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/title" class="uri">Title</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">A Simple ChangeSet</div></td></tr>
-</table><table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/title" class="uri">Title</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Linked ChangeSets</div></td></tr>
-</table><table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/title" class="uri">Title</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Implementing Undo With ChangeSets</div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/title" class="uri">Title</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">A Simple ChangeSet</div></td></tr>
+</table><table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/title" class="uri">Title</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Linked ChangeSets</div></td></tr>
+</table><table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/title" class="uri">Title</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Implementing Undo With ChangeSets</div></td></tr>
 </table>
 <h2 id="sec-examples">Other Information</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="even"><div class="lit"><a href="http://purl.org/vocab/changeset/schema-20060321">http://purl.org/vocab/changeset/schema-20060321</a></div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">2006-03-21</div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/changeset/schema#" class="uri"><a href="Http://purl.org/vocab/changeset/schema#">Http://purl.org/vocab/changeset/schema#</a></a></div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/changeset/schema-20051214" class="uri">changeset:schema-20051214</a></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="even"><div class="lit"><a href="http://purl.org/vocab/changeset/schema-20060321">http://purl.org/vocab/changeset/schema-20060321</a></div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">2006-03-21</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/changeset/schema#" class="uri"><a href="Http://purl.org/vocab/changeset/schema#">Http://purl.org/vocab/changeset/schema#</a></a></div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/changeset/schema-20051214" class="uri">changeset:schema-20051214</a></div></td></tr>
 </table></p>
 
       </div>

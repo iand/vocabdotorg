@@ -11,6 +11,11 @@ AUTHOR = Ian Davis
 .htaccess:
 	ignore
 
+Makefile:
+	ignore
+
+frontmatter:
+	ignore
 
 *.md:
 	config

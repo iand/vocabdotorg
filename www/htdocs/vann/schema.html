@@ -5,14 +5,6 @@
   <head>
     <title>VANN: A vocabulary for annotating vocabulary descriptions</title>
     
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -170,14 +162,14 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h3 id="preferredNamespacePrefix">Preferred Namespace Prefix</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/vann/preferredNamespacePrefix" class="uri"><a href="http://purl.org/vocab/vann/preferredNamespacePrefix">http://purl.org/vocab/vann/preferredNamespacePrefix</a></a></p><p class="terminfo">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</p>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">preferred namespace prefixes</div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#inverseSingular" class="uri">Inverse </a></div></th><td valign="top" width="80%" class="even"><div class="lit">is preferred namespace prefix for</div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">preferred namespace prefixes</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#inverseSingular" class="uri">Inverse </a></div></th><td valign="top" width="80%" class="even"><div class="lit">is preferred namespace prefix for</div></td></tr>
 </table>
 <h3 id="preferredNamespaceUri">Preferred Namespace Uri</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/vann/preferredNamespaceUri" class="uri"><a href="http://purl.org/vocab/vann/preferredNamespaceUri">http://purl.org/vocab/vann/preferredNamespaceUri</a></a></p><p class="terminfo">The preferred namespace URI to use when using terms from this vocabulary in an XML document.</p>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">preferred namespace URIs</div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#inverseSingular" class="uri">Inverse </a></div></th><td valign="top" width="80%" class="even"><div class="lit">is preferred namespace URI for</div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">preferred namespace URIs</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#inverseSingular" class="uri">Inverse </a></div></th><td valign="top" width="80%" class="even"><div class="lit">is preferred namespace URI for</div></td></tr>
 </table>
 <h3 id="termGroup">Term Group</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/vann/termGroup" class="uri"><a href="http://purl.org/vocab/vann/termGroup">http://purl.org/vocab/vann/termGroup</a></a></p><p class="terminfo">A group of related terms in a vocabulary.</p>
@@ -186,11 +178,11 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4>Semantics</h4>
 <p class="termsemantics">It is a sub-property of <a href="http://www.w3.org/2000/01/rdf-schema#seeAlso" class="uri">See also</a>. </p>
 <h2 id="sec-examples">Other Information</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="even"><div class="lit"><a href="http://purl.org/vocab/vann/vann-vocab-20050401">http://purl.org/vocab/vann/vann-vocab-20050401</a></div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">2010-06-07</div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/vann/" class="uri">VANN: A vocabulary for annotating vocabulary descriptions</a><br />This document describes a vocabulary for annotating descriptions of vocabularies with examples and usage notes.</div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/vann/vann-vocab-20040305" class="uri">vann:vann-vocab-20040305</a></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="even"><div class="lit"><a href="http://purl.org/vocab/vann/vann-vocab-20050401">http://purl.org/vocab/vann/vann-vocab-20050401</a></div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">2010-06-07</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/vann/" class="uri">VANN: A vocabulary for annotating vocabulary descriptions</a><br />This document describes a vocabulary for annotating descriptions of vocabularies with examples and usage notes.</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/vann/vann-vocab-20040305" class="uri">vann:vann-vocab-20040305</a></div></td></tr>
 </table></p>
 
       </div>

@@ -5,14 +5,6 @@
   <head>
     <title>Academic Institution Internal Structure Ontology Roles (AIISO Roles)</title>
     
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -143,7 +135,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
     <div class="colmask fullpage">
       <div class="col1">
       <p><dl class="doc-info"><dt>Creators</dt><dd><div class="lit">Rob Styles</div></dd><dd><div class="lit">Chris Wallace</div></dd></dl><div class="lit">The AIISO Roles schema provides common roles found in academic institutions in higher education. It is intended for use with Participation (<a href="http://purl.org/vocab/participation/schema">http://purl.org/vocab/participation/schema</a>), FOAF (<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>) and AIISO (<a href="http://purl.org/vocab/aiiso/schema">http://purl.org/vocab/aiiso/schema</a>) to describe the roles that people play within an institution.
-        <span class="lang">[en]</span></div><p>Copyright © 2008 Rob Styles, Chris Wallace<p>
+    <span class="lang">[en]</span></div><p>Copyright © 2008 Rob Styles, Chris Wallace<p>
 <h2 id="sec-history">History</h2>
 <ul><li>2008-05-14 &ndash; first issued</li><li>2008-05-14 &ndash; semantic change by Rob Styles: First cut of the aiiso roles published</li><li>2010-06-10 &ndash; semantic change by Josef Petrák: Added additional roles and corrected rdfs:subClassOf</li></ul>
 <h2 id="sec-namespace">Namespace</h2>
@@ -850,12 +842,12 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 &ndash; first issued</li></ul>
 <h2 id="sec-examples">Other Information</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-05-20</div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit"><a href="http://purl.org/vocab/aiiso-roles/schema-20100610">http://purl.org/vocab/aiiso-roles/schema-20100610</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso-roles/schema#" class="uri">Academic Institution Internal Structure Ontology Roles (AIISO Roles)</a><br />The AIISO Roles schema provides common roles found in academic institutions in higher education. It is intended for use with Participation (<a href="http://purl.org/vocab/participation/schema">http://purl.org/vocab/participation/schema</a>), FOAF (<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>) and AIISO (<a href="http://purl.org/vocab/aiiso/schema">http://purl.org/vocab/aiiso/schema</a>) to describe the roles that people play within an institution.
-        </div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/aiiso-roles/schema-20100610.html" class="uri"><a href="Http://purl.org/vocab/aiiso-roles/schema-20100610.html">Http://purl.org/vocab/aiiso-roles/schema-20100610.html</a></a></div><div class="res"><a href="http://purl.org/vocab/aiiso-roles/schema-20100610.rdf" class="uri"><a href="Http://purl.org/vocab/aiiso-roles/schema-20100610.rdf">Http://purl.org/vocab/aiiso-roles/schema-20100610.rdf</a></a></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-05-20</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit"><a href="http://purl.org/vocab/aiiso-roles/schema-20100610">http://purl.org/vocab/aiiso-roles/schema-20100610</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso-roles/schema#" class="uri">Academic Institution Internal Structure Ontology Roles (AIISO Roles)</a><br />The AIISO Roles schema provides common roles found in academic institutions in higher education. It is intended for use with Participation (<a href="http://purl.org/vocab/participation/schema">http://purl.org/vocab/participation/schema</a>), FOAF (<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>) and AIISO (<a href="http://purl.org/vocab/aiiso/schema">http://purl.org/vocab/aiiso/schema</a>) to describe the roles that people play within an institution.
+    </div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/aiiso-roles/schema-20100610.html" class="uri"><a href="Http://purl.org/vocab/aiiso-roles/schema-20100610.html">Http://purl.org/vocab/aiiso-roles/schema-20100610.html</a></a></div><div class="res"><a href="http://purl.org/vocab/aiiso-roles/schema-20100610.rdf" class="uri"><a href="Http://purl.org/vocab/aiiso-roles/schema-20100610.rdf">Http://purl.org/vocab/aiiso-roles/schema-20100610.rdf</a></a></div></td></tr>
 </table></p>
 
       </div>

@@ -5,14 +5,6 @@
   <head>
     <title>Resource List Ontology</title>
     
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -145,7 +137,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
       <p><dl class="doc-info"><dt>Creators</dt><dd><div class="lit">Nadeem Shabir</div></dd><dd><div class="lit">Rob Styles</div></dd><dt>Contributors</dt><dd><div class="lit">Ian Corns</div></dd><dd><div class="lit">Sarah Bartlett</div></dd></dl><div class="lit">
 The Resource List ontology describes collections of Items grouped together in Sections and explicitly ordered. Items refer to resources, currently bibo:Documents. The ontology subclasses SIOC for Container and Item relationships as well as providing additional properties for explicit ordering and optimisations for retrieving deeply structured Lists.
 The Resource List ontology is intended for use describing academic reading lists, bookmarks, bibliographies and similar structured collections of references.
-        <span class="lang">[en]</span></div><p>Copyright © 2008 Talis Information Ltd<p>
+    <span class="lang">[en]</span></div><p>Copyright © 2008 Talis Information Ltd<p>
 <h2 id="sec-history">History</h2>
 <ul><li>2008-05-19 &ndash; first issued</li><li>2008-05-19 &ndash; semantic change by Nadeem Shabir: First cut of the ontology published</li><li>2008-07-31 &ndash; semantic change by Nadeem Shabir: Ontology updated, lifecycle integrated</li><li>2009-07-01 &ndash; semantic change by Nadeem Shabir: Ontology updated, updated to reflect new properties, and change to using rdf:Seq of ordering of items/sections</li></ul>
 <h2 id="sec-namespace">Namespace</h2>
@@ -276,15 +268,15 @@ The Resource List ontology is intended for use describing academic reading lists
 <h2 id="sec-examples">Examples</h2></p>
 
 <p><h2 id="sec-examples">Other Information</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-05-14</div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit"><a href="http://purl.org/vocab/resourcelist/schema#">http://purl.org/vocab/resourcelist/schema#</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/resourcelist/schema#" class="uri">Resource List Ontology</a><br />
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-05-14</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit"><a href="http://purl.org/vocab/resourcelist/schema#">http://purl.org/vocab/resourcelist/schema#</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/resourcelist/schema#" class="uri">Resource List Ontology</a><br />
 The Resource List ontology describes collections of Items grouped together in Sections and explicitly ordered. Items refer to resources, currently bibo:Documents. The ontology subclasses SIOC for Container and Item relationships as well as providing additional properties for explicit ordering and optimisations for retrieving deeply structured Lists.
 The Resource List ontology is intended for use describing academic reading lists, bookmarks, bibliographies and similar structured collections of references.
-        </div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/vocab/vann/usageNote" class="uri">Usage </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/resourcelist/usagenote.html" class="uri"><a href="Http://purl.org/vocab/resourcelist/usagenote.html">Http://purl.org/vocab/resourcelist/usagenote.html</a></a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/resourcelist/schema-20080519.html" class="uri"><a href="Http://purl.org/vocab/resourcelist/schema-20080519.html">Http://purl.org/vocab/resourcelist/schema-20080519.html</a></a></div><div class="res"><a href="http://purl.org/vocab/resourcelist/schema-20080519.rdf" class="uri"><a href="Http://purl.org/vocab/resourcelist/schema-20080519.rdf">Http://purl.org/vocab/resourcelist/schema-20080519.rdf</a></a></div></td></tr>
+    </div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/vocab/vann/usageNote" class="uri">Usage </a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/resourcelist/usagenote.html" class="uri"><a href="Http://purl.org/vocab/resourcelist/usagenote.html">Http://purl.org/vocab/resourcelist/usagenote.html</a></a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/resourcelist/schema-20080519.html" class="uri"><a href="Http://purl.org/vocab/resourcelist/schema-20080519.html">Http://purl.org/vocab/resourcelist/schema-20080519.html</a></a></div><div class="res"><a href="http://purl.org/vocab/resourcelist/schema-20080519.rdf" class="uri"><a href="Http://purl.org/vocab/resourcelist/schema-20080519.rdf">Http://purl.org/vocab/resourcelist/schema-20080519.rdf</a></a></div></td></tr>
 </table></p>
 
       </div>

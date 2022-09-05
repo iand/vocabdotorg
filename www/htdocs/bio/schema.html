@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
   <head>
     <title>BIO: A vocabulary for biographical information</title>
+    
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -135,29 +136,28 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
       <div class="col1">
       <p><dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="lit">David Galbraith</div></dd></dl><p class="abstract">This document describes a vocabulary for describing biographical information about people, both living and dead. </p><div class="lit"><div></p>
 
- <p>The BIO vocabulary contains terms useful for finding out more about people and their backgrounds and has some cross-over into genealogical information.
-    The approach taken is to describe a person's life as a series of interconnected key events, around which other information can be woven.
-    This vocabulary defines the event framework and supplies a set of core event types that cover many use cases, but it is expected that it
-    will be extended in other vocabularies to suit their needs. The intention of this vocabulary is to describe biographical events of people
-    and this intention carries through to the definitions of the properties and classes which are person-centric rather than neutral. For example
-    the Employment event puts the person being employed as the principal agent in the event rather than the employer.</p>
-    <p>The BIO vocabulary defines a number of core classes and properties for describing biographical information: </p>
-    <p><figure><img src="/bio/core-classes.png"></img><br></br>Figure: Biography Vocabulary Core Classes (<a href="/bio/core-classes.png">PNG version</a>, <a href="/bio/core-classes.svg">SVG version</a>)</figure></p>
-    <p>At its heart the BIO vocabulary is concerned with people, their relationships and the events in their lives. Together these can be
-    used to build up a narrative of a person's life and their interactions with other people, organizations and the world around them. Events bound intervals
-    of time that may be associated with particular relationships between people and groups or organisations. Many different types of life event are
-    defined in this vocabulary including the obvious Birth, Marriage and Death but also Coronation, Performance and even Murder. These events are not intended
-    to be fully comprehensive but are representative of the types of events associated with biographical material. Currently the relationship segment of the
-    vocabulary is underspecified with only a generic Relationship class available. It is envisaged that many types of relationship such as families, employments
-    and ownerships will be specified in the future.</p>
-    <p>The sequence of events and intervals build a timeline of history against which people and their relationships can be placed. The aim is
-    to enable simple forms of genealogical reasoning such as determining whether a child was born out of wedlock or the location of a family
-    given the fact one of their children was attending a particular school. Events are ordered in time by relating them to one another and to abstract
-    intervals of time:</p>
-    <p><figure><img src="/bio/timelines.png"></img><br></br>Figure: Biography Vocabulary Timelines(<a href="/bio/timelines.png">PNG version</a>, <a href="/bio/timelines.svg">SVG version</a>)</figure></p>
-    <p>Please see <a href="https://github.com/iand/vocab-bio">https://github.com/iand/vocab-bio</a> for the master version of this vocabulary.</p>
-  </div></div><p>Please direct feedback on this document to the <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF-DEV mailing list</a></p><p>Copyright © 2002-2010 Ian Davis and David Galbraith<p>
-
+<p>The BIO vocabulary contains terms useful for finding out more about people and their backgrounds and has some cross-over into genealogical information. 
+The approach taken is to describe a person's life as a series of interconnected key events, around which other information can be woven. 
+This vocabulary defines the event framework and supplies a set of core event types that cover many use cases, but it is expected that it 
+will be extended in other vocabularies to suit their needs. The intention of this vocabulary is to describe biographical events of people 
+and this intention carries through to the definitions of the properties and classes which are person-centric rather than neutral. For example 
+the Employment event puts the person being employed as the principal agent in the event rather than the employer.</p>
+<p>The BIO vocabulary defines a number of core classes and properties for describing biographical information: </p>
+<p><figure><img src="/bio/core-classes.png"></img><br></br>Figure: Biography Vocabulary Core Classes (<a href="http://vocab.org/bio/core-classes.png">PNG version</a>, <a href="http://vocab.org/bio/core-classes.svg">SVG version</a>)</figure></p>
+<p>At its heart the BIO vocabulary is concerned with people, their relationships and the events in their lives. Together these can be
+used to build up a narrative of a person's life and their interactions with other people, organizations and the world around them. Events bound intervals
+of time that may be associated with particular relationships between people and groups or organisations. Many different types of life event are
+defined in this vocabulary including the obvious Birth, Marriage and Death but also Coronation, Performance and even Murder. These events are not intended
+to be fully comprehensive but are representative of the types of events associated with biographical material. Currently the relationship segment of the
+vocabulary is underspecified with only a generic Relationship class available. It is envisaged that many types of relationship such as families, employments
+and ownerships will be specified in the future.</p>
+<p>The sequence of events and intervals build a timeline of history against which people and their relationships can be placed. The aim is
+to enable simple forms of genealogical reasoning such as determining whether a child was born out of wedlock or the location of a family
+given the fact one of their children was attending a particular school. Events are ordered in time by relating them to one another and to abstract
+intervals of time:</p>
+<p><figure><img src="/bio/timelines.png"></img><br></br>Figure: Biography Vocabulary Timelines(<a href="http://vocab.org/bio/timelines.png">PNG version</a>, <a href="http://vocab.org/bio/timelines.svg">SVG version</a>)</figure></p>
+<p>Please see <a href="https://github.com/iand/vocab-bio">https://github.com/iand/vocab-bio</a> for the master version of this vocabulary.</p>
+</div></div><p>Please direct feedback on this document to the <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF-DEV mailing list"</a></p><p>Copyright © 2002-2010 Ian Davis and David Galbraith<p>
 <h2 id="sec-history">History</h2>
 <ul><li>2003-03-07 - first issued</li><li>2003-07-28 - semantic change by Ian Davis: Added keywords property</li><li>2004-03-05 - editorial change by Ian Davis: Added Creative Commons license</li><li>2005-04-01 - editorial change by Ian Davis: Added examples</li><li>2009-05-19 - editorial change by Ian Davis: Minor changes to improve publishing process</li><li>2010-04-20 - editorial change by Ian Davis: Added change history</li><li>2010-05-10 - semantic change by Ian Davis: Major expansion of properties and classes</li><li>2010-05-20 - editorial change by Ian Davis: Batch of revisions based on community feedback</li><li>2010-06-05 - semantic change by Ian Davis: Added biography property</li><li>2010-06-06 - semantic change by Ian Davis: Added subproperty and equivalent property relations for bio:father, bio:mother and bio:child</li><li>2011-06-10 - semantic change by Ian Davis: Added bio:Formation and bio:Disbanding events</li><li>2011-06-10 - semantic change by Ian Davis: Added bio:Performance event</li><li>2011-06-14 - editorial change by Ian Davis: Expanded description and added diagrams</li><li>2011-06-14 - semantic change by Alexandre Passant: Added properties for Birth and Death Event types, motivated by JSON serialisations of RDF</li><li>2011-06-14 - semantic change by Ian Davis: Added bio:Relationship class and properties</li></ul>
 <h2 id="sec-namespace">Namespace</h2>
@@ -267,7 +267,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Agents<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Agents<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Relationship">Agent Relationship</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Relationship" class="uri"><a href="http://purl.org/vocab/bio/0.1/Relationship">http://purl.org/vocab/bio/0.1/Relationship</a></a></p><p class="terminfo">A particular type of connection existing between people, groups or organizations related to or having dealings with each other.</p>
@@ -321,14 +321,14 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>The birth of Albert Einstein</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Birth
+<pre><code>_:e a bio:Birth
     ; dc:date &ldquo;1879-03-14&rdquo;
     ; bio:principal &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:parent &lt;<a href="http://dbpedia.org/resource/Pauline_Koch&gt;">http://dbpedia.org/resource/Pauline_Koch&gt;</a>
     ; bio:parent &lt;<a href="http://dbpedia.org/resource/Hermann_Einstein&gt;">http://dbpedia.org/resource/Hermann_Einstein&gt;</a>
     ; bio:place &lt;<a href="http://dbpedia.org/resource/Ulm&gt;">http://dbpedia.org/resource/Ulm&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-04 &ndash; editorial change by Ian Davis: Marked as testing</li></ul>
 <h3 id="birth">Birth Event</h3>
@@ -338,7 +338,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-07-12 &ndash; semantic change by Alexandre Passant: Proposed addition of the property</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Birth Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Birth Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Burial">Burial</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Burial" class="uri"><a href="http://purl.org/vocab/bio/0.1/Burial">http://purl.org/vocab/bio/0.1/Burial</a></a></p><p class="terminfo">The event of interring the remains of a person&#39;s body into the ground.</p>
@@ -367,7 +367,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; first issued</li><li>2010-06-06 &ndash; semantic change by Ian Davis: Made equivalent to rel:parentOf on suggestion of Gautier Poupeau</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Children<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Children<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="concludingEvent">Concluding Event</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/concludingEvent" class="uri"><a href="http://purl.org/vocab/bio/0.1/concludingEvent">http://purl.org/vocab/bio/0.1/concludingEvent</a></a></p><p class="terminfo">An event that marks the end of an interval and/or relationship. The event changes of the state of affairs that held during the interval. For example a period of study may be concluded by a Graduation event.</p>
@@ -376,7 +376,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-06 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Concluding Event<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Concluding Event<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="concurrentEvent">Concurrent Event</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/concurrentEvent" class="uri"><a href="http://purl.org/vocab/bio/0.1/concurrentEvent">http://purl.org/vocab/bio/0.1/concurrentEvent</a></a></p><p class="terminfo">An event that occurs while this event is occurring. The events need not start or conclude at the same times.</p>
@@ -385,7 +385,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-06 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Concurrent Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Concurrent Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Coronation">Coronation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Coronation" class="uri"><a href="http://purl.org/vocab/bio/0.1/Coronation">http://purl.org/vocab/bio/0.1/Coronation</a></a></p><p class="terminfo">The ceremonial event of a person being invested with regal power to become a monarch.</p>
@@ -401,25 +401,25 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>The cremation of Albert Einstein</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Cremation
+<pre><code>_:e a bio:Cremation
     ; dc:date &ldquo;1955-04-18&rdquo;
     ; bio:principal &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:place &lt;<a href="http://dbpedia.org/resource/Princeton,_New_Jersey&gt;">http://dbpedia.org/resource/Princeton,_New_Jersey&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; first issued</li></ul>
 <h3 id="date">Date</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/date" class="uri"><a href="http://purl.org/vocab/bio/0.1/date">http://purl.org/vocab/bio/0.1/date</a></a></p><p class="terminfo">The date at which an event occurred.</p>
 <h4>Usage</h4>
 <div class="usagenote"><div class="lit"><p>The date should be formatted as specified in <a href="http://www.w3.org/TR/NOTE-datetime">ISO8601</a>.
-    For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21-05:00 corresponds to 15th March 2003, 8:21 am, US Eastern Standard Time.</p></div></div>
+For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21-05:00 corresponds to 15th March 2003, 8:21 am, US Eastern Standard Time.</p></div></div>
 <h4>Semantics</h4>
 <p class="termsemantics">Having this property implies being an <a href="http://purl.org/vocab/bio/0.1/Event" class="uri">Event</a>. It is a sub-property of <a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; editorial change by Ian Davis: Added a plural label</li><li>2010-05-04 &ndash; editorial change by Ian Davis: Marked as a stable term</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Dates<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Dates<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Death">Death</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Death" class="uri"><a href="http://purl.org/vocab/bio/0.1/Death">http://purl.org/vocab/bio/0.1/Death</a></a></p><p class="terminfo">The event of a person&#39;s life ending.</p>
@@ -429,12 +429,12 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>The death of Albert Einstein</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Death
+<pre><code>_:e a bio:Death
     ; dc:date &ldquo;1955-04-18&rdquo;
     ; bio:principal &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:place &lt;<a href="http://dbpedia.org/resource/Princeton,_New_Jersey&gt;">http://dbpedia.org/resource/Princeton,_New_Jersey&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-04 &ndash; editorial change by Ian Davis: Marked as a stable term</li></ul>
 <h3 id="death">Death Event</h3>
@@ -444,7 +444,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-07-12 &ndash; semantic change by Alexandre Passant: Proposed addition of the property</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Death Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Death Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Demotion">Demotion</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Demotion" class="uri"><a href="http://purl.org/vocab/bio/0.1/Demotion">http://purl.org/vocab/bio/0.1/Demotion</a></a></p><p class="terminfo">The event of a person changing the position they hold with an employer to one with less importance or responsibility.</p>
@@ -472,13 +472,13 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>The divorce of Albert Einstein and Mileva Marić</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Divorce
+<pre><code>_:e a bio:Divorce
     ; dc:date &ldquo;1919-02-14&rdquo;
     ; bio:partner &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:partner &lt;<a href="http://dbpedia.org/resource/Mileva_Mari%C4%87&gt;">http://dbpedia.org/resource/Mileva_Mari%C4%87&gt;</a>
     ; bio:place &lt;<a href="http://dbpedia.org/resource/Zurich&gt;">http://dbpedia.org/resource/Zurich&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; first issued</li></ul>
 <h3 id="Emigration">Emigration</h3>
@@ -489,12 +489,12 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>Albert Einstein emigrating to the United States</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Emigration
+<pre><code>_:e a bio:Emigration
     ; dc:date &ldquo;1933&rdquo;^^xsd:gYear
     ; bio:principal &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:state &lt;<a href="http://dbpedia.org/resource/United_States&gt;">http://dbpedia.org/resource/United_States&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; first issued</li></ul>
 <h3 id="employer">Employer</h3>
@@ -504,7 +504,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Employers<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Employers<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Employment">Employment</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Employment" class="uri"><a href="http://purl.org/vocab/bio/0.1/Employment">http://purl.org/vocab/bio/0.1/Employment</a></a></p><p class="terminfo">The event of a person entering an occupational relationship with an employer.</p>
@@ -553,7 +553,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-06 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Following Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Following Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Formation">Formation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Formation" class="uri"><a href="http://purl.org/vocab/bio/0.1/Formation">http://purl.org/vocab/bio/0.1/Formation</a></a></p><p class="terminfo">The event of a group or organization coming into being.</p>
@@ -575,12 +575,12 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>Albert Einstein receiving his Doctorate from the University of Zurich</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Graduation
+<pre><code>_:e a bio:Graduation
     ; dc:date &ldquo;1905&rdquo;^^xsd:gYear
     ; bio:principal &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:organization &lt;<a href="http://dbpedia.org/resource/University_of_Zurich&gt;">http://dbpedia.org/resource/University_of_Zurich&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; first issued</li></ul>
 <h3 id="GroupEvent">Group Event</h3>
@@ -596,7 +596,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-06 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Immediately Following Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Immediately Following Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="immediatelyPrecedingEvent">Immediately Preceding Event</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/immediatelyPrecedingEvent" class="uri"><a href="http://purl.org/vocab/bio/0.1/immediatelyPrecedingEvent">http://purl.org/vocab/bio/0.1/immediatelyPrecedingEvent</a></a></p><p class="terminfo">An event that occurs and concludes immediately before this event.</p>
@@ -605,7 +605,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-06 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Immediately Preceding Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Immediately Preceding Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Imprisonment">Imprisonment</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Imprisonment" class="uri"><a href="http://purl.org/vocab/bio/0.1/Imprisonment">http://purl.org/vocab/bio/0.1/Imprisonment</a></a></p><p class="terminfo">The event of a person being detained in a jail or prison.</p>
@@ -632,7 +632,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-06 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Initiating Event<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Initiating Event<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Interval">Interval</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Interval" class="uri"><a href="http://purl.org/vocab/bio/0.1/Interval">http://purl.org/vocab/bio/0.1/Interval</a></a></p><p class="terminfo">A extended interval of time related to a particular state of affairs, such as the lifespan of a person or a period of employment.</p>
@@ -659,7 +659,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; editorial change by Ian Davis: Added a plural label</li><li>2010-05-03 &ndash; semantic change by Ian Davis: Made a subproperty of owl:differentFrom</li><li>2011-06-14 &ndash; semantic change by Ian Davis: Changed domain to foaf:Agent</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Life Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Life Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Marriage">Marriage</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Marriage" class="uri"><a href="http://purl.org/vocab/bio/0.1/Marriage">http://purl.org/vocab/bio/0.1/Marriage</a></a></p><p class="terminfo">The event of creating uniting the participants into a new family unit, sometimes accompanied by a formal wedding ceremony. This is intended to cover a broad range of marriages including those given formal legal standing, common-law, or by convention. It is not restricted to marriages of two people of the opposite gender, but also includes polygamous and same-sex unions.</p>
@@ -669,13 +669,13 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>The marriage of Albert Einstein and Mileva Marić</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Marriage
+<pre><code>_:e a bio:Marriage
     ; dc:date &ldquo;1903&rdquo;
     ; bio:partner &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:partner &lt;<a href="http://dbpedia.org/resource/Mileva_Mari%C4%87&gt;">http://dbpedia.org/resource/Mileva_Mari%C4%87&gt;</a>
     ; bio:place &lt;<a href="http://dbpedia.org/resource/Bern&gt;">http://dbpedia.org/resource/Bern&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-04 &ndash; editorial change by Ian Davis: Marked as a stable term</li><li>2010-05-04 &ndash; semantic change by Ian Davis: Made equivalent to cyc:WeddingEvent_Generic</li></ul>
 <h3 id="mother">Mother</h3>
@@ -700,12 +700,12 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 
 <p><h5>Albert Einstein becoming a citizen of the United States</h5>
 <div class="lit">
-        <pre><code>_:e a bio:Emigration
+<pre><code>_:e a bio:Emigration
     ; dc:date &ldquo;1940&rdquo;
     ; bio:principal &lt;<a href="http://dbpedia.org/resource/Albert_Einstein&gt;">http://dbpedia.org/resource/Albert_Einstein&gt;</a>
     ; bio:state &lt;<a href="http://dbpedia.org/resource/United_States&gt;">http://dbpedia.org/resource/United_States&gt;</a>
     .</code></pre>
-        </div>
+</div>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; first issued</li></ul>
 <h3 id="officiator">Officiator</h3>
@@ -715,7 +715,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Officiators<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Officiators<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="olb">One-line bio</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/olb" class="uri"><a href="http://purl.org/vocab/bio/0.1/olb">http://purl.org/vocab/bio/0.1/olb</a></a></p><p class="terminfo">A one-line biography of the person.</p>
@@ -736,7 +736,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Organizations<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Organizations<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="parent">Parent</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/parent" class="uri"><a href="http://purl.org/vocab/bio/0.1/parent">http://purl.org/vocab/bio/0.1/parent</a></a></p><p class="terminfo">A person that takes the parent role in an event.</p>
@@ -745,7 +745,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Parents<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Parents<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="participant">Participant</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/participant" class="uri"><a href="http://purl.org/vocab/bio/0.1/participant">http://purl.org/vocab/bio/0.1/participant</a></a></p><p class="terminfo">A person, group or organization that participates in a relationship for some time.</p>
@@ -754,7 +754,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-06-14 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Participants<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Participants<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="partner">Partner</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/partner" class="uri"><a href="http://purl.org/vocab/bio/0.1/partner">http://purl.org/vocab/bio/0.1/partner</a></a></p><p class="terminfo">A person that is involved in a event as a partner in a relationship.</p>
@@ -763,7 +763,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Partners<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Partners<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Performance">Performance</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Performance" class="uri"><a href="http://purl.org/vocab/bio/0.1/Performance">http://purl.org/vocab/bio/0.1/Performance</a></a></p><p class="terminfo">The event of an individual or a group of performers performing. Examples include concerts, plays, recitals, recordings, busking etc.</p>
@@ -778,7 +778,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 &ndash; editorial change by Ian Davis: Added a plural label</li><li>2010-05-04 &ndash; editorial change by Ian Davis: Marked as a stable term</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Places<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Places<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="position">Position</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/position" class="uri"><a href="http://purl.org/vocab/bio/0.1/position">http://purl.org/vocab/bio/0.1/position</a></a></p><p class="terminfo">The employment position or public office involved in an event.</p>
@@ -787,7 +787,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Positions<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Positions<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="precedingEvent">Preceding Event</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/precedingEvent" class="uri"><a href="http://purl.org/vocab/bio/0.1/precedingEvent">http://purl.org/vocab/bio/0.1/precedingEvent</a></a></p><p class="terminfo">An event that occurs and concludes at some time before this event.</p>
@@ -796,7 +796,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-06 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Preceding Events<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Preceding Events<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="principal">Principal</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/principal" class="uri"><a href="http://purl.org/vocab/bio/0.1/principal">http://purl.org/vocab/bio/0.1/principal</a></a></p><p class="terminfo">A person that takes the primary and most important role in an event. For example the principal in a Birth event would be the child being born and the principal in a Burial event would be the deceased person.</p>
@@ -805,7 +805,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Principals<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Principals<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="Promotion">Promotion</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Promotion" class="uri"><a href="http://purl.org/vocab/bio/0.1/Promotion">http://purl.org/vocab/bio/0.1/Promotion</a></a></p><p class="terminfo">The event of a person changing the position they hold with an employer to one with more importance or responsibility.</p>
@@ -826,7 +826,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-06-14 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Relationships<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Relationships<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="interval">Relationship Interval</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/interval" class="uri"><a href="http://purl.org/vocab/bio/0.1/interval">http://purl.org/vocab/bio/0.1/interval</a></a></p><p class="terminfo">The interval during which the relationship persists.</p>
@@ -853,7 +853,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Spectators<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Spectators<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="state">State</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/state" class="uri"><a href="http://purl.org/vocab/bio/0.1/state">http://purl.org/vocab/bio/0.1/state</a></a></p><p class="terminfo">A country or independent territory that is involved in an event.</p>
@@ -862,7 +862,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">States<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">States<span class="lang">[en]</span></div></td></tr>
 </table>
 <h3 id="witness">Witness</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/witness" class="uri"><a href="http://purl.org/vocab/bio/0.1/witness">http://purl.org/vocab/bio/0.1/witness</a></a></p><p class="terminfo">A person that witnesses and can bear testimony to the occurrence of an event.</p>
@@ -871,7 +871,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 &ndash; first issued</li></ul>
 <h4 id="sec-examples">Other Information</h4>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Witnesses<span class="lang">[en]</span></div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/net/vocab/2004/03/label#plural" class="uri">Plural</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">Witnesses<span class="lang">[en]</span></div></td></tr>
 </table>
 <h2 id="sec-examples">Examples</h2></p>
 
@@ -1251,11 +1251,11 @@ _:marriage6-interval&#xD;
   ; bio:terminatingEvent _:henryviii-death&#xD;
   .&#xD;
 </code></pre>
-       </div></p>
+</div></p>
 <h2 id="sec-examples">Other Information</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="even"><div class="lit"><a href="http://purl.org/vocab/bio/0.1/schema">http://purl.org/vocab/bio/0.1/schema</a></div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">10 May 2010</div></td></tr>
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="even"><div class="lit"><a href="http://purl.org/vocab/bio/0.1/schema">http://purl.org/vocab/bio/0.1/schema</a></div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="odd"><div class="lit">10 May 2010</div></td></tr>
 </table></p>
 
       </div>

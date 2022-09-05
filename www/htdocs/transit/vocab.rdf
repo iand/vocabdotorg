@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-  xmlns:owl="http://www.w3.org/2002/07/owl#" 
-  xmlns:bio="http://vocab.org/transit/terms/" 
-  xmlns:vann="http://purl.org/vocab/vann/" 
-  xmlns:dc="http://purl.org/dc/terms/" 
-  xmlns:cc="http://web.resource.org/cc/" 
+  <?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:bio="http://vocab.org/transit/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:cc="http://web.resource.org/cc/"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:ov="http://open.vocab.org/terms/"
@@ -27,7 +27,7 @@
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-28</dc:issued>
     <rdfs:seeAlso rdf:resource="http://code.google.com/transit/spec/transit_feed_specification.html" rdfs:label="General Transit Feed Specification"/>
 <!--
-    <ov:discussionList rdf:resource="http://lists.foaf-project.org/mailman/listinfo/foaf-dev" rdfs:label="FOAF-DEV mailing list"/>    
+    <ov:discussionList rdf:resource="http://lists.foaf-project.org/mailman/listinfo/foaf-dev" rdfs:label="FOAF-DEV mailing list"/>
 -->
     <vann:preferredNamespaceUri>http://vocab.org/transit/terms/</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>transit</vann:preferredNamespacePrefix>
@@ -55,10 +55,10 @@
 
 
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Classes
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
   <owl:Class rdf:about="http://vocab.org/transit/terms/AccessArrangement">
@@ -140,7 +140,7 @@
     <st:term_status>unstable</st:term_status>
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-28</dc:issued>
   </owl:Class>
-  
+
   <owl:Class rdf:about="http://vocab.org/transit/terms/MinimumTimeTransfer">
     <rdfs:label xml:lang="en">Minimum Time Transfer</rdfs:label>
     <rdfs:comment xml:lang="en">A transfer point between two routes that requires a minimum amount of time between arrival and departure to ensure a connection.</rdfs:comment>
@@ -276,10 +276,10 @@
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-28</dc:issued>
   </owl:Class>
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of an agency
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
   <rdf:Property rdf:about="http://vocab.org/transit/terms/timezone">
@@ -299,12 +299,12 @@
     <rdfs:isDefinedBy rdf:resource="http://vocab.org/transit/terms/"/>
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-28</dc:issued>
   </rdf:Property>
- 
 
-  <!-- 
+
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a stop
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
   <rdf:Property rdf:about="http://vocab.org/transit/terms/station">
@@ -330,10 +330,10 @@
 
 
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a station
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
 
@@ -348,10 +348,10 @@
   </rdf:Property>
 
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a route
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
   <rdf:Property rdf:about="http://vocab.org/transit/terms/agency">
@@ -402,10 +402,10 @@
   </rdf:Property>
 
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a schedule
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
   <rdf:Property rdf:about="http://vocab.org/transit/terms/date">
@@ -427,10 +427,10 @@
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-28</dc:issued>
   </rdf:Property>
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a service
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
   <rdf:Property rdf:about="http://vocab.org/transit/terms/schedule">
@@ -463,10 +463,10 @@
 
 
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a transfer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
 
@@ -500,10 +500,10 @@
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-28</dc:issued>
   </rdf:Property>
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a servicestop
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
 
@@ -621,23 +621,23 @@
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-01-25</dc:issued>
   </rdf:Property>
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Instances
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
   <rdf:Description rdf:about="http://vocab.org/transit/terms/disallowed">
     <rdf:type rdf:resource="http://vocab.org/transit/terms/AccessArrangement" />
     <rdfs:label xml:lang="en">Disallowed</rdfs:label>
     <rdfs:comment xml:lang="en">The particular form of access is unavailable.</rdfs:comment>
   </rdf:Description>
-  
+
   <rdf:Description rdf:about="http://vocab.org/transit/terms/prearranged">
     <rdf:type rdf:resource="http://vocab.org/transit/terms/AccessArrangement" />
     <rdfs:label xml:lang="en">Pre-arranged</rdfs:label>
     <rdfs:comment xml:lang="en">The particular form of access must be pre-arranged with the transit agency.</rdfs:comment>
   </rdf:Description>
-  
+
   <rdf:Description rdf:about="http://vocab.org/transit/terms/standard">
     <rdf:type rdf:resource="http://vocab.org/transit/terms/AccessArrangement" />
     <rdfs:label xml:lang="en">Standard</rdfs:label>
@@ -651,10 +651,10 @@
   </rdf:Description>
 
 
-  <!-- 
+  <!--
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       Properties of a fare
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   -->
 
 

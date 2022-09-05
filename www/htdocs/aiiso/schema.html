@@ -5,14 +5,6 @@
   <head>
     <title>Academic Institution Internal Structure Ontology (AIISO)</title>
     
-<!--
-  $formats = $this->desc->get_resource_triple_values($this->desc->get_uri(), 'http://purl.org/dc/terms/hasFormat');
-  foreach ($formats as $format_uri) {
-    $media_type = $this->desc->get_first_literal($format_uri, 'http://purl.org/dc/elements/1.1/format');
-    $label = $this->desc->get_first_literal($format_uri, RDFS_LABEL, $media_type);
-    echo '    <link rel="alternate" type="' . htmlspecialchars($media_type) . '" href="' . htmlspecialchars($format_uri) . '" title="' . htmlspecialchars($label) . ' version of this document"/>' . "\n";
-  }
--->
     <style media="screen" type="text/css">
       /* <!-- */
 code.xml .text {
@@ -144,7 +136,7 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
       <div class="col1">
       <p><dl class="doc-info"><dt>Creators</dt><dd><div class="lit">Rob Styles</div></dd><dd><div class="lit">Nadeem Shabir</div></dd><dt>Contributors</dt><dd><div class="lit">Ian Corns</div></dd><dd><div class="lit">Sarah Bartlett</div></dd><dd><div class="lit">Chris Wallace</div></dd></dl><div class="lit">
             The Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (<a href="http://purl.org/vocab/participation/schema">http://purl.org/vocab/participation/schema</a>), FOAF (<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>) and aiiso-roles (<a href="http://purl.org/vocab/aiiso-roles/schema">http://purl.org/vocab/aiiso-roles/schema</a>) to describe the roles that people play within an institution.
-        <span class="lang">[en]</span></div><p>Copyright © 2008 Talis Information Ltd<p>
+    <span class="lang">[en]</span></div><p>Copyright © 2008 Talis Information Ltd<p>
 <h2 id="sec-history">History</h2>
 <ul><li>2008-05-14 &ndash; first issued</li><li>2008-05-14 &ndash; semantic change by Rob Styles: First cut of the ontology published</li><li>2008-05-20 &ndash; semantic change by Nadeem Shabir: Added statement of responsibility for both knowledgeGrouping and organizationalUnit</li><li>2008-05-20 &ndash; semantic change by Rob Styles: Corrected classes with more than one possible domain class to use owl:unionOf</li><li>2008-09-25 &ndash; semantic change by Rob Styles: Changed subclassing to subclass from foaf:Organization and deprecated organizationalUnit</li><li>2008-09-25 &ndash; semantic change by Rob Styles: Deprecated name in favour of foaf:name</li></ul>
 <h2 id="sec-namespace">Namespace</h2>
@@ -333,15 +325,15 @@ table td, table th { border-left: solid #999999 1px; border-right: solid #999999
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 &ndash; first issued</li></ul>
 <h2 id="sec-examples">Other Information</h2>
-<table width="100%"><tr><th valign="top" class="odd><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-05-20</div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit"><a href="http://purl.org/vocab/aiiso/schema-20080925">http://purl.org/vocab/aiiso/schema-20080925</a></div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema#" class="uri">Academic Institution Internal Structure Ontology (AIISO)</a><br />
+<table width="100%"><tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" class="uri">Type</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://www.w3.org/2002/07/owl#Ontology" class="uri">owl:Ontology</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/elements/1.1/date" class="uri">Date</a></div></th><td valign="top" width="80%" class="even"><div class="lit">2008-05-20</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/elements/1.1/identifier" class="uri">Identifier</a></div></th><td valign="top" width="80%" class="odd"><div class="lit"><a href="http://purl.org/vocab/aiiso/schema-20080925">http://purl.org/vocab/aiiso/schema-20080925</a></div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema#" class="uri">Academic Institution Internal Structure Ontology (AIISO)</a><br />
             The Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (<a href="http://purl.org/vocab/participation/schema">http://purl.org/vocab/participation/schema</a>), FOAF (<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>) and aiiso-roles (<a href="http://purl.org/vocab/aiiso-roles/schema">http://purl.org/vocab/aiiso-roles/schema</a>) to describe the roles that people play within an institution.
-        </div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/vocab/vann/usageNote" class="uri">Usage </a></div></th><td valign="top" width="80%" class="odd"><div class="res">file:///home/iand/web/vocab.org/www/src/aiiso/usagenote.html</div></td></tr>
-<tr><th valign="top" class="even><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080520" class="uri">aiiso:schema-20080520</a></div></td></tr>
-<tr><th valign="top" class="odd><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.html" class="uri"><a href="Http://purl.org/vocab/aiiso/schema-20080925.html">Http://purl.org/vocab/aiiso/schema-20080925.html</a></a></div><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.rdf" class="uri"><a href="Http://purl.org/vocab/aiiso/schema-20080925.rdf">Http://purl.org/vocab/aiiso/schema-20080925.rdf</a></a></div></td></tr>
+    </div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/vocab/vann/usageNote" class="uri">Usage </a></div></th><td valign="top" width="80%" class="odd"><div class="res">file:///home/iand/web/vocab.org/www/src/aiiso/usagenote.html</div></td></tr>
+<tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080520" class="uri">aiiso:schema-20080520</a></div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.html" class="uri"><a href="Http://purl.org/vocab/aiiso/schema-20080925.html">Http://purl.org/vocab/aiiso/schema-20080925.html</a></a></div><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.rdf" class="uri"><a href="Http://purl.org/vocab/aiiso/schema-20080925.rdf">Http://purl.org/vocab/aiiso/schema-20080925.rdf</a></a></div></td></tr>
 </table></p>
 
       </div>
