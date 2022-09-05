@@ -129,25 +129,25 @@ sourcerdf: schema-20080925.rdf
 <h3 id="code">Code</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#code" class="uri">http://purl.org/vocab/aiiso/schema#code</a></p><p class="terminfo">The code used by an Institution to refer to a KnowledgeGrouping or Organization.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid15. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid15. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li></ul>
 <h3 id="description">Description</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#description" class="uri">http://purl.org/vocab/aiiso/schema#description</a></p><p class="terminfo">A Description of the KnowledgeGrouping or Organization.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid19. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid19. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li></ul>
 <h3 id="knowledgeGrouping">KnowledgeGrouping</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#knowledgeGrouping" class="uri">http://purl.org/vocab/aiiso/schema#knowledgeGrouping</a></p><p class="terminfo">A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid26. Every value of this property is a <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid26. Every value of this property is a <a href="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping" class="uri">KnowledgeGrouping</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated due to poor and ambiguous naming</li></ul>
 <h3 id="name">Name</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#name" class="uri">http://purl.org/vocab/aiiso/schema#name</a></p><p class="terminfo">Deprecated in favour of foaf:name. The name given to a KnowledgeGrouping or Organization.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid10. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. It is a sub-property of <a href="http://www.w3.org/2000/01/rdf-schema#Label" class="uri">rdfs:Label</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid10. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#string" class="uri">xsd:string</a>. It is a sub-property of <a href="http://www.w3.org/2000/01/rdf-schema#Label" class="uri">rdfs:Label</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-14 - first issued</li><li>2008-05-20 - semantic change by Rob Styles: Corrected the domain to use an owl:unionOf the two classes, allowing subjects of this property to be either a Knowledge Grouping or an organizational Unit rather than having to be both.</li><li>2008-09-25 - semantic change by Rob Styles: Deprecated in favour of foaf:name</li></ul>
 <h3 id="organization">Organization</h3>
@@ -177,13 +177,13 @@ sourcerdf: schema-20080925.rdf
 <h3 id="responsibilityOf">Responsibility of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#responsibilityOf" class="uri">http://purl.org/vocab/aiiso/schema#responsibilityOf</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid31. Every value of this property is a <a href="http://xmlns.com/foaf/spec/Agent" class="uri">spec:Agent</a>. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#responsibleFor" class="uri">Responsible for</a></p>
+<p class="termsemantics">Having this property implies being a Genid31. Every value of this property is a <a href="http://xmlns.com/foaf/spec/Agent" class="uri">spec:Agent</a>. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#responsibleFor" class="uri">Responsible for</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-20 - first issued</li></ul>
 <h3 id="responsibleFor">Responsible for</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso/schema#responsibleFor" class="uri">http://purl.org/vocab/aiiso/schema#responsibleFor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/spec/Agent" class="uri">msg0:Agent</a>. Every value of this property is genid34. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#responsibilityOf" class="uri">Responsibility of</a></p>
+<p class="termsemantics">Having this property implies being a <a href="http://xmlns.com/foaf/spec/Agent" class="uri">msg0:Agent</a>. Every value of this property is a Genid34. It is the inverse of <a href="http://purl.org/vocab/aiiso/schema#responsibilityOf" class="uri">Responsibility of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li><li>2008-09-25 - semantic change by Rob Styles: Added as inverse of Responsibility Of</li></ul>
 <h3 id="teaches">Teaches</h3>
@@ -199,7 +199,7 @@ sourcerdf: schema-20080925.rdf
 <tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/isVersionOf" class="uri">Version of</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema#" class="uri">Academic Institution Internal Structure Ontology (AIISO)</a><br />
 			The Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (http://purl.org/vocab/participation/schema), FOAF (http://xmlns.com/foaf/0.1/) and aiiso-roles (http://purl.org/vocab/aiiso-roles/schema) to describe the roles that people play within an institution.
 	</div></td></tr>
-<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/vocab/vann/usageNote" class="uri">Usage </a></div></th><td valign="top" width="80%" class="odd"><div class="res">file:///home/iand/web/vocab.org/www/src/aiiso/usagenote.html</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/vocab/vann/usageNote" class="uri">Usage </a></div></th><td valign="top" width="80%" class="odd"><div class="res">file:///home/iand/wip/iand/vocabdotorg/www/src/aiiso/usagenote.html</div></td></tr>
 <tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080520" class="uri">aiiso:schema-20080520</a></div></td></tr>
 <tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.html" class="uri">Http://purl.org/vocab/aiiso/schema-20080925.html</a></div><div class="res"><a href="http://purl.org/vocab/aiiso/schema-20080925.rdf" class="uri">Http://purl.org/vocab/aiiso/schema-20080925.rdf</a></div></td></tr>
 </table>

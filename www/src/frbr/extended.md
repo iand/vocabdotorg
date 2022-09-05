@@ -74,13 +74,13 @@ sourcerdf: extended.rdf
 <h3 id="AutonomousExpression">Autonomous expression</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#AutonomousExpression" class="uri">http://purl.org/vocab/frbr/extended#AutonomousExpression</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Expression" class="uri">frbr:Expression</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#ReferentialExpression" class="uri">Referential expression</a>. It is equivalent to genid18. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Expression" class="uri">frbr:Expression</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#ReferentialExpression" class="uri">Referential expression</a>. It is equivalent to Genid18. 
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-08-10 - semantic change by Ian Davis: Changed complementOf to refer to ReferentialExpression instead of ReferentialWork</li></ul>
 <h3 id="AutonomousWork">Autonomous work</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#AutonomousWork" class="uri">http://purl.org/vocab/frbr/extended#AutonomousWork</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#ReferentialWork" class="uri">Referential work</a>. It is equivalent to genid10. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#ReferentialWork" class="uri">Referential work</a>. It is equivalent to Genid10. 
 <h3 id="complementsExpression">Complements expression</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#complementsExpression" class="uri">http://purl.org/vocab/frbr/extended#complementsExpression</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
@@ -254,7 +254,7 @@ The subject is not dependent on the object for meaning.</p>
 <h3 id="isReferentiallyRelatedToWork">Is referentially related to work</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork" class="uri">http://purl.org/vocab/frbr/extended#isReferentiallyRelatedToWork</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid27. Every value of this property is a <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. It is a sub-property of <a href="http://purl.org/vocab/frbr/extended#isRelatedToWork" class="uri">Is related to work</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid27. Every value of this property is a <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. It is a sub-property of <a href="http://purl.org/vocab/frbr/extended#isRelatedToWork" class="uri">Is related to work</a>. </p>
 <h3 id="isRelatedToExpression">Is related to expression</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#isRelatedToExpression" class="uri">http://purl.org/vocab/frbr/extended#isRelatedToExpression</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
@@ -270,15 +270,15 @@ The subject is not dependent on the object for meaning.</p>
 <h3 id="isRelatedToWork">Is related to work</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#isRelatedToWork" class="uri">http://purl.org/vocab/frbr/extended#isRelatedToWork</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid30. Every value of this property is a <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">frbr:relatedEndeavour</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid30. Every value of this property is a <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">frbr:relatedEndeavour</a>. </p>
 <h3 id="ReferentialExpression">Referential expression</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#ReferentialExpression" class="uri">http://purl.org/vocab/frbr/extended#ReferentialExpression</a></p><p class="terminfo">A referential expression is one which has little meaning when not studied in conjunction with the expression it refers to.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Expression" class="uri">frbr:Expression</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#AutonomousExpression" class="uri">Autonomous expression</a>. It is equivalent to genid23. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Expression" class="uri">frbr:Expression</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#AutonomousExpression" class="uri">Autonomous expression</a>. It is equivalent to Genid23. 
 <h3 id="ReferentialWork">Referential work</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#ReferentialWork" class="uri">http://purl.org/vocab/frbr/extended#ReferentialWork</a></p><p class="terminfo">A referential work is one which has little meaning when not studied in conjunction with the work it refers to.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#AutonomousWork" class="uri">Autonomous work</a>. It is equivalent to genid14. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#Work" class="uri">frbr:Work</a>. No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/extended#AutonomousWork" class="uri">Autonomous work</a>. It is equivalent to Genid14. 
 <h3 id="referentiallyComplementsExpression">Referentially complements expression</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression" class="uri">http://purl.org/vocab/frbr/extended#referentiallyComplementsExpression</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>

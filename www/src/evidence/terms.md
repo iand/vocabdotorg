@@ -2,7 +2,7 @@ title: Evidence
 uri: http://vocab.org/evidence/terms
 sourcerdf: terms.rdf
 ----
-<dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="res">genid1</div></dd><dt>Contributor</dt><dd><div class="res">genid2</div></dd></dl><div class="lit">This vocabulary defines terms for describing forms of evidence and the hypotheses that may be formed from it. It was created at vocamp oxford 2008<span class="lang">[en]</span></div>
+<dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="res">Ben O&#39;Steen</div></dd><dt>Contributor</dt><dd><div class="res">Keith Alexander</div></dd></dl><div class="lit">This vocabulary defines terms for describing forms of evidence and the hypotheses that may be formed from it. It was created at vocamp oxford 2008<span class="lang">[en]</span></div>
 <h2 id="sec-summary">Terms Summary</h2>
 <p>An alphabetical list of all terms defined in this schema.</p><table><tr><th>Term</th><th>URI</th><th>Description</th></tr>
 <tr><td><a href="#Conclusion">Conclusion</a></td><td nowrap="nowrap">http://vocab.org/evidence/terms/Conclusion</td></td><td>a proposition arrived at after consideration of evidence</td></tr>

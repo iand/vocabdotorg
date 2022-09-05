@@ -30,8 +30,8 @@ _:genid4 <http://purl.org/dc/elements/1.1/date> "2010-06-10" .
 _:genid4 <http://purl.org/dc/elements/1.1/creator> "Josef Petr\u00E1k" .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added additional roles and corrected rdfs:subClassOf" .
 <http://purl.org/vocab/aiiso-roles/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid4 .
-<file:///home/iand/web/vocab.org/www/src/aiiso-roles/schema-20100610.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
-<file:///home/iand/web/vocab.org/www/src/aiiso-roles/schema-20100610.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/aiiso-roles/schema-20100610.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/aiiso-roles/schema-20100610.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .

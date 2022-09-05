@@ -182,7 +182,7 @@ The Resource List ontology is intended for use describing academic reading lists
 <h3 id="created">Created Date</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#created" class="uri"><a href="http://purl.org/vocab/resourcelist/schema#created">http://purl.org/vocab/resourcelist/schema#created</a></a></p><p class="terminfo">This property is used to capture the date a list, item, or section was created</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid28. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid28. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-07-31 &ndash; first issued</li></ul>
 <h3 id="description">Description</h3>
@@ -204,7 +204,7 @@ The Resource List ontology is intended for use describing academic reading lists
 <h3 id="lastUpdated">Last Updated Date</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#lastUpdated" class="uri"><a href="http://purl.org/vocab/resourcelist/schema#lastUpdated">http://purl.org/vocab/resourcelist/schema#lastUpdated</a></a></p><p class="terminfo">This property is used to capture the date a list, item, or section last updated</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid32. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid32. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2009-07-01 &ndash; first issued</li></ul>
 <h3 id="usedBy">List Used By</h3>
@@ -238,25 +238,25 @@ The Resource List ontology is intended for use describing academic reading lists
 <h3 id="contains">Contains</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#contains" class="uri"><a href="http://purl.org/vocab/resourcelist/schema#contains">http://purl.org/vocab/resourcelist/schema#contains</a></a></p><p class="terminfo">A List may contain many Sections and Items organised in a hierarchical structure. the contains property provides a relationshiop between the parent List and all Sections and Items within it, whether they are attached directly or deeper within the structure. This allows a List and all of its parts to be retrieved with a single DESCRIBE. This is an optimisation that precludes the need for recursive querying.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. Every value of this property is genid11. </p>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. Every value of this property is a Genid11. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 &ndash; first issued</li></ul>
 <h3 id="list">List</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#list" class="uri"><a href="http://purl.org/vocab/resourcelist/schema#list">http://purl.org/vocab/resourcelist/schema#list</a></a></p><p class="terminfo">Sections and Items are contained within Lists, the list property allows an easy way to get from Items and Sections that may be several levels deep to their parent List.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid8. Every value of this property is a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. </p>
+<p class="termsemantics">Having this property implies being a Genid8. Every value of this property is a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 &ndash; first issued</li></ul>
 <h3 id="next">Next</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#next" class="uri"><a href="http://purl.org/vocab/resourcelist/schema#next">http://purl.org/vocab/resourcelist/schema#next</a></a></p><p class="terminfo">DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid17. Every value of this property is genid14. </p>
+<p class="termsemantics">Having this property implies being a Genid17. Every value of this property is a Genid14. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 &ndash; first issued</li><li>2009-07-01 &ndash; semantic change by Nadeem Shabir: Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable</li></ul>
 <h3 id="previous">Previous</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#previous" class="uri"><a href="http://purl.org/vocab/resourcelist/schema#previous">http://purl.org/vocab/resourcelist/schema#previous</a></a></p><p class="terminfo">DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid24. Every value of this property is genid21. </p>
+<p class="termsemantics">Having this property implies being a Genid24. Every value of this property is a Genid21. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 &ndash; first issued</li><li>2009-07-01 &ndash; semantic change by Nadeem Shabir: Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable</li></ul>
 <h3 id="resource">Resource</h3>

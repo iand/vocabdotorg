@@ -9,8 +9,8 @@
 <http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2008 Talis Information Ltd" .
 <http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/lifecycle/schema#" .
 <http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "lifecycle" .
-<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/example> <file:///home/iand/web/vocab.org/www/src/lifecycle/schema-diagram.html> .
-<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/example> <file:///home/iand/web/vocab.org/www/src/lifecycle/example-job-application-lifecycle.html> .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/example> <file:///home/iand/wip/iand/vocabdotorg/www/src/lifecycle/schema-diagram.html> .
+<http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/vann/example> <file:///home/iand/wip/iand/vocabdotorg/www/src/lifecycle/example-job-application-lifecycle.html> .
 <http://purl.org/vocab/lifecycle/schema#> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/lifecycle/schema-20080603> .
 <http://purl.org/vocab/lifecycle/schema-20080603.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
@@ -29,8 +29,8 @@ _:genid3 <http://purl.org/dc/elements/1.1/date> "2008-06-03" .
 _:genid3 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "First cut of the ontology published" .
 <http://purl.org/vocab/lifecycle/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid3 .
-<file:///home/iand/web/vocab.org/www/src/lifecycle/schema-20080603.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
-<file:///home/iand/web/vocab.org/www/src/lifecycle/schema-20080603.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/lifecycle/schema-20080603.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/lifecycle/schema-20080603.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .

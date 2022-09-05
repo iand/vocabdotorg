@@ -2,7 +2,7 @@ title: RELATIONSHIP: A vocabulary for describing relationships between people
 uri: http://purl.org/vocab/relationship/
 sourcerdf: rel-vocab-20100607.rdf
 ----
-<dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="res">genid1</div></dd></dl><div class="lit">A vocabulary for describing relationships between people</div><p>Please direct feedback on this document to the <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF-DEV mailing list"</a></p>
+<dl class="doc-info"><dt>Creators</dt><dd><div class="res"><a href="http://iandavis.com/id/me" class="uri">Ian Davis</a></div></dd><dd><div class="res">Eric Vitiello Jr</div></dd></dl><div class="lit">A vocabulary for describing relationships between people</div><p>Please direct feedback on this document to the <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF-DEV mailing list"</a></p>
 <h2 id="sec-history">History</h2>
 <ul><li>2004-02-11 - first issued</li><li>2005-08-10 - editorial change by Ian Davis: Added isDefinedBy properties and updated documentation</li><li>2009-05-15 - semantic change by Ian Davis: Typed vocabulary as owl:Ontology</li><li>2010-02-09 - semantic change by Ian Davis: Asserted that foaf:knows is rdfs:subPropertyOf rel:knowsOf</li><li>2010-02-09 - semantic change by Ian Davis: Incorporated changes suggested by Henry Story on foaf-dev list</li><li>2010-04-19 - editorial change by Ian Davis: Inlined the examples that had been orphaned by publishing software changes</li></ul>
 <h2 id="sec-namespace">Namespace</h2>

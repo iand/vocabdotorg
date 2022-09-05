@@ -76,9 +76,9 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added properties f
 <http://purl.org/vocab/bio/0.1/> <http://purl.org/vocab/vann/termGroup> <http://purl.org/vocab/bio/0.1/termgroup3> .
 <http://purl.org/vocab/bio/0.1/> <http://purl.org/vocab/vann/termGroup> <http://purl.org/vocab/bio/0.1/termgroup4> .
 <http://purl.org/vocab/bio/0.1/> <http://purl.org/vocab/vann/termGroup> <http://purl.org/vocab/bio/0.1/termgroup5> .
-<file:///home/iand/web/vocab.org/www/src/bio/schema.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
-<file:///home/iand/web/vocab.org/www/src/bio/schema.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/1.0/> .
-<file:///home/iand/web/vocab.org/www/src/bio/schema.rdf> <http://purl.org/dc/terms/type> <http://purl.org/dc/dcmitype/Text> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/bio/schema.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/bio/schema.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/1.0/> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/bio/schema.rdf> <http://purl.org/dc/terms/type> <http://purl.org/dc/dcmitype/Text> .
 <http://creativecommons.org/licenses/by/1.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
 <http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
 <http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .

@@ -100,13 +100,13 @@ context of existing RDF work.
 <h3 id="adaption">Adaption</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#adaption" class="uri">http://purl.org/vocab/frbr/core#adaption</a></p><p class="terminfo">An adaption of a work or expression.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid174. Every value of this property is genid177. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#adaptionOf" class="uri">Adaption of</a></p>
+<p class="termsemantics">Having this property implies being a Genid174. Every value of this property is a Genid177. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#adaptionOf" class="uri">Adaption of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="adaptionOf">Adaption of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#adaptionOf" class="uri">http://purl.org/vocab/frbr/core#adaptionOf</a></p><p class="terminfo">A work or expression that is adapted.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid183. Every value of this property is genid186. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#adaption" class="uri">Adaption</a></p>
+<p class="termsemantics">Having this property implies being a Genid183. Every value of this property is a Genid186. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#adaption" class="uri">Adaption</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="alternate">Alternate</h3>
@@ -136,13 +136,13 @@ context of existing RDF work.
 <h3 id="complement">Complement</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#complement" class="uri">http://purl.org/vocab/frbr/core#complement</a></p><p class="terminfo">A complement to a work or expression.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid138. Every value of this property is genid141. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#complementOf" class="uri">Complement of</a></p>
+<p class="termsemantics">Having this property implies being a Genid138. Every value of this property is a Genid141. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#complementOf" class="uri">Complement of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="complementOf">Complement of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#complementOf" class="uri">http://purl.org/vocab/frbr/core#complementOf</a></p><p class="terminfo">A work or expression that is complemented.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid147. Every value of this property is genid150. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#complement" class="uri">Complement</a></p>
+<p class="termsemantics">Having this property implies being a Genid147. Every value of this property is a Genid150. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#complement" class="uri">Complement</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="Concept">Concept</h3>
@@ -154,7 +154,7 @@ context of existing RDF work.
 <h3 id="CorporateBody">Corporate body</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#CorporateBody" class="uri">http://purl.org/vocab/frbr/core#CorporateBody</a></p><p class="terminfo">This class corresponds to the FRBR group two entity &#39;Corporate Body&#39;.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#ResponsibleEntity" class="uri">Responsible entity</a>. It is equivalent to genid41. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/frbr/core#ResponsibleEntity" class="uri">Responsible entity</a>. It is equivalent to Genid41. 
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added comment</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Extracted definition from existing comment</li></ul>
 <h3 id="creator">Creator</h3>
@@ -184,7 +184,7 @@ context of existing RDF work.
 <h3 id="Endeavour">Endeavour</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#Endeavour" class="uri">http://purl.org/vocab/frbr/core#Endeavour</a></p><p class="terminfo">This class represents any one of the FRBR group one entities.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/core#ResponsibleEntity" class="uri">Responsible entity</a> or <a href="http://purl.org/vocab/frbr/core#Subject" class="uri">Subject</a>. Having <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> or <a href="http://purl.org/vocab/frbr/core#responsibleEntity" class="uri">Responsible entity</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> or <a href="http://purl.org/vocab/frbr/core#responsibleEntityOf" class="uri">Responsible entity of</a>. It is equivalent to genid9. 
+<p class="termsemantics">No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/core#ResponsibleEntity" class="uri">Responsible entity</a> or <a href="http://purl.org/vocab/frbr/core#Subject" class="uri">Subject</a>. Having <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> or <a href="http://purl.org/vocab/frbr/core#responsibleEntity" class="uri">Responsible entity</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> or <a href="http://purl.org/vocab/frbr/core#responsibleEntityOf" class="uri">Responsible entity of</a>. It is equivalent to Genid9. 
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added comment</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Extracted definition from existing comment</li></ul>
 <h3 id="Event">Event</h3>
@@ -214,13 +214,13 @@ context of existing RDF work.
 <h3 id="imitation">Imitation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#imitation" class="uri">http://purl.org/vocab/frbr/core#imitation</a></p><p class="terminfo">An imitation of a work or expression.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid210. Every value of this property is genid213. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#imitationOf" class="uri">Imitation of</a></p>
+<p class="termsemantics">Having this property implies being a Genid210. Every value of this property is a Genid213. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#imitationOf" class="uri">Imitation of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="imitationOf">Imitation of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#imitationOf" class="uri">http://purl.org/vocab/frbr/core#imitationOf</a></p><p class="terminfo">A work or expression that is imitated.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid219. Every value of this property is genid222. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#imitation" class="uri">Imitation</a></p>
+<p class="termsemantics">Having this property implies being a Genid219. Every value of this property is a Genid222. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#imitation" class="uri">Imitation</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="Item">Item</h3>
@@ -334,13 +334,13 @@ context of existing RDF work.
 <h3 id="reproduction">Reproduction</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#reproduction" class="uri">http://purl.org/vocab/frbr/core#reproduction</a></p><p class="terminfo">A reproduction of a manifestation or item.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid84. Every value of this property is genid87. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#reproductionOf" class="uri">Reproduction of</a></p>
+<p class="termsemantics">Having this property implies being a Genid84. Every value of this property is a Genid87. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#reproductionOf" class="uri">Reproduction of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Manifestation or Item</li></ul>
 <h3 id="reproductionOf">Reproduction of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#reproductionOf" class="uri">http://purl.org/vocab/frbr/core#reproductionOf</a></p><p class="terminfo">A manifestation or item that is reproduced.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid93. Every value of this property is genid96. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#reproduction" class="uri">Reproduction</a></p>
+<p class="termsemantics">Having this property implies being a Genid93. Every value of this property is a Genid96. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#reproduction" class="uri">Reproduction</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Manifestation or Item</li></ul>
 <h3 id="responsibleEntity">Responsible entity</h3>
@@ -352,7 +352,7 @@ context of existing RDF work.
 <h3 id="ResponsibleEntity">Responsible entity</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#ResponsibleEntity" class="uri">http://purl.org/vocab/frbr/core#ResponsibleEntity</a></p><p class="terminfo">This class represents any of the FRBR group two entities.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/core#Endeavour" class="uri">Endeavour</a> or <a href="http://purl.org/vocab/frbr/core#Subject" class="uri">Subject</a>. Having <a href="http://purl.org/vocab/frbr/core#responsibleEntityOf" class="uri">Responsible entity of</a>, <a href="http://purl.org/vocab/frbr/core#creatorOf" class="uri">Creator of</a>, <a href="http://purl.org/vocab/frbr/core#realizerOf" class="uri">Realizer of</a>, <a href="http://purl.org/vocab/frbr/core#producerOf" class="uri">Producer of</a> or <a href="http://purl.org/vocab/frbr/core#ownerOf" class="uri">Owner of</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/frbr/core#responsibleEntity" class="uri">Responsible entity</a>, <a href="http://purl.org/vocab/frbr/core#creator" class="uri">Creator</a>, <a href="http://purl.org/vocab/frbr/core#realizer" class="uri">Realizer</a>, <a href="http://purl.org/vocab/frbr/core#producer" class="uri">Producer</a> or <a href="http://purl.org/vocab/frbr/core#owner" class="uri">Owner</a>. It is equivalent to genid32. 
+<p class="termsemantics">No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/core#Endeavour" class="uri">Endeavour</a> or <a href="http://purl.org/vocab/frbr/core#Subject" class="uri">Subject</a>. Having <a href="http://purl.org/vocab/frbr/core#responsibleEntityOf" class="uri">Responsible entity of</a>, <a href="http://purl.org/vocab/frbr/core#creatorOf" class="uri">Creator of</a>, <a href="http://purl.org/vocab/frbr/core#realizerOf" class="uri">Realizer of</a>, <a href="http://purl.org/vocab/frbr/core#producerOf" class="uri">Producer of</a> or <a href="http://purl.org/vocab/frbr/core#ownerOf" class="uri">Owner of</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/frbr/core#responsibleEntity" class="uri">Responsible entity</a>, <a href="http://purl.org/vocab/frbr/core#creator" class="uri">Creator</a>, <a href="http://purl.org/vocab/frbr/core#realizer" class="uri">Realizer</a>, <a href="http://purl.org/vocab/frbr/core#producer" class="uri">Producer</a> or <a href="http://purl.org/vocab/frbr/core#owner" class="uri">Owner</a>. It is equivalent to Genid32. 
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added comment</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Extracted definition from existing comment</li></ul>
 <h3 id="responsibleEntityOf">Responsible entity of</h3>
@@ -376,61 +376,61 @@ context of existing RDF work.
 <h3 id="subject">Subject</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#subject" class="uri">http://purl.org/vocab/frbr/core#subject</a></p><p class="terminfo">The subject of a work.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/frbr/core#Work" class="uri">Work</a>. Every value of this property is genid276. </p>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/frbr/core#Work" class="uri">Work</a>. Every value of this property is a Genid276. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li></ul>
 <h3 id="Subject">Subject</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#Subject" class="uri">http://purl.org/vocab/frbr/core#Subject</a></p><p class="terminfo">This class represents any of the FRBR group three entities.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/core#ResponsibleEntity" class="uri">Responsible entity</a> or <a href="http://purl.org/vocab/frbr/core#Endeavour" class="uri">Endeavour</a>. It is equivalent to genid47. 
+<p class="termsemantics">No member of this class can also be a member of <a href="http://purl.org/vocab/frbr/core#ResponsibleEntity" class="uri">Responsible entity</a> or <a href="http://purl.org/vocab/frbr/core#Endeavour" class="uri">Endeavour</a>. It is equivalent to Genid47. 
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added comment</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Extracted definition from existing comment</li></ul>
 <h3 id="successor">Successor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#successor" class="uri">http://purl.org/vocab/frbr/core#successor</a></p><p class="terminfo">A successor to a work or expression.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid102. Every value of this property is genid105. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#successorOf" class="uri">Successor of</a></p>
+<p class="termsemantics">Having this property implies being a Genid102. Every value of this property is a Genid105. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#successorOf" class="uri">Successor of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="successorOf">Successor of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#successorOf" class="uri">http://purl.org/vocab/frbr/core#successorOf</a></p><p class="terminfo">A work or expression that is succeeded.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid111. Every value of this property is genid114. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#successor" class="uri">Successor</a></p>
+<p class="termsemantics">Having this property implies being a Genid111. Every value of this property is a Genid114. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#successor" class="uri">Successor</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="summarization">Summarization</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#summarization" class="uri">http://purl.org/vocab/frbr/core#summarization</a></p><p class="terminfo">A summarization of a work or expression.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid156. Every value of this property is genid159. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#summarizationOf" class="uri">Summarization of</a></p>
+<p class="termsemantics">Having this property implies being a Genid156. Every value of this property is a Genid159. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#summarizationOf" class="uri">Summarization of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="summarizationOf">Summarization of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#summarizationOf" class="uri">http://purl.org/vocab/frbr/core#summarizationOf</a></p><p class="terminfo">A work or expression that is summarized.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid165. Every value of this property is genid168. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#summarization" class="uri">Summarization</a></p>
+<p class="termsemantics">Having this property implies being a Genid165. Every value of this property is a Genid168. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#summarization" class="uri">Summarization</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="supplement">Supplement</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#supplement" class="uri">http://purl.org/vocab/frbr/core#supplement</a></p><p class="terminfo">A supplement to a work or expression.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid120. Every value of this property is genid123. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#supplementOf" class="uri">Supplement of</a></p>
+<p class="termsemantics">Having this property implies being a Genid120. Every value of this property is a Genid123. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#supplementOf" class="uri">Supplement of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="supplementOf">Supplement of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#supplementOf" class="uri">http://purl.org/vocab/frbr/core#supplementOf</a></p><p class="terminfo">A work or expression that is supplemented.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid129. Every value of this property is genid132. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#supplement" class="uri">Supplement</a></p>
+<p class="termsemantics">Having this property implies being a Genid129. Every value of this property is a Genid132. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#supplement" class="uri">Supplement</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="transformation">Transformation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#transformation" class="uri">http://purl.org/vocab/frbr/core#transformation</a></p><p class="terminfo">A transformation of a work or expression.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid192. Every value of this property is genid195. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#transformationOf" class="uri">Transformation of</a></p>
+<p class="termsemantics">Having this property implies being a Genid192. Every value of this property is a Genid195. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#transformationOf" class="uri">Transformation of</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="transformationOf">Transformation of</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/frbr/core#transformationOf" class="uri">http://purl.org/vocab/frbr/core#transformationOf</a></p><p class="terminfo">A work or expression that is transformed.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being genid201. Every value of this property is genid204. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#transformation" class="uri">Transformation</a></p>
+<p class="termsemantics">Having this property implies being a Genid201. Every value of this property is a Genid204. It is a sub-property of <a href="http://purl.org/vocab/frbr/core#relatedEndeavour" class="uri">Related endeavour</a> and the inverse of <a href="http://purl.org/vocab/frbr/core#transformation" class="uri">Transformation</a></p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2005-07-15 - first issued</li><li>2005-08-08 - editorial change by Ian Davis: Added isDefinedBy property referring to FRBR core namespace</li><li>2005-08-09 - editorial change by Ian Davis: Added definition</li><li>2005-08-10 - semantic change by Ian Davis: Added domain and range of Work or Expression</li></ul>
 <h3 id="translation">Translation</h3>
@@ -461,5 +461,5 @@ IFLA report on the Functional Requirements for Bibliographic Records (FRBR).
 </div></td></tr>
 <tr><th valign="top" class="odd"><div class="label"><a href="http://purl.org/dc/terms/replaces" class="uri">Replaces</a></div></th><td valign="top" width="80%" class="odd"><div class="res"><a href="http://purl.org/vocab/frbr/frbr-core-20050809" class="uri">msg0:frbr-core-20050809</a></div></td></tr>
 <tr><th valign="top" class="even"><div class="label"><a href="http://purl.org/dc/terms/hasFormat" class="uri">s</a></div></th><td valign="top" width="80%" class="even"><div class="res"><a href="http://purl.org/vocab/frbr/frbr-core-20050810.html" class="uri">Http://purl.org/vocab/frbr/frbr-core-20050810.html</a></div><div class="res"><a href="http://purl.org/vocab/frbr/frbr-core-20050810.rdf" class="uri">Http://purl.org/vocab/frbr/frbr-core-20050810.rdf</a></div></td></tr>
-<tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2004/02/skos/core#example" class="uri">Example</a></div></th><td valign="top" width="80%" class="odd"><div class="res">file:///home/iand/web/vocab.org/www/src/frbr/frbr-example-film-20050809.html</div></td></tr>
+<tr><th valign="top" class="odd"><div class="label"><a href="http://www.w3.org/2004/02/skos/core#example" class="uri">Example</a></div></th><td valign="top" width="80%" class="odd"><div class="res">file:///home/iand/wip/iand/vocabdotorg/www/src/frbr/frbr-example-film-20050809.html</div></td></tr>
 </table>

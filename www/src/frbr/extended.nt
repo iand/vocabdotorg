@@ -24,9 +24,9 @@ _:genid3 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
 _:genid3 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Added isDefinedBy properties and updated documentation" .
 <http://purl.org/vocab/frbr/extended#> <http://www.w3.org/2004/02/skos/core#changeNote> _:genid3 .
-<file:///home/iand/web/vocab.org/www/src/frbr/extended.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
-<file:///home/iand/web/vocab.org/www/src/frbr/extended.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
-<file:///home/iand/web/vocab.org/www/src/frbr/extended.rdf> <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Text> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/frbr/extended.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/frbr/extended.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<file:///home/iand/wip/iand/vocabdotorg/www/src/frbr/extended.rdf> <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Text> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
