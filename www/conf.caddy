@@ -1,0 +1,7 @@
+
+file_server {
+	index index.html index.htm index.xml schema.html terms.html core.html extended.html
+}
+
+#redir /bio  /bio/schema
+#redir /bio/ /bio/schema
