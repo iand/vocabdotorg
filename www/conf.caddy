@@ -3,5 +3,14 @@ file_server {
 	index index.html index.htm index.xml schema.html terms.html core.html extended.html
 }
 
-#redir /bio  /bio/schema
-#redir /bio/ /bio/schema
+rewrite /frbr/core        /frbr/core.html
+rewrite /frbr/extended    /frbr/extended.html
+rewrite /lifecycle/schema /lifecycle/schema.html
+rewrite /changeset/schema /changeset/schema.html
+rewrite /riro/ddl         /riro/ddl.html
+rewrite /riro/gpt         /riro/gpt.html
+rewrite /riro/sdl         /riro/sdl.html
+rewrite /whisky/terms     /whisky/terms.html
+
+redir /changesets   /changeset/schema 301
+redir /changesets/* /changeset/schema 301
