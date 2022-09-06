@@ -41,11 +41,11 @@ sourcerdf: schema-20080925.rdf
 <h3 id="role">Role</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#role" class="uri">http://purl.org/vocab/participation/schema#role</a></p><p class="terminfo">connects groups that have a role to the instance of that role</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid4. Every value of this property is a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. It is the inverse of <a href="http://purl.org/vocab/participation/schema#role_at" class="uri">Role</a></p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a> and <a href="http://xmlns.com/foaf/0.1/Group" class="uri">foaf:Group</a>. Every value of this property is a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. It is the inverse of <a href="http://purl.org/vocab/participation/schema#role_at" class="uri">Role</a></p>
 <h3 id="role_at">Role</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#role_at" class="uri">http://purl.org/vocab/participation/schema#role_at</a></p><p class="terminfo">connects groups that have a role to the instance of that role</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. Every value of this property is a Genid7. It is the inverse of <a href="http://purl.org/vocab/participation/schema#role_at" class="uri">Role</a></p>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/participation/schema#Role" class="uri">Role</a>. Every value of this property is a class that is the union of <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a> and <a href="http://xmlns.com/foaf/0.1/Group" class="uri">foaf:Group</a>. It is the inverse of <a href="http://purl.org/vocab/participation/schema#role_at" class="uri">Role</a></p>
 <h3 id="startDate">StartDate</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/participation/schema#startDate" class="uri">http://purl.org/vocab/participation/schema#startDate</a></p><p class="terminfo">The date on which this agent started performing this role</p>
 <h4>Semantics</h4>

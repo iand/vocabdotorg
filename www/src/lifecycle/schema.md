@@ -83,7 +83,7 @@ sourcerdf: schema-20080603.rdf
 <h3 id="next">Next</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#next" class="uri">http://purl.org/vocab/lifecycle/schema#next</a></p><p class="terminfo">provides a simple ordering relationship to allow tasks to be ordered in user interfaces.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid4. Every value of this property is a Genid7. </p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://purl.org/vocab/lifecycle/schema#Task" class="uri">Task</a> and <a href="http://purl.org/vocab/lifecycle/schema#TaskGroup" class="uri">Task Group</a>. Every value of this property is a class that is the union of <a href="http://purl.org/vocab/lifecycle/schema#Task" class="uri">Task</a> and <a href="http://purl.org/vocab/lifecycle/schema#TaskGroup" class="uri">Task Group</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-06-03 - first issued</li></ul>
 <h3 id="possibleState">Possible state</h3>
@@ -125,7 +125,7 @@ sourcerdf: schema-20080603.rdf
 <h3 id="task">Task</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/lifecycle/schema#task" class="uri">http://purl.org/vocab/lifecycle/schema#task</a></p><p class="terminfo">A task related to this transition.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid10. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#Task" class="uri">Task</a>. </p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://purl.org/vocab/lifecycle/schema#TaskGroup" class="uri">Task Group</a> and <a href="http://purl.org/vocab/lifecycle/schema#Transition" class="uri">Transition</a>. Every value of this property is a <a href="http://purl.org/vocab/lifecycle/schema#Task" class="uri">Task</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-06-03 - first issued</li></ul>
 <h3 id="taskGroup">Task group</h3>

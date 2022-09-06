@@ -44,13 +44,13 @@ The Resource List ontology is intended for use describing academic reading lists
 <h3 id="AlternativeItem">Alternative Item</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#AlternativeItem" class="uri">http://purl.org/vocab/resourcelist/schema#AlternativeItem</a></p><p class="terminfo">An Alternative Item is an Item that is used specifically as an alternative to the Item it is associated with. This allows resource list creators to specify alternative resources when the core items on their list are unavailable, or simply in addition to them within a given context.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li></ul>
 <h3 id="created">Created Date</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#created" class="uri">http://purl.org/vocab/resourcelist/schema#created</a></p><p class="terminfo">This property is used to capture the date a list, item, or section was created</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid28. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a> and <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a> and <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-07-31 - first issued</li></ul>
 <h3 id="description">Description</h3>
@@ -66,13 +66,13 @@ The Resource List ontology is intended for use describing academic reading lists
 <h3 id="Item">Item</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">http://purl.org/vocab/resourcelist/schema#Item</a></p><p class="terminfo">An Item represents a resource in the context of the list in which it is contained. This differs from the resource itself in that a resource may be referenced in many lists or many times within a single list. Item provides the means to contextualize the specific reference to a resource on each list.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/Item" class="uri">spec:Item</a>. Having <a href="http://purl.org/vocab/resourcelist/schema#resource" class="uri">Resource</a> or <a href="http://purl.org/vocab/resourcelist/schema#alternative" class="uri">Alternative</a> implies being a member of this class. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/Item" class="uri">spec:Item</a>. Having <a href="http://purl.org/vocab/resourcelist/schema#resource" class="uri">Resource</a> or <a href="http://purl.org/vocab/resourcelist/schema#alternative" class="uri">Alternative</a> implies being a member of this class. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li></ul>
 <h3 id="lastUpdated">Last Updated Date</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#lastUpdated" class="uri">http://purl.org/vocab/resourcelist/schema#lastUpdated</a></p><p class="terminfo">This property is used to capture the date a list, item, or section last updated</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid32. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a> and <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a> and <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. Every value of this property is a <a href="http://www.w3.org/2001/XMLSchema#date" class="uri">xsd:date</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2009-07-01 - first issued</li></ul>
 <h3 id="usedBy">List Used By</h3>
@@ -88,13 +88,13 @@ The Resource List ontology is intended for use describing academic reading lists
 <h3 id="List">Resource List</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">http://purl.org/vocab/resourcelist/schema#List</a></p><p class="terminfo">A Resource List represents an ordered collection of Items each which refers to a resource (currently bibo:Documents) for such purposes as managing a bibliography, circulating a reading list or similar.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/Container" class="uri">sioc:Container</a> and <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" class="uri">rdf:Seq</a>. Having <a href="http://purl.org/vocab/resourcelist/schema#contains" class="uri">Contains</a>, <a href="http://purl.org/vocab/resourcelist/schema#usedBy" class="uri">List Used By</a> or <a href="http://purl.org/vocab/resourcelist/schema#description" class="uri">Description</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/resourcelist/schema#list" class="uri">List</a> or <a href="http://purl.org/vocab/resourcelist/schema#usesList" class="uri">Uses Resource List</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/Container" class="uri">sioc:Container</a> and <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" class="uri">rdf:Seq</a>. Having <a href="http://purl.org/vocab/resourcelist/schema#contains" class="uri">Contains</a>, <a href="http://purl.org/vocab/resourcelist/schema#usedBy" class="uri">List Used By</a> or <a href="http://purl.org/vocab/resourcelist/schema#description" class="uri">Description</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/resourcelist/schema#list" class="uri">List</a> or <a href="http://purl.org/vocab/resourcelist/schema#usesList" class="uri">Uses Resource List</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li><li>2009-07-01 - semantic change by Nadeem Shabir: Updated, List now also subclasses rdf:Seq</li></ul>
 <h3 id="Section">Section</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">http://purl.org/vocab/resourcelist/schema#Section</a></p><p class="terminfo">A Section denotes a grouping of resources within a Resource List that are considered related in some way.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/Container" class="uri">msg0:Container</a> and <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" class="uri">rdf:Seq</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/Container" class="uri">msg0:Container</a> and <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" class="uri">rdf:Seq</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li><li>2009-07-01 - semantic change by Nadeem Shabir: Updated, Section now also subclasses rdf:Seq</li></ul>
 <h3 id="usesList">Uses Resource List</h3>
@@ -106,25 +106,25 @@ The Resource List ontology is intended for use describing academic reading lists
 <h3 id="contains">Contains</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#contains" class="uri">http://purl.org/vocab/resourcelist/schema#contains</a></p><p class="terminfo">A List may contain many Sections and Items organised in a hierarchical structure. the contains property provides a relationshiop between the parent List and all Sections and Items within it, whether they are attached directly or deeper within the structure. This allows a List and all of its parts to be retrieved with a single DESCRIBE. This is an optimisation that precludes the need for recursive querying.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. Every value of this property is a Genid11. </p>
+<p class="termsemantics">Having this property implies being a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. Every value of this property is a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a> and <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li></ul>
 <h3 id="list">List</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#list" class="uri">http://purl.org/vocab/resourcelist/schema#list</a></p><p class="terminfo">Sections and Items are contained within Lists, the list property allows an easy way to get from Items and Sections that may be several levels deep to their parent List.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid8. Every value of this property is a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. </p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a> and <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a>. Every value of this property is a <a href="http://purl.org/vocab/resourcelist/schema#List" class="uri">Resource List</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li></ul>
 <h3 id="next">Next</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#next" class="uri">http://purl.org/vocab/resourcelist/schema#next</a></p><p class="terminfo">DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid17. Every value of this property is a Genid14. </p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a> and <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a>. Every value of this property is a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a> and <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li><li>2009-07-01 - semantic change by Nadeem Shabir: Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable</li></ul>
 <h3 id="previous">Previous</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/resourcelist/schema#previous" class="uri">http://purl.org/vocab/resourcelist/schema#previous</a></p><p class="terminfo">DEPRECATED: The Sections and Items within a List or a Section are ordered. The mechanism for that is a doubly linked list, using next and previous.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having this property implies being a Genid24. Every value of this property is a Genid21. </p>
+<p class="termsemantics">Having this property implies being a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a> and <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a>. Every value of this property is a class that is the union of <a href="http://purl.org/vocab/resourcelist/schema#Section" class="uri">Section</a> and <a href="http://purl.org/vocab/resourcelist/schema#Item" class="uri">Item</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-05-19 - first issued</li><li>2009-07-01 - semantic change by Nadeem Shabir: Deprecated: Lists and Sections are now subclasses of rdf:Seq, explicit ordering using previous/next is highly undesirable</li></ul>
 <h3 id="resource">Resource</h3>

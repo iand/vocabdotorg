@@ -118,595 +118,595 @@ sourcerdf: schema-20100610.rdf
 <h3 id="ADP_student">ADP student</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#ADP_student" class="uri">http://purl.org/vocab/aiiso-roles/schema#ADP_student</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">participation:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">participation:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Administrative_Assistant">Administrative Assistant</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Administrative_Assistant" class="uri">http://purl.org/vocab/aiiso-roles/schema#Administrative_Assistant</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg0:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg0:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Administrator">Administrator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Administrator" class="uri">http://purl.org/vocab/aiiso-roles/schema#Administrator</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg1:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg1:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Admission_Officer">Admission Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Admission_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Admission_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg2:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg2:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Admissions_and_International_Officer">Admissions and International Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Admissions_and_International_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Admissions_and_International_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg3:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg3:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Assistant">Assistant</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Assistant" class="uri">http://purl.org/vocab/aiiso-roles/schema#Assistant</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg4:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg4:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Assistant_Computer_Officer">Assistant Computer Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Assistant_Computer_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Assistant_Computer_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg5:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg5:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Assistant_Director">Assistant Director</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Assistant_Director" class="uri">http://purl.org/vocab/aiiso-roles/schema#Assistant_Director</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg6:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg6:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Associate">Associate</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Associate" class="uri">http://purl.org/vocab/aiiso-roles/schema#Associate</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg7:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg7:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Associate_Dean">Associate Dean</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Associate_Dean" class="uri">http://purl.org/vocab/aiiso-roles/schema#Associate_Dean</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg8:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg8:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Associate_Director">Associate Director</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Associate_Director" class="uri">http://purl.org/vocab/aiiso-roles/schema#Associate_Director</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg9:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg9:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Associate_Lecturer">Associate Lecturer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Associate_Lecturer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Associate_Lecturer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg10:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg10:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Associate_Professor">Associate Professor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Associate_Professor" class="uri">http://purl.org/vocab/aiiso-roles/schema#Associate_Professor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg11:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg11:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-06-10 - first issued</li></ul>
 <h3 id="Audio_Visual_and_Graphics_Technician">Audio Visual and Graphics Technician</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Audio_Visual_and_Graphics_Technician" class="uri">http://purl.org/vocab/aiiso-roles/schema#Audio_Visual_and_Graphics_Technician</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg12:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg12:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="CAD_Instructor">CAD Instructor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#CAD_Instructor" class="uri">http://purl.org/vocab/aiiso-roles/schema#CAD_Instructor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg13:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg13:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="CPDA_Coordinator">CPDA Coordinator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#CPDA_Coordinator" class="uri">http://purl.org/vocab/aiiso-roles/schema#CPDA_Coordinator</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg14:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg14:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Campus_Library_Manager">Campus Library Manager</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Campus_Library_Manager" class="uri">http://purl.org/vocab/aiiso-roles/schema#Campus_Library_Manager</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg15:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg15:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Chair">Chair</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Chair" class="uri">http://purl.org/vocab/aiiso-roles/schema#Chair</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg16:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg16:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Clerk">Clerk</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Clerk" class="uri">http://purl.org/vocab/aiiso-roles/schema#Clerk</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg17:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg17:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Computer_Officer">Computer Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Computer_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Computer_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg18:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg18:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Computer_Team_Leader">Computer Team Leader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Computer_Team_Leader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Computer_Team_Leader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg19:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg19:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Convenor">Convenor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Convenor" class="uri">http://purl.org/vocab/aiiso-roles/schema#Convenor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg20:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg20:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Deputy_Academic_Registrar">Deputy Academic Registrar</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Deputy_Academic_Registrar" class="uri">http://purl.org/vocab/aiiso-roles/schema#Deputy_Academic_Registrar</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg21:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg21:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Deputy_Chair">Deputy Chair</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Deputy_Chair" class="uri">http://purl.org/vocab/aiiso-roles/schema#Deputy_Chair</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg22:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg22:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Deputy_Head_of_Department">Deputy Head of Department</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_Department" class="uri">http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_Department</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg23:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg23:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Deputy_Head_of_School">Deputy Head of School</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_School" class="uri">http://purl.org/vocab/aiiso-roles/schema#Deputy_Head_of_School</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg24:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg24:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Deputy_Librarian">Deputy Librarian</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Deputy_Librarian" class="uri">http://purl.org/vocab/aiiso-roles/schema#Deputy_Librarian</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg25:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg25:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Director">Director</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Director" class="uri">http://purl.org/vocab/aiiso-roles/schema#Director</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg26:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg26:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Executive_Support_Officer">Executive Support Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Executive_Support_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Executive_Support_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg27:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg27:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="External_Examiner">External Examiner</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#External_Examiner" class="uri">http://purl.org/vocab/aiiso-roles/schema#External_Examiner</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg28:Role</a> and <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg29:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg28:Role</a> and <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg29:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li><li>2008-09-25 - first issued</li></ul>
 <h3 id="External_Examiner">External Examiner</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#External_Examiner" class="uri">http://purl.org/vocab/aiiso-roles/schema#External_Examiner</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg30:Role</a> and <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg31:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg30:Role</a> and <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg31:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li><li>2008-09-25 - first issued</li></ul>
 <h3 id="External_Lecturer">External Lecturer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#External_Lecturer" class="uri">http://purl.org/vocab/aiiso-roles/schema#External_Lecturer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg32:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg32:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-06-10 - first issued</li></ul>
 <h3 id="External_Programmes_Advisor">External Programmes Advisor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#External_Programmes_Advisor" class="uri">http://purl.org/vocab/aiiso-roles/schema#External_Programmes_Advisor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg33:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg33:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Faculty_Administrator">Faculty Administrator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Faculty_Administrator" class="uri">http://purl.org/vocab/aiiso-roles/schema#Faculty_Administrator</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg34:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg34:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Faculty_Librarian">Faculty Librarian</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Faculty_Librarian" class="uri">http://purl.org/vocab/aiiso-roles/schema#Faculty_Librarian</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg35:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg35:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Fellow">Fellow</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Fellow" class="uri">http://purl.org/vocab/aiiso-roles/schema#Fellow</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg36:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg36:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Field_Leader">Field Leader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Field_Leader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Field_Leader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg37:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg37:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Finance_Assistant">Finance Assistant</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Finance_Assistant" class="uri">http://purl.org/vocab/aiiso-roles/schema#Finance_Assistant</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg38:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg38:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Finance_and_Resources_Officer">Finance and Resources Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Finance_and_Resources_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Finance_and_Resources_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg39:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg39:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="First_Aider">First Aider</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#First_Aider" class="uri">http://purl.org/vocab/aiiso-roles/schema#First_Aider</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg40:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg40:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Group_Leader">Group Leader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Group_Leader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Group_Leader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg41:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg41:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Head_of_Department">Head of Department</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Head_of_Department" class="uri">http://purl.org/vocab/aiiso-roles/schema#Head_of_Department</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg42:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg42:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Head_of_School">Head of School</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Head_of_School" class="uri">http://purl.org/vocab/aiiso-roles/schema#Head_of_School</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg43:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg43:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Hourly_Paid_Lecturer">Hourly Paid Lecturer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Hourly_Paid_Lecturer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Hourly_Paid_Lecturer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg44:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg44:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Internal_Moderator">Internal Moderator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Internal_Moderator" class="uri">http://purl.org/vocab/aiiso-roles/schema#Internal_Moderator</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg45:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg45:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Joint_Head_of_Technical_Services">Joint Head of Technical Services</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Joint_Head_of_Technical_Services" class="uri">http://purl.org/vocab/aiiso-roles/schema#Joint_Head_of_Technical_Services</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg46:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg46:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Lecturer">Lecturer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Lecturer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Lecturer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg47:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg47:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Manager">Manager</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Manager" class="uri">http://purl.org/vocab/aiiso-roles/schema#Manager</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg48:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg48:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Marketing_Officer">Marketing Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Marketing_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Marketing_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg49:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg49:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Marketing_and_Admissions_Assistant">Marketing and Admissions Assistant</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Marketing_and_Admissions_Assistant" class="uri">http://purl.org/vocab/aiiso-roles/schema#Marketing_and_Admissions_Assistant</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg50:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg50:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Marketing_and_International_Assistant">Marketing and International Assistant</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Marketing_and_International_Assistant" class="uri">http://purl.org/vocab/aiiso-roles/schema#Marketing_and_International_Assistant</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg51:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg51:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Member">Member</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Member" class="uri">http://purl.org/vocab/aiiso-roles/schema#Member</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg52:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg52:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Modular_Scheme_Administrator">Modular Scheme Administrator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Modular_Scheme_Administrator" class="uri">http://purl.org/vocab/aiiso-roles/schema#Modular_Scheme_Administrator</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg53:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg53:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Module_Coordinator">Module Coordinator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Module_Coordinator" class="uri">http://purl.org/vocab/aiiso-roles/schema#Module_Coordinator</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg54:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg54:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Module_Leader">Module Leader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Module_Leader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Module_Leader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg55:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg55:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="PC_Systems_Manager">PC Systems Manager</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#PC_Systems_Manager" class="uri">http://purl.org/vocab/aiiso-roles/schema#PC_Systems_Manager</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg56:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg56:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Personal_Assistant_to_Associate_Dean">Personal Assistant to Associate Dean</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Associate_Dean" class="uri">http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Associate_Dean</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg57:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg57:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Personal_Assistant_to_Dean">Personal Assistant to Dean</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Dean" class="uri">http://purl.org/vocab/aiiso-roles/schema#Personal_Assistant_to_Dean</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg58:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg58:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="PHD_Candidate">Ph.D. Candidate</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#PHD_Candidate" class="uri">http://purl.org/vocab/aiiso-roles/schema#PHD_Candidate</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg59:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg59:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-06-10 - first issued</li></ul>
 <h3 id="Placement_Post">Placement Post</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Placement_Post" class="uri">http://purl.org/vocab/aiiso-roles/schema#Placement_Post</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg60:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg60:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Postgraduate_Scheme_Director">Postgraduate Scheme Director</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Postgraduate_Scheme_Director" class="uri">http://purl.org/vocab/aiiso-roles/schema#Postgraduate_Scheme_Director</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg61:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg61:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Principal_Computer_Officer">Principal Computer Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Principal_Computer_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Principal_Computer_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg62:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg62:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Principal_Electronics_Technician">Principal Electronics Technician</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Principal_Electronics_Technician" class="uri">http://purl.org/vocab/aiiso-roles/schema#Principal_Electronics_Technician</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg63:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg63:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Principal_Lecturer">Principal Lecturer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Principal_Lecturer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Principal_Lecturer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg64:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg64:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Principal_Officer">Principal Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Principal_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Principal_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg65:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg65:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Principal_Technician">Principal Technician</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Principal_Technician" class="uri">http://purl.org/vocab/aiiso-roles/schema#Principal_Technician</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg66:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg66:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Professor">Professor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Professor" class="uri">http://purl.org/vocab/aiiso-roles/schema#Professor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg67:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg67:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Project_Manager">Project Manager</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Project_Manager" class="uri">http://purl.org/vocab/aiiso-roles/schema#Project_Manager</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg68:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg68:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Reader">Reader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Reader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Reader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg69:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg69:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Receptionist">Receptionist</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Receptionist" class="uri">http://purl.org/vocab/aiiso-roles/schema#Receptionist</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg70:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg70:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Research">Research</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Research" class="uri">http://purl.org/vocab/aiiso-roles/schema#Research</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg71:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg71:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Research_Administrator">Research Administrator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Research_Administrator" class="uri">http://purl.org/vocab/aiiso-roles/schema#Research_Administrator</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg72:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg72:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Research_Associate">Research Associate</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Research_Associate" class="uri">http://purl.org/vocab/aiiso-roles/schema#Research_Associate</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg73:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg73:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Research_Director">Research Director</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Research_Director" class="uri">http://purl.org/vocab/aiiso-roles/schema#Research_Director</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg74:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg74:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Research_Fellow">Research Fellow</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Research_Fellow" class="uri">http://purl.org/vocab/aiiso-roles/schema#Research_Fellow</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg75:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg75:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Research_Leader">Research Leader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Research_Leader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Research_Leader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg76:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg76:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Research_Student">Research Student</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Research_Student" class="uri">http://purl.org/vocab/aiiso-roles/schema#Research_Student</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg77:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg77:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Researcher">Researcher</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Researcher" class="uri">http://purl.org/vocab/aiiso-roles/schema#Researcher</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg78:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg78:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Secretary">Secretary</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Secretary" class="uri">http://purl.org/vocab/aiiso-roles/schema#Secretary</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg79:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg79:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Secretary_to_Head_of_Schools">Secretary to Head of Schools</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Secretary_to_Head_of_Schools" class="uri">http://purl.org/vocab/aiiso-roles/schema#Secretary_to_Head_of_Schools</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg80:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg80:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Senior_Lecturer">Senior Lecturer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Senior_Lecturer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Senior_Lecturer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg81:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg81:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Senior_Team_Leader">Senior Team Leader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Senior_Team_Leader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Senior_Team_Leader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg82:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg82:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Senior_Technician">Senior Technician</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Senior_Technician" class="uri">http://purl.org/vocab/aiiso-roles/schema#Senior_Technician</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg83:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg83:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Special_Needs_Officer">Special Needs Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Special_Needs_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Special_Needs_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg84:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg84:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Student_Adviser">Student Adviser</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Student_Adviser" class="uri">http://purl.org/vocab/aiiso-roles/schema#Student_Adviser</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg85:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg85:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Student_Affairs_Officer">Student Affairs Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Student_Affairs_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Student_Affairs_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg86:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg86:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-06-10 - first issued</li></ul>
 <h3 id="Student_Representative">Student Representative</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Student_Representative" class="uri">http://purl.org/vocab/aiiso-roles/schema#Student_Representative</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg87:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg87:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Team_Leader">Team Leader</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Team_Leader" class="uri">http://purl.org/vocab/aiiso-roles/schema#Team_Leader</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg88:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg88:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Technical_Manager">Technical Manager</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Technical_Manager" class="uri">http://purl.org/vocab/aiiso-roles/schema#Technical_Manager</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg89:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg89:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Technical_Purchasing_Assistant">Technical Purchasing Assistant</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Technical_Purchasing_Assistant" class="uri">http://purl.org/vocab/aiiso-roles/schema#Technical_Purchasing_Assistant</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg90:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg90:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Technical_Resources_Manager">Technical Resources Manager</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Technical_Resources_Manager" class="uri">http://purl.org/vocab/aiiso-roles/schema#Technical_Resources_Manager</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg91:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg91:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Technician">Technician</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Technician" class="uri">http://purl.org/vocab/aiiso-roles/schema#Technician</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg92:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg92:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Tutor">Tutor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Tutor" class="uri">http://purl.org/vocab/aiiso-roles/schema#Tutor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg93:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg93:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Undergraduate_Scheme_Director">Undergraduate Scheme Director</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Undergraduate_Scheme_Director" class="uri">http://purl.org/vocab/aiiso-roles/schema#Undergraduate_Scheme_Director</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg94:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg94:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="User_Services_Manager">User Services Manager</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#User_Services_Manager" class="uri">http://purl.org/vocab/aiiso-roles/schema#User_Services_Manager</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg95:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg95:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Visiting_Professor">Visiting Professor</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Visiting_Professor" class="uri">http://purl.org/vocab/aiiso-roles/schema#Visiting_Professor</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg96:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg96:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Visiting_Researcher">Visiting Researcher</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Visiting_Researcher" class="uri">http://purl.org/vocab/aiiso-roles/schema#Visiting_Researcher</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg97:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg97:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Visiting_Senior_Research_Fellow">Visiting Senior Research Fellow</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Visiting_Senior_Research_Fellow" class="uri">http://purl.org/vocab/aiiso-roles/schema#Visiting_Senior_Research_Fellow</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg98:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg98:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h3 id="Web_Development_Officer">Web Development Officer</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/aiiso-roles/schema#Web_Development_Officer" class="uri">http://purl.org/vocab/aiiso-roles/schema#Web_Development_Officer</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg99:Role</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/participation/schema#Role" class="uri">msg99:Role</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2008-09-25 - first issued</li></ul>
 <h2 id="sec-examples">Other Information</h2>

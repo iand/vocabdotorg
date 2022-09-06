@@ -292,7 +292,7 @@ eg        ov:hasChecksum  &#34;sha1:a526a7c1bc65348dc7649556bee283ee3c999b92&#34
 <h3 id="AfricanRedSlip">African Red Slip</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/AfricanRedSlip" class="uri">http://open.vocab.org/terms/AfricanRedSlip</a></p><p class="terminfo">The ceramic ware produced during the Roman period in the region of what is now the modern country of Tunisia.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/Ware" class="uri">Ware</a>. It is equivalent to <a href="http://dbpedia.org/resource/African_Red_Slip" class="uri">dbp:African_Red_Slip</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/Ware" class="uri">Ware</a>. It is equivalent to <a href="http://dbpedia.org/resource/African_Red_Slip" class="uri">dbp:African_Red_Slip</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -304,7 +304,7 @@ eg        ov:hasChecksum  &#34;sha1:a526a7c1bc65348dc7649556bee283ee3c999b92&#34
 <h3 id="AmateurRadioOperator">Amateur Radio Operator</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/AmateurRadioOperator" class="uri">http://open.vocab.org/terms/AmateurRadioOperator</a></p><p class="terminfo">A person who is licensed in at least one ITU region to operate (transmit and receive) a radio using frequencies and modes permitted only  to licensed persons.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -337,7 +337,7 @@ eg        ov:hasChecksum  &#34;sha1:a526a7c1bc65348dc7649556bee283ee3c999b92&#34
 <h3 id="AnnotationSet">Annotation Set</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/AnnotationSet" class="uri">http://open.vocab.org/terms/AnnotationSet</a></p><p class="terminfo">A type of dataset that contains annotations on a set of resources.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/ns/void#Dataset" class="uri">void:Dataset</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/ns/void#Dataset" class="uri">void:Dataset</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -395,7 +395,7 @@ eg        ov:hasChecksum  &#34;sha1:a526a7c1bc65348dc7649556bee283ee3c999b92&#34
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/AutomobileModel" class="uri">http://open.vocab.org/terms/AutomobileModel</a></p><p class="terminfo">From en.wikipedia.org:
 &#34;A car model is a particular brand of vehicle sold under a marque. From an engineering point of view, a particular car model is usually defined and/or constrained by the use of a particular car chassis/bodywork combination or the same monocoque.&#34;</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/AutomobileCataologType" class="uri">Automobile Catalog Type</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/AutomobileCataologType" class="uri">Automobile Catalog Type</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -416,7 +416,7 @@ eg        ov:hasChecksum  &#34;sha1:a526a7c1bc65348dc7649556bee283ee3c999b92&#34
 <h3 id="BiologicalDatabase">Biological Database</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/BiologicalDatabase" class="uri">http://open.vocab.org/terms/BiologicalDatabase</a></p><p class="terminfo">Database for Biologists (Bioinformatics)</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/ScientificDatabase" class="uri">Scientific Database</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/ScientificDatabase" class="uri">Scientific Database</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -428,7 +428,7 @@ eg        ov:hasChecksum  &#34;sha1:a526a7c1bc65348dc7649556bee283ee3c999b92&#34
 <h3 id="Birth">Birth</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/Birth" class="uri">http://open.vocab.org/terms/Birth</a></p><p class="terminfo">Birth class</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">c4dm:Event</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/Death" class="uri">ov:Death</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">c4dm:Event</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/Death" class="uri">ov:Death</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -744,7 +744,7 @@ Values should be compass directions, eg: N, NE, E, SE, S, SW, W, NW
 <h3 id="Country">Country</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/Country" class="uri">http://open.vocab.org/terms/Country</a></p><p class="terminfo">A country is a geographical region. A country may be the territory of a sovereign state, the territory of a non-sovereign (or formerly sovereign) political division, or a region associated with a certain people or certain characteristics.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">It is equivalent to <a href="http://schema.org/Country" class="uri">s:Country</a>. 
+<p class="termsemantics">It is equivalent to <a href="http://schema.org/Country" class="uri">s:Country</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -766,7 +766,7 @@ Values should be compass directions, eg: N, NE, E, SE, S, SW, W, NW
 <h3 id="Course">Course</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/Course" class="uri">http://open.vocab.org/terms/Course</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having <a href="http://open.vocab.org/terms/deliveredBy" class="uri">Course teacher</a>, <a href="http://open.vocab.org/terms/offeredBy" class="uri">Offering organization</a>, <a href="http://open.vocab.org/terms/responsiblityOf" class="uri">Responsible organization</a> or <a href="http://open.vocab.org/terms/semester" class="uri">Semester</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/offersCourse" class="uri">Offered course</a> or <a href="http://open.vocab.org/terms/teaches" class="uri">Teaches</a>. It is equivalent to <a href="http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#Course" class="uri">msg51:Course</a>. 
+<p class="termsemantics">Having <a href="http://open.vocab.org/terms/deliveredBy" class="uri">Course teacher</a>, <a href="http://open.vocab.org/terms/offeredBy" class="uri">Offering organization</a>, <a href="http://open.vocab.org/terms/responsiblityOf" class="uri">Responsible organization</a> or <a href="http://open.vocab.org/terms/semester" class="uri">Semester</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/offersCourse" class="uri">Offered course</a> or <a href="http://open.vocab.org/terms/teaches" class="uri">Teaches</a>. It is equivalent to <a href="http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#Course" class="uri">msg51:Course</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -888,7 +888,7 @@ http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113/ranges.html#L
 <h3 id="DeletedEntry">Deleted Entry</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/DeletedEntry" class="uri">http://open.vocab.org/terms/DeletedEntry</a></p><p class="terminfo">A construct representing a deleted entry in an Atom feed.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://bblfish.net/work/atom-owl/2006-06-06/#Entry" class="uri">atom-owl:Entry</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://bblfish.net/work/atom-owl/2006-06-06/#Entry" class="uri">atom-owl:Entry</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1254,7 +1254,7 @@ Range: any institution or individual who loans a borrower money</p>
 <h3 id="House">House</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/House" class="uri">http://open.vocab.org/terms/House</a></p><p class="terminfo">Structure in which someone lives</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/building" class="uri">ov:building</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/horse" class="uri">ov:horse</a>. Having <a href="http://open.vocab.org/terms/houseColor" class="uri">HouseColor</a> implies being a member of this class. It is equivalent to <a href="http://open.vocab.org/terms/domicile" class="uri">ov:domicile</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/building" class="uri">ov:building</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/horse" class="uri">ov:horse</a>. Having <a href="http://open.vocab.org/terms/houseColor" class="uri">HouseColor</a> implies being a member of this class. It is equivalent to <a href="http://open.vocab.org/terms/domicile" class="uri">ov:domicile</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1266,7 +1266,7 @@ Range: any institution or individual who loans a borrower money</p>
 <h3 id="ITUREgion">ITU Region for governance of radio operation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/ITUREgion" class="uri">http://open.vocab.org/terms/ITUREgion</a></p><p class="terminfo">The ITU defines a set of world-wide regions which uniquely describe locations for radio operation (in particular, amateur radio operation).  These regions are widely-used by amateur radio operators to report operation and radio contacts.  Each region has a unique abbreviation.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://dublincore.org/documents/2006/04/10/dcmi-box/" class="uri">Http://dublincore.org/documents/2006/04/10/dcmi-box/</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://dublincore.org/documents/2006/04/10/dcmi-box/" class="uri">Http://dublincore.org/documents/2006/04/10/dcmi-box/</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1290,7 +1290,7 @@ Range: any institution or individual who loans a borrower money</p>
 <h3 id="IllegalRDFXMLStatement">Illegal RDF/XML Statement</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/IllegalRDFXMLStatement" class="uri">http://open.vocab.org/terms/IllegalRDFXMLStatement</a></p><p class="terminfo">A statement that would be illegal to express in a non-reified form in RDF/XML - usually because the predicate cannot be converted to a QName.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" class="uri">rdf:Statement</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" class="uri">rdf:Statement</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1332,7 +1332,7 @@ Tools *may* automatically convert between openvocab:IllegalRDFXMLStatement state
 <h3 id="IrcBot">IrcBot</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/IrcBot" class="uri">http://open.vocab.org/terms/IrcBot</a></p><p class="terminfo">An irc chat bot</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/spec/#term_Agent" class="uri">spec:term_Agent</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/spec/#term_Agent" class="uri">spec:term_Agent</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1365,7 +1365,7 @@ Tools *may* automatically convert between openvocab:IllegalRDFXMLStatement state
 <h3 id="KillerGorilla">Killer Gorilla</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/KillerGorilla" class="uri">http://open.vocab.org/terms/KillerGorilla</a></p><p class="terminfo">A gorilla that kills or has the inclination to do so.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://umbel.org/umbel/sc/Gorilla" class="uri">umbel:Gorilla</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/NotAKillerGorilla" class="uri">Non Killer-Gorilla</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://umbel.org/umbel/sc/Gorilla" class="uri">umbel:Gorilla</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/NotAKillerGorilla" class="uri">Non Killer-Gorilla</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1420,7 +1420,7 @@ Tools *may* automatically convert between openvocab:IllegalRDFXMLStatement state
 <h3 id="StillAKillerGorilla">Living Killer Gorilla</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/StillAKillerGorilla" class="uri">http://open.vocab.org/terms/StillAKillerGorilla</a></p><p class="terminfo">Indicates that the subject is a non-deceased killer gorilla.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/KillerGorilla" class="uri">Killer Gorilla</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/NotAKillerGorilla" class="uri">Non Killer-Gorilla</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/KillerGorilla" class="uri">Killer Gorilla</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/NotAKillerGorilla" class="uri">Non Killer-Gorilla</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1432,7 +1432,7 @@ Tools *may* automatically convert between openvocab:IllegalRDFXMLStatement state
 <h3 id="MOTTestingStation">MOT Testing Station</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/MOTTestingStation" class="uri">http://open.vocab.org/terms/MOTTestingStation</a></p><p class="terminfo">The class of all MOT Testing Stations.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" class="uri">geo:SpatialThing</a>. Having <a href="http://open.vocab.org/terms/aeNumber" class="uri">AE Number</a> or <a href="http://open.vocab.org/terms/motVehicleClasses" class="uri">MOT Vehicle Classes</a> implies being a member of this class. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" class="uri">geo:SpatialThing</a>. Having <a href="http://open.vocab.org/terms/aeNumber" class="uri">AE Number</a> or <a href="http://open.vocab.org/terms/motVehicleClasses" class="uri">MOT Vehicle Classes</a> implies being a member of this class. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1476,7 +1476,7 @@ Tools *may* automatically convert between openvocab:IllegalRDFXMLStatement state
 <h3 id="Manifest">Manifest</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/Manifest" class="uri">http://open.vocab.org/terms/Manifest</a></p><p class="terminfo">A manifest is a listing of files or URIs or resources of some sort encoded in some way</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/net/opmv/ns#Artefact" class="uri">opmv:Artefact</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/net/opmv/ns#Artefact" class="uri">opmv:Artefact</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1488,7 +1488,7 @@ Tools *may* automatically convert between openvocab:IllegalRDFXMLStatement state
 <h3 id="MicroblogPost">MicroblogPost</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/MicroblogPost" class="uri">http://open.vocab.org/terms/MicroblogPost</a></p><p class="terminfo">A post on a microblogging service like Twitter, identi.ca, Jaiku or FriendFeed. Usually untitled and with a limited number of characters, and sometimes containing in-line text-based syntactical elements like at-replies, hashtags, group &#39;bangtags&#39; etc.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">It is equivalent to <a href="http://rdfs.org/sioc/types#MicroblogPost" class="uri">types:MicroblogPost</a>. 
+<p class="termsemantics">It is equivalent to <a href="http://rdfs.org/sioc/types#MicroblogPost" class="uri">types:MicroblogPost</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1512,7 +1512,7 @@ Tools *may* automatically convert between openvocab:IllegalRDFXMLStatement state
 <h3 id="MultiSportEvent">MultiSportEvent</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/MultiSportEvent" class="uri">http://open.vocab.org/terms/MultiSportEvent</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">msg104:Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">msg104:Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1590,7 +1590,7 @@ rdfs:seeAlso &lt;http://en.wikipedia.org/wiki/British_national_grid_reference_sy
 <h3 id="NewsItem">News item</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/NewsItem" class="uri">http://open.vocab.org/terms/NewsItem</a></p><p class="terminfo">A piece of News</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/ns#Item" class="uri">msg109:Item</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/ns#Item" class="uri">msg109:Item</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1602,7 +1602,7 @@ rdfs:seeAlso &lt;http://en.wikipedia.org/wiki/British_national_grid_reference_sy
 <h3 id="NotAKillerGorilla">Non Killer-Gorilla</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/NotAKillerGorilla" class="uri">http://open.vocab.org/terms/NotAKillerGorilla</a></p><p class="terminfo">Indicates that something is definitely not a Killer-Gorilla. (It may still be a killer though. Or a gorilla.)</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/2002/07/owl#Thing" class="uri">owl:Thing</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/KillerGorilla" class="uri">Killer Gorilla</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/2002/07/owl#Thing" class="uri">owl:Thing</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/KillerGorilla" class="uri">Killer Gorilla</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1686,7 +1686,7 @@ rdfs:seeAlso &lt;http://en.wikipedia.org/wiki/British_national_grid_reference_sy
 <h3 id="OlympicGames">Olympic games</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/OlympicGames" class="uri">http://open.vocab.org/terms/OlympicGames</a></p><p class="terminfo">The Olympic Games are an international multi-sport event established for both summer and winter sports.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/MultiSportEvent" class="uri">MultiSportEvent</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/MultiSportEvent" class="uri">MultiSportEvent</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1781,7 +1781,7 @@ rdfs:seeAlso &lt;http://en.wikipedia.org/wiki/British_national_grid_reference_sy
 <h3 id="Plot">Plot</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/Plot" class="uri">http://open.vocab.org/terms/Plot</a></p><p class="terminfo">A Plot of anything.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Document" class="uri">foaf:Document</a>. No member of this class can also be a member of <a href="http://xmlns.com/foaf/0.1/Agent" class="uri">foaf:Agent</a>, <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>, <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a> or <a href="http://xmlns.com/foaf/0.1/Project" class="uri">foaf:Project</a>. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/hasPlot" class="uri">HasPlot</a>. It is equivalent to <a href="http://purl.org/ontology/bibo/Document" class="uri">bibo:Document</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://xmlns.com/foaf/0.1/Document" class="uri">foaf:Document</a>. No member of this class can also be a member of <a href="http://xmlns.com/foaf/0.1/Agent" class="uri">foaf:Agent</a>, <a href="http://xmlns.com/foaf/0.1/Organization" class="uri">foaf:Organization</a>, <a href="http://xmlns.com/foaf/0.1/Person" class="uri">foaf:Person</a> or <a href="http://xmlns.com/foaf/0.1/Project" class="uri">foaf:Project</a>. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/hasPlot" class="uri">HasPlot</a>. It is equivalent to <a href="http://purl.org/ontology/bibo/Document" class="uri">bibo:Document</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1829,7 +1829,7 @@ See elso http://open.vocab.org/terms/Plot.<span class="lang">[en]</span></div></
 <h3 id="PrimaryVisualElement">Primary Visual Element</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/PrimaryVisualElement" class="uri">http://open.vocab.org/terms/PrimaryVisualElement</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/VisualElement" class="uri">Visual Element</a>. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/depictsSameResourceAs" class="uri">Depicts same resource as</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/VisualElement" class="uri">Visual Element</a>. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/depictsSameResourceAs" class="uri">Depicts same resource as</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -1899,7 +1899,7 @@ See elso http://open.vocab.org/terms/Plot.<span class="lang">[en]</span></div></
 <h3 id="ScientificDatabase">Scientific Database</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/ScientificDatabase" class="uri">http://open.vocab.org/terms/ScientificDatabase</a></p><p class="terminfo">A Scientific Database</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/Database" class="uri">Database</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/Database" class="uri">Database</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -2015,7 +2015,7 @@ See elso http://open.vocab.org/terms/Plot.<span class="lang">[en]</span></div></
 <h3 id="SportEvent">Sport Event </h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/SportEvent" class="uri">http://open.vocab.org/terms/SportEvent</a></p><p class="terminfo">e.g. : 100m in Beijing 2008</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">msg134:Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">msg134:Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -2082,7 +2082,7 @@ See elso http://open.vocab.org/terms/Plot.<span class="lang">[en]</span></div></
 <h3 id="SummerOlympicGames">Summer Olympic Games</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/SummerOlympicGames" class="uri">http://open.vocab.org/terms/SummerOlympicGames</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/OlympicGames" class="uri">Olympic games</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/WinterOlympicGames" class="uri">Winter Olympic Games</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/OlympicGames" class="uri">Olympic games</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/WinterOlympicGames" class="uri">Winter Olympic Games</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -2125,7 +2125,7 @@ See elso http://open.vocab.org/terms/Plot.<span class="lang">[en]</span></div></
 <h3 id="TrimPackage">Trim Package</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/TrimPackage" class="uri">http://open.vocab.org/terms/TrimPackage</a></p><p class="terminfo">A Trim Package represents a standard configuration of options for an automobile.  Usually, a Car Model will be available as several Trim Packages.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/AutomobileCataologType" class="uri">Automobile Catalog Type</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/AutomobileCataologType" class="uri">Automobile Catalog Type</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -2145,7 +2145,7 @@ See elso http://open.vocab.org/terms/Plot.<span class="lang">[en]</span></div></
 <h3 id="UnivCourse">University Course</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/UnivCourse" class="uri">http://open.vocab.org/terms/UnivCourse</a></p><p class="terminfo">A course taught at a university</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/Course" class="uri">Course</a>. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/hudCourse" class="uri">Course</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/Course" class="uri">Course</a>. Things are a member of this class if they are the value of <a href="http://open.vocab.org/terms/hudCourse" class="uri">Course</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -2249,7 +2249,7 @@ Another box on a different slide is a different VisualElement and can also ov:de
 <h3 id="WinterOlympicGames">Winter Olympic Games</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/WinterOlympicGames" class="uri">http://open.vocab.org/terms/WinterOlympicGames</a></p><p class="terminfo"></p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/OlympicGames" class="uri">Olympic games</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/SummerOlympicGames" class="uri">Summer Olympic Games</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://open.vocab.org/terms/OlympicGames" class="uri">Olympic games</a>. No member of this class can also be a member of <a href="http://open.vocab.org/terms/SummerOlympicGames" class="uri">Summer Olympic Games</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>
@@ -2276,7 +2276,7 @@ Another box on a different slide is a different VisualElement and can also ov:de
 <h3 id="ZoiaCommand">ZoiaCommand</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://open.vocab.org/terms/ZoiaCommand" class="uri">http://open.vocab.org/terms/ZoiaCommand</a></p><p class="terminfo">A command issued to the code4lib IRC chat bot, zoia.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/#term_Post" class="uri">msg148:term_Post</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://rdfs.org/sioc/spec/#term_Post" class="uri">msg148:term_Post</a>. </p>
 <h4 id="sec-status">Status</h4>
 
 <h4 id="sec-examples">Other Information</h4>

@@ -119,13 +119,13 @@ intervals of time:</p>
 <h3 id="Accession">Accession</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Accession" class="uri">http://purl.org/vocab/bio/0.1/Accession</a></p><p class="terminfo">The event of a person succeeding to the right to hold regal power. This event is often automatic on the death of the previous monarch and is usually followed by a coronation event.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Adoption">Adoption</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Adoption" class="uri">http://purl.org/vocab/bio/0.1/Adoption</a></p><p class="terminfo">The event of creating of a legal parent/child relationship that does not exist biologically.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="agent">Agent</h3>
@@ -140,37 +140,37 @@ intervals of time:</p>
 <h3 id="Relationship">Agent Relationship</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Relationship" class="uri">http://purl.org/vocab/bio/0.1/Relationship</a></p><p class="terminfo">A particular type of connection existing between people, groups or organizations related to or having dealings with each other.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Having <a href="http://purl.org/vocab/bio/0.1/participant" class="uri">Participant</a> or <a href="http://purl.org/vocab/bio/0.1/interval" class="uri">Relationship Interval</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/relationship" class="uri">Relationship</a>. It is equivalent to <a href="http://purl.org/vocab/relationship/Relationship" class="uri">rel:Relationship</a>. 
+<p class="termsemantics">Having <a href="http://purl.org/vocab/bio/0.1/participant" class="uri">Participant</a> or <a href="http://purl.org/vocab/bio/0.1/interval" class="uri">Relationship Interval</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/relationship" class="uri">Relationship</a>. It is equivalent to <a href="http://purl.org/vocab/relationship/Relationship" class="uri">rel:Relationship</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-06-14 - first issued</li></ul>
 <h3 id="Annulment">Annulment</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Annulment" class="uri">http://purl.org/vocab/bio/0.1/Annulment</a></p><p class="terminfo">The event of declaring a marriage void from the beginning as though it never existed.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Assassination">Assassination</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Assassination" class="uri">http://purl.org/vocab/bio/0.1/Assassination</a></p><p class="terminfo">The event of a person being deliberately targeted and killed.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Murder" class="uri">Murder</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Murder" class="uri">Murder</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 - first issued</li></ul>
 <h3 id="Baptism">Baptism</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Baptism" class="uri">http://purl.org/vocab/bio/0.1/Baptism</a></p><p class="terminfo">The ceremonial event held to admit a person to membership of a Christian church.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li><li>2010-05-20 - editorial change by Ian Davis: Revised comment, replacing &#39;the Christian church&#39; with &#39;a Christian church&#39;</li></ul>
 <h3 id="BarMitzvah">BarMitzvah</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/BarMitzvah" class="uri">http://purl.org/vocab/bio/0.1/BarMitzvah</a></p><p class="terminfo">The ceremonial event held when a Jewish boy reaches age 13.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="BasMitzvah">BasMitzvah</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/BasMitzvah" class="uri">http://purl.org/vocab/bio/0.1/BasMitzvah</a></p><p class="terminfo">The ceremonial event held when a Jewish girl reaching age 13, also known as &#34;Bat Mitzvah.&#34;</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="biography">Biography</h3>
@@ -184,7 +184,7 @@ intervals of time:</p>
 <h3 id="Birth">Birth</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Birth" class="uri">http://purl.org/vocab/bio/0.1/Birth</a></p><p class="terminfo">The event of a person entering into life.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/birth" class="uri">Birth Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/birth" class="uri">Birth Event</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>The birth of Albert Einstein</h5>
@@ -211,19 +211,19 @@ intervals of time:</p>
 <h3 id="Burial">Burial</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Burial" class="uri">http://purl.org/vocab/bio/0.1/Burial</a></p><p class="terminfo">The event of interring the remains of a person&#39;s body into the ground.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="NameChange">Change of Name</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/NameChange" class="uri">http://purl.org/vocab/bio/0.1/NameChange</a></p><p class="terminfo">The event of a person changing their name.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="PositionChange">Change of Position</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/PositionChange" class="uri">http://purl.org/vocab/bio/0.1/PositionChange</a></p><p class="terminfo">The event of a person changing the position they hold with an employer.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="child">Child</h3>
@@ -258,13 +258,13 @@ intervals of time:</p>
 <h3 id="Coronation">Coronation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Coronation" class="uri">http://purl.org/vocab/bio/0.1/Coronation</a></p><p class="terminfo">The ceremonial event of a person being invested with regal power to become a monarch.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Cremation">Cremation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Cremation" class="uri">http://purl.org/vocab/bio/0.1/Cremation</a></p><p class="terminfo">The event of disposing of the remains of a person&#39;s body by fire.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>The cremation of Albert Einstein</h5>
@@ -292,7 +292,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Death">Death</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Death" class="uri">http://purl.org/vocab/bio/0.1/Death</a></p><p class="terminfo">The event of a person&#39;s life ending.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/death" class="uri">Death Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/death" class="uri">Death Event</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>The death of Albert Einstein</h5>
@@ -317,25 +317,25 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Demotion">Demotion</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Demotion" class="uri">http://purl.org/vocab/bio/0.1/Demotion</a></p><p class="terminfo">The event of a person changing the position they hold with an employer to one with less importance or responsibility.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/PositionChange" class="uri">Change of Position</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/PositionChange" class="uri">Change of Position</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Disbanding">Disbanding</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Disbanding" class="uri">http://purl.org/vocab/bio/0.1/Disbanding</a></p><p class="terminfo">The event of a group or organization being disbanded.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-06-10 - first issued</li></ul>
 <h3 id="Dismissal">Dismissal</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Dismissal" class="uri">http://purl.org/vocab/bio/0.1/Dismissal</a></p><p class="terminfo">The event of a person involuntarily giving up their office or position. Dismissal is often perceived to be the employee&#39;s fault and may be considered disgraceful.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Divorce">Divorce</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Divorce" class="uri">http://purl.org/vocab/bio/0.1/Divorce</a></p><p class="terminfo">The event of legally dissolving a marriage.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>The divorce of Albert Einstein and Mileva Marić</h5>
@@ -352,7 +352,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Emigration">Emigration</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Emigration" class="uri">http://purl.org/vocab/bio/0.1/Emigration</a></p><p class="terminfo">The event of a person leaving their homeland with the intent of residing elsewhere.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>Albert Einstein emigrating to the United States</h5>
@@ -377,13 +377,13 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Employment">Employment</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Employment" class="uri">http://purl.org/vocab/bio/0.1/Employment</a></p><p class="terminfo">The event of a person entering an occupational relationship with an employer.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Enrolment">Enrolment</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Enrolment" class="uri">http://purl.org/vocab/bio/0.1/Enrolment</a></p><p class="terminfo">The event of a person initiating attendence to a school or other place of learning.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Event">Event</h3>
@@ -391,7 +391,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h4>Usage</h4>
 <div class="usagenote"><div class="lit">This class is intended to describe biographical events, i.e. events in the life of a person.<span class="lang">[en]</span></div></div>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">c4dm:Event</a>, <a href="http://sw.opencyc.org/2009/04/07/concept/en/Event" class="uri">cyc:Event</a>, <a href="http://linkedevents.org/ontology/Event" class="uri">msg0:Event</a> and <a href="http://purl.org/dc/dcmitype/Event" class="uri">dctype:Event</a>. Having <a href="http://purl.org/vocab/bio/0.1/date" class="uri">Date</a>, <a href="http://purl.org/vocab/bio/0.1/place" class="uri">Place</a>, <a href="http://purl.org/vocab/bio/0.1/position" class="uri">Position</a>, <a href="http://purl.org/vocab/bio/0.1/eventInterval" class="uri">Event Interval</a>, <a href="http://purl.org/vocab/bio/0.1/precedingEvent" class="uri">Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyPrecedingEvent" class="uri">Immediately Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/followingEvent" class="uri">Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyFollowingEvent" class="uri">Immediately Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/concurrentEvent" class="uri">Concurrent Event</a>, <a href="http://purl.org/vocab/bio/0.1/agent" class="uri">Agent</a>, <a href="http://purl.org/vocab/bio/0.1/employer" class="uri">Employer</a>, <a href="http://purl.org/vocab/bio/0.1/state" class="uri">State</a>, <a href="http://purl.org/vocab/bio/0.1/parent" class="uri">Parent</a>, <a href="http://purl.org/vocab/bio/0.1/principal" class="uri">Principal</a>, <a href="http://purl.org/vocab/bio/0.1/partner" class="uri">Partner</a>, <a href="http://purl.org/vocab/bio/0.1/officiator" class="uri">Officiator</a>, <a href="http://purl.org/vocab/bio/0.1/witness" class="uri">Witness</a>, <a href="http://purl.org/vocab/bio/0.1/spectator" class="uri">Spectator</a> or <a href="http://purl.org/vocab/bio/0.1/organization" class="uri">Organization</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/precedingEvent" class="uri">Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyPrecedingEvent" class="uri">Immediately Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/followingEvent" class="uri">Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyFollowingEvent" class="uri">Immediately Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/concurrentEvent" class="uri">Concurrent Event</a>, <a href="http://purl.org/vocab/bio/0.1/initiatingEvent" class="uri">Initiating Event</a>, <a href="http://purl.org/vocab/bio/0.1/concludingEvent" class="uri">Concluding Event</a> or <a href="http://purl.org/vocab/bio/0.1/event" class="uri">Life Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/NET/c4dm/event.owl#Event" class="uri">c4dm:Event</a>, <a href="http://sw.opencyc.org/2009/04/07/concept/en/Event" class="uri">cyc:Event</a>, <a href="http://linkedevents.org/ontology/Event" class="uri">msg0:Event</a> and <a href="http://purl.org/dc/dcmitype/Event" class="uri">dctype:Event</a>. Having <a href="http://purl.org/vocab/bio/0.1/date" class="uri">Date</a>, <a href="http://purl.org/vocab/bio/0.1/place" class="uri">Place</a>, <a href="http://purl.org/vocab/bio/0.1/position" class="uri">Position</a>, <a href="http://purl.org/vocab/bio/0.1/eventInterval" class="uri">Event Interval</a>, <a href="http://purl.org/vocab/bio/0.1/precedingEvent" class="uri">Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyPrecedingEvent" class="uri">Immediately Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/followingEvent" class="uri">Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyFollowingEvent" class="uri">Immediately Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/concurrentEvent" class="uri">Concurrent Event</a>, <a href="http://purl.org/vocab/bio/0.1/agent" class="uri">Agent</a>, <a href="http://purl.org/vocab/bio/0.1/employer" class="uri">Employer</a>, <a href="http://purl.org/vocab/bio/0.1/state" class="uri">State</a>, <a href="http://purl.org/vocab/bio/0.1/parent" class="uri">Parent</a>, <a href="http://purl.org/vocab/bio/0.1/principal" class="uri">Principal</a>, <a href="http://purl.org/vocab/bio/0.1/partner" class="uri">Partner</a>, <a href="http://purl.org/vocab/bio/0.1/officiator" class="uri">Officiator</a>, <a href="http://purl.org/vocab/bio/0.1/witness" class="uri">Witness</a>, <a href="http://purl.org/vocab/bio/0.1/spectator" class="uri">Spectator</a> or <a href="http://purl.org/vocab/bio/0.1/organization" class="uri">Organization</a> implies being a member of this class. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/precedingEvent" class="uri">Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyPrecedingEvent" class="uri">Immediately Preceding Event</a>, <a href="http://purl.org/vocab/bio/0.1/followingEvent" class="uri">Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/immediatelyFollowingEvent" class="uri">Immediately Following Event</a>, <a href="http://purl.org/vocab/bio/0.1/concurrentEvent" class="uri">Concurrent Event</a>, <a href="http://purl.org/vocab/bio/0.1/initiatingEvent" class="uri">Initiating Event</a>, <a href="http://purl.org/vocab/bio/0.1/concludingEvent" class="uri">Concluding Event</a> or <a href="http://purl.org/vocab/bio/0.1/event" class="uri">Life Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-04 - editorial change by Ian Davis: Marked as a stable term</li><li>2010-05-04 - semantic change by Ian Davis: Made equivalent to cyc:Event</li><li>2010-05-20 - editorial change by Ian Davis: Marked as testing status</li><li>2010-05-20 - semantic change by Ian Davis: Removed subclass of owl-time ProperInteval</li></ul>
 <h3 id="eventInterval">Event Interval</h3>
@@ -403,7 +403,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Execution">Execution</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Execution" class="uri">http://purl.org/vocab/bio/0.1/Execution</a></p><p class="terminfo">The event of a person being deliberately killed as punishment.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Death" class="uri">Death</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Death" class="uri">Death</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 - first issued</li></ul>
 <h3 id="father">Father</h3>
@@ -426,19 +426,19 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Formation">Formation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Formation" class="uri">http://purl.org/vocab/bio/0.1/Formation</a></p><p class="terminfo">The event of a group or organization coming into being.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-06-10 - first issued</li></ul>
 <h3 id="Funeral">Funeral</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Funeral" class="uri">http://purl.org/vocab/bio/0.1/Funeral</a></p><p class="terminfo">The event of marking a person&#39;s death with a ceremony.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Graduation">Graduation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Graduation" class="uri">http://purl.org/vocab/bio/0.1/Graduation</a></p><p class="terminfo">The event of a person being awarded educational diplomas or degrees.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>Albert Einstein receiving his Doctorate from the University of Zurich</h5>
@@ -454,7 +454,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="GroupEvent">Group Event</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">http://purl.org/vocab/bio/0.1/GroupEvent</a></p><p class="terminfo">A type of event that is principally about one or more agents and their partnership. Other agents may be involved but the event is most significant for the partner agent.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Every member of this class has at least 2 <a href="http://purl.org/vocab/bio/0.1/partner" class="uri">Partner</a> propertiesBeing a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Event" class="uri">Event</a> and Genid25. 
+<p class="termsemantics">Every member of this class has at least 2 <a href="http://purl.org/vocab/bio/0.1/partner" class="uri">Partner</a> properties. Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Event" class="uri">Event</a> and a class that has at least 2 <a href="http://purl.org/vocab/bio/0.1/partner" class="uri">Partner</a> properties. </p>
 <h4 id="sec-status">Status</h4>
 
 <h3 id="immediatelyFollowingEvent">Immediately Following Event</h3>
@@ -478,19 +478,19 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Imprisonment">Imprisonment</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Imprisonment" class="uri">http://purl.org/vocab/bio/0.1/Imprisonment</a></p><p class="terminfo">The event of a person being detained in a jail or prison.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-04 - first issued</li></ul>
 <h3 id="Inauguration">Inauguration</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Inauguration" class="uri">http://purl.org/vocab/bio/0.1/Inauguration</a></p><p class="terminfo">The ceremonial event marking the beginning of a person&#39;s term of office as a leader.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="IndividualEvent">Individual Event</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">http://purl.org/vocab/bio/0.1/IndividualEvent</a></p><p class="terminfo">A type of event that is principally about a single person, group or organization. Other agents may be involved but the event is most significant for the principal agent.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Every member of this class has exactly 1 <a href="http://purl.org/vocab/bio/0.1/principal" class="uri">Principal</a> propertyBeing a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Event" class="uri">Event</a> and Genid24. 
+<p class="termsemantics">Every member of this class has exactly 1 <a href="http://purl.org/vocab/bio/0.1/principal" class="uri">Principal</a> property. Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Event" class="uri">Event</a> and a class that has exactly 1 <a href="http://purl.org/vocab/bio/0.1/principal" class="uri">Principal</a> property. </p>
 <h4 id="sec-status">Status</h4>
 
 <h3 id="initiatingEvent">Initiating Event</h3>
@@ -505,13 +505,13 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Interval">Interval</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Interval" class="uri">http://purl.org/vocab/bio/0.1/Interval</a></p><p class="terminfo">A extended interval of time related to a particular state of affairs, such as the lifespan of a person or a period of employment.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/2006/time#ProperInterval" class="uri">time:ProperInterval</a>. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/eventInterval" class="uri">Event Interval</a> or <a href="http://purl.org/vocab/bio/0.1/interval" class="uri">Relationship Interval</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://www.w3.org/2006/time#ProperInterval" class="uri">time:ProperInterval</a>. Things are a member of this class if they are the value of <a href="http://purl.org/vocab/bio/0.1/eventInterval" class="uri">Event Interval</a> or <a href="http://purl.org/vocab/bio/0.1/interval" class="uri">Relationship Interval</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Investiture">Investiture</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Investiture" class="uri">http://purl.org/vocab/bio/0.1/Investiture</a></p><p class="terminfo">The ceremonial event of a person taking a public office or honour.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="keywords">Key Words</h3>
@@ -532,7 +532,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Marriage">Marriage</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Marriage" class="uri">http://purl.org/vocab/bio/0.1/Marriage</a></p><p class="terminfo">The event of creating uniting the participants into a new family unit, sometimes accompanied by a formal wedding ceremony. This is intended to cover a broad range of marriages including those given formal legal standing, common-law, or by convention. It is not restricted to marriages of two people of the opposite gender, but also includes polygamous and same-sex unions.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. It is equivalent to <a href="http://sw.opencyc.org/2009/04/07/concept/en/WeddingEvent_Generic" class="uri">cyc:WeddingEvent_Generic</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. It is equivalent to <a href="http://sw.opencyc.org/2009/04/07/concept/en/WeddingEvent_Generic" class="uri">cyc:WeddingEvent_Generic</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>The marriage of Albert Einstein and Mileva Marić</h5>
@@ -557,13 +557,13 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Murder">Murder</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Murder" class="uri">http://purl.org/vocab/bio/0.1/Murder</a></p><p class="terminfo">The event of a person being killed unlawfully with intent by the killer.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Death" class="uri">Death</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/Death" class="uri">Death</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-05 - first issued</li></ul>
 <h3 id="Naturalization">Naturalization</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Naturalization" class="uri">http://purl.org/vocab/bio/0.1/Naturalization</a></p><p class="terminfo">The event of a person obtaining citizenship. Note that the place the naturalization event occurs at may be different from the state the person is obtaining citizenship of. </p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-examples">Examples</h4>
 
 <h5>Albert Einstein becoming a citizen of the United States</h5>
@@ -594,7 +594,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Ordination">Ordination</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Ordination" class="uri">http://purl.org/vocab/bio/0.1/Ordination</a></p><p class="terminfo">The ceremonial event held when a person receives authority to act in religious matters.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="organization">Organization</h3>
@@ -636,7 +636,7 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Performance">Performance</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Performance" class="uri">http://purl.org/vocab/bio/0.1/Performance</a></p><p class="terminfo">The event of an individual or a group of performers performing. Examples include concerts, plays, recitals, recordings, busking etc.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. It is equivalent to <a href="http://purl.org/ontology/mo/Performance" class="uri">mo:Performance</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/GroupEvent" class="uri">Group Event</a>. It is equivalent to <a href="http://purl.org/ontology/mo/Performance" class="uri">mo:Performance</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2011-06-12 - first issued</li></ul>
 <h3 id="place">Place</h3>
@@ -678,13 +678,13 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Promotion">Promotion</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Promotion" class="uri">http://purl.org/vocab/bio/0.1/Promotion</a></p><p class="terminfo">The event of a person changing the position they hold with an employer to one with more importance or responsibility.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/PositionChange" class="uri">Change of Position</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/PositionChange" class="uri">Change of Position</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Redundancy">Redundancy</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Redundancy" class="uri">http://purl.org/vocab/bio/0.1/Redundancy</a></p><p class="terminfo">The event of a person involuntarily giving up an office or position that is no longer needed. Redundancy is usually perceived to be the employer&#39;s fault and is usually due to conditions outside of the employee&#39;s control.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="relationship">Relationship</h3>
@@ -705,13 +705,13 @@ For example: 2003-03-15 corresponds to the 15th March 2003, and 2003-03-15T13:21
 <h3 id="Resignation">Resignation</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Resignation" class="uri">http://purl.org/vocab/bio/0.1/Resignation</a></p><p class="terminfo">The event of a person voluntarily giving up or quitting their office or position.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="Retirement">Retirement</h3>
 <p class="termuri"><strong>URI:</strong> <a href="http://purl.org/vocab/bio/0.1/Retirement" class="uri">http://purl.org/vocab/bio/0.1/Retirement</a></p><p class="terminfo">The event of a person exiting an occupational relationship with an employer after a qualifying time period. In many cultures retirement is expected and even required once the person reaches a particular age.</p>
 <h4>Semantics</h4>
-<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. 
+<p class="termsemantics">Being a member of this class implies also being a member of <a href="http://purl.org/vocab/bio/0.1/IndividualEvent" class="uri">Individual Event</a>. </p>
 <h4 id="sec-status">Status</h4>
 <ul><li>2010-05-03 - first issued</li></ul>
 <h3 id="spectator">Spectator</h3>
