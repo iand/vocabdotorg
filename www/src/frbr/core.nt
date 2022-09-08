@@ -24,7 +24,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/rdf+xml
 _:genid2 <http://www.w3.org/2000/01/rdf-schema#label> "RDF"@en .
 <http://purl.org/vocab/frbr/frbr-core-20050810.rdf> <http://purl.org/dc/elements/1.1/format> _:genid2 .
 <http://purl.org/vocab/frbr/core#> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/frbr/frbr-core-20050810.rdf> .
-<http://purl.org/vocab/frbr/core#> <http://www.w3.org/2004/02/skos/core#example> <file:///home/iand/wip/iand/vocabdotorg/www/src/frbr/frbr-example-film-20050809.html> .
+<http://purl.org/vocab/frbr/core#> <http://www.w3.org/2004/02/skos/core#example> <file:///home/iand/web/vocabdotorg/www/src/frbr/frbr-example-film-20050809.html> .
 <http://purl.org/vocab/frbr/core#> <http://purl.org/dc/terms/issued> "2005-07-15" .
 _:genid3 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
 _:genid3 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
@@ -50,8 +50,8 @@ _:genid8 <http://purl.org/dc/elements/1.1/date> "2005-08-10" .
 _:genid8 <http://purl.org/dc/elements/1.1/creator> "Ian Davis" .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Item is now not a subclass of geo:SpatialThing" .
 <http://purl.org/vocab/frbr/core#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid8 .
-<file:///home/iand/wip/iand/vocabdotorg/www/src/frbr/core.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
-<file:///home/iand/wip/iand/vocabdotorg/www/src/frbr/core.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<file:///home/iand/web/vocabdotorg/www/src/frbr/core.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/web/vocabdotorg/www/src/frbr/core.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .

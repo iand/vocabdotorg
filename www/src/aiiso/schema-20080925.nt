@@ -12,7 +12,7 @@
 <http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/elements/1.1/rights> "Copyright \u00A9 2008 Talis Information Ltd" .
 <http://purl.org/vocab/aiiso/schema#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/aiiso/schema#" .
 <http://purl.org/vocab/aiiso/schema#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aiiso" .
-<http://purl.org/vocab/aiiso/schema#> <http://purl.org/vocab/vann/usageNote> <file:///home/iand/wip/iand/vocabdotorg/www/src/aiiso/usagenote.html> .
+<http://purl.org/vocab/aiiso/schema#> <http://purl.org/vocab/vann/usageNote> <file:///home/iand/web/vocabdotorg/www/src/aiiso/usagenote.html> .
 <http://purl.org/vocab/aiiso/schema#> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/aiiso/schema-20080520> .
 <http://purl.org/vocab/aiiso/schema-20080925.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/IMT> .
@@ -47,8 +47,8 @@ _:genid7 <http://purl.org/dc/elements/1.1/date> "2008-09-25" .
 _:genid7 <http://purl.org/dc/elements/1.1/creator> "Rob Styles" .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Deprecated name in favour of foaf:name" .
 <http://purl.org/vocab/aiiso/schema#> <http://www.w3.org/2004/02/skos/core#historyNote> _:genid7 .
-<file:///home/iand/wip/iand/vocabdotorg/www/src/aiiso/schema-20080925.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
-<file:///home/iand/wip/iand/vocabdotorg/www/src/aiiso/schema-20080925.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
+<file:///home/iand/web/vocabdotorg/www/src/aiiso/schema-20080925.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/web/vocabdotorg/www/src/aiiso/schema-20080925.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
 <http://creativecommons.org/licenses/by/2.0/uk/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .

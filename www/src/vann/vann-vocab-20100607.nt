@@ -11,9 +11,9 @@
 <http://purl.org/vocab/vann/> <http://purl.org/dc/terms/rights> "Copyright \u00A9 2005 Ian Davis" .
 <http://purl.org/vocab/vann/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/vann/" .
 <http://purl.org/vocab/vann/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vann" .
-<file:///home/iand/wip/iand/vocabdotorg/www/src/vann/vann-vocab-20100607.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
-<file:///home/iand/wip/iand/vocabdotorg/www/src/vann/vann-vocab-20100607.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/1.0/> .
-<file:///home/iand/wip/iand/vocabdotorg/www/src/vann/vann-vocab-20100607.rdf> <http://purl.org/dc/terms/type> <http://purl.org/dc/dcmitype/Text> .
+<file:///home/iand/web/vocabdotorg/www/src/vann/vann-vocab-20100607.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> .
+<file:///home/iand/web/vocabdotorg/www/src/vann/vann-vocab-20100607.rdf> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/1.0/> .
+<file:///home/iand/web/vocabdotorg/www/src/vann/vann-vocab-20100607.rdf> <http://purl.org/dc/terms/type> <http://purl.org/dc/dcmitype/Text> .
 <http://creativecommons.org/licenses/by/1.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/License> .
 <http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Reproduction> .
 <http://creativecommons.org/licenses/by/1.0/> <http://web.resource.org/cc/permits> <http://web.resource.org/cc/Distribution> .
