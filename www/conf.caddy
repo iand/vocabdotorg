@@ -14,3 +14,312 @@ rewrite /whisky/terms     /whisky/terms.html
 
 redir /changesets   /changeset/schema 301
 redir /changesets/* /changeset/schema 301
+
+# Namespace documents without an extension are served from the HTML file of the same name.
+try_files {path} {path}.html
+
+rewrite /multi-tenant-configuration/schema /multi-tenant-configuration/schema-20090513.html
+rewrite /transit/terms/ /transit/terms.html
+rewrite /waiver/terms/  /waiver/terms.html
+
+# The kro vocabulary has only a Turtle representation.
+rewrite /kro/top /kro/top.ttl
+header  /kro/top Content-Type "text/turtle; charset=utf-8"
+
+redir /bio/0.1  /bio/ 301
+redir /bio/0.1/ /bio/ 301
+
+# The places schema has only an RDF/XML representation.
+rewrite /places/schema.rdf /places/schema.rdf.xml
+header  /places/schema.rdf Content-Type "application/rdf+xml; charset=utf-8"
+
+# Vocabulary directories without an index document redirect to the vocabulary's main document.
+redir /genealogy                    /genealogy/time 302
+redir /genealogy/                   /genealogy/time 302
+redir /kro                          /kro/top 302
+redir /kro/                         /kro/top 302
+redir /multi-tenant-configuration   /multi-tenant-configuration/schema 302
+redir /multi-tenant-configuration/  /multi-tenant-configuration/schema 302
+redir /places                       /places/schema.rdf 302
+redir /places/                      /places/schema.rdf 302
+redir /reuters_regions              /reuters_regions/1.0/ 302
+redir /reuters_regions/             /reuters_regions/1.0/ 302
+redir /reuters_topics               /reuters_topics/1.0/ 302
+redir /reuters_topics/              /reuters_topics/1.0/ 302
+
+# Linked Data term URIs redirect with 303 See Other to the document that describes them.
+# Generated once from the frozen schemas in src; open.vocab.org terms are not served.
+map {path} {vocab_term_doc} {
+	# bio
+	/bio/0.1/Accession                            /bio/#Accession
+	/bio/0.1/Adoption                             /bio/#Adoption
+	/bio/0.1/Annulment                            /bio/#Annulment
+	/bio/0.1/Assassination                        /bio/#Assassination
+	/bio/0.1/Baptism                              /bio/#Baptism
+	/bio/0.1/BarMitzvah                           /bio/#BarMitzvah
+	/bio/0.1/BasMitzvah                           /bio/#BasMitzvah
+	/bio/0.1/Birth                                /bio/#Birth
+	/bio/0.1/Burial                               /bio/#Burial
+	/bio/0.1/Coronation                           /bio/#Coronation
+	/bio/0.1/Cremation                            /bio/#Cremation
+	/bio/0.1/Death                                /bio/#Death
+	/bio/0.1/Demotion                             /bio/#Demotion
+	/bio/0.1/Disbanding                           /bio/#Disbanding
+	/bio/0.1/Dismissal                            /bio/#Dismissal
+	/bio/0.1/Divorce                              /bio/#Divorce
+	/bio/0.1/Emigration                           /bio/#Emigration
+	/bio/0.1/Employment                           /bio/#Employment
+	/bio/0.1/Enrolment                            /bio/#Enrolment
+	/bio/0.1/Event                                /bio/#Event
+	/bio/0.1/Execution                            /bio/#Execution
+	/bio/0.1/Formation                            /bio/#Formation
+	/bio/0.1/Funeral                              /bio/#Funeral
+	/bio/0.1/Graduation                           /bio/#Graduation
+	/bio/0.1/GroupEvent                           /bio/#GroupEvent
+	/bio/0.1/Imprisonment                         /bio/#Imprisonment
+	/bio/0.1/Inauguration                         /bio/#Inauguration
+	/bio/0.1/IndividualEvent                      /bio/#IndividualEvent
+	/bio/0.1/Interval                             /bio/#Interval
+	/bio/0.1/Investiture                          /bio/#Investiture
+	/bio/0.1/Marriage                             /bio/#Marriage
+	/bio/0.1/Murder                               /bio/#Murder
+	/bio/0.1/NameChange                           /bio/#NameChange
+	/bio/0.1/Naturalization                       /bio/#Naturalization
+	/bio/0.1/Ordination                           /bio/#Ordination
+	/bio/0.1/Performance                          /bio/#Performance
+	/bio/0.1/PositionChange                       /bio/#PositionChange
+	/bio/0.1/Promotion                            /bio/#Promotion
+	/bio/0.1/Redundancy                           /bio/#Redundancy
+	/bio/0.1/Relationship                         /bio/#Relationship
+	/bio/0.1/Resignation                          /bio/#Resignation
+	/bio/0.1/Retirement                           /bio/#Retirement
+	/bio/0.1/agent                                /bio/#agent
+	/bio/0.1/biography                            /bio/#biography
+	/bio/0.1/birth                                /bio/#birth
+	/bio/0.1/child                                /bio/#child
+	/bio/0.1/concludingEvent                      /bio/#concludingEvent
+	/bio/0.1/concurrentEvent                      /bio/#concurrentEvent
+	/bio/0.1/date                                 /bio/#date
+	/bio/0.1/death                                /bio/#death
+	/bio/0.1/employer                             /bio/#employer
+	/bio/0.1/event                                /bio/#event
+	/bio/0.1/eventInterval                        /bio/#eventInterval
+	/bio/0.1/father                               /bio/#father
+	/bio/0.1/followingEvent                       /bio/#followingEvent
+	/bio/0.1/immediatelyFollowingEvent            /bio/#immediatelyFollowingEvent
+	/bio/0.1/immediatelyPrecedingEvent            /bio/#immediatelyPrecedingEvent
+	/bio/0.1/initiatingEvent                      /bio/#initiatingEvent
+	/bio/0.1/interval                             /bio/#interval
+	/bio/0.1/keywords                             /bio/#keywords
+	/bio/0.1/mother                               /bio/#mother
+	/bio/0.1/officiator                           /bio/#officiator
+	/bio/0.1/olb                                  /bio/#olb
+	/bio/0.1/organization                         /bio/#organization
+	/bio/0.1/parent                               /bio/#parent
+	/bio/0.1/participant                          /bio/#participant
+	/bio/0.1/partner                              /bio/#partner
+	/bio/0.1/place                                /bio/#place
+	/bio/0.1/position                             /bio/#position
+	/bio/0.1/precedingEvent                       /bio/#precedingEvent
+	/bio/0.1/principal                            /bio/#principal
+	/bio/0.1/relationship                         /bio/#relationship
+	/bio/0.1/spectator                            /bio/#spectator
+	/bio/0.1/state                                /bio/#state
+	/bio/0.1/termgroup1                           /bio/#termgroup1
+	/bio/0.1/termgroup2                           /bio/#termgroup2
+	/bio/0.1/termgroup3                           /bio/#termgroup3
+	/bio/0.1/termgroup4                           /bio/#termgroup4
+	/bio/0.1/termgroup5                           /bio/#termgroup5
+	/bio/0.1/witness                              /bio/#witness
+
+	# desc
+	/desc/schema/description                      /desc/schema#description
+	/desc/schema/isDescriptionOf                  /desc/schema#isDescriptionOf
+
+	# evidence
+	/evidence/terms/Conclusion                    /evidence/terms#Conclusion
+	/evidence/terms/Evidence                      /evidence/terms#Evidence
+	/evidence/terms/Hypothesis                    /evidence/terms#Hypothesis
+	/evidence/terms/conclusion                    /evidence/terms#conclusion
+	/evidence/terms/refutingEvidence              /evidence/terms#refutingEvidence
+	/evidence/terms/supportingEvidence            /evidence/terms#supportingEvidence
+
+	# kro
+	/kro/top/Abstract                             /kro/top#Abstract
+	/kro/top/Actuality                            /kro/top#Actuality
+	/kro/top/Continuant                           /kro/top#Continuant
+	/kro/top/Description                          /kro/top#Description
+	/kro/top/Form                                 /kro/top#Form
+	/kro/top/History                              /kro/top#History
+	/kro/top/Independent                          /kro/top#Independent
+	/kro/top/Intention                            /kro/top#Intention
+	/kro/top/Juncture                             /kro/top#Juncture
+	/kro/top/Mediating                            /kro/top#Mediating
+	/kro/top/Nexus                                /kro/top#Nexus
+	/kro/top/Object                               /kro/top#Object
+	/kro/top/Occurrent                            /kro/top#Occurrent
+	/kro/top/Participation                        /kro/top#Participation
+	/kro/top/Physical                             /kro/top#Physical
+	/kro/top/Prehension                           /kro/top#Prehension
+	/kro/top/Process                              /kro/top#Process
+	/kro/top/Proposition                          /kro/top#Proposition
+	/kro/top/Purpose                              /kro/top#Purpose
+	/kro/top/Reason                               /kro/top#Reason
+	/kro/top/Relative                             /kro/top#Relative
+	/kro/top/Schema                               /kro/top#Schema
+	/kro/top/Script                               /kro/top#Script
+	/kro/top/Situation                            /kro/top#Situation
+	/kro/top/Structure                            /kro/top#Structure
+
+	# psychometric-profile
+	/psychometric-profile/PoliticalCompassProfile /psychometric-profile/PoliticalCompassProfile.html
+	/psychometric-profile/PsychometricProfile     /psychometric-profile/#PsychometricProfile
+	/psychometric-profile/economic                /psychometric-profile/economic.html
+	/psychometric-profile/profile                 /psychometric-profile/profile.html
+	/psychometric-profile/social                  /psychometric-profile/social.html
+
+	# relationship
+	/relationship/Relationship                    /relationship/#Relationship
+	/relationship/acquaintanceOf                  /relationship/#acquaintanceOf
+	/relationship/ambivalentOf                    /relationship/#ambivalentOf
+	/relationship/ancestorOf                      /relationship/#ancestorOf
+	/relationship/antagonistOf                    /relationship/#antagonistOf
+	/relationship/apprenticeTo                    /relationship/#apprenticeTo
+	/relationship/childOf                         /relationship/#childOf
+	/relationship/closeFriendOf                   /relationship/#closeFriendOf
+	/relationship/collaboratesWith                /relationship/#collaboratesWith
+	/relationship/colleagueOf                     /relationship/#colleagueOf
+	/relationship/descendantOf                    /relationship/#descendantOf
+	/relationship/employedBy                      /relationship/#employedBy
+	/relationship/employerOf                      /relationship/#employerOf
+	/relationship/enemyOf                         /relationship/#enemyOf
+	/relationship/engagedTo                       /relationship/#engagedTo
+	/relationship/examples/1                      /relationship/
+	/relationship/examples/2                      /relationship/
+	/relationship/friendOf                        /relationship/#friendOf
+	/relationship/grandchildOf                    /relationship/#grandchildOf
+	/relationship/grandparentOf                   /relationship/#grandparentOf
+	/relationship/hasMet                          /relationship/#hasMet
+	/relationship/influencedBy                    /relationship/#influencedBy
+	/relationship/knowsByReputation               /relationship/#knowsByReputation
+	/relationship/knowsInPassing                  /relationship/#knowsInPassing
+	/relationship/knowsOf                         /relationship/#knowsOf
+	/relationship/lifePartnerOf                   /relationship/#lifePartnerOf
+	/relationship/livesWith                       /relationship/#livesWith
+	/relationship/lostContactWith                 /relationship/#lostContactWith
+	/relationship/mentorOf                        /relationship/#mentorOf
+	/relationship/neighborOf                      /relationship/#neighborOf
+	/relationship/parentOf                        /relationship/#parentOf
+	/relationship/participant                     /relationship/#participant
+	/relationship/participantIn                   /relationship/#participantIn
+	/relationship/siblingOf                       /relationship/#siblingOf
+	/relationship/spouseOf                        /relationship/#spouseOf
+	/relationship/worksWith                       /relationship/#worksWith
+	/relationship/wouldLikeToKnow                 /relationship/#wouldLikeToKnow
+
+	# transit
+	/transit/terms/AccessArrangement              /transit/terms/#AccessArrangement
+	/transit/terms/Agency                         /transit/terms/#Agency
+	/transit/terms/BusRoute                       /transit/terms/#BusRoute
+	/transit/terms/CableCarRoute                  /transit/terms/#CableCarRoute
+	/transit/terms/Fare                           /transit/terms/#Fare
+	/transit/terms/FerryRoute                     /transit/terms/#FerryRoute
+	/transit/terms/FunicularRoute                 /transit/terms/#FunicularRoute
+	/transit/terms/GondalaRoute                   /transit/terms/#GondalaRoute
+	/transit/terms/InboundService                 /transit/terms/#InboundService
+	/transit/terms/MinimumTimeTransfer            /transit/terms/#MinimumTimeTransfer
+	/transit/terms/OutboundService                /transit/terms/#OutboundService
+	/transit/terms/RailRoute                      /transit/terms/#RailRoute
+	/transit/terms/RecommendedTransfer            /transit/terms/#RecommendedTransfer
+	/transit/terms/Route                          /transit/terms/#Route
+	/transit/terms/RouteStop                      /transit/terms/#RouteStop
+	/transit/terms/Schedule                       /transit/terms/#Schedule
+	/transit/terms/Service                        /transit/terms/#Service
+	/transit/terms/ServiceStop                    /transit/terms/#ServiceStop
+	/transit/terms/Station                        /transit/terms/#Station
+	/transit/terms/Stop                           /transit/terms/#Stop
+	/transit/terms/SubwayRoute                    /transit/terms/#SubwayRoute
+	/transit/terms/TimedTransfer                  /transit/terms/#TimedTransfer
+	/transit/terms/TramRoute                      /transit/terms/#TramRoute
+	/transit/terms/Transfer                       /transit/terms/#Transfer
+	/transit/terms/UnavailableTransfer            /transit/terms/#UnavailableTransfer
+	/transit/terms/agency                         /transit/terms/#agency
+	/transit/terms/arrivalTime                    /transit/terms/#arrivalTime
+	/transit/terms/callsign                       /transit/terms/#callsign
+	/transit/terms/color                          /transit/terms/#color
+	/transit/terms/coordinated                    /transit/terms/#coordinated
+	/transit/terms/currency                       /transit/terms/#currency
+	/transit/terms/date                           /transit/terms/#date
+	/transit/terms/departureTime                  /transit/terms/#departureTime
+	/transit/terms/disallowed                     /transit/terms/#disallowed
+	/transit/terms/distance                       /transit/terms/#distance
+	/transit/terms/dropoff                        /transit/terms/#dropoff
+	/transit/terms/fromStop                       /transit/terms/#fromStop
+	/transit/terms/headsign                       /transit/terms/#headsign
+	/transit/terms/iataCode                       /transit/terms/#iataCode
+	/transit/terms/icaoCode                       /transit/terms/#icaoCode
+	/transit/terms/language                       /transit/terms/#language
+	/transit/terms/minTransferTime                /transit/terms/#minTransferTime
+	/transit/terms/pickup                         /transit/terms/#pickup
+	/transit/terms/prearranged                    /transit/terms/#prearranged
+	/transit/terms/price                          /transit/terms/#price
+	/transit/terms/route                          /transit/terms/#route
+	/transit/terms/routeService                   /transit/terms/#routeService
+	/transit/terms/routeStop                      /transit/terms/#routeStop
+	/transit/terms/schedule                       /transit/terms/#schedule
+	/transit/terms/scheduleService                /transit/terms/#scheduleService
+	/transit/terms/sequence                       /transit/terms/#sequence
+	/transit/terms/service                        /transit/terms/#service
+	/transit/terms/serviceStop                    /transit/terms/#serviceStop
+	/transit/terms/standard                       /transit/terms/#standard
+	/transit/terms/station                        /transit/terms/#station
+	/transit/terms/stationStop                    /transit/terms/#stationStop
+	/transit/terms/stop                           /transit/terms/#stop
+	/transit/terms/textColor                      /transit/terms/#textColor
+	/transit/terms/timezone                       /transit/terms/#timezone
+	/transit/terms/toStop                         /transit/terms/#toStop
+	/transit/terms/transfer                       /transit/terms/#transfer
+
+	# vann
+	/vann/changes                                 /vann/#changes
+	/vann/example                                 /vann/#example
+	/vann/preferredNamespacePrefix                /vann/#preferredNamespacePrefix
+	/vann/preferredNamespaceUri                   /vann/#preferredNamespaceUri
+	/vann/termGroup                               /vann/#termGroup
+	/vann/usageNote                               /vann/#usageNote
+
+	# waiver
+	/waiver/terms/declaration                     /waiver/terms/#declaration
+	/waiver/terms/norms                           /waiver/terms/#norms
+	/waiver/terms/waiver                          /waiver/terms/#waiver
+
+	# whisky
+	/whisky/terms/Brand                           /whisky/terms#Brand
+	/whisky/terms/Cask                            /whisky/terms#Cask
+	/whisky/terms/Distillery                      /whisky/terms#Distillery
+	/whisky/terms/WaterSource                     /whisky/terms#WaterSource
+	/whisky/terms/Whisky                          /whisky/terms#Whisky
+	/whisky/terms/WhiskyReview                    /whisky/terms#WhiskyReview
+	/whisky/terms/abv                             /whisky/terms#abv
+	/whisky/terms/age                             /whisky/terms#age
+	/whisky/terms/agingCask                       /whisky/terms#agingCask
+	/whisky/terms/body                            /whisky/terms#body
+	/whisky/terms/brand                           /whisky/terms#brand
+	/whisky/terms/character                       /whisky/terms#character
+	/whisky/terms/colour                          /whisky/terms#colour
+	/whisky/terms/colourDescription               /whisky/terms#colourDescription
+	/whisky/terms/distillery                      /whisky/terms#distillery
+	/whisky/terms/expressionLabel                 /whisky/terms#expressionLabel
+	/whisky/terms/finish                          /whisky/terms#finish
+	/whisky/terms/finishingCask                   /whisky/terms#finishingCask
+	/whisky/terms/grain                           /whisky/terms#grain
+	/whisky/terms/material                        /whisky/terms#material
+	/whisky/terms/nose                            /whisky/terms#nose
+	/whisky/terms/owner                           /whisky/terms#owner
+	/whisky/terms/palate                          /whisky/terms#palate
+	/whisky/terms/previousContents                /whisky/terms#previousContents
+	/whisky/terms/region                          /whisky/terms#region
+	/whisky/terms/waterSource                     /whisky/terms#waterSource
+}
+@vocab_term not vars {vocab_term_doc} ""
+redir @vocab_term {vocab_term_doc} 303
