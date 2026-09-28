@@ -1,7 +1,0 @@
-# See https://developers.cloudflare.com/pages/platform/headers/
-
-/*/.rdf
-	Content-Type: application/xml+rdf
-
-/*/*/*.rdf
-	Content-Type: application/xml+rdf
