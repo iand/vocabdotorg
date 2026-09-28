@@ -13,7 +13,7 @@
   xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
   xmlns:vann="http://purl.org/vocab/vann/" 
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-  xmlns:lifeycle="http://purl.org/vocab/lifecycle/schema#"
+  xmlns:lifecycle="http://purl.org/vocab/lifecycle/schema#"
 >
   <resource:List rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts#self">
     <resource:created>20080520110000</resource:created>
@@ -31,7 +31,7 @@
 	<sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self" />
 	<sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week2#self" />
 	<sioc:parent_of rdf:resource="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week3#self" />
-	<lifecyle:state rdf:resource="http://purl.org/vocab/resourcelist/schema#status-published" />
+	<lifecycle:state rdf:resource="http://purl.org/vocab/resourcelist/schema#status-published" />
   </resource:List>
   <resource:Section rdf:about="http://list.hogwarts.ac.uk/lists/introduction_to_defence_against_the_dark_arts/sections/week1#self">
     <sioc:name xml:lang="en">Week 1</sioc:name>
