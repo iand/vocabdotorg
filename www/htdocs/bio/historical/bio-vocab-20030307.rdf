@@ -82,7 +82,7 @@
 
   <rdf:Property rdf:about="http://purl.org/vocab/bio/0.1/event" 
                 rdfs:label="Event"
-                rdfs:comment="An event associated with a person."&gt;
+                rdfs:comment="An event associated with a person.">
     
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <rdfs:range rdf:resource="http://purl.org/vocab/bio/0.1/Event"/>
